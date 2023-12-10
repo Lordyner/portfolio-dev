@@ -25,18 +25,18 @@ export default function sendEmail(req, res) {
                 privateKey: process.env.mail_contact_private_api_key,
             })
             .then(
-                (response) => {
-                    logger.info('Mail successfully sent', response.status, response.text)
+                (res) => {
+                    logger.info('Mail successfully sent', res.status, res.text)
                     res.status(201).json({ message: 'Mail sent' })
                 },
                 (err) => {
-                    logger.error('Error sending mail', response.status, response.text)
+                    logger.error('Error sending mail', res.status, res.text)
                     res.status(500).json({ message: 'Error sending mail' })
                 },
             );
 
     } catch (error) {
-        logger.error('Error sending mail', response.status, response.text)
+        logger.error('Error sending mail', res.status, res.text)
         res.status(500).json({ message: 'Error sending mail' });
     }
 
