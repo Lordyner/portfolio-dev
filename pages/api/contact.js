@@ -17,12 +17,13 @@ export default function sendEmail(req, res) {
         res.status(400).json({ message: 'Parameters are not correct' })
         return;
     }
+
     try {
         logger.info(`Service id : ${process.env.mail_contact_service_id}`)
         return emailjs
-            .send(process.env.mail_contact_service_id, process.env.mail_contact_template_id, params, {
-                publicKey: process.env.mail_contact_public_api_key,
-                privateKey: process.env.mail_contact_private_api_key,
+            .send(process.env.MAIL_CONTACT_SERVICE_ID, process.env.MAIL_CONTACT_TEMPLATE_ID, params, {
+                publicKey: process.env.MAIL_CONTACT_PUBLIC_API_KEY,
+                privateKey: process.env.MAIL_CONtACT_PRIVATE_API_KEY,
             })
             .then(
                 (response) => {
