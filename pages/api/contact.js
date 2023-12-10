@@ -18,6 +18,7 @@ export default function sendEmail(req, res) {
         return;
     }
     try {
+        logger.info(`Service id : ${process.env.mail_contact_service_id}`)
         return emailjs
             .send(process.env.mail_contact_service_id, process.env.mail_contact_template_id, params, {
                 publicKey: process.env.mail_contact_public_api_key,
