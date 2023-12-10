@@ -23,7 +23,7 @@ export default function sendEmail(req, res) {
         return emailjs
             .send(process.env.MAIL_CONTACT_SERVICE_ID, process.env.MAIL_CONTACT_TEMPLATE_ID, params, {
                 publicKey: process.env.MAIL_CONTACT_PUBLIC_API_KEY,
-                privateKey: process.env.MAIL_CONtACT_PRIVATE_API_KEY,
+                privateKey: process.env.MAIL_CONTACT_PRIVATE_API_KEY
             })
             .then(
                 (response) => {
