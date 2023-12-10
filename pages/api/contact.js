@@ -26,17 +26,17 @@ export default function sendEmail(req, res) {
             })
             .then(
                 (response) => {
-                    logger.info('Mail successfully sent')
+                    logger.info('Mail successfully sent', response)
                     res.status(201).json({ message: 'Mail sent' })
                 },
                 (err) => {
-                    logger.error('Error sending mail')
+                    logger.error('Error sending mail', err)
                     res.status(500).json({ message: 'Error sending mail' })
                 },
             );
 
     } catch (error) {
-        logger.error('Error sending mail', res.status, res.text)
+        logger.error('Error sending mail', error)
         res.status(500).json({ message: 'Error sending mail' });
     }
 
