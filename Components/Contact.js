@@ -53,6 +53,7 @@ const Contact = () => {
         <section id="contact-section">
             <h2>CONTACT</h2>
             <form ref={form} onSubmit={sendEmail} id="contact-form">
+                <div className="g-recaptcha" data-sitekey="6LeXcCwpAAAAADFuZqewJFwjLqMxE-K3RxK-Wabi"></div>
                 <div className="contact-form-header">
                     <input type="text" name="user_name" placeholder="NOM"></input>
                     <input type="text" name="user_mail" placeholder="MAIL"></input>
