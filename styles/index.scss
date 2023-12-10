@@ -117,6 +117,17 @@ button {
         transition: 0.2s ease-in-out;
         color: #fff;
     }
+
+    &:disabled,
+    &[disabled] {
+        background-color: #ccc;
+        box-shadow: none;
+
+        &:hover {
+            transform: none;
+            cursor: not-allowed;
+        }
+    }
 }
 
 .dark-filter {

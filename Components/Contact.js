@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import useData from '../Hooks/useData';
 import { getLogger } from '@/logging/log-util';
 
@@ -10,9 +10,10 @@ const Contact = () => {
     const { setShowPopupConfirmation } = useData();
     const { setShowPopupError } = useData();
     const { setShowPopupContactFormIncorrect } = useData();
-
+    const [isDisabled, setIsDisabled] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsDisabled(true);
         setIsLoading(true);
         const mail = {
             name: form.current[0].value,
@@ -26,6 +27,7 @@ const Contact = () => {
             logger.info('Formulaire envoie de mail non valide')
             setIsLoading(false);
             setShowPopupContactFormIncorrect(true);
+            setIsDisabled(false);
             return;
         }
         fetch('/api/contact', {
@@ -46,8 +48,9 @@ const Contact = () => {
                 setShowPopupError(true);
 
             }
-        })
-    };
+        }).finally(() => setIsDisabled(false))
+    }
+
 
     return (
         <section id="contact-section">
@@ -55,14 +58,14 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail} id="contact-form">
                 <div className="g-recaptcha" data-sitekey="6LeXcCwpAAAAADFuZqewJFwjLqMxE-K3RxK-Wabi"></div>
                 <div className="contact-form-header">
-                    <input type="text" name="user_name" placeholder="NOM"></input>
-                    <input type="text" name="user_mail" placeholder="MAIL"></input>
+                    <input type="text" name="user_name" placeholder="NOM" required></input>
+                    <input type="email" name="user_mail" placeholder="MAIL" required></input>
                 </div>
                 <div className="contact-form-body">
-                    <textarea name="message" placeholder="MESSAGE"></textarea>
+                    <textarea name="message" placeholder="MESSAGE" required></textarea>
                 </div>
                 <div className="contact-form-footer">
-                    <button className="primary-button">ENVOYEZ</button>
+                    <button className="primary-button" disabled={isDisabled}>ENVOYEZ</button>
                 </div>
             </form>
         </section>
