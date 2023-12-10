@@ -9,7 +9,6 @@ export default function sendEmail(req, res) {
         mailAdress: req.body.mailAdress,
         message: req.body.message
     }
-    console.log(JSON.stringify(params))
     if (!params.name || params.name === ""
         || !params.mailAdress || params.mailAdress === "" || !params.mailAdress.includes === "@"
         || !params.message || params.message === ""
@@ -26,17 +25,17 @@ export default function sendEmail(req, res) {
             })
             .then(
                 (response) => {
-                    logger.info('Mail successfully sent', response)
+                    logger.info(`Mail successfully sent : ${JSON.stringify(response)}`)
                     res.status(201).json({ message: 'Mail sent' })
                 },
                 (err) => {
-                    logger.error('Error sending mail', err)
+                    logger.error(`Error sending mail : ${JSON.stringify(err)}`)
                     res.status(500).json({ message: 'Error sending mail' })
                 },
             );
 
     } catch (error) {
-        logger.error('Error sending mail', error)
+        logger.error(`Error sending mail : ${JSON.stringify(error)}`)
         res.status(500).json({ message: 'Error sending mail' });
     }
 
