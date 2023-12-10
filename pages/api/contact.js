@@ -25,12 +25,12 @@ export default function sendEmail(req, res) {
                 privateKey: process.env.mail_contact_private_api_key,
             })
             .then(
-                (res) => {
-                    logger.info('Mail successfully sent', res.status, res.text)
+                (response) => {
+                    logger.info('Mail successfully sent')
                     res.status(201).json({ message: 'Mail sent' })
                 },
                 (err) => {
-                    logger.error('Error sending mail', res.status, res.text)
+                    logger.error('Error sending mail')
                     res.status(500).json({ message: 'Error sending mail' })
                 },
             );
