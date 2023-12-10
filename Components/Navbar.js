@@ -17,8 +17,7 @@ const Navbar = () => {
                 </a>
             </div>
             <ul className={`nav-links ${isDesktopResolution ? "" : "display-none"}`}>
-                <li><a href="#">CURRICULUM VITAE</a></li>
-                <li><a href="#contact-section">CONTACT</a></li>
+                <li><a href="/CV-andrelubin-thomas.pdf" download="CV-andrelubin-thomas">CURRICULUM VITAE</a></li>
                 <li><a href="#projects-section" className="secondary-button"> PROJETS</a></li>
             </ul>
 

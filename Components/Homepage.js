@@ -10,7 +10,7 @@ const Homepage = () => {
                 <p>Développeur Fullstack avec plus de 5 ans d'expérience dans plusieurs domaines (bancaire, grande distribution, immobilier ...).</p>
             </div>
             <div className="main-content-footer">
-                <button className="primary-button">WORK WITH ME</button>
+                <a href="#contact-section" className="primary-button">WORK WITH ME</a>
             </div>
         </section>
     );

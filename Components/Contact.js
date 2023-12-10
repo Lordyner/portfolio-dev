@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import useData from '../Hooks/useData';
 import { getLogger } from '@/logging/log-util';
 
@@ -61,7 +61,7 @@ const Contact = () => {
                     <textarea name="message" placeholder="MESSAGE"></textarea>
                 </div>
                 <div className="contact-form-footer">
-                    <button className="primary-button">SUBMIT</button>
+                    <button className="primary-button">ENVOYEZ</button>
                 </div>
             </form>
         </section>
