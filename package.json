@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/nodejs": "^2.2.0",
+    "@vercel/speed-insights": "^1.0.1",
     "next": "^13.0.7",
     "pino": "^8.16.2",
     "react": "^18",
