@@ -1,0 +1,32 @@
+/* Colors */
+
+$primary-color: #6E07F3;
+$darker-primary-color: #150147;
+$primary-background-color: #ffffff;
+$secondary-background-color: lighten(#F7E6FF, 4%);
+
+$footer-background-color: #150147;
+
+/* Fonts */
+
+@font-face {
+  font-family: SourceSansProRegular;
+  src: url('../public/fonts/static/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: SourceSansProBold;
+  src: url('../public/fonts/static/SourceSansPro-Bold.ttf');
+}
+
+$heading-900 : 4.16rem;
+$heading-500 : 2.7rem;
+$heading-300 : 1.33rem;
+$heading-200 : .95rem;
+$body-900 : 1.8rem;
+
+/* Breakpoints */
+
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 375px;
