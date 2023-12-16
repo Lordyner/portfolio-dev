@@ -105,12 +105,17 @@ button {
     font-size: 1.25rem;
     background-color: variables.$primary-color;
     color: #ffff;
-    padding: 1.5rem 5rem;
     font-weight: 700;
+    padding: 1rem 2rem;
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
     letter-spacing: .9px;
     transition: 0.2s ease-in-out;
+
+    @media (min-width: variables.$laptop) {
+        padding: 1.5rem 5rem;
+
+    }
 
     &:hover {
         transform: translateY(-4px);
@@ -346,6 +351,10 @@ section {
         padding: 2rem;
         font-size: 1.125rem;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        a {
+            font-size: variables.$heading-300;
+        }
     }
 
     #close-menu-icon {
