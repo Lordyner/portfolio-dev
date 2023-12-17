@@ -11,8 +11,8 @@ const SkillSection = () => {
             <div className='about-me-container'>
                 <div className="talk-no-jutsu">
                     <p>
-                        Avec <b>cinq années d'expérience</b> en tant que <b>développeur fullstack</b>, j'ai eu le privilège de travailler dans des secteurs variés tels que le bancaire, l'immobilier et la grande distribution.<br />
-                        Cette diversité m'a permis de développer une <b>capacité d'adaptation exceptionnelle</b>, m'adaptant rapidement aux besoins spécifiques de chaque domaine.<br />
+                        Avec <b>cinq années d'expérience</b> en tant que <b>développeur fullstack</b>, j'ai eu le privilège de travailler dans des secteurs variés tels que le bancaire, telecom et l'immobilier.<br />
+                        Cette diversité m'a permis de développer une <b>capacité d'adaptation exceptionnelle</b>, afin de faire face aux besoins spécifiques de chaque domaine.<br />
                         Ma force réside dans mon <b>autonomie</b> et ma capacité à mener à bien des projets du début à la fin. Mon approche méthodique et ma rigueur dans le développement d'applications webs garantissent des solutions de <b>haute qualité</b>, tout en <b>respectant les délais</b>.
                     </p>
                 </div>
@@ -35,8 +35,8 @@ const SkillSection = () => {
                     </div>
                     <div className="skill">
                         <div className="skill-values">
-                            <div className="skill-name">REACT</div>
-                            <div className="skill-pourcentage">75%</div>
+                            <div className="skill-name">REACT / NEXT.JS</div>
+                            <div className="skill-pourcentage">80%</div>
                         </div>
                         <div className="gauge"></div>
                         <div className="gauge-fill gauge-75"></div>
