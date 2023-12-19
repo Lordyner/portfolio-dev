@@ -12,6 +12,7 @@ import illustrationMailError from '@/public/images/illustration_bug.svg'
 import illustrationMailSent from '@/public/images/illustration_mail_sent.svg'
 import formValidationImg from '@/public/images/form_validation.svg'
 import PopupContact from '@/Components/PopupContact';
+import Values from '@/Components/Values';
 
 export default function Home() {
   const [screenWidth, setScreenWidth] = useState();
@@ -71,6 +72,7 @@ export default function Home() {
         <Homepage />
         <SkillSection />
         <Project />
+        <Values />
         <Contact />
         <Footer />
       </main >

@@ -1,0 +1,67 @@
+@use '../styles/variables';
+
+.values {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 1rem;
+    background-color: #fff;
+    margin: 2rem 0;
+
+    #topLeft {
+        border-top-left-radius: 1rem;
+    }
+
+    #topRight {
+        border-top-right-radius: 1rem;
+    }
+
+    #bottomLeft {
+        border-bottom-left-radius: 1rem;
+    }
+
+    #bottomRight {
+        border-bottom-right-radius: 1rem;
+    }
+
+    .description {
+        text-align: center;
+        max-width: 70%;
+        font-size: variables.$body-200;
+        //color: variables.$darker-primary-color;
+
+    }
+
+    .valueText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .value {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+        padding: 1.5rem;
+        border: 1px solid rgba(221, 221, 221, 0.4);
+        // border: 1px solid variables.$lighter-primary-color;
+
+
+        img {
+            width: 10rem;
+            height: 10rem;
+            // border: 1px solid #ddd;
+            // border-radius: 50%;
+            // padding: 2rem;
+        }
+
+        h3 {
+            font-size: variables.$heading-300;
+            color: variables.$darker-primary-color;
+        }
+    }
+
+}

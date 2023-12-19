@@ -3,11 +3,7 @@ import React from 'react';
 const SkillSection = () => {
     return (
         <section id="skills-section">
-            <h2>
-                <span className='section-heading'>
-                    ABOUT ME
-                </span>
-            </h2>
+            <h2>ABOUT ME</h2>
             <div className='about-me-container'>
                 <div className="talk-no-jutsu">
                     <p>

@@ -2,6 +2,7 @@
 
 $primary-color: #6E07F3;
 $darker-primary-color: #150147;
+$lighter-primary-color: #e7c0fc;
 $primary-background-color: #ffffff;
 $secondary-background-color: lighten(#F7E6FF, 4%);
 
@@ -21,9 +22,13 @@ $footer-background-color: #150147;
 
 $heading-900 : 4.16rem;
 $heading-500 : 2.7rem;
+$heading-400 : 1.8rem;
 $heading-300 : 1.33rem;
 $heading-200 : .95rem;
-$body-900 : 1.8rem;
+$body-500 : 1.75rem;
+$body-300 : 1.25rem;
+$body-200 : 1.10rem;
+$body-100 : 1rem;
 
 /* Breakpoints */
 
