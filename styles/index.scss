@@ -28,6 +28,10 @@ body {
     display: flex;
 }
 
+.f-col {
+    flex-direction: column;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -36,8 +40,16 @@ body {
     justify-content: end;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .mb-4 {
     margin-bottom: 4rem;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
 }
 
 .gap-1 {
@@ -46,6 +58,10 @@ body {
 
 .gap-2 {
     gap: 2rem;
+}
+
+.gap-05 {
+    gap: .5rem
 }
 
 /* STYLE */
@@ -277,9 +293,7 @@ section {
     min-height: 100vh;
 }
 
-#projects-section {
-    min-height: 100vh;
-}
+
 
 
 .navbar {
@@ -405,91 +419,6 @@ section {
 
 }
 
-
-.project-card-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    width: 100%;
-    padding: 3rem;
-
-
-    @media (max-width: 1110px) {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 21rem;
-        height: 21rem;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-        transition: .2s ease-in-out;
-
-        &:hover {
-            transform: translateY(-2px);
-            transition: .2s ease-in-out;
-        }
-
-
-        img {
-            width: 21rem;
-            height: 21rem;
-            border-radius: 10px;
-        }
-
-
-    }
-
-    .overlay {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        visibility: hidden;
-        background-color: #150147;
-        width: 21rem;
-        position: relative;
-        height: 21rem;
-        bottom: 21.3rem;
-        opacity: 0;
-        transition: .45s ease-in-out;
-        color: #fff;
-        font-weight: 900;
-
-        span {
-            font-weight: 700;
-            letter-spacing: .9px;
-        }
-
-        a {
-            border-radius: 30px;
-            text-decoration: none;
-            color: #fff;
-            border: 3px solid variables.$primary-color;
-            //transition: .45s ease-in-out;
-            letter-spacing: 1px;
-
-            &:hover {
-                background-color: variables.$primary-color;
-                transition: .45s ease-in-out;
-            }
-        }
-    }
-
-    .project-card:hover>.overlay {
-        transition: .45s ease-in-out;
-        opacity: 1;
-        visibility: visible;
-        font-weight: 900;
-        font-size: variables.$body-300;
-    }
-}
 
 .about-me-container {
     display: flex;
@@ -629,6 +558,7 @@ section {
     padding-top: 2rem;
     text-align: center;
     min-height: 80vh;
+
 
     // &::before {
     //     background-image: url(./images/illustration_programmer.svg);
