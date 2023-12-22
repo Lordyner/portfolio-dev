@@ -7,9 +7,9 @@ const SkillSection = () => {
             <div className='about-me-container'>
                 <div className="talk-no-jutsu">
                     <p>
-                        Avec <b>cinq années d'expérience</b> en tant que <b>développeur fullstack</b>, j'ai eu le privilège de travailler dans des secteurs variés tels que le bancaire, telecom et l'immobilier.<br />
+                        Avec <b>cinq années d'expérience</b> en tant que <b>développeur web</b>, j'ai eu le privilège de travailler dans des secteurs variés tels que le bancaire, telecom et l'immobilier.<br />
                         Cette diversité m'a permis de développer une <b>capacité d'adaptation exceptionnelle</b>, afin de faire face aux besoins spécifiques de chaque domaine.<br />
-                        Ma force réside dans mon <b>autonomie</b> et ma capacité à mener à bien des projets du début à la fin. Mon approche méthodique et ma rigueur dans le développement d'applications webs garantissent des solutions de <b>haute qualité</b>, tout en <b>respectant les délais</b>.
+                        Ma force réside dans mon <b>autonomie</b> et ma capacité à comprendre le besoin du client et y répondre avec une solution adaptée.
                     </p>
                 </div>
                 <div className="skills-container">

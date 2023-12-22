@@ -7,7 +7,7 @@ const Homepage = () => {
                 <h1>HELLO WORLD !</h1>
             </div>
             <div className="main-content-body">
-                <p>Développeur Fullstack avec plus de 5 ans d'expérience dans plusieurs domaines (bancaire, telecom, immobilier ...).</p>
+                <p>Développeur Web avec plus de 5 ans d'expérience dans plusieurs domaines (bancaire, telecom, immobilier ...).</p>
             </div>
             <div className="main-content-footer">
                 <a href="#contact-section" className="primary-button">WORK WITH ME</a>
