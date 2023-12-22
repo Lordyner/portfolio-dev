@@ -4,7 +4,7 @@ import passwordGeneratorImg from '@/public/images/password-generator-screenshot.
 import puissance4Img from '@/public/images/puissance4-screenshot.png'
 import Image from 'next/image';
 import classes from './Project.module.scss';
-import frontendmentorLogo from '../public/images/frontendmentor_logo.png';
+import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
 
 const Project = () => {
     return (
