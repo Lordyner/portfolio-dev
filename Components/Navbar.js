@@ -1,33 +1,37 @@
-import React from 'react';
-import useData from '../Hooks/useData';
-import avatarOfMe from '@/public/images/avatarMe.png';
+import React, { useContext } from 'react';
+import avatarOfMe from '@/public/images/avatarOfMe.png';
 import iconMenuClose from '@/public/images/icon-menu-close.svg';
 import Image from 'next/image';
-
+import classes from './Navbar.module.css'
+import GlobalContext from '@/Store/GlobalContext';
 const Navbar = () => {
 
-    const { isDesktopResolution } = useData();
-    const { isMenuOpen, setIsMenuOpen } = useData();
+    const { isDesktopResolution } = useContext(GlobalContext);
+    const { isMobileResolution } = useContext(GlobalContext);
+    const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     return (
-        <nav className="navbar">
-            <div className="logo">
-                <a className="site-link" href="/">
-                    <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className="profil-img" width={50} height={50} />
-                    <span className={`${isDesktopResolution ? "" : "display-none"}`}>ANDRE-LUBIN THOMAS</span>
+        <nav className={classes.navbar}>
+            <div className={classes.logo}>
+                <a className={classes.link} href="/">
+                    {isMobileResolution && <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />}
+                    <span className={`${isMobileResolution ? "display-none" : ""}`}>ANDRE-LUBIN THOMAS</span>
                 </a>
             </div>
-            <ul className={`nav-links ${isDesktopResolution ? "" : "display-none"}`}>
+            {/* Classic links */}
+            {/* <ul className={`nav-links ${isDesktopResolution ? "" : "display-none"}`}>
                 <li><a href="/CV-andrelubin-thomas.pdf" download="CV-andrelubin-thomas">CURRICULUM VITAE</a></li>
                 <li><a href="#projects-section" className="secondary-button"> PROJETS</a></li>
-            </ul>
+            </ul> */}
 
-            <div className={`${isDesktopResolution ? "hamburger display-none" : "hamburger"}`}
+            {/* Burger menu */}
+            <div className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <div className='burger burger1' />
-                <div className='burger burger2' />
-                <div className='burger burger3' />
+                <div className={`${classes.burger} burger1`} />
+                <div className={`${classes.burger} burger2`} />
+                <div className={`${classes.burger} burger3`} />
             </div>
-            <div id="sideMenu" className={`side-menu ${isMenuOpen ? "active" : ""}`}>
+            {/* Side menu */}
+            <div id="sideMenu" className={`${classes.sideMenu} ${isMenuOpen ? classes.active : ""}`}>
                 <div className='d-flex justify-content-end mb-4'>
                     <Image src={iconMenuClose} alt='close menu icon' id='close-menu-icon' onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 </div>
@@ -35,7 +39,7 @@ const Navbar = () => {
                 <a href="#contact-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>CONTACT</a>
                 <a href="#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</a>
             </div>
-        </nav>
+        </nav >
     );
 };
 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/nodejs": "^2.2.0",
+    "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
     "next": "^13.0.7",
@@ -18,7 +19,6 @@
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-loader-spinner": "^6.1.0",
-    "sass": "^1.69.5",
     "sharp": "^0.33.0"
   }
 }

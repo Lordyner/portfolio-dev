@@ -1,15 +1,15 @@
-import React, { useRef, useState } from 'react';
-import useData from '../Hooks/useData';
+import React, { useContext, useRef, useState } from 'react';
 import { getLogger } from '@/logging/log-util';
+import GlobalContext from '@/Store/GlobalContext';
 
 const Contact = () => {
     const logger = getLogger('Contact');
 
     const form = useRef();
-    const { setIsLoading } = useData();
-    const { setShowPopupConfirmation } = useData();
-    const { setShowPopupError } = useData();
-    const { setShowPopupContactFormIncorrect } = useData();
+    const { setIsLoading } = useContext(GlobalContext);
+    const { setShowPopupConfirmation } = useContext(GlobalContext);
+    const { setShowPopupError } = useContext(GlobalContext);
+    const { setShowPopupContactFormIncorrect } = useContext(GlobalContext);
     const [isDisabled, setIsDisabled] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();

@@ -1,0 +1,157 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 4;
+    background-color: var(--black);
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.textWrapper {
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.valueProposition {
+    font-size: var(--body-500);
+    max-width: 21rem;
+    padding-bottom: 1em;
+    /* color: var(--grey); */
+    opacity: .8;
+}
+
+
+
+.heroContainer img {
+    max-width: 90%;
+    object-fit: contain;
+    max-height: 340px;
+}
+
+.heroContainer .handdrawn {
+    width: 2.5rem;
+    min-height: unset;
+    height: 2.5rem;
+    position: absolute;
+}
+
+/* Media for tablet */
+@media screen and (min-width: 768px) {
+    .heroContainer {
+        padding: 1rem 2.5rem;
+        background-color: unset;
+        text-align: left;
+        position: relative;
+
+    }
+
+    .textWrapper {
+        align-items: flex-start;
+    }
+
+    .heroContainer img {
+        min-height: 100%;
+        position: relative;
+        bottom: 12rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .heroContainer .handdrawn {
+        width: 2.5rem;
+        min-height: unset;
+        height: 2.5rem;
+        position: absolute;
+    }
+
+    #github {
+        right: 18rem;
+        bottom: 17rem;
+        transform: rotate(-20deg);
+
+    }
+
+    #laptop {
+        left: 25rem;
+        bottom: 5rem;
+        transform: rotate(10deg);
+    }
+
+    #rocket {
+        right: 10rem;
+        top: 6rem;
+        transform: rotate(40deg);
+    }
+
+    .valueProposition {
+        max-width: 90%;
+
+    }
+}
+
+/* Media for laptop */
+@media screen and (min-width: 1110px) {
+    .valueProposition {
+        max-width: 80%;
+    }
+
+    .heroContainer .handdrawn {
+        width: 3rem;
+        height: 3rem;
+        opacity: .9;
+        color: red;
+    }
+
+    #github {
+        right: 8rem;
+        bottom: 12rem;
+        transform: rotate(-15deg);
+
+    }
+
+    #laptop {
+        left: 23rem;
+        bottom: 4rem;
+        transform: rotate(5deg);
+    }
+
+    #rocket {
+        right: 6rem;
+        top: 6rem;
+        transform: rotate(40deg);
+    }
+}
+
+/* Media for desktop */
+@media screen and (min-width: 1440px) {
+    .valueProposition {
+        max-width: 80%;
+    }
+
+    .heroContainer .handdrawn {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #github {
+        right: 18rem;
+        bottom: 17rem;
+
+    }
+
+    #laptop {
+        left: 25rem;
+        bottom: 5rem;
+    }
+
+    #rocket {
+        right: 10rem;
+        top: 6rem;
+    }
+}

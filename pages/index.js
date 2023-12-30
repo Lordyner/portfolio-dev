@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import useData from '@/Hooks/useData';
+import { useState, useEffect, useContext } from 'react';
 import Navbar from '@/Components/Navbar';
-import Homepage from '@/Components/Homepage';
+import Hero from '@/Components/Hero';
 import SkillSection from '@/Components/SkillSection';
 import Project from '@/Components/Project';
 import Contact from '@/Components/Contact';
@@ -13,19 +12,45 @@ import illustrationMailSent from '@/public/images/illustration_mail_sent.svg'
 import formValidationImg from '@/public/images/form_validation.svg'
 import PopupContact from '@/Components/PopupContact';
 import Values from '@/Components/Values';
+import GlobalContext from '@/Store/GlobalContext';
+import portfolioBg from '../public/images/portfolio_bg.jpeg';
+import Image from 'next/image';
 
 export default function Home() {
   const [screenWidth, setScreenWidth] = useState();
-  const { isLoading } = useData();
-  const { showPopupConfirmation, setShowPopupConfirmation } = useData();
-  const { showPopupError, setShowPopupError } = useData();
-  const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useData();
-  const { setIsDesktopResolution } = useData();
+  const { isLoading } = useContext(GlobalContext);
+  const { showPopupConfirmation, setShowPopupConfirmation } = useContext(GlobalContext);
+  const { showPopupError, setShowPopupError } = useContext(GlobalContext);
+  const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useContext(GlobalContext);
+
+  const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
+  const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
+  const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
+
   const mobileResolution = 767;
+  const laptopResolution = 1110;
+  const desktopResolution = 1440;
 
   const handleMenuDisplay = () => {
     setScreenWidth(window.screen.width);
-    screenWidth > mobileResolution ? setIsDesktopResolution(true) : setIsDesktopResolution(false);
+    // Entre 0 et 768px
+    if (screenWidth <= mobileResolution) {
+      setIsMobileResolution(true);
+    } else {
+      setIsMobileResolution(false);
+    }
+
+    if (screenWidth > mobileResolution && screenWidth < desktopResolution) {
+      setIsLaptopResolution(true);
+    } else {
+      setIsLaptopResolution(false);
+    }
+
+    if (screenWidth >= desktopResolution) {
+      setIsDesktopResolution(true);
+    } else {
+      setIsDesktopResolution(false);
+    }
   }
 
   useEffect(() => {
@@ -42,8 +67,35 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className="main-container">
-        {isLoading && <Spinner />}
+        {isMobileResolution &&
+          <>
+            <Navbar />
+            <Hero />
+          </>
+        }
+        {!isMobileResolution &&
+          <>
+            <div className='wrapperLeftAndRight'>
+              <div className='leftSide'>
+                <Navbar />
+                <Hero />
+              </div>
+              <div className="rightSide">
+                <Image src={portfolioBg} alt='Thomas André-Lubin en train de développer sur son ordinateur' />
+              </div>
+            </div>
+          </>
+        }
+      </main >
+      <Values />
+
+
+
+
+
+      {/* {isLoading && <Spinner />}
         {showPopupConfirmation && <PopupContact
           title="MAIL ENVOYÉ"
           img={illustrationMailSent}
@@ -67,15 +119,12 @@ export default function Home() {
             buttonText="OK"
             imgDescription="form validation"
             showPopup={showPopupContactFormIncorrect}
-            setShowPopup={setShowPopupContactFormIncorrect} />}
-        <Navbar />
-        <Homepage />
-        <SkillSection />
+            setShowPopup={setShowPopupContactFormIncorrect} />} */}
+      {/* <SkillSection />
         <Project />
-        <Values />
-        <Contact />
-        <Footer />
-      </main >
+        <Contact /> */}
+      {/* <Footer /> */}
+
     </>
   )
 
