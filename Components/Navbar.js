@@ -18,10 +18,10 @@ const Navbar = () => {
                 </a>
             </div>
             {/* Classic links */}
-            {/* <ul className={`nav-links ${isDesktopResolution ? "" : "display-none"}`}>
-                <li><a href="/CV-andrelubin-thomas.pdf" download="CV-andrelubin-thomas">CURRICULUM VITAE</a></li>
-                <li><a href="#projects-section" className="secondary-button"> PROJETS</a></li>
-            </ul> */}
+            <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
+                <a href="/CV-andrelubin-thomas.pdf" className={classes.link} download="CV-andrelubin-thomas">Curriculum Vitae</a>
+                <a href="#projects-section" className={classes.link}>Projets</a>
+            </div>
 
             {/* Burger menu */}
             <div className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}

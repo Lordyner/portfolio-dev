@@ -24,33 +24,27 @@ export default function Home() {
   const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useContext(GlobalContext);
 
   const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
+  const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
   const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
 
-  const mobileResolution = 767;
-  const laptopResolution = 1110;
+  const mobileResolution = 320;
+  const tabletResolution = 767;
+  const laptopResolution = 1024;
   const desktopResolution = 1440;
 
   const handleMenuDisplay = () => {
     setScreenWidth(window.screen.width);
-    // Entre 0 et 768px
-    if (screenWidth <= mobileResolution) {
-      setIsMobileResolution(true);
-    } else {
-      setIsMobileResolution(false);
-    }
 
-    if (screenWidth > mobileResolution && screenWidth < desktopResolution) {
-      setIsLaptopResolution(true);
-    } else {
-      setIsLaptopResolution(false);
-    }
+    const isMobile = screenWidth < tabletResolution;
+    const isTablet = screenWidth >= tabletResolution && screenWidth < laptopResolution;
+    const isLaptop = screenWidth >= laptopResolution && screenWidth < desktopResolution;
+    const isDesktop = screenWidth >= desktopResolution;
 
-    if (screenWidth >= desktopResolution) {
-      setIsDesktopResolution(true);
-    } else {
-      setIsDesktopResolution(false);
-    }
+    setIsMobileResolution(isMobile);
+    setIsTabletResolution(isTablet);
+    setIsLaptopResolution(isLaptop);
+    setIsDesktopResolution(isDesktop);
   }
 
   useEffect(() => {
@@ -69,13 +63,13 @@ export default function Home() {
       </Head>
 
       <main className="main-container">
-        {isMobileResolution &&
+        {(isMobileResolution || isTabletResolution) &&
           <>
             <Navbar />
             <Hero />
           </>
         }
-        {!isMobileResolution &&
+        {(isLaptopResolution || isDesktopResolution) &&
           <>
             <div className='wrapperLeftAndRight'>
               <div className='leftSide'>
@@ -90,6 +84,7 @@ export default function Home() {
         }
       </main >
       <Values />
+      <Project />
 
 
 
@@ -121,7 +116,6 @@ export default function Home() {
             showPopup={showPopupContactFormIncorrect}
             setShowPopup={setShowPopupContactFormIncorrect} />} */}
       {/* <SkillSection />
-        <Project />
         <Contact /> */}
       {/* <Footer /> */}
 

@@ -8,13 +8,18 @@
     background-color: var(--black);
 }
 
-.link {
+a.link {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     color: #ddd;
     font-size: var(--heading-400);
+}
+
+.navLink {
+    display: flex;
+    gap: 2rem;
 }
 
 .title {
@@ -113,11 +118,17 @@
 
 @media (min-width: 768px) {
     .navbar {
-        max-width: 60%;
         padding: 2rem 2.5rem;
     }
 
     .hamburger {
         display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .navLink {
+        gap: 4rem;
     }
 }

@@ -11,6 +11,7 @@ import githubMascot from '@/public/images/github_handdrawn.svg';
 const Hero = () => {
 
     const { isMobileResolution } = useContext(GlobalContext);
+    const { isTabletResolution } = useContext(GlobalContext);
 
     return (
         <main className={classes.heroContainer}>
@@ -26,7 +27,7 @@ const Hero = () => {
                 <Image src={laptop} id={classes.laptop} className={classes.handdrawn} alt="Ordinateur portable dessiné à la main" />
                 <Image src={githubMascot} id={classes.github} className={classes.handdrawn} alt="Mascotte de github dessiné à la main" /></>
             } */}
-            {isMobileResolution && <Image src={portfolioBgMobile} />}
+            {(isMobileResolution || isTabletResolution) && <Image src={portfolioBgMobile} />}
         </main>
     );
 };

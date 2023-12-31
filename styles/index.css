@@ -12,7 +12,7 @@
 
     /* Breakpoints */
     --desktop: 1440px;
-    --laptop: 1100px;
+    --laptop: 1040px;
     --tablet: 768px;
     --mobile: 375px;
 
@@ -21,26 +21,29 @@
     --heading-600: 1.75rem;
     --heading-500: 1.25rem;
     --body-500: 1rem;
+    --body-500: 1rem;
 
 }
 
 @media screen and (min-width: 768px) {
     :root {
         --heading-900: 2.5rem;
-        --heading-600: 1.75rem;
+        --heading-600: 2rem;
         --heading-500: 1.5rem;
         --heading-400: 1.25rem;
         --body-500: 1.25rem;
+        --body-400: 1.25rem;
     }
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1024px) {
     :root {
         --heading-900: 3rem;
         --heading-600: 2.25rem;
-        --heading-500: 1.5rem;
+        --heading-500: 1.75rem;
         --heading-400: 1.25rem;
         --body-500: 1.5rem;
+        --body-400: 1.5rem;
     }
 }
 
@@ -48,9 +51,10 @@
     :root {
         --heading-900: 4.25rem;
         --heading-600: 2.75rem;
-        --heading-500: 1.75rem;
+        --heading-500: 2rem;
         --heading-400: 1.5rem;
         --body-500: 1.75rem;
+        --body-400: 1.5rem;
     }
 }
 
@@ -396,6 +400,7 @@ section {
 
 
 
+
 .about-me-container {
     display: flex;
     width: 100%;
@@ -605,5 +610,11 @@ footer {
     section {
 
         min-height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        padding: 3.5rem 2rem;
     }
 }

@@ -8,13 +8,11 @@
     text-align: center;
 }
 
-
-
 .valueProposition {
     display: flex;
     flex-direction: column;
     padding: 2em 0 2.5em 0;
-    gap: 1em;
+    gap: .5rem;
     font-size: var(--body-500);
     text-align: center;
 }
@@ -30,19 +28,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-}
-
-.customWrapperChild {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 3rem 2rem;
-    min-width: 60%;
     background-color: #fff;
-    gap: .5rem;
+    gap: .25rem;
     border-radius: 15px;
 }
+
 
 .imageBg {
     width: 8rem;
@@ -78,6 +69,7 @@
 .buttonWrapper {
     display: flex;
     justify-content: center;
+    font-size: var(--body-500);
     padding-top: 3em;
 
 }
@@ -90,8 +82,33 @@
     .cardContainer {
         display: flex;
         flex-direction: row;
-        gap: .5rem
+        gap: 2rem
     }
 }
 
-@media screen and (min-width: 1110px) {}
+@media screen and (min-width: 1024px) {
+    .valueSection img {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .imageBg {
+        width: 10rem;
+        height: 10rem;
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cardContainer {
+        gap: 3em;
+        font-size: var(--body-500);
+        justify-content: center;
+    }
+
+    .card {
+        justify-content: center;
+        max-width: 20%;
+    }
+
+}

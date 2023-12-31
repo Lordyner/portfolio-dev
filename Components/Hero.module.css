@@ -46,21 +46,9 @@
     .heroContainer {
         padding: 1rem 2.5rem;
         background-color: unset;
-        text-align: left;
+        /* text-align: left; */
         position: relative;
 
-    }
-
-    .textWrapper {
-        align-items: flex-start;
-    }
-
-    .heroContainer img {
-        min-height: 100%;
-        position: relative;
-        bottom: 12rem;
-        width: 100%;
-        object-fit: cover;
     }
 
     .heroContainer .handdrawn {
@@ -90,15 +78,20 @@
     }
 
     .valueProposition {
-        max-width: 90%;
+        max-width: 70%;
 
     }
 }
 
 /* Media for laptop */
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1024px) {
     .valueProposition {
         max-width: 80%;
+        text-align: left;
+    }
+
+    .textWrapper {
+        align-items: flex-start;
     }
 
     .heroContainer .handdrawn {

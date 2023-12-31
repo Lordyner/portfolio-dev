@@ -10,6 +10,7 @@ export function GlobalContextProvider(props) {
     const [showPopupContactFormIncorrect, setShowPopupContactFormIncorrect] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState();
     const [isMobileResolution, setIsMobileResolution] = useState();
+    const [isTabletResolution, setIsTabletResolution] = useState();
     const [isLaptopResolution, setIsLaptopResolution] = useState();
     const [isDesktopResolution, setIsDesktopResolution] = useState();
 
@@ -20,6 +21,7 @@ export function GlobalContextProvider(props) {
             showPopupError, setShowPopupError,
             isMenuOpen, setIsMenuOpen,
             isMobileResolution, setIsMobileResolution,
+            isTabletResolution, setIsTabletResolution,
             isLaptopResolution, setIsLaptopResolution,
             isDesktopResolution, setIsDesktopResolution,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect

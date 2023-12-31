@@ -11,9 +11,10 @@ import clock from '@/public/images/clock.png';
 import GlobalContext from '@/Store/GlobalContext';
 
 const Values = () => {
+    const { isMobileResolution } = useContext(GlobalContext);
+    const { isTabletResolution } = useContext(GlobalContext);
     const { isLaptopResolution } = useContext(GlobalContext);
     const { isDesktopResolution } = useContext(GlobalContext);
-    const { isMobileResolution } = useContext(GlobalContext);
 
 
     return (
@@ -27,38 +28,32 @@ const Values = () => {
             {/* For laptop and desktop, we display values on the same row */}
             {(isLaptopResolution || isDesktopResolution) && <div className={classes.cardContainer}>
                 <div className={classes.card}>
-                    <div className={classes.customWrapperChild}>
-                        <div className={classes.imageWrapper}>
-                            <div className={classes.imageBg}></div>
-                            <Image src={clock} alt="Icône d'horloge" />
-                        </div>
-                        <h3>Respect des deadlines</h3>
-                        <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <div className={classes.imageWrapper}>
+                        <div className={classes.imageBg}></div>
+                        <Image src={clock} alt="Icône d'horloge" />
                     </div>
+                    <h3>Respect des deadlines</h3>
+                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                 </div>
                 <div className={classes.card}>
-                    <div className={classes.customWrapperChild}>
-                        <div className={classes.imageWrapper}>
-                            <div className={classes.imageBg}></div>
-                            <Image src={clock} alt="Icône d'horloge" />
-                        </div>
-                        <h3>Respect des deadlines</h3>
-                        <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <div className={classes.imageWrapper}>
+                        <div className={classes.imageBg}></div>
+                        <Image src={clock} alt="Icône d'horloge" />
                     </div>
+                    <h3>Respect des deadlines</h3>
+                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                 </div>
                 <div className={classes.card}>
-                    <div className={classes.customWrapperChild}>
-                        <div className={classes.imageWrapper}>
-                            <div className={classes.imageBg}></div>
-                            <Image src={clock} alt="Icône d'horloge" />
-                        </div>
-                        <h3>Respect des deadlines</h3>
-                        <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <div className={classes.imageWrapper}>
+                        <div className={classes.imageBg}></div>
+                        <Image src={clock} alt="Icône d'horloge" />
                     </div>
+                    <h3>Respect des deadlines</h3>
+                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                 </div>
             </div>}
             {/* For mobile, we use a carousel to display values */}
-            {isMobileResolution &&
+            {(isMobileResolution || isTabletResolution) &&
                 <Splide
                     options={{
                         perPage: 1,
@@ -71,38 +66,32 @@ const Values = () => {
 
                     <SplideSlide key="1">
                         <div className={classes.card}>
-                            <div className={classes.customWrapperChild}>
-                                <div className={classes.imageWrapper}>
-                                    <div className={classes.imageBg}></div>
-                                    <Image src={clock} alt="Icône d'horloge" />
-                                </div>
-                                <h3>Respect des deadlines</h3>
-                                <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <div className={classes.imageWrapper}>
+                                <div className={classes.imageBg}></div>
+                                <Image src={clock} alt="Icône d'horloge" />
                             </div>
+                            <h3>Respect des deadlines</h3>
+                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                         </div>
                     </SplideSlide>
                     <SplideSlide key="2">
                         <div className={classes.card}>
-                            <div className={classes.customWrapperChild}>
-                                <div className={classes.imageWrapper}>
-                                    <div className={classes.imageBg}></div>
-                                    <Image src={clock} alt="Icône d'horloge" />
-                                </div>
-                                <h3>Respect des deadlines</h3>
-                                <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <div className={classes.imageWrapper}>
+                                <div className={classes.imageBg}></div>
+                                <Image src={clock} alt="Icône d'horloge" />
                             </div>
+                            <h3>Respect des deadlines</h3>
+                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                         </div>
                     </SplideSlide>
                     <SplideSlide key="3">
                         <div className={classes.card}>
-                            <div className={classes.customWrapperChild}>
-                                <div className={classes.imageWrapper}>
-                                    <div className={classes.imageBg}></div>
-                                    <Image src={clock} alt="Icône d'horloge" />
-                                </div>
-                                <h3>Respect des deadlines</h3>
-                                <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <div className={classes.imageWrapper}>
+                                <div className={classes.imageBg}></div>
+                                <Image src={clock} alt="Icône d'horloge" />
                             </div>
+                            <h3>Respect des deadlines</h3>
+                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
                         </div>
                     </SplideSlide>
 
