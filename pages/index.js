@@ -29,7 +29,7 @@ export default function Home() {
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
 
   const mobileResolution = 320;
-  const tabletResolution = 767;
+  const tabletResolution = 768;
   const laptopResolution = 1024;
   const desktopResolution = 1440;
 

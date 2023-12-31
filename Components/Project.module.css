@@ -1,18 +1,30 @@
+.projectSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black);
+
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
-
+    justify-content: center;
     align-self: center;
-    padding-top: 6rem;
+    padding-top: 3em;
     padding-bottom: 2rem;
-
-    @media screen and (min-width: 1110px) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 3rem;
-    }
+    font-size: var(--body-500);
+}
 
 
+.projectSection h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.projectSection p {
+    font-size: var(--body-400);
 }
 
 .card {
@@ -20,39 +32,25 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    border-radius: 3px;
-    min-width: 20rem;
+    border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) -6px -1px 1px -17px;
     transition: .2s ease-in-out;
-    background-color: #fff;
-    color: #000;
+    color: #fff;
+    border: 1px solid #fff;
 
+}
 
+.mainImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2;
+}
 
-    .mainImg {
-        width: 100%;
-        min-height: 50%;
-    }
-
-
-
-    .title {
-        font-weight: 700;
-        letter-spacing: .7px;
-    }
-
-    .cardContent {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
+.logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
 }
 
 .card img {
@@ -60,24 +58,75 @@
 }
 
 .card:hover {
-    background-color: #f7e6ff;
+    /* background-color: #f7e6ff; */
     transition: .2s ease-in-out;
 }
 
+
+
+
+.title {
+    font-family: LatoBold;
+    font-weight: 900;
+    color: #fff;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .button {
-    border: 1px solid #e7c0fc;
-    padding: .7rem 1rem;
+    padding: .75rem 1.5rem;
     border-radius: 4px;
     color: #fff;
     width: 100%;
     text-align: center;
     opacity: 1;
-    background-color: #e7c0fc;
+    background-color: var(--primary-color);
     font-size: 1rem;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.10);
+    font-size: var(--body-400);
+    font-family: Lato;
+    transform: uppercase;
 }
 
-.button:hover {
-    background-color: #d398fa;
-    color: #fff;
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        /* grid-template-columns: repeat(3, calc(clamp(18.75rem, 18.029vw + 7.212rem, 23.438rem))); */
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        justify-content: center;
+        /* font-size: var(--body-500); */
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        grid-gap: 2em;
+    }
+
+    .logo {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .card {
+        gap: 1.5rem;
+        padding: 1rem 1.5rem
+    }
 }

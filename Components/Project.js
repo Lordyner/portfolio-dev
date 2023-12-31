@@ -8,16 +8,16 @@ import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
 
 const Project = () => {
     return (
-        <section id='projects-section'>
-            <h2>PROJETS</h2>
+        <section className={classes.projectSection}>
+            <h2>Derniers projets</h2>
             <div className={classes.container}>
                 <div className={classes.card}>
-                    <Image src={newsHomepageImg} alt="page d'accueil du site d'information" className={classes.mainImg} width={341} height={200} />
+                    <Image src={newsHomepageImg} alt="page d'accueil du site d'information" className={classes.mainImg} />
                     <div className='d-flex gap-05 align-items-center'>
-                        <Image src={frontendmentorLogo} alt="logo de l'entreprise frontendmentor.io" width={40} height={40} />
+                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
-                            <span className={classes.title}>Page d'accueil d'informations</span>
-                            <span className={classes.description}>Frontend mentor</span>
+                            <p className={classes.title}>Page d'accueil d'informations</p>
+                            <p className={classes.description}>Frontend mentor</p>
                         </div>
                     </div>
                     <div className='d-flex w-100'>
@@ -25,16 +25,14 @@ const Project = () => {
                             Visitez le site
                         </a>
                     </div>
-
                 </div>
                 <div className={classes.card}>
-                    <Image src={passwordGeneratorImg} alt='prévisualisation du projet de génération de mot de passe' className={classes.mainImg} width={341} height={200} />
-
+                    <Image src={passwordGeneratorImg} alt='prévisualisation du projet de génération de mot de passe' className={classes.mainImg} />
                     <div className='d-flex gap-05 align-items-center'>
-                        <Image src={frontendmentorLogo} alt="logo de l'entreprise frontendmentor.io" width={40} height={40} />
+                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
-                            <span className={classes.title}>Générateur de mot de passe</span>
-                            <span className={classes.description}>Frontend mentor</span>
+                            <p className={classes.title}>Générateur de mot de passe</p>
+                            <p className={classes.description}>Frontend mentor</p>
                         </div>
                     </div>
                     <div className='d-flex w-100'>
@@ -44,12 +42,12 @@ const Project = () => {
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <Image src={puissance4Img} alt='preview of my connect-four game project' className={classes.mainImg} width={341} height={200} />
+                    <Image src={puissance4Img} alt='preview of my connect-four game project' className={classes.mainImg} />
                     <div className='d-flex gap-05 align-items-center'>
-                        <Image src={frontendmentorLogo} alt="logo de l'entreprise frontendmentor.io" width={40} height={40} />
+                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
-                            <span className={classes.title}>Puissance 4</span>
-                            <span className={classes.description}>Frontend mentor</span>
+                            <p className={classes.title}>Puissance 4</p>
+                            <p className={classes.description}>Frontend mentor</p>
                         </div>
                     </div>
                     <div className='d-flex w-100'>
