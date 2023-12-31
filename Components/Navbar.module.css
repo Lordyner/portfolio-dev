@@ -112,7 +112,7 @@ a.link {
 }
 
 .sideMenu a {
-    font-size: var(--heading-500);
+    font-size: 1.25rem;
     color: var(--black);
 }
 

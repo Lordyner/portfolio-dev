@@ -22,7 +22,6 @@
     --heading-500: 1.25rem;
     --body-500: 1rem;
     --body-500: 1rem;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -39,7 +38,7 @@
 @media screen and (min-width: 1024px) {
     :root {
         --heading-900: 3rem;
-        --heading-600: 2.25rem;
+        --heading-600: 2.5rem;
         --heading-500: 1.75rem;
         --heading-400: 1.25rem;
         --body-500: 1.5rem;
@@ -50,10 +49,10 @@
 @media screen and (min-width: 1440px) {
     :root {
         --heading-900: 4.25rem;
-        --heading-600: 2.75rem;
+        --heading-600: 3.25rem;
         --heading-500: 2rem;
         --heading-400: 1.5rem;
-        --body-500: 1.75rem;
+        --body-500: 2rem;
         --body-400: 1.5rem;
     }
 }
@@ -200,7 +199,7 @@ button {
 
     background-color: var(--primary-color);
     color: #fff;
-    padding: 1em 2em;
+    padding: .75em 1.5em;
     border-radius: 10rem;
     font-size: var(--body-500);
     transition: 0.2s ease-in-out;
@@ -373,10 +372,7 @@ a {
 section {
     padding: 2rem;
     min-height: 100svh;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    background-color: var(--lightGrey);
+
 }
 
 .splide__pagination__page.is-active {
