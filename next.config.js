@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
-  /* config options here */
-}
 
-module.exports = nextConfig
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/api/auth/callback/google',
+        destination: '/api/auth/callback/google',
+        permanent: true,
+      },
+    ];
+  },
+};

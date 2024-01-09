@@ -20,7 +20,7 @@ const Hero = () => {
                 <div className={classes.valueProposition}>
                     <p>J'aide les entreprises à obtenir plus de clients à travers des solutions webs adaptés à leur besoins</p>
                 </div>
-                <Link href="#" alt='Thomas André-Lubin en train de développer sur son ordinateur' className='primary-call-to-action'>Réserver un appel</Link>
+                <Link href="/book-a-call" alt='Thomas André-Lubin en train de développer sur son ordinateur' className='primary-call-to-action'>Réserver un appel</Link>
             </div>
             {/* {!isMobileResolution && <><Image src={rocket} id={classes.rocket} className={classes.handdrawn} alt="Fusée dessiné à la main" />
 

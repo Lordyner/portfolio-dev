@@ -10,13 +10,18 @@ import Spinner from '@/Components/Spinner';
 import illustrationMailError from '@/public/images/illustration_bug.svg'
 import illustrationMailSent from '@/public/images/illustration_mail_sent.svg'
 import formValidationImg from '@/public/images/form_validation.svg'
-import PopupContact from '@/Components/PopupContact';
+import PopupContact from '@/Components/Popup';
 import Values from '@/Components/Values';
 import GlobalContext from '@/Store/GlobalContext';
 import portfolioBg from '../public/images/portfolio_bg.jpeg';
 import Image from 'next/image';
+import Meeting from './book-a-call';
+import { getLogger } from '@/Logging/log-util';
 
 export default function Home() {
+
+  const logger = getLogger('Meeting');
+
   const [screenWidth, setScreenWidth] = useState();
   const { isLoading } = useContext(GlobalContext);
   const { showPopupConfirmation, setShowPopupConfirmation } = useContext(GlobalContext);
@@ -27,12 +32,9 @@ export default function Home() {
   const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
   const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
+  const { mobileResolution, tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
 
-  const mobileResolution = 320;
-  const tabletResolution = 768;
-  const laptopResolution = 1024;
-  const desktopResolution = 1440;
-
+  logger.info('Home page rendered');
   const handleMenuDisplay = () => {
     setScreenWidth(window.screen.width);
 
@@ -60,6 +62,7 @@ export default function Home() {
         <meta name="description" content="Portfolio du développeur André-Lubin Thomas" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://apis.google.com/js/api.js" type="text/javascript" />
       </Head>
 
       <main className="main-container">
@@ -85,7 +88,7 @@ export default function Home() {
       </main >
       <Values />
       <Project />
-
+      {/* <Meeting /> */}
 
 
 
@@ -116,7 +119,7 @@ export default function Home() {
             showPopup={showPopupContactFormIncorrect}
             setShowPopup={setShowPopupContactFormIncorrect} />} */}
       {/* <SkillSection />
-        <Contact /> */}
+        */}
       {/* <Footer /> */}
 
     </>

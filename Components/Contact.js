@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from 'react';
-import { getLogger } from '@/logging/log-util';
+import { getLogger } from '@/Logging/log-util';
 import GlobalContext from '@/Store/GlobalContext';
 
 const Contact = () => {

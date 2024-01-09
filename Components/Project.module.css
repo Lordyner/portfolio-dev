@@ -3,7 +3,15 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--black);
+}
 
+.projectSection h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.projectSection p {
+    font-size: var(--body-400);
 }
 
 .container {
@@ -15,17 +23,9 @@
     padding-top: 3em;
     padding-bottom: 2rem;
     font-size: var(--body-500);
+    align-items: center;
 }
 
-
-.projectSection h2 {
-    color: #fff;
-    text-align: center;
-}
-
-.projectSection p {
-    font-size: var(--body-400);
-}
 
 .card {
     display: flex;
@@ -40,10 +40,18 @@
 
 }
 
+.card img {
+    border-radius: 5px;
+}
+
+.card:hover {
+    transition: .2s ease-in-out;
+}
+
 .mainImg {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: unset;
     aspect-ratio: 2;
 }
 
@@ -52,17 +60,6 @@
     height: 2.5rem;
     object-fit: cover;
 }
-
-.card img {
-    border-radius: 5px;
-}
-
-.card:hover {
-    /* background-color: #f7e6ff; */
-    transition: .2s ease-in-out;
-}
-
-
 
 
 .title {
@@ -74,6 +71,10 @@
 .cardContent {
     display: flex;
     flex-direction: column;
+}
+
+.cardImage {
+    display: grid;
 }
 
 

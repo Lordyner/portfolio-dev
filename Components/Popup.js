@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const PopupContact = ({ title, img, buttonText, imgDescription, showPopup, setShowPopup }) => {
+const Popup = ({ title, img, buttonText, imgDescription, showPopup, setShowPopup }) => {
 
     return (
         <>
@@ -18,4 +18,4 @@ const PopupContact = ({ title, img, buttonText, imgDescription, showPopup, setSh
     );
 };
 
-export default PopupContact;
+export default Popup;

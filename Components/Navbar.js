@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import avatarOfMe from '@/public/images/avatarOfMe.png';
-import iconMenuClose from '@/public/images/icon-menu-close.svg';
+import iconMenuClose from '@/public/images/icon_menu_close.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';

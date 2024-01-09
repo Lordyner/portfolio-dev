@@ -2,13 +2,14 @@
     /* Colors */
     --primary-color: #837BD1;
     --darker-primary-color: #150147;
-    --lighter-primary-color: #e7c0fc;
+    --lighter-primary-color: hsl(246, 48%, 65%, 30%);
     --primary-background-color: #ffffff;
     --secondary-background-color: lighten(#F7E6FF, 4%);
     --black: #1D1C1D;
     --grey: #ccc;
     --lightGrey: #F8F8F8;
     --footer-background-color: #150147;
+    --form-field: #9FAABE;
 
     /* Breakpoints */
     --desktop: 1440px;
@@ -21,7 +22,7 @@
     --heading-600: 1.75rem;
     --heading-500: 1.25rem;
     --body-500: 1rem;
-    --body-500: 1rem;
+    --body-400: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -242,6 +243,18 @@ button {
     cursor: not-allowed;
 }
 
+
+.secondary-button {
+    background-color: #fff;
+    border: 1px solid var(--grey);
+    color: var(--black);
+    padding: .75em 1.5em;
+    border-radius: 10rem;
+    font-size: var(--body-500);
+    transition: 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
 .dark-filter {
     background-color: rgba(0, 0, 0, 23%);
     transition: background-color .5s,
@@ -270,30 +283,24 @@ a.secondary-button {
 }
 
 input {
-    all: unset;
-    padding: 1rem;
+    /* all: unset; */
+    padding: .5em;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 50%;
+    border-radius: 5px;
+    font-size: var(--body-400);
 
-    &::placeholder {
-        opacity: .6;
-    }
 }
 
 textarea {
-    all: unset;
-    padding: 1rem;
+    /* all: unset; */
+    padding: .5rem;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 100%;
-    height: 15rem;
-
-    &::placeholder {
-        opacity: .6;
-    }
+    border-radius: 5px;
+    font-size: var(--body-400);
+    resize: none;
+    /* white-space: nowrap; */
 }
 
 a {
@@ -332,15 +339,14 @@ a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: center;
     background-color: #fff;
     align-items: center;
     color: #000;
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 1.875rem 1.25rem;
     position: fixed;
-    width: 40%;
-    height: 50%;
+    width: 70%;
+    height: fit-content;
     z-index: 100;
     top: 0;
     left: 0;
@@ -348,24 +354,14 @@ a {
     bottom: 0;
     margin: auto;
 
-    @media (min-width: var(--tablet)) {
-        max-width: 30rem;
-        padding: 2.5rem;
-        gap: 1rem;
-    }
-
     h2 {
-        font-size: var(--body-500);
-
+        font-size: var(--heading-500);
+        padding-top: 1rem;
     }
 
-    img {
-        width: 100%;
-        height: 60%;
-    }
-
-    .primary-button {
-        padding: 1rem 3rem;
+    p {
+        font-size: var(--body-400);
+        text-align: center;
     }
 }
 
@@ -594,9 +590,44 @@ footer {
     background: unset !important;
 }
 
+/* FullCalendar overwrite styles */
+.fc .fc-toolbar-title,
+.fc-toolbar-title {
+    font-size: var(--heading-500);
+}
+
+.fc .fc-button-primary {
+    background-color: #fff;
+    border-color: var(--grey);
+    color: #000
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #fff;
+    border-color: var(--grey);
+    color: #000
+}
+
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: #fff;
+    border-color: var(--grey);
+    color: #000
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: var(--grey);
+    border-color: var(--grey);
+    color: #fff
+}
+
 @media screen and (min-width: 768px) {
     .main-container {
         min-height: 100vh;
+    }
+
+    .popup {
+        width: 40%;
+
     }
 
     .rightSide {
@@ -612,5 +643,13 @@ footer {
 @media screen and (min-width: 1024px) {
     section {
         padding: 3.5rem 2rem;
+    }
+
+    .popup {
+        padding: 2rem 1.75rem;
+    }
+
+    .popup p {
+        max-width: 80%;
     }
 }

@@ -1,0 +1,42 @@
+.buttonIcon img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.buttonIcon {
+    border: 2px solid #F0F0F0;
+    border-radius: 50%;
+    margin-top: 1rem;
+    padding: .75rem;
+}
+
+.iconMenuClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .buttonIcon img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .buttonIcon {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    .buttonIcon img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .buttonIcon {
+        padding: 1.5rem;
+    }
+}
