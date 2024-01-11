@@ -15,15 +15,18 @@ import Values from '@/Components/Values';
 import GlobalContext from '@/Store/GlobalContext';
 import portfolioBg from '../public/images/portfolio_bg.jpeg';
 import Image from 'next/image';
-import Meeting from './book-a-call';
 import { getLogger } from '@/Logging/log-util';
+import Meeting from '@/Components/Meeting';
+import getAccessToken from '@/Utils/getAccessTokenUtils';
+import getGoogleEvents from '@/Utils/getGoogleEvents';
+import PopupAddAgenda from '@/Components/PopupAddAgenda';
 
-export default function Home() {
+export default function Home({ googleCalendarEvents }) {
 
   const logger = getLogger('Meeting');
 
   const [screenWidth, setScreenWidth] = useState();
-  const { isLoading } = useContext(GlobalContext);
+
   const { showPopupConfirmation, setShowPopupConfirmation } = useContext(GlobalContext);
   const { showPopupError, setShowPopupError } = useContext(GlobalContext);
   const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useContext(GlobalContext);
@@ -33,8 +36,11 @@ export default function Home() {
   const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
   const { mobileResolution, tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
-
+  const { isLoading, setIsLoading } = useContext(GlobalContext);
+  const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
+  const { isMenuOpen } = useContext(GlobalContext);
   logger.info('Home page rendered');
+
   const handleMenuDisplay = () => {
     setScreenWidth(window.screen.width);
 
@@ -55,8 +61,14 @@ export default function Home() {
   }, [screenWidth])
 
 
+
   return (
     <>
+      {isLoading && <Spinner />}
+      {showPopupAddMeetingInClientCalendar && <PopupAddAgenda
+        showPopup={showPopupAddMeetingInClientCalendar}
+        setShowPopup={setShowPopupAddMeetingInClientCalendar}
+      />}
       <Head>
         <title>Portfolio André-Lubin Thomas</title>
         <meta name="description" content="Portfolio du développeur André-Lubin Thomas" />
@@ -64,6 +76,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script src="https://apis.google.com/js/api.js" type="text/javascript" />
       </Head>
+      {isMenuOpen && <div className='overlay-burger-menu'></div>}
 
       <main className="main-container">
         {(isMobileResolution || isTabletResolution) &&
@@ -88,9 +101,7 @@ export default function Home() {
       </main >
       <Values />
       <Project />
-      {/* <Meeting /> */}
-
-
+      <Meeting googleCalendarEvents={googleCalendarEvents} />
 
 
       {/* {isLoading && <Spinner />}
@@ -124,5 +135,35 @@ export default function Home() {
 
     </>
   )
+
+}
+
+
+/************************************************************************************************************* */
+/* There is an issue, I'm requesting a new access token each time, even if the previous one is still valid *****/
+/* Write the access token in a file *****/
+/************************************************************************************************************* */
+
+export async function getStaticProps(context) {
+
+  const logger = getLogger('BookACall - getStaticProps');
+
+  // Retrieve the access token from Google API
+  const accessToken = await getAccessToken('https://www.googleapis.com/auth/calendar.readonly');
+
+  let calendarData = null;
+
+  // Call Google Calendar API only if the access token is not null
+  if (accessToken) {
+    calendarData = await getGoogleEvents(accessToken);
+  }
+
+  return {
+    props: {
+      googleCalendarEvents: calendarData || []
+    },
+    revalidate: 3599,
+  };
+
 
 }

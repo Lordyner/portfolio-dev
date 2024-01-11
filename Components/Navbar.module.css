@@ -59,6 +59,7 @@ a.link {
 
 .sideMenu.active {
     right: 0;
+    transition: right .2s ease-in-out;
 }
 
 
@@ -97,7 +98,7 @@ a.link {
     height: 100%;
     width: 55%;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     right: -3000px;
     background-color: #fff;
@@ -109,6 +110,7 @@ a.link {
     padding: 2rem;
     font-size: var(--body-500);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
 }
 
 .sideMenu a {

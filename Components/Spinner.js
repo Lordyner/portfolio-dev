@@ -4,9 +4,9 @@ import { TailSpin } from 'react-loader-spinner';
 const Spinner = () => {
     return (
         <div className="overlay-loader"><TailSpin
-            height="200"
-            width="200"
-            color="#6E07F3"
+            height="150"
+            width="150"
+            color="#837BD1"
             ariaLabel="tail-spin-loading"
             radius="1"
             wrapperStyle={{}}

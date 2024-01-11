@@ -6,6 +6,7 @@ import getAccessToken from '@/Utils/getAccessTokenUtils';
 import GlobalContext from '@/Store/GlobalContext';
 import Spinner from '@/Components/Spinner';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
+import getGoogleEvents from '@/Utils/getGoogleEvents';
 
 
 const BookACall = ({ googleCalendarEvents }) => {
@@ -49,7 +50,6 @@ const BookACall = ({ googleCalendarEvents }) => {
             {showPopupAddMeetingInClientCalendar && <PopupAddAgenda
                 showPopup={showPopupAddMeetingInClientCalendar}
                 setShowPopup={setShowPopupAddMeetingInClientCalendar}
-                createEventInUserCalendar={addEventInFinalUser}
             />}
             <Navbar />
             <Meeting googleCalendarEvents={googleCalendarEvents} />
@@ -57,6 +57,10 @@ const BookACall = ({ googleCalendarEvents }) => {
     );
 };
 
+/************************************************************************************************************* */
+/* There is an issue, I'm requesting a new access token each time, even if the previous one is still valid *****/
+/* Write the access token in a file *****/
+/************************************************************************************************************* */
 
 export async function getStaticProps(context) {
 
@@ -69,38 +73,8 @@ export async function getStaticProps(context) {
 
     // Call Google Calendar API only if the access token is not null
     if (accessToken) {
-        // 3. Call Calendar API
-        try {
-            logger.info('Calling calendar API');
-            const responseCalendar = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${process.env.CALENDAR_ID}/events`, {
-                method: 'GET',
-                headers: { 'Authorization': 'Bearer ' + accessToken }
-            });
-            const dataCalendar = await responseCalendar.json();
-
-            // Get all the items of dataCalendar
-            calendarData = dataCalendar.items;
-
-            // Filter events to keep only the confirmed ones
-            calendarData = calendarData.filter(event => event.status === 'confirmed');
-
-            //Retrieve usefull properties of each event and if one of the properties is undefined, set it to null, only if the status equals confirmed
-            calendarData = calendarData.map(event => {
-                return {
-                    title: 'Réservé',
-                    start: event.start.dateTime || null,
-                    end: event.end.dateTime || null
-                }
-            })
-
-        } catch (error) {
-            logger.error('Error while calling calendar API : ' + error.message);
-        }
+        calendarData = await getGoogleEvents(accessToken);
     }
-
-
-    // There is an issue, I'm requesting a new access token each time, even if the previous one is still valid
-
 
     return {
         props: {
@@ -111,4 +85,5 @@ export async function getStaticProps(context) {
 
 
 }
+
 export default BookACall;

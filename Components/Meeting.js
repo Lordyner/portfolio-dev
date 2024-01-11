@@ -80,8 +80,8 @@ const Meeting = ({ googleCalendarEvents }) => {
 
     const createEvent = (e) => {
         e.preventDefault();
+
         console.log("handleSubmit")
-        setIsLoading(true);
         // Call the api to create the event
         const params = {
             selectedDate: selectedDate,
@@ -89,17 +89,16 @@ const Meeting = ({ googleCalendarEvents }) => {
             mail: form.current.mail.value,
             tel: form.current.tel.value
         }
-        // Check if any of the fields are empty and if so, return
-        if (!params.selectedDate || !params.description ||
-            !params.mail || !params.tel) {
-            //Log all the fields
-            logger.info(JSON.stringify(params));
-
-            logger.info("One of the fields is empty");
-            alert("Veuillez saisir tous les champs");
+        // Check if the fields are valid
+        if (!params.description || !params.selectedDate || !params.mail
+            || !params.tel || !params.mail.includes('@') || !params.mail.includes('.') ||
+            !params.tel.match(/^[0-9]{10}$/)) {
+            logger.info("No date has been selected");
+            isMobileResolution ? alert('Veuillez saisir un creneau horaire en restant appuyé une seconde sur le calendrier') : alert('Veuillez saisir un créneau horaire en cliquant sur le calendrier');
             return;
         }
 
+        setIsLoading(true);
 
         fetch('/api/createEvent', {
             method: 'POST',
@@ -129,20 +128,20 @@ const Meeting = ({ googleCalendarEvents }) => {
             <div className={classes.content}>
                 <h1>Réserver un appel</h1>
                 <p>Vous avez un besoin, une idée de projet, des maquettes à transformer en site ? Discutons en ensemble</p>
-                {(isMobileResolution || isTabletResolution) && <div class={classes.separation}></div>}
+                {(isMobileResolution || isTabletResolution) && <div className={classes.separation}></div>}
                 <form ref={form} className={classes.form} onSubmit={createEvent}>
                     <div className={classes.fieldsWrapper}>
                         <div className={classes.formGroup}>
                             <label htmlFor='mail'>Mail</label>
-                            <input type='text' name='mail' id='mail'></input>
+                            <input type='email' name='mail' id='mail' pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></input>
                         </div>
                         <div className={classes.formGroup}>
                             <label htmlFor='tel'>Téléphone</label>
-                            <input type='text' name='tel' id='tel'></input>
+                            <input type='text' name='tel' id='tel' pattern="[0-9]+" required></input>
                         </div>
                         <div className={classes.formGroup}>
                             <label htmlFor='message'>Message</label>
-                            <textarea id='message' name='message' type='textarea' rows={8}></textarea>
+                            <textarea id='message' name='message' type='textarea' rows={8} required></textarea>
                         </div>
                         <FullCalendar
                             ref={fullCalendar}
@@ -159,6 +158,30 @@ const Meeting = ({ googleCalendarEvents }) => {
                             selectAllow={function (selectInfo) {
                                 var duration = Math.abs(selectInfo.end - selectInfo.start);
                                 return duration === 1800000;
+                            }}
+                            customButtons={{
+                                prev: {
+                                    click: function () {
+                                        fullCalendar.current.getApi().prev();
+                                        setSelectedDate(null);
+
+                                    }
+                                },
+                                next: {
+                                    click: function () {
+                                        fullCalendar.current.getApi().next();
+                                        setSelectedDate(null);
+
+                                    }
+                                },
+                                today: {
+                                    text: 'Aujourd\'hui',
+                                    click: function () {
+                                        fullCalendar.current.getApi().today();
+                                        setSelectedDate(null);
+
+                                    }
+                                }
                             }}
 
                             headerToolbar={
@@ -191,11 +214,12 @@ const Meeting = ({ googleCalendarEvents }) => {
                             eventContent={renderEventContent}
                             locale='fr'
                             events={googleCalendarEvents}
+                            required
                         />
                     </div>
-                    <div className={classes.buttonWrapper}>
 
-                        <button className='primary-button'>Confirmer</button>
+                    <div className={classes.buttonWrapper}>
+                        <button className='primary-button' type='submit'>Confirmer</button>
                         <button className='secondary-button'>Annuler</button>
                     </div>
                 </form>

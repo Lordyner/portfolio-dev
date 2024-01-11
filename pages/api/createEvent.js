@@ -15,7 +15,6 @@ export default async function createEvent(req, res) {
         res.status(400).json({ message: 'One of the fields is empty' });
         return;
     }
-    res.status(200).json({ message: 'Event created successfully' });
 
 
     /*******************************************************************************************/
@@ -64,7 +63,7 @@ export default async function createEvent(req, res) {
                     dateTime: selectedDate.end,
                     timeZone: 'Europe/Paris'
                 },
-                status: 'tentative',
+                status: 'confirmed',
                 summary: `Call with a prospect ${mail} ${tel}`,
                 description: description
 

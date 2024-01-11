@@ -79,12 +79,21 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    /* Bug : rentre en conflit avec le form validation (le message d'erreur ne s'affiche pas)  */
+    /* scroll-behavior: smooth; */
+
 }
 
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
 }
+
+/* input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+} */
 
 
 
@@ -322,9 +331,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(35, 31, 31, .3);
+    background-color: rgb(35, 31, 31, .5);
     width: 100%;
     height: 100%;
+    z-index: 999;
 
 }
 
@@ -332,8 +342,19 @@ a {
     width: 100%;
     height: 100%;
     position: fixed;
-    background: rgba(0, 0, 0, 0.55);
+    background-color: rgb(35, 31, 31, .3);
+    z-index: 999;
 }
+
+.overlay-burger-menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(35, 31, 31, .3);
+    z-index: 999;
+    transition: .3s ease-in-out;
+}
+
 
 .popup {
     display: flex;
@@ -353,10 +374,12 @@ a {
     right: 0;
     bottom: 0;
     margin: auto;
+    z-index: 9999;
 
     h2 {
         font-size: var(--heading-500);
         padding-top: 1rem;
+        text-align: center;
     }
 
     p {
