@@ -20,6 +20,7 @@ import Meeting from '@/Components/Meeting';
 import getAccessToken from '@/Utils/getAccessTokenUtils';
 import getGoogleEvents from '@/Utils/getGoogleEvents';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
+import FAQ from '@/Components/FAQ';
 
 export default function Home({ googleCalendarEvents }) {
 
@@ -74,7 +75,6 @@ export default function Home({ googleCalendarEvents }) {
         <meta name="description" content="Portfolio du développeur André-Lubin Thomas" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <script src="https://apis.google.com/js/api.js" type="text/javascript" />
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
 
@@ -101,37 +101,12 @@ export default function Home({ googleCalendarEvents }) {
       </main >
       <Values />
       <Project />
-      <Meeting googleCalendarEvents={googleCalendarEvents} />
+      <FAQ />
+
+      {/* <Meeting googleCalendarEvents={googleCalendarEvents} /> */}
 
 
-      {/* {isLoading && <Spinner />}
-        {showPopupConfirmation && <PopupContact
-          title="MAIL ENVOYÉ"
-          img={illustrationMailSent}
-          buttonText="OK"
-          imgDescription="illustration mail envoyé"
-          showPopup={showPopupConfirmation}
-          setShowPopup={setShowPopupConfirmation}
-        />}
-        {showPopupError && <PopupContact
-          title="ÉCHEC ENVOIE MAIL"
-          img={illustrationMailError}
-          buttonText="OK"
-          imgDescription="illustration échec mail"
-          showPopup={showPopupError}
-          setShowPopup={setShowPopupError}
-        />}
-        {showPopupContactFormIncorrect &&
-          <PopupContact
-            title="Veuillez remplir correctement les champs"
-            img={formValidationImg}
-            buttonText="OK"
-            imgDescription="form validation"
-            showPopup={showPopupContactFormIncorrect}
-            setShowPopup={setShowPopupContactFormIncorrect} />} */}
-      {/* <SkillSection />
-        */}
-      {/* <Footer /> */}
+      <Footer />
 
     </>
   )

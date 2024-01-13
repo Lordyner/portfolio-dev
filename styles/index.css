@@ -261,7 +261,6 @@ button {
     border-radius: 10rem;
     font-size: var(--body-500);
     transition: 0.2s ease-in-out;
-    text-transform: uppercase;
 }
 
 .dark-filter {
@@ -269,7 +268,7 @@ button {
     transition: background-color .5s,
 }
 
-a.secondary-button {
+/* a.secondary-button {
     padding: 1rem;
     border-radius: 2px;
     min-width: 80px;
@@ -289,7 +288,7 @@ a.secondary-button {
         color: #fff;
         transition: .2s ease-in-out;
     }
-}
+} */
 
 input {
     /* all: unset; */
@@ -389,9 +388,8 @@ a {
 }
 
 section {
-    padding: 2rem;
+    padding: 2rem 1rem;
     min-height: 100svh;
-
 }
 
 .splide__pagination__page.is-active {
@@ -658,7 +656,7 @@ footer {
     }
 
     section {
-
+        padding: 2rem;
         min-height: 100vh;
     }
 }

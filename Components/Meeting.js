@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import classes from './Meeting.module.css';
 import Image from 'next/image';
 import profilPic from '@/public/images/profile_pic_zoomed_a_bit.jpg';
-import profilPicWithoutBg from '@/public/images/profile_pic_zoomed_a_bit-removebg.png';
 import GlobalContext from '@/Store/GlobalContext';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -220,14 +219,12 @@ const Meeting = ({ googleCalendarEvents }) => {
 
                     <div className={classes.buttonWrapper}>
                         <button className='primary-button' type='submit'>Confirmer</button>
-                        <button className='secondary-button'>Annuler</button>
+                        <a type='button' className='secondary-button' href="/">Annuler</a>
                     </div>
                 </form>
             </div >
             {(isLaptopResolution || isDesktopResolution) && <div className={classes.imageWrapper}>
-                {/* <div className={classes.colorBg} /> */}
                 <Image src={profilPic} alt='Thomas André-Lubin en train de déveloper sur son ordinateur' />
-                {/* <Image src={profilPicWithoutBg} alt='Thomas André-Lubin en train de déveloper sur son ordinateur' /> */}
 
             </div>}
         </main >
