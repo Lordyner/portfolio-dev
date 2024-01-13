@@ -583,30 +583,6 @@ section {
     flex-direction: column;
 }
 
-footer {
-    background-color: var(--footer-background-color);
-    color: #fff;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    h3 {
-        font-weight: normal;
-        ;
-        color: #fff;
-    }
-
-    a,
-    .social-links {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        font-size: var(--body-500);
-        color: #fff;
-    }
-}
-
 .splide__arrow {
     background: unset !important;
 }

@@ -1,20 +1,55 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
+import classes from './Footer.module.css';
+import avatarOfMe from '@/public/images/avatarOfMe.png';
+import Image from 'next/image';
+import GlobalContext from '@/Store/GlobalContext';
 
 const Footer = () => {
+
+    const { isMobileResolution } = useContext(GlobalContext)
     return (
-        <footer>
-            <div>
-                <h4>ANDRE-LUBIN THOMAS</h4>
-                <span>Développeur Fullstack avec 5 ans d'expériences dans de multiples secteurs.</span>
-            </div>
-            <div className='social-links'>
-                <a href="https://github.com/Lordyner" target='_blank'>
-                    <SiGithub />
-                </a>
-                <a href="https://www.linkedin.com/in/thomas-andre-lubin-988760111/" target='_blank'>
-                    <SiLinkedin />
-                </a>
+        <footer className={classes.footer}>
+            <div className={classes.container}>
+                {isMobileResolution &&
+                    <div className={classes.valueProposition}>
+
+                        <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />
+                        <div>
+                            <h2>Thomas André-Lubin</h2>
+                            <p>Value proposition qui fait des trucs</p>
+                        </div>
+                    </div>
+                }
+                {!isMobileResolution &&
+                    <div className={classes.valueProposition}>
+                        <div className={classes.imageAndNameContainer}>
+                            <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />
+                            <h2>Thomas André-Lubin</h2>
+                        </div>
+                        <p>Value proposition qui fait des trucs</p>
+                    </div>
+                }
+                {isMobileResolution && <div className={classes.separator}></div>}
+
+                <div className={classes.linkContainer}>
+                    <div className={classes.topLinks}>
+                        <div className={classes.classicLinks}>
+                            <a href="/">Accueil</a>
+                            <a href="/">Curriculum Vitae</a>
+                            <a href="/">Projets</a>
+                        </div>
+                    </div>
+                    {!isMobileResolution && <div className={classes.separator}></div>}
+                    <div className={classes.socialLinks}>
+                        <a href="https://github.com/Lordyner" className={classes.icon} target='_blank'>
+                            <SiGithub alt='toto' />
+                        </a>
+                        <a href="https://www.linkedin.com/in/thomas-andre-lubin-988760111/" className={classes.icon} target='_blank'>
+                            <SiLinkedin alt='tata' />
+                        </a>
+                    </div>
+                </div>
             </div>
         </footer>
     );
