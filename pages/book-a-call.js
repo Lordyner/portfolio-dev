@@ -7,6 +7,7 @@ import GlobalContext from '@/Store/GlobalContext';
 import Spinner from '@/Components/Spinner';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
 import getGoogleEvents from '@/Utils/getGoogleEvents';
+import Footer from '@/Components/Footer';
 
 
 const BookACall = ({ googleCalendarEvents }) => {
@@ -53,6 +54,8 @@ const BookACall = ({ googleCalendarEvents }) => {
             />}
             <Navbar />
             <Meeting googleCalendarEvents={googleCalendarEvents} />
+            <Footer />
+
         </>
     );
 };

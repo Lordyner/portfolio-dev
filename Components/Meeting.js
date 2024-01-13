@@ -219,7 +219,7 @@ const Meeting = ({ googleCalendarEvents }) => {
 
                     <div className={classes.buttonWrapper}>
                         <button className='primary-button' type='submit'>Confirmer</button>
-                        <a type='button' className='secondary-button' href="/">Annuler</a>
+                        <a type='button' className='secondary-button' href="/#home">Annuler</a>
                     </div>
                 </form>
             </div >

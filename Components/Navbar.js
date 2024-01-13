@@ -6,7 +6,6 @@ import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 const Navbar = () => {
 
-    const { isDesktopResolution } = useContext(GlobalContext);
     const { isMobileResolution } = useContext(GlobalContext);
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     return (
@@ -33,11 +32,11 @@ const Navbar = () => {
             {/* Side menu */}
             <div id="sideMenu" className={`${classes.sideMenu} ${isMenuOpen ? classes.active : ""}`}>
                 <div className='d-flex justify-content-end mb-4'>
-                    <Image src={iconMenuClose} alt='close menu icon' id='close-menu-icon' onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                    <Image src={iconMenuClose} alt='icône de fermeture du menu' id='close-menu-icon' onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 </div>
-                <a href="#">CURRICULUM VITAE</a>
-                <a href="#contact-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>CONTACT</a>
-                <a href="#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</a>
+                <a href="/book-a-call" onClick={() => setIsMenuOpen(!isMenuOpen)}>RENDEZ-VOUS</a>
+                <a href="/CV-andrelubin-thomas.pdf">CURRICULUM VITAE</a>
+                <a href="/#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</a>
             </div>
         </nav >
     );

@@ -4,9 +4,6 @@ import Link from 'next/link';
 import portfolioBgMobile from '../public/images/portfolio_bg_mobile_reduced.jpeg';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
-import rocket from '@/public/images/rocket_handdrawn.svg';
-import laptop from '@/public/images/laptop_handdrawn.svg';
-import githubMascot from '@/public/images/github_handdrawn.svg';
 
 const Hero = () => {
 
@@ -14,7 +11,7 @@ const Hero = () => {
     const { isTabletResolution } = useContext(GlobalContext);
 
     return (
-        <main className={classes.heroContainer}>
+        <main id="home" className={classes.heroContainer}>
             <div className={classes.textWrapper}>
                 <h1>Développeur web</h1>
                 <div className={classes.valueProposition}>

@@ -8,7 +8,7 @@ import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
 
 const Project = () => {
     return (
-        <section className={classes.projectSection}>
+        <section id='projects-section' className={classes.projectSection}>
             <h2>Derniers projets</h2>
             <div className={classes.container}>
                 <div className={classes.card}>

@@ -102,10 +102,6 @@ export default function Home({ googleCalendarEvents }) {
       <Values />
       <Project />
       <FAQ />
-
-      {/* <Meeting googleCalendarEvents={googleCalendarEvents} /> */}
-
-
       <Footer />
 
     </>

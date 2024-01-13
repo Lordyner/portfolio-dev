@@ -35,9 +35,9 @@ const Footer = () => {
                 <div className={classes.linkContainer}>
                     <div className={classes.topLinks}>
                         <div className={classes.classicLinks}>
-                            <a href="/">Accueil</a>
-                            <a href="/">Curriculum Vitae</a>
-                            <a href="/">Projets</a>
+                            <a href="/#home">Accueil</a>
+                            <a href="/CV-andrelubin-thomas.pdf">Curriculum Vitae</a>
+                            <a href="/#projects-section">Projets</a>
                         </div>
                     </div>
                     {!isMobileResolution && <div className={classes.separator}></div>}
