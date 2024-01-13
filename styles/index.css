@@ -90,11 +90,24 @@ body {
 
 }
 
-/* input:invalid,
-textarea:invalid {
-    border: 2px solid red;
-} */
 
+::-webkit-scrollbar {
+    width: .75rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: .5rem;
+    background-color: var(--lightGrey);
+    border: 1px solid #cacaca;
+    margin-block: .1em;
+
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    /* background-color: #ad9ede; */
+    background-color: #A0A0A0;
+}
 
 
 /* UTILS */
@@ -439,74 +452,6 @@ section {
             font-size: 1.4rem;
             line-height: 2.5rem;
             opacity: .8;
-        }
-    }
-
-    .skills-container {
-        display: flex;
-        flex-direction: column;
-        padding: 3rem 0;
-        gap: 2.5rem;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-            padding: 3rem 0 0 0;
-        }
-
-        .skill {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-
-            .skill-values {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .gauge {
-                background-color: #fff;
-                border: 1px solid #000000;
-                opacity: .6;
-                border-radius: 10px;
-                height: 16px;
-
-
-            }
-
-            .gauge-fill {
-                background-color: var(--darker-primary-color);
-                border-radius: 10px;
-                height: 7px;
-                opacity: .2;
-                position: relative;
-                bottom: 12px;
-                left: 4px;
-                transition: .1s ease-in-out;
-
-                &:hover {
-                    opacity: .6;
-                    transition: .3s ease-in-out;
-                }
-            }
-
-            .gauge-90 {
-                width: 90%;
-            }
-
-            .gauge-75 {
-                width: 75%;
-            }
-
-            .skill-name,
-            .skill-pourcentage {
-                font-weight: 600;
-            }
-
-
         }
     }
 }

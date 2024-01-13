@@ -56,11 +56,6 @@ a.link {
 }
 
 
-#closeMenuIcon {
-    width: 1.5rem;
-    color: var(--darker-primary-color);
-}
-
 .sideMenu.active {
     right: 0;
     transition: right .2s ease-in-out;
