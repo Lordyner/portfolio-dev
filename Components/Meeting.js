@@ -12,7 +12,7 @@ import Link from 'next/link';
 const Meeting = ({ googleCalendarEvents }) => {
 
     const logger = getLogger('Meeting');
-    const { isLoading, setIsLoading } = useContext(GlobalContext);
+    const { setIsLoading } = useContext(GlobalContext);
 
     const [screenWidth, setScreenWidth] = useState();
     const [selectedDate, setSelectedDate] = useState();
@@ -21,7 +21,7 @@ const Meeting = ({ googleCalendarEvents }) => {
     const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
     const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
     const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
-    const { mobileResolution, tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+    const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
     const { setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
 
     const form = useRef();
@@ -53,13 +53,13 @@ const Meeting = ({ googleCalendarEvents }) => {
 
         )
     }
+
     // function for select callback
     function handleSelect(info) {
         setSelectedDate({
             start: info.startStr,
             end: info.endStr
         });
-        console.log(info.startStr + ' to ' + info.endStr);
     }
 
     function clearForm() {
@@ -90,9 +90,7 @@ const Meeting = ({ googleCalendarEvents }) => {
             tel: form.current.tel.value
         }
         // Check if the fields are valid
-        if (!params.description || !params.selectedDate || !params.mail
-            || !params.tel || !params.mail.includes('@') || !params.mail.includes('.') ||
-            !params.tel.match(/^[0-9]{10}$/)) {
+        if (!params.selectedDate) {
             logger.info("No date has been selected");
             isMobileResolution ? alert('Veuillez saisir un creneau horaire en restant appuyé une seconde sur le calendrier') : alert('Veuillez saisir un créneau horaire en cliquant sur le calendrier');
             return;
@@ -127,7 +125,7 @@ const Meeting = ({ googleCalendarEvents }) => {
         <main className={classes.meeting}>
             <div className={classes.content}>
                 <h1>Réserver un appel</h1>
-                <p>Vous avez un besoin, une idée de projet, des maquettes à transformer en site ? Discutons en ensemble</p>
+                <p>Vous avez un besoin, une idée de projet, des maquettes à transformer en site ? Discutons-en ensemble</p>
                 {(isMobileResolution || isTabletResolution) && <div className={classes.separation}></div>}
                 <form ref={form} className={classes.form} onSubmit={createEvent}>
                     <div className={classes.fieldsWrapper}>
@@ -225,7 +223,6 @@ const Meeting = ({ googleCalendarEvents }) => {
             </div >
             {(isLaptopResolution || isDesktopResolution) && <div className={classes.imageWrapper}>
                 <Image src={profilPic} alt='Thomas André-Lubin en train de déveloper sur son ordinateur' />
-
             </div>}
         </main >
     );

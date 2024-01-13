@@ -16,35 +16,6 @@ const BookACall = ({ googleCalendarEvents }) => {
     const { isLoading, setIsLoading } = useContext(GlobalContext);
     const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
     const router = useRouter();
-    const addEventInFinalUser = async () => {
-        fetch('/api/addEventInFinalUser', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                summary: 'Rendez-vous avec le client',
-                description: 'Rendez-vous avec le client',
-                start: {
-                    dateTime: '2021-10-15T10:00:00-07:00',
-                    timeZone: 'America/Los_Angeles'
-                },
-                end: {
-                    dateTime: '2021-10-15T10:25:00-07:00',
-                    timeZone: 'America/Los_Angeles'
-                },
-                attendees: [
-                    { email: '' },
-                ],
-            })
-        }).then(response => {
-            if (response.status === 201 || response.status === 200) {
-                console.log("Event created");
-            } else {
-                console.log("Event not created");
-            }
-        })
-    }
 
     useEffect(() => {
         // Handle loading spinner during page transitions

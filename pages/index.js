@@ -1,34 +1,29 @@
 import Head from 'next/head';
 import { useState, useEffect, useContext, Suspense } from 'react';
+import { getLogger } from '@/Logging/log-util';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 import Navbar from '@/Components/Navbar';
 import Hero from '@/Components/Hero';
-import SkillSection from '@/Components/SkillSection';
 import Project from '@/Components/Project';
-import Contact from '@/Components/Contact';
 import Footer from '@/Components/Footer';
 import Spinner from '@/Components/Spinner';
-import illustrationMailError from '@/public/images/illustration_bug.svg'
-import illustrationMailSent from '@/public/images/illustration_mail_sent.svg'
-import formValidationImg from '@/public/images/form_validation.svg'
-import PopupContact from '@/Components/Popup';
 import Values from '@/Components/Values';
-import GlobalContext from '@/Store/GlobalContext';
-import portfolioBg from '../public/images/portfolio_bg.jpeg';
-import Image from 'next/image';
-import { getLogger } from '@/Logging/log-util';
-import Meeting from '@/Components/Meeting';
-import getAccessToken from '@/Utils/getAccessTokenUtils';
-import getGoogleEvents from '@/Utils/getGoogleEvents';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
 import FAQ from '@/Components/FAQ';
-import { useRouter } from 'next/router';
+import GlobalContext from '@/Store/GlobalContext';
+import portfolioBg from '../public/images/portfolio_bg.jpeg';
 
-export default function Home({ googleCalendarEvents }) {
+export default function Home() {
 
+  /* Logger */
   const logger = getLogger('Meeting');
+  logger.info('Home page rendered');
 
+  /* State */
   const [screenWidth, setScreenWidth] = useState();
 
+  /* Context */
   const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
   const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
   const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
@@ -37,9 +32,11 @@ export default function Home({ googleCalendarEvents }) {
   const { isLoading, setIsLoading } = useContext(GlobalContext);
   const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
   const { isMenuOpen } = useContext(GlobalContext);
-  const router = useRouter();
-  logger.info('Home page rendered');
 
+  /* Router */
+  const router = useRouter();
+
+  /* Functions */
   const handleMenuDisplay = () => {
     setScreenWidth(window.screen.width);
 
@@ -117,26 +114,3 @@ export default function Home({ googleCalendarEvents }) {
 /* Write the access token in a file *****/
 /************************************************************************************************************* */
 
-export async function getStaticProps(context) {
-
-  const logger = getLogger('BookACall - getStaticProps');
-
-  // Retrieve the access token from Google API
-  const accessToken = await getAccessToken('https://www.googleapis.com/auth/calendar.readonly');
-
-  let calendarData = null;
-
-  // Call Google Calendar API only if the access token is not null
-  if (accessToken) {
-    calendarData = await getGoogleEvents(accessToken);
-  }
-
-  return {
-    props: {
-      googleCalendarEvents: calendarData || []
-    },
-    revalidate: 3599,
-  };
-
-
-}
