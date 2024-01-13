@@ -1,6 +1,6 @@
 import Meeting from '@/Components/Meeting';
 import Navbar from '@/Components/Navbar';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { getLogger } from '@/Logging/log-util';
 import getAccessToken from '@/Utils/getAccessTokenUtils';
 import GlobalContext from '@/Store/GlobalContext';
@@ -8,13 +8,14 @@ import Spinner from '@/Components/Spinner';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
 import getGoogleEvents from '@/Utils/getGoogleEvents';
 import Footer from '@/Components/Footer';
+import { useRouter } from 'next/router';
 
 
 const BookACall = ({ googleCalendarEvents }) => {
 
     const { isLoading, setIsLoading } = useContext(GlobalContext);
     const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
-
+    const router = useRouter();
     const addEventInFinalUser = async () => {
         fetch('/api/addEventInFinalUser', {
             method: 'POST',
@@ -44,6 +45,12 @@ const BookACall = ({ googleCalendarEvents }) => {
             }
         })
     }
+
+    useEffect(() => {
+        // Handle loading spinner during page transitions
+        router.events.on("routeChangeStart", () => setIsLoading(true));
+        router.events.on("routeChangeComplete", () => setIsLoading(false));
+    }, [])
 
     return (
         <>

@@ -4,6 +4,7 @@ import classes from './Footer.module.css';
 import avatarOfMe from '@/public/images/avatarOfMe.png';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
+import Link from 'next/link';
 
 const Footer = () => {
 
@@ -35,17 +36,17 @@ const Footer = () => {
                 <div className={classes.linkContainer}>
                     <div className={classes.topLinks}>
                         <div className={classes.classicLinks}>
-                            <a href="/#home">Accueil</a>
+                            <Link href="/#home">Accueil</Link>
                             <a href="/CV-andrelubin-thomas.pdf">Curriculum Vitae</a>
-                            <a href="/#projects-section">Projets</a>
+                            <Link href="/#projects-section">Projets</Link>
                         </div>
                     </div>
                     <div className={classes.socialLinks}>
                         <a href="https://github.com/Lordyner" className={classes.icon} target='_blank'>
-                            <SiGithub alt='toto' />
+                            <SiGithub alt='icône Github' />
                         </a>
                         <a href="https://www.linkedin.com/in/thomas-andre-lubin-988760111/" className={classes.icon} target='_blank'>
-                            <SiLinkedin alt='tata' />
+                            <SiLinkedin alt='icône Linkedin' />
                         </a>
                     </div>
                 </div>

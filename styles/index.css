@@ -236,7 +236,7 @@ button {
 
     background-color: #fff;
     color: var(--black);
-    padding: 1em 2em;
+    padding: .75em 1.75em;
     border-radius: 10px;
     font-size: var(--body-500);
     transition: 0.2s ease-in-out;

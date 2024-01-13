@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, Suspense } from 'react';
 import Navbar from '@/Components/Navbar';
 import Hero from '@/Components/Hero';
 import SkillSection from '@/Components/SkillSection';
@@ -21,6 +21,7 @@ import getAccessToken from '@/Utils/getAccessTokenUtils';
 import getGoogleEvents from '@/Utils/getGoogleEvents';
 import PopupAddAgenda from '@/Components/PopupAddAgenda';
 import FAQ from '@/Components/FAQ';
+import { useRouter } from 'next/router';
 
 export default function Home({ googleCalendarEvents }) {
 
@@ -28,18 +29,15 @@ export default function Home({ googleCalendarEvents }) {
 
   const [screenWidth, setScreenWidth] = useState();
 
-  const { showPopupConfirmation, setShowPopupConfirmation } = useContext(GlobalContext);
-  const { showPopupError, setShowPopupError } = useContext(GlobalContext);
-  const { showPopupContactFormIncorrect, setShowPopupContactFormIncorrect } = useContext(GlobalContext);
-
   const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
   const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
   const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
-  const { mobileResolution, tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+  const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
   const { isLoading, setIsLoading } = useContext(GlobalContext);
   const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
   const { isMenuOpen } = useContext(GlobalContext);
+  const router = useRouter();
   logger.info('Home page rendered');
 
   const handleMenuDisplay = () => {
@@ -57,8 +55,13 @@ export default function Home({ googleCalendarEvents }) {
   }
 
   useEffect(() => {
+    // Handle menu display
     handleMenuDisplay();
     window.addEventListener('resize', handleMenuDisplay);
+
+    // Handle loading spinner
+    router.events.on("routeChangeStart", () => setIsLoading(true));
+    router.events.on("routeChangeComplete", () => setIsLoading(false));
   }, [screenWidth])
 
 
@@ -103,7 +106,6 @@ export default function Home({ googleCalendarEvents }) {
       <Project />
       <FAQ />
       <Footer />
-
     </>
   )
 

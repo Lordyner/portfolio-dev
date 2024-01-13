@@ -4,6 +4,7 @@ import iconMenuClose from '@/public/images/icon_menu_close.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
+import Link from 'next/link';
 const Navbar = () => {
 
     const { isMobileResolution } = useContext(GlobalContext);
@@ -11,15 +12,15 @@ const Navbar = () => {
     return (
         <nav className={classes.navbar}>
             <div className={classes.logo}>
-                <a className={classes.link} href="/">
+                <Link className={classes.link} href="/">
                     {isMobileResolution && <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />}
                     <span className={`${isMobileResolution ? "display-none" : ""}`}>ANDRE-LUBIN THOMAS</span>
-                </a>
+                </Link>
             </div>
             {/* Classic links */}
             <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
                 <a href="/CV-andrelubin-thomas.pdf" className={classes.link} download="CV-andrelubin-thomas">Curriculum Vitae</a>
-                <a href="#projects-section" className={classes.link}>Projets</a>
+                <Link href="/#projects-section" className={classes.link}>Projets</Link>
             </div>
 
             {/* Burger menu */}
@@ -34,9 +35,9 @@ const Navbar = () => {
                 <div className='d-flex justify-content-end mb-4'>
                     <Image src={iconMenuClose} alt='icône de fermeture du menu' id='close-menu-icon' onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 </div>
-                <a href="/book-a-call" onClick={() => setIsMenuOpen(!isMenuOpen)}>RESERVER UN APPEL</a>
+                <Link href="/book-a-call" onClick={() => setIsMenuOpen(!isMenuOpen)}>RESERVER UN APPEL</Link>
                 <a href="/CV-andrelubin-thomas.pdf">CURRICULUM VITAE</a>
-                <a href="/#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</a>
+                <Link href="/#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</Link>
             </div>
         </nav >
     );

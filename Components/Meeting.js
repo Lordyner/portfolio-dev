@@ -7,6 +7,7 @@ import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { getLogger } from '@/Logging/log-util';
 import interactionPlugin from "@fullcalendar/interaction"
+import Link from 'next/link';
 
 const Meeting = ({ googleCalendarEvents }) => {
 
@@ -218,7 +219,7 @@ const Meeting = ({ googleCalendarEvents }) => {
 
                     <div className={classes.buttonWrapper}>
                         <button className='primary-button' type='submit'>Confirmer</button>
-                        <a type='button' className='secondary-button' href="/#home">Annuler</a>
+                        <Link type='button' className='secondary-button' href="/#home">Annuler</Link>
                     </div>
                 </form>
             </div >

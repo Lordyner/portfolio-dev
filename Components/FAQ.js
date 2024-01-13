@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './FAQ.module.css';
 import QuestionAnswer from './QuestionAnswer';
+import Link from 'next/link';
 const FAQ = () => {
     return (
         <section className={classes.faqSection}>
@@ -17,7 +18,8 @@ const FAQ = () => {
 
             <div className={classes.bottomCAT}>
                 <p>D'autres questions en suspens ?</p>
-                <button className='primary-button'>Réserver un appel</button>
+                <Link href="/book-a-call" className='primary-button'>Réserver un appel</Link>
+
             </div>
         </section>
     );
