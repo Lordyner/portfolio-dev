@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className='d-flex justify-content-end mb-4'>
                     <Image src={iconMenuClose} alt='icône de fermeture du menu' id='close-menu-icon' onClick={() => setIsMenuOpen(!isMenuOpen)} />
                 </div>
-                <a href="/book-a-call" onClick={() => setIsMenuOpen(!isMenuOpen)}>RENDEZ-VOUS</a>
+                <a href="/book-a-call" onClick={() => setIsMenuOpen(!isMenuOpen)}>RESERVER UN APPEL</a>
                 <a href="/CV-andrelubin-thomas.pdf">CURRICULUM VITAE</a>
                 <a href="/#projects-section" onClick={() => setIsMenuOpen(!isMenuOpen)}>PROJETS</a>
             </div>

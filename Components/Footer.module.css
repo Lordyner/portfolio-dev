@@ -101,6 +101,8 @@
 
     .topLinks {
         display: flex;
+        border-bottom: 2px solid var(--lightGrey);
+        padding-bottom: 1rem;
     }
 
     .classicLinks {

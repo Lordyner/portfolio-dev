@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
 import classes from './Values.module.css';
 import Image from 'next/image';
-import happyClient from '../public/images/happy_client.svg'
-import communication from '../public/images/communication.svg'
-import quality from '../public/images/value_quality.svg'
-import time from '../public/images/value_time.svg'
+import userExperience from '../public/images/user_experience.png';
+import iconSEO from '../public/images/icon_seo.png'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import clock from '@/public/images/clock.png';
+import customMade from '../public/images/custom_made.png';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 
@@ -20,10 +18,11 @@ const Values = () => {
 
     return (
         <section className={classes.valueSection}>
-            <h2>Proposition de valeur</h2>
+            <h2>Augmentez votre visibilité, convertissez vos visiteurs en clients.</h2>
             <div className={classes.valueProposition}>
-                <p>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
-                <p>Lorepsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris magna augue, sagittis id lectus </p>
+                <p>Avoir un site internet aujourd'hui est une nécessité pour les entreprises.</p>
+                <p>Mais un site qui n'est pas visité ou que l'utilisateur quitte après cinq secondes, c'est de l'argent perdu.</p>
+                <p>C'est pourquoi je mets ces valeurs au centre de mon travail : </p>
             </div>
 
             {/* For laptop and desktop, we display values on the same row */}
@@ -31,26 +30,26 @@ const Values = () => {
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={clock} alt="Icône d'horloge" />
+                        <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" />
                     </div>
-                    <h3>Respect des deadlines</h3>
-                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <h3>Expérience utilisateur</h3>
+                    <p className={classes.valueDescription}>Une expérience utilisateur positive favorise la conversion en client.</p>
                 </div>
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={clock} alt="Icône d'horloge" />
+                        <Image src={iconSEO} alt="Icône SEO" />
                     </div>
-                    <h3>Respect des deadlines</h3>
-                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <h3>Bonnes pratiques SEO</h3>
+                    <p className={classes.valueDescription}>Le respect des bonnes pratiques SEO aide votre site à obtenir plus de trafic.</p>
                 </div>
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={clock} alt="Icône d'horloge" />
+                        <Image src={customMade} alt="Icône d'une interface avec des jauges" />
                     </div>
-                    <h3>Respect des deadlines</h3>
-                    <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                    <h3>Site sur mesure</h3>
+                    <p className={classes.valueDescription}>Chaque site que je réalise est construit sur mesure afin de répondre à vos besoins et coller à votre image.</p>
                 </div>
             </div>}
             {/* For mobile, we use a carousel to display values */}
@@ -69,30 +68,30 @@ const Values = () => {
                         <div className={classes.card}>
                             <div className={classes.imageWrapper}>
                                 <div className={classes.imageBg}></div>
-                                <Image src={clock} alt="Icône d'horloge" />
+                                <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" />
                             </div>
-                            <h3>Respect des deadlines</h3>
-                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <h3>Expérience utilisateur</h3>
+                            <p className={classes.valueDescription}>Une expérience utilisateur positive favorise la conversion en client.</p>
                         </div>
                     </SplideSlide>
                     <SplideSlide key="2">
                         <div className={classes.card}>
                             <div className={classes.imageWrapper}>
                                 <div className={classes.imageBg}></div>
-                                <Image src={clock} alt="Icône d'horloge" />
+                                <Image src={iconSEO} alt="Icône SEO" />
                             </div>
-                            <h3>Respect des deadlines</h3>
-                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <h3>Bonnes pratiques SEO</h3>
+                            <p className={classes.valueDescription}>Le respect des bonnes pratiques SEO aide votre site à obtenir plus de trafic.</p>
                         </div>
                     </SplideSlide>
                     <SplideSlide key="3">
                         <div className={classes.card}>
                             <div className={classes.imageWrapper}>
                                 <div className={classes.imageBg}></div>
-                                <Image src={clock} alt="Icône d'horloge" />
+                                <Image src={customMade} alt="Icône d'une interface avec des jauges" />
                             </div>
-                            <h3>Respect des deadlines</h3>
-                            <p className={classes.valueDescription}>Description de ma proposition de valeur. A qui ? Quoi ? Comment ? Pourquoi ?</p>
+                            <h3>Site sur mesure</h3>
+                            <p className={classes.valueDescription}>Chaque site que je réalise est construit sur mesure afin de répondre à vos besoins et coller à votre image.</p>
                         </div>
                     </SplideSlide>
 

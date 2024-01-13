@@ -213,7 +213,6 @@ const Meeting = ({ googleCalendarEvents }) => {
                             eventContent={renderEventContent}
                             locale='fr'
                             events={googleCalendarEvents}
-                            required
                         />
                     </div>
 

@@ -15,7 +15,7 @@ const Hero = () => {
             <div className={classes.textWrapper}>
                 <h1>Développeur web</h1>
                 <div className={classes.valueProposition}>
-                    <p>J'aide les entreprises à obtenir plus de clients à travers des solutions webs adaptés à leur besoins</p>
+                    <p>J'aide les entreprises à obtenir plus de clients en leur développant un site internet sur-mesure.</p>
                 </div>
                 <Link href="/book-a-call" className='primary-call-to-action'>Réserver un appel</Link>
             </div>

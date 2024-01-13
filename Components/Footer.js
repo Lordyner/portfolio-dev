@@ -27,7 +27,7 @@ const Footer = () => {
                             <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />
                             <h2>Thomas André-Lubin</h2>
                         </div>
-                        <p>Value proposition qui fait des trucs</p>
+                        <p>Développement de site web sur mesure.</p>
                     </div>
                 }
                 {isMobileResolution && <div className={classes.separator}></div>}
@@ -40,7 +40,6 @@ const Footer = () => {
                             <a href="/#projects-section">Projets</a>
                         </div>
                     </div>
-                    {!isMobileResolution && <div className={classes.separator}></div>}
                     <div className={classes.socialLinks}>
                         <a href="https://github.com/Lordyner" className={classes.icon} target='_blank'>
                             <SiGithub alt='toto' />

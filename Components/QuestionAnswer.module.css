@@ -10,13 +10,23 @@
     border-bottom: none;
 }
 
+.questionAnswerContainer a {
+    text-decoration: underline;
+    color: var(--form-field);
+}
+
+.questionAnswerContainer a:hover {
+    color: var(--black);
+}
+
 .question {
     /* font-family: LatoBold; */
     font-size: var(--body-500);
 }
 
 .answer {
-    color: #C0C0C0;
+    /* color: #C0C0C0; */
+    color: var(--form-field);
     max-height: 0;
     overflow: hidden;
     transition: max-height .2s ease-out;
