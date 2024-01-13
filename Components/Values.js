@@ -9,6 +9,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import clock from '@/public/images/clock.png';
 import GlobalContext from '@/Store/GlobalContext';
+import Link from 'next/link';
 
 const Values = () => {
     const { isMobileResolution } = useContext(GlobalContext);
@@ -99,7 +100,7 @@ const Values = () => {
             }
 
             <div className={classes.buttonWrapper}>
-                <button className='primary-button'>Réserver un appel</button>
+                <Link href="/book-a-call" className='primary-button'>Réserver un appel</Link>
             </div>
         </section >
     );
