@@ -9,12 +9,14 @@ import PopupAddAgenda from '@/Components/PopupAddAgenda';
 import getGoogleEvents from '@/Utils/getGoogleEvents';
 import Footer from '@/Components/Footer';
 import { useRouter } from 'next/router';
+import PopupError from '@/Components/PopupError';
 
 
 const BookACall = ({ googleCalendarEvents }) => {
 
     const { isLoading, setIsLoading } = useContext(GlobalContext);
     const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
+    const { showPopupError, setShowPopupError } = useContext(GlobalContext);
     const router = useRouter();
 
     useEffect(() => {
@@ -29,6 +31,13 @@ const BookACall = ({ googleCalendarEvents }) => {
             {showPopupAddMeetingInClientCalendar && <PopupAddAgenda
                 showPopup={showPopupAddMeetingInClientCalendar}
                 setShowPopup={setShowPopupAddMeetingInClientCalendar}
+            />}
+            {showPopupError && <PopupError
+                showPopup={showPopupError}
+                setShowPopup={setShowPopupError}
+                title="Une erreur s'est produite lors de la prise du rendez-vous."
+                text="Vous pouvez m'envoyer un mail à : andrelubin.thomas.dev@gmail.com. Veuillez m'excusez pour ce désagrément."
+                buttonText="Fermer"
             />}
             <Navbar />
             <Meeting googleCalendarEvents={googleCalendarEvents} />

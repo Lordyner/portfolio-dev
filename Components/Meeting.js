@@ -23,6 +23,7 @@ const Meeting = ({ googleCalendarEvents }) => {
     const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
     const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
     const { setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
+    const { setShowPopupError } = useContext(GlobalContext);
 
     const form = useRef();
     const fullCalendar = useRef();
@@ -98,7 +99,7 @@ const Meeting = ({ googleCalendarEvents }) => {
 
         setIsLoading(true);
 
-        fetch('/api/createEvent', {
+        fetch('/api/creatEvent', {
             method: 'POST',
             body: JSON.stringify({
                 params: params
@@ -114,7 +115,8 @@ const Meeting = ({ googleCalendarEvents }) => {
             } else {
                 console.log("Event not created");
                 logger.error('Error creating event on google calendar');
-                // Show error popup
+                setShowPopupError(true);
+
             }
         }).finally(() => {
             setIsLoading(false);
@@ -146,6 +148,11 @@ const Meeting = ({ googleCalendarEvents }) => {
                             plugins={[timeGridPlugin, interactionPlugin]}
                             initialView="timeGridWeek"
                             selectable={true}
+                            // Don't display past dates
+                            validRange={{
+                                start: new Date()
+                            }}
+
                             // Restrict calendar selection to 16h-20h
                             selectConstraint={{
                                 startTime: '16:00',
