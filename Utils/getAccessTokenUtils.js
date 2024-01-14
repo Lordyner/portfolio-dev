@@ -5,7 +5,6 @@ import jose from 'node-jose';
 export default async function getAccessToken(scope) {
 
     const logger = getLogger('getAccessToken method');
-    logger.info('Private key : ' + process.env.GOOGLE_CALENDAR_PRIVATE_KEY);
     // Extraire la clé privée
     const privateKey = atob(process.env.GOOGLE_CALENDAR_PRIVATE_KEY);
 
@@ -13,7 +12,6 @@ export default async function getAccessToken(scope) {
     // a. Create the payload
     let now = Math.floor(Date.now() / 1000);
     let exp = now + 3600
-    logger.info('GOOGLE_SERVICE_ACCOUNT_EMAIL : ' + process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL);
     const JWTClaimSet = {
         "iss": process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
         "scope": scope,
