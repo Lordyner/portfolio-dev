@@ -1,4 +1,4 @@
-import { getLogger } from '@/Logging/log-util';
+import { getLogger } from '../../Logging/log-util';
 import getAccessToken from '@/Utils/getAccessTokenUtils';
 
 export default async function createEvent(req, res) {

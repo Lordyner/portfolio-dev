@@ -5,7 +5,7 @@ import profilPic from '@/public/images/profile_pic_zoomed_a_bit.jpg';
 import GlobalContext from '@/Store/GlobalContext';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import { getLogger } from '@/Logging/log-util';
+import { getLogger } from '../Logging/log-util';
 import interactionPlugin from "@fullcalendar/interaction"
 import Link from 'next/link';
 

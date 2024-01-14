@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import googleCalendarIcon from '@/public/images/google_calendar_icon.svg';
 import classes from './PopupAddAgenda.module.css';
 import iconMenuClose from '@/public/images/icon_menu_close.svg';
 const PopupAddAgenda = ({ showPopup, setShowPopup }) => {

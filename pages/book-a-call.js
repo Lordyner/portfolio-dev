@@ -1,7 +1,7 @@
 import Meeting from '@/Components/Meeting';
 import Navbar from '@/Components/Navbar';
 import React, { useContext, useEffect } from 'react';
-import { getLogger } from '@/Logging/log-util';
+import { getLogger } from '../Logging/log-util';
 import getAccessToken from '@/Utils/getAccessTokenUtils';
 import GlobalContext from '@/Store/GlobalContext';
 import Spinner from '@/Components/Spinner';
