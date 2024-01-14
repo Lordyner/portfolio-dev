@@ -48,8 +48,14 @@ export default async function getAccessToken(scope) {
             body: formBody
         });
 
+        if (response.status !== 200) {
+            logger.error('Error while requesting access token : ' + response.status + ' ' + response.statusText);
+            return null;
+        }
+
         data = await response.json();
-        logger.info('Response : ' + response.status + ' ' + response.statusText);
+        logger.info('Access token retrieved : ' + response.status + ' ' + response.statusText);
+
     } catch (error) {
         logger.error('Error while requesting access token : ' + error.message);
     }

@@ -55,8 +55,6 @@ export async function getStaticProps(context) {
     // Call Google Calendar API only if the access token is not null
     if (accessToken) {
         calendarData = await getGoogleEvents(accessToken);
-    } else {
-        logger.error('Access token is null');
     }
 
     return {
