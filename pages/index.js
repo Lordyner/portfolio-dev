@@ -18,7 +18,7 @@ export default function Home() {
 
   /* Logger */
   const logger = getLogger('Meeting');
-  logger.info('Home page rendered');
+  logger.debug('Home page rendered');
 
   /* State */
   const [screenWidth, setScreenWidth] = useState();

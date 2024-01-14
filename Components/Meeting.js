@@ -28,7 +28,7 @@ const Meeting = ({ googleCalendarEvents }) => {
     const form = useRef();
     const fullCalendar = useRef();
 
-    logger.info('Meeting component rendered');
+    logger.debug('Meeting component rendered');
     const handleMenuDisplay = () => {
         setScreenWidth(window.screen.width);
 
