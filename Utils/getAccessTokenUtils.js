@@ -49,7 +49,7 @@ export default async function getAccessToken(scope) {
         });
 
         data = await response.json();
-        logger.info('Access token received');
+        logger.info('Response : ' + response.status + ' ' + response.statusText);
     } catch (error) {
         logger.error('Error while requesting access token : ' + error.message);
     }
