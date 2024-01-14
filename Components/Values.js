@@ -18,11 +18,9 @@ const Values = () => {
 
     return (
         <section className={classes.valueSection}>
-            <h2>Augmentez votre visibilité, convertissez vos visiteurs en clients.</h2>
+            <h2>Boostez votre visibilité, convertissez vos visiteurs.</h2>
             <div className={classes.valueProposition}>
-                <p>Avoir un site internet aujourd'hui est une nécessité pour les entreprises.</p>
-                <p>Mais un site qui n'est pas visité ou que l'utilisateur quitte après cinq secondes, c'est de l'argent perdu.</p>
-                <p>C'est pourquoi je mets ces valeurs au centre de mon travail : </p>
+                <p>Je crée des sites web impactants qui optimisent votre visibilité et vos conversions.</p>
             </div>
 
             {/* For laptop and desktop, we display values on the same row */}

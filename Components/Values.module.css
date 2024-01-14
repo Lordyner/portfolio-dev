@@ -19,7 +19,7 @@
 .valueProposition {
     display: flex;
     flex-direction: column;
-    padding: 1em 0 2.5em 0;
+    padding: .5rem 0 2.5em 0;
     gap: .5rem;
     font-size: var(--body-500);
     text-align: center;
@@ -126,7 +126,7 @@
     }
 
     .valueProposition p {
-        max-width: 70%;
+        max-width: 50%;
     }
 
     .valueProposition {
