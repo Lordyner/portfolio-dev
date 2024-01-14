@@ -13,7 +13,7 @@ const Project = () => {
             <div className={classes.container}>
                 <div className={classes.card}>
                     <Image src={newsHomepageImg} alt="page d'accueil du site d'information" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center'>
+                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
                         <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
                             <p className={classes.title}>Page d'accueil d'informations</p>
@@ -28,7 +28,7 @@ const Project = () => {
                 </div>
                 <div className={classes.card}>
                     <Image src={passwordGeneratorImg} alt='prévisualisation du projet de génération de mot de passe' className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center'>
+                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
                         <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
                             <p className={classes.title}>Générateur de mot de passe</p>
@@ -43,7 +43,7 @@ const Project = () => {
                 </div>
                 <div className={classes.card}>
                     <Image src={puissance4Img} alt='preview of my connect-four game project' className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center'>
+                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
                         <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
                             <p className={classes.title}>Puissance 4</p>
