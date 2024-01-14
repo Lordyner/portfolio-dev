@@ -105,6 +105,12 @@
         height: 10rem;
 
     }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: normal;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -116,7 +122,7 @@
 
     .card {
         justify-content: center;
-        max-width: 20%;
+        max-width: 80%;
     }
 
     .valueProposition p {
