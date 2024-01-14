@@ -62,12 +62,12 @@
 
 @font-face {
     font-family: LatoRegular;
-    src: url('../public/fonts/static/lato/Lato-Regular.ttf');
+    src: url('../public/fonts/static/Lato/Lato-Regular.ttf');
 }
 
 @font-face {
     font-family: LatoBold;
-    src: url('../public/fonts/static/lato/Lato-Bold.ttf');
+    src: url('../public/fonts/static/Lato/Lato-Bold.ttf');
 }
 
 
