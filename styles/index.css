@@ -81,7 +81,7 @@
 html {
     /* Bug : rentre en conflit avec le form validation (le message d'erreur ne s'affiche pas)  */
     /* scroll-behavior: smooth; */
-
+    font-size: 90%;
 }
 
 body {
