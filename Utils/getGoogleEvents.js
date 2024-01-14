@@ -1,4 +1,4 @@
-import { getLogger } from "@/Logging/log-util";
+import { getLogger } from "@/logging/log-util";
 
 export default async function getGoogleEvents(accessToken) {
 

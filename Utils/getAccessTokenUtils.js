@@ -1,4 +1,4 @@
-import { getLogger } from '@/Logging/log-util';
+import { getLogger } from '@/logging/log-util';
 import jose from 'node-jose';
 
 

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect, useContext, Suspense } from 'react';
-import { getLogger } from '@/Logging/log-util';
+import { getLogger } from '@/logging/log-util';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Navbar from '@/Components/Navbar';
