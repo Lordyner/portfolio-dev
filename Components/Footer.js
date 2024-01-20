@@ -18,7 +18,7 @@ const Footer = () => {
                         <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />
                         <div>
                             <h2>Thomas André-Lubin</h2>
-                            <p>Value proposition qui fait des trucs</p>
+                            <p>Développement de site web sur mesure.</p>
                         </div>
                     </div>
                 }
