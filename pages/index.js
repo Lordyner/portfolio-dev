@@ -93,7 +93,7 @@ export default function Home() {
                 <Hero />
               </div>
               <div className="rightSide">
-                <Image src={portfolioBg} alt='Thomas André-Lubin en train de développer sur son ordinateur' />
+                <Image src={portfolioBg} alt='Développeur web freelance en train de développer sur son ordinateur' />
               </div>
             </div>
           </>
