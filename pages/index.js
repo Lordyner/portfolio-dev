@@ -74,6 +74,14 @@ export default function Home() {
         <title>Développeur web Freelance</title>
         <meta name="description" content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property='og:title' content='Développeur web Freelance' />
+        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
+        <meta property='og:image' content='/images/portfolio_bg_mobile_reduced.jpeg' />
+        <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
+        <meta property='og:type' content='website' />
+        <meta property='og:locale' content='fr_FR' />
+        <meta property='og:site_name' content='Développeur web Freelance' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
