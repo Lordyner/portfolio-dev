@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import classes from './Meeting.module.css';
 import Image from 'next/image';
-import profilPic from '@/public/images/profile_pic_zoomed_a_bit.jpg';
+import profilPic from '@/public/images/profile_pic.jpg';
 import GlobalContext from '@/Store/GlobalContext';
 import FullCalendar from '@fullcalendar/react';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -51,7 +51,6 @@ const Meeting = ({ googleCalendarEvents }) => {
             <div className={classes.meetingSlot}>
                 <span className={classes.slotTitle}>{!isMobileResolution && eventInfo.event.title}</span>
             </div>
-
         )
     }
 
@@ -124,114 +123,119 @@ const Meeting = ({ googleCalendarEvents }) => {
 
     }
     return (
-        <main className={classes.meeting}>
-            <div className={classes.content}>
-                <h1>Réserver un appel</h1>
-                <p>Vous avez un besoin, une idée de projet, des maquettes à transformer en site ? Discutons-en ensemble</p>
-                {(isMobileResolution || isTabletResolution) && <div className={classes.separation}></div>}
-                <form ref={form} className={classes.form} onSubmit={createEvent}>
-                    <div className={classes.fieldsWrapper}>
-                        <div className={classes.formGroup}>
-                            <label htmlFor='mail'>Mail</label>
-                            <input type='email' name='mail' id='mail' pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></input>
-                        </div>
-                        <div className={classes.formGroup}>
-                            <label htmlFor='tel'>Téléphone</label>
-                            <input type='text' name='tel' id='tel' pattern="[0-9]+" required></input>
-                        </div>
-                        <div className={classes.formGroup}>
-                            <label htmlFor='message'>Message</label>
-                            <textarea id='message' name='message' type='textarea' rows={8} required></textarea>
-                        </div>
-                        <FullCalendar
-                            ref={fullCalendar}
-                            plugins={[timeGridPlugin, interactionPlugin]}
-                            initialView="timeGridWeek"
-                            selectable={true}
-                            // Don't display past dates
-                            validRange={{
-                                start: new Date()
-                            }}
+        <main className={classes.container}>
+            <div className={classes.contactContainer}>
+                <div className={classes.formContainer}>
+                    <h1>Réserver un appel</h1>
+                    <p>Vous avez un besoin, une idée de projet, des maquettes à transformer en site ?<br /> Discutons-en ensemble.</p>
+                    <form ref={form} className={classes.form} onSubmit={createEvent}>
+                        <div className={classes.fieldsWrapper}>
+                            <div className={classes.formGroup}>
+                                <label htmlFor='mail'>Mail</label>
+                                <input type='email' name='mail' id='mail' placeholder='Email*' pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></input>
+                            </div>
+                            <div className={classes.formGroup}>
+                                <label htmlFor='tel'>Téléphone</label>
+                                <input type='text' name='tel' id='tel' placeholder='Téléphone*' pattern="[0-9]+" required></input>
+                            </div>
+                            <div className={classes.formGroup}>
+                                <label htmlFor='message'>Message</label>
+                                <textarea id='message' name='message' placeholder='Message*' type='textarea' rows={5} required></textarea>
+                            </div>
+                            <FullCalendar
+                                ref={fullCalendar}
+                                plugins={[timeGridPlugin, interactionPlugin]}
+                                initialView="timeGridWeek"
+                                selectable={true}
+                                // Don't display past dates
+                                validRange={{
+                                    start: new Date()
+                                }}
 
-                            // Restrict calendar selection to 16h-20h
-                            selectConstraint={{
-                                startTime: '16:00',
-                                endTime: '20:00',
-                                daysOfWeek: [0, 1, 2, 3, 4, 5, 6]
-                            }}
-                            // Restrict selection to 30 minutes slots
-                            selectAllow={function (selectInfo) {
-                                var duration = Math.abs(selectInfo.end - selectInfo.start);
-                                return duration === 1800000;
-                            }}
-                            customButtons={{
-                                prev: {
-                                    click: function () {
-                                        fullCalendar.current.getApi().prev();
-                                        setSelectedDate(null);
+                                // Restrict calendar selection to 16h-20h
+                                selectConstraint={{
+                                    startTime: '16:00',
+                                    endTime: '20:00',
+                                    daysOfWeek: [0, 1, 2, 3, 4, 5, 6]
+                                }}
+                                // Restrict selection to 30 minutes slots
+                                selectAllow={function (selectInfo) {
+                                    var duration = Math.abs(selectInfo.end - selectInfo.start);
+                                    return duration === 1800000;
+                                }}
+                                customButtons={{
+                                    prev: {
+                                        click: function () {
+                                            fullCalendar.current.getApi().prev();
+                                            setSelectedDate(null);
 
+                                        }
+                                    },
+                                    next: {
+                                        click: function () {
+                                            fullCalendar.current.getApi().next();
+                                            setSelectedDate(null);
+
+                                        }
+                                    },
+                                    today: {
+                                        text: 'Aujourd\'hui',
+                                        click: function () {
+                                            fullCalendar.current.getApi().today();
+                                            setSelectedDate(null);
+
+                                        }
                                     }
-                                },
-                                next: {
-                                    click: function () {
-                                        fullCalendar.current.getApi().next();
-                                        setSelectedDate(null);
+                                }}
 
-                                    }
-                                },
-                                today: {
-                                    text: 'Aujourd\'hui',
-                                    click: function () {
-                                        fullCalendar.current.getApi().today();
-                                        setSelectedDate(null);
-
+                                headerToolbar={
+                                    {
+                                        left: 'title',
+                                        center: '',
+                                        right: isMobileResolution ? 'prev,next' : 'prev,next today'
                                     }
                                 }
-                            }}
+                                dayHeaderFormat={
+                                    {
+                                        day: 'numeric',
+                                        weekday: 'short'
+                                    }
+                                }
+                                eventBackgroundColor='var(--grey)'
+                                eventBorderColor='var(--grey)'
+                                eventTextColor='#fff'
+                                unselectAuto={false}
+                                allDaySlot={false}
+                                titleFormat={{ year: 'numeric', month: 'long', day: 'numeric' }}
+                                buttonText={{ today: 'Aujourd\'hui' }}
+                                slotMinTime="16:00:00"
+                                slotMaxTime="20:00:00"
+                                slotDuration="00:30"
+                                expandRows={true}
+                                firstDay={1}
+                                nowIndicator={true}
+                                select={handleSelect}
+                                eventContent={renderEventContent}
+                                locale='fr'
+                                events={googleCalendarEvents}
+                            />
+                        </div>
 
-                            headerToolbar={
-                                {
-                                    left: 'title',
-                                    center: '',
-                                    right: isMobileResolution ? 'prev,next' : 'prev,next today'
-                                }
-                            }
-                            dayHeaderFormat={
-                                {
-                                    day: 'numeric',
-                                    weekday: 'short'
-                                }
-                            }
-                            eventBackgroundColor='var(--grey)'
-                            eventBorderColor='var(--grey)'
-                            eventTextColor='#fff'
-                            unselectAuto={false}
-                            allDaySlot={false}
-                            titleFormat={{ year: 'numeric', month: 'long', day: 'numeric' }}
-                            buttonText={{ today: 'Aujourd\'hui' }}
-                            slotMinTime="16:00:00"
-                            slotMaxTime="20:00:00"
-                            slotDuration="00:30"
-                            expandRows={true}
-                            firstDay={1}
-                            nowIndicator={true}
-                            select={handleSelect}
-                            eventContent={renderEventContent}
-                            locale='fr'
-                            events={googleCalendarEvents}
-                        />
+                        <div className={classes.buttonWrapper}>
+                            <button className='primary-call-to-action bgBlack' type='submit'>Confirmer</button>
+                            <div><span>Me contacter par mail ?</span> <a href='mailto:andrelubin.thomas.dev@gmail.com'>andrelubin.thomas.dev@gmail.com</a></div>
+
+                        </div>
+                    </form>
+                </div>
+                {(isLaptopResolution || isDesktopResolution) &&
+                    <div className={classes.imageWrapper}>
+                        <Image src={profilPic} alt='Thomas André-Lubin en train de déveloper sur son ordinateur' />
                     </div>
+                }
+            </div>
 
-                    <div className={classes.buttonWrapper}>
-                        <button className='primary-button' type='submit'>Confirmer</button>
-                        <Link type='button' className='secondary-button' href="/#home">Annuler</Link>
-                    </div>
-                </form>
-            </div >
-            {(isLaptopResolution || isDesktopResolution) && <div className={classes.imageWrapper}>
-                <Image src={profilPic} alt='Thomas André-Lubin en train de déveloper sur son ordinateur' />
-            </div>}
-        </main >
+        </main>
     );
 };
 

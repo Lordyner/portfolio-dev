@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <main id="home" className={classes.heroContainer}>
             <div className={classes.textWrapper}>
-                <h1>Développeur web freelance</h1>
+                <h1>Développeur web <br />freelance</h1>
                 <div className={classes.valueProposition}>
                     <p>J'aide les entreprises à obtenir plus de clients en leur développant un site internet sur mesure.</p>
                 </div>
