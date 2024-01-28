@@ -71,8 +71,8 @@ export default function Home() {
         setShowPopup={setShowPopupAddMeetingInClientCalendar}
       />}
       <Head>
-        <title>Portfolio André-Lubin Thomas</title>
-        <meta name="description" content="Portfolio du développeur André-Lubin Thomas" />
+        <title>Développeur web Freelance</title>
+        <meta name="description" content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
