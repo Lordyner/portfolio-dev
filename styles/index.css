@@ -23,6 +23,9 @@
     --heading-500: 1.25rem;
     --body-500: 1rem;
     --body-400: 1rem;
+
+    --sidePadding: 2rem;
+    --topAndBotPadding: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -354,7 +357,7 @@ a {
     height: 100%;
     position: fixed;
     background-color: rgb(35, 31, 31, .3);
-    z-index: 999;
+    z-index: 90;
     transition: .3s ease-in-out;
 }
 

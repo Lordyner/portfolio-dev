@@ -18,6 +18,19 @@ export function GlobalContextProvider(props) {
     const [laptopResolution] = useState(1024);
     const [desktopResolution] = useState(1440);
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        handleBodyScroll(!isMenuOpen);
+    }
+    const handleBodyScroll = (lockScroll) => {
+        const body = document.body;
+        if (lockScroll) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    };
+
     return (
         <GlobalContext.Provider value={{
             isLoading, setIsLoading,
@@ -29,7 +42,8 @@ export function GlobalContextProvider(props) {
             isLaptopResolution, setIsLaptopResolution,
             isDesktopResolution, setIsDesktopResolution,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
-            mobileResolution, tabletResolution, laptopResolution, desktopResolution
+            mobileResolution, tabletResolution, laptopResolution, desktopResolution,
+            toggleMenu
         }}>
             {props.children}
         </GlobalContext.Provider>

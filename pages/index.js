@@ -72,11 +72,11 @@ export default function Home() {
       />}
       <Head>
         <title>Développeur web Freelance</title>
-        <meta name="description" content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
+        <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property='og:title' content='Développeur web Freelance' />
-        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
+        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
         <meta property='og:image' content='/images/profil_pic_looking_laptop_zoomed.jpg' />
         <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
         <meta property='og:type' content='website' />
@@ -88,7 +88,7 @@ export default function Home() {
         <meta property="og:url" content="https://www.thomasandrelubin.fr/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Développeur web Freelance" />
-        <meta property="og:description" content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
+        <meta property="og:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
         <meta property="og:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
 
         {/* Twitter Meta Tags */}
@@ -96,7 +96,7 @@ export default function Home() {
         <meta property="twitter:domain" content="thomasandrelubin.fr" />
         <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
         <meta name="twitter:title" content="Développeur web Freelance" />
-        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création  de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
+        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
         <meta name="twitter:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
 
       </Head>
