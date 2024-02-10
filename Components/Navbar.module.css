@@ -12,6 +12,7 @@
     gap: 1rem;
     padding: var(--topAndBotPadding) var(--sidePadding);
     align-items: center;
+    background-color: var(--black);
 }
 
 a.link {
