@@ -2,6 +2,7 @@ import React from 'react';
 import newsHomepageImg from '@/public/images/news-homepage-screenshot.png'
 import passwordGeneratorImg from '@/public/images/password-generator-screenshot.png'
 import puissance4Img from '@/public/images/puissance4-screenshot.png'
+import photoSnapImg from '@/public/images/photosnap-homepage-screenshot.png'
 import Image from 'next/image';
 import classes from './Project.module.css';
 import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
@@ -12,6 +13,21 @@ const Project = () => {
         <section id='projects-section' className={classes.projectSection}>
             <h2>Derniers projets</h2>
             <div className={classes.container}>
+                <div className={classes.card}>
+                    <Image src={photoSnapImg} alt="page d'accueil de photosnap" className={classes.mainImg} />
+                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
+                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
+                        <div className={classes.text}>
+                            <p className={classes.title}>Photosnap</p>
+                            <p className={classes.description}>Frontend mentor</p>
+                        </div>
+                    </div>
+                    <div className='d-flex w-100'>
+                        <a className={classes.button} href="https://photosnap-sigma.vercel.app/" target="blank">
+                            Visitez le site
+                        </a>
+                    </div>
+                </div>
                 <div className={classes.card}>
                     <Image src={myTeamLandingPage} alt="page d'accueil de myTeam" className={classes.mainImg} />
                     <div className='d-flex gap-05 align-items-center flex-grow-2'>
