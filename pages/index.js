@@ -101,28 +101,10 @@ export default function Home() {
 
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
+      <Navbar />
 
-      <main className="main-container">
-        {(isMobileResolution || isTabletResolution) &&
-          <>
-            <Navbar />
-            <Hero />
-          </>
-        }
-        {(isLaptopResolution || isDesktopResolution) &&
-          <>
-            <div className='wrapperLeftAndRight'>
-              <div className='leftSide'>
-                <Navbar />
-                <Hero />
-              </div>
-              <div className="rightSide">
-                <Image src={portfolioBg} alt='Développeur web freelance en train de développer sur son ordinateur' />
-              </div>
-            </div>
-          </>
-        }
-      </main >
+      <Hero />
+
       <Values />
       <Project />
       <FAQ />

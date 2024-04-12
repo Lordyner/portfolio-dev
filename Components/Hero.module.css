@@ -1,150 +1,88 @@
 .heroContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 4;
-    background-color: var(--black);
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
+    padding: 0 1.5rem;
+    gap: 2rem;
 }
 
 .textWrapper {
-    padding-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: .5rem;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
-.valueProposition {
-    font-size: var(--body-500);
-    max-width: 21rem;
-    padding-bottom: 1em;
-    /* color: var(--grey); */
-    opacity: .8;
+.accentWord {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-family: DMSerifDisplay;
+    font-weight: normal;
+    color: #00619A;
 }
 
-
-
-.heroContainer img {
-    max-width: 90%;
-    object-fit: contain;
-    max-height: 340px;
+.focusLeft {
+    object-position: left;
 }
 
-.heroContainer .handdrawn {
-    width: 2.5rem;
-    min-height: unset;
-    height: 2.5rem;
-    position: absolute;
+.imgWrapper {
+    display: flex;
+    justify-content: center;
 }
 
-/* Media for tablet */
-@media screen and (min-width: 768px) {
-    .heroContainer {
-        padding: 1rem 2.5rem;
-        background-color: unset;
-        /* text-align: left; */
-        position: relative;
-
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
 
-    .heroContainer .handdrawn {
-        width: 2.5rem;
-        min-height: unset;
-        height: 2.5rem;
-        position: absolute;
-    }
-
-    #github {
-        right: 18rem;
-        bottom: 17rem;
-        transform: rotate(-20deg);
-
-    }
-
-    #laptop {
-        left: 25rem;
-        bottom: 5rem;
-        transform: rotate(10deg);
-    }
-
-    #rocket {
-        right: 10rem;
-        top: 6rem;
-        transform: rotate(40deg);
-    }
-
-    .valueProposition {
-        max-width: 70%;
-
+    100% {
+        transform: translateX(calc(-13.5rem * 4))
     }
 }
 
-/* Media for laptop */
-@media screen and (min-width: 1024px) {
-    .valueProposition {
-        max-width: 80%;
-        text-align: left;
-    }
-
-    .textWrapper {
-        align-items: flex-start;
-    }
-
-    .heroContainer .handdrawn {
-        width: 3rem;
-        height: 3rem;
-        opacity: .9;
-        color: red;
-    }
-
-    #github {
-        right: 8rem;
-        bottom: 12rem;
-        transform: rotate(-15deg);
-
-    }
-
-    #laptop {
-        left: 23rem;
-        bottom: 4rem;
-        transform: rotate(5deg);
-    }
-
-    #rocket {
-        right: 6rem;
-        top: 6rem;
-        transform: rotate(40deg);
-    }
+.slider {
+    width: 100vw;
+    position: relative;
+    height: auto;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* margin: auto; */
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Media for desktop */
-@media screen and (min-width: 1440px) {
-    .valueProposition {
-        max-width: 80%;
-    }
 
-    .heroContainer .handdrawn {
-        width: 5rem;
-        height: 5rem;
-    }
 
-    #github {
-        right: 18rem;
-        bottom: 17rem;
-
-    }
-
-    #laptop {
-        left: 25rem;
-        bottom: 5rem;
-    }
-
-    #rocket {
-        right: 10rem;
-        top: 6rem;
-    }
+.sliderTrack {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 10s linear infinite;
+    width: calc(13.5rem * 4);
 }
+
+.heroImg {
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.imgCarousel {
+    border-radius: 0.5rem;
+    width: 12rem;
+    object-fit: cover;
+
+
+}
+
+.imgCarousel:nth-child(even) {
+    /* transform: translateY(1rem); */
+}
+
+/* .imgCarousel:nth-child(odd):hover {
+    transform: rotate(-3deg);
+} */
+
+@media (min-width: 48rem) {}
+
+
+@media (min-width: 90rem) {}

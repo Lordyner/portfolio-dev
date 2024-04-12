@@ -19,6 +19,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
+    "framer-motion": "^11.0.25",
     "google-auth-library": "^8.9.0",
     "googleapis": "^105.0.0",
     "jose": "^5.2.0",

@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import avatarOfMe from '@/public/images/avatarOfMe.png';
+import faceLogo from '@/public/images/face-logo.png';
 import iconMenuClose from '@/public/images/icon_menu_close.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className={classes.navWrapper}>
                 <div className={classes.logo}>
                     <Link href="/">
-                        <Image src={avatarOfMe} alt='avatar du développeur web freelance Thomas André-Lubin' className={classes.logoImg} width={50} height={50} />
+                        <Image src={faceLogo} alt='visage de Thomas André-Lubin en logo' className={classes.logoImg} />
                     </Link>
                 </div>
                 {/* Classic links */}
