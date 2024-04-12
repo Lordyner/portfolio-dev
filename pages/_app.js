@@ -7,7 +7,7 @@ import Script from 'next/script';
 export default function App({ Component, pageProps }) {
 
   const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID
-
+  console.log(GA_TRACKING_ID)
   return <GlobalContextProvider>
     <Component {...pageProps} />
     <SpeedInsights />
