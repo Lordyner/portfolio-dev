@@ -6,7 +6,6 @@ import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
 
-  console.log(GA_TRACKING_ID)
   return <GlobalContextProvider>
     <Component {...pageProps} />
     <SpeedInsights />
