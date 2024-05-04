@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import classes from './Footer.module.css';
-import avatarOfMe from '@/public/images/avatarOfMe.png';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
@@ -15,7 +14,7 @@ const Footer = () => {
                 {isMobileResolution &&
                     <div className={classes.valueProposition}>
 
-                        <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} />
+                        {/* <Image src={avatarOfMe} alt='développeur thomas andré-lubin' className={classes.profilImg} width={50} height={50} /> */}
                         <div>
                             <h2>Thomas André-Lubin</h2>
                             <p>Développement de site web sur mesure.</p>

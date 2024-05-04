@@ -9,10 +9,7 @@ import Project from '@/Components/Project';
 import Footer from '@/Components/Footer';
 import Spinner from '@/Components/Spinner';
 import Values from '@/Components/Values';
-import PopupAddAgenda from '@/Components/PopupAddAgenda';
-import FAQ from '@/Components/FAQ';
 import GlobalContext from '@/Store/GlobalContext';
-import portfolioBg from '../public/images/portfolio_bg.jpeg';
 
 export default function Home() {
 
@@ -102,13 +99,13 @@ export default function Home() {
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
       <Navbar />
+      {/* 
+      <Hero /> */}
 
-      <Hero />
-
-      <Values />
+      {/* <Values />
       <Project />
-      <FAQ />
-      <Footer />
+      <FAQ /> */}
+      {/* <Footer /> */}
     </>
   )
 

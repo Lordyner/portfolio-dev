@@ -1,19 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import classes from './Hero.module.css';
 import Link from 'next/link';
-import portfolioBgMobile from '../public/images/portfolio_bg_mobile_reduced.jpeg';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import CursorBlinker from './UI/CursorBlinker';
-import meWhileDeveloping from '../public/images/profil_pic_looking_laptop_zoomed.jpg';
-import heroImgManga from '../public/images/heroImage_manga.png';
-import povDev from '../public/images/istockphoto-pov-dev.jpg';
-import codeAndAudiophile from '../public/images/audiophile_hero_img.PNG';
-import myCode from '../public/images/myCode.png';
-import rightArrowImg from '../public/images/right_arrow.png';
-import audiophile from '../public/images/audiophile_project.PNG';
-import office from '../public/images/desktop.jpg';
+
 const Hero = () => {
 
     const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);

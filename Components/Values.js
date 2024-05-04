@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import classes from './Values.module.css';
 import Image from 'next/image';
-import userExperience from '../public/images/user_experience.png';
-import iconSEO from '../public/images/icon_seo.png'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import customMade from '../public/images/custom_made.png';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 
@@ -28,7 +25,7 @@ const Values = () => {
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" />
+                        {/* <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" /> */}
                     </div>
                     <h3>Expérience utilisateur</h3>
                     <p className={classes.valueDescription}>Une expérience utilisateur positive favorise la conversion en client.</p>
@@ -36,7 +33,7 @@ const Values = () => {
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={iconSEO} alt="Icône SEO" />
+                        {/* <Image src={iconSEO} alt="Icône SEO" /> */}
                     </div>
                     <h3>Bonnes pratiques SEO</h3>
                     <p className={classes.valueDescription}>Le respect des bonnes pratiques SEO aide votre site à obtenir plus de trafic.</p>
@@ -44,7 +41,7 @@ const Values = () => {
                 <div className={classes.card}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.imageBg}></div>
-                        <Image src={customMade} alt="Icône d'une interface avec des jauges" />
+                        {/* <Image src={customMade} alt="Icône d'une interface avec des jauges" /> */}
                     </div>
                     <h3>Site sur mesure</h3>
                     <p className={classes.valueDescription}>Chaque site que je réalise est construit sur mesure afin de répondre à vos besoins et coller à votre image.</p>

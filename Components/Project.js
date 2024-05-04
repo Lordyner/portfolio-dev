@@ -1,11 +1,8 @@
 import React from 'react';
 import newsHomepageImg from '@/public/images/news-homepage-screenshot.png'
-import passwordGeneratorImg from '@/public/images/password-generator-screenshot.png'
-import puissance4Img from '@/public/images/puissance4-screenshot.png'
 import photoSnapImg from '@/public/images/photosnap-homepage-screenshot.png'
 import Image from 'next/image';
 import classes from './Project.module.css';
-import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
 import payAPIHomepage from '../public/images/payAPI_homepage.png';
 import myTeamLandingPage from '@/public/images/myteam_firstPage.png';
 import coffeeRoastersLandingPage from '@/public/images/coffee_roasters_homepage.png';
@@ -17,7 +14,7 @@ const Project = () => {
                 <div className={classes.card}>
                     <Image src={coffeeRoastersLandingPage} alt="page d'accueil de coffee roasters" className={classes.mainImg} />
                     <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
+                        {/* <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" /> */}
                         <div className={classes.text}>
                             <p className={classes.title}>Coffee roasters</p>
                             <p className={classes.description}>Frontend mentor</p>
@@ -90,7 +87,7 @@ const Project = () => {
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <Image src={passwordGeneratorImg} alt='prévisualisation du projet de génération de mot de passe' className={classes.mainImg} />
+                    {/* <Image src={passwordGeneratorImg} alt='prévisualisation du projet de génération de mot de passe' className={classes.mainImg} /> */}
                     <div className='d-flex gap-05 align-items-center flex-grow-2'>
                         <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
@@ -105,7 +102,7 @@ const Project = () => {
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <Image src={puissance4Img} alt='preview of my connect-four game project' className={classes.mainImg} />
+                    {/* <Image src={puissance4Img} alt='preview of my connect-four game project' className={classes.mainImg} /> */}
                     <div className='d-flex gap-05 align-items-center flex-grow-2'>
                         <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
                         <div className={classes.text}>
