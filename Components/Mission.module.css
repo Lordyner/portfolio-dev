@@ -1,0 +1,48 @@
+.missionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 5.5rem 1.5rem;
+}
+
+
+
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+
+
+@media (min-width: 48rem) {
+    .missionContainer {
+        padding: 5.5rem 2.5rem;
+        gap: 2rem;
+
+    }
+
+
+}
+
+@media (min-width: 64rem) {
+    .textWrapper {
+        max-width: 42.5rem;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    .content {}
+}

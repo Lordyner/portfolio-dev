@@ -5,15 +5,12 @@ import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import CursorBlinker from './UI/CursorBlinker';
-
+import heroImgMobile from '@/public/images/hero_img_mobile.png';
+import heroImgDesktop from '@/public/images/hero_img_desktop.png';
 const Hero = () => {
 
-    const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);
-    const [classicImageSelected, setClassicImageSelected] = useState(false);
-    const heroImages = [
-        meWhileDeveloping,
-        heroImgManga
-    ]
+    const { isMobileResolution, isTabletResolution, isDesktopResolution } = useContext(GlobalContext);
+
     const textIndex = useMotionValue(0);
     const texts = [
         "e-commerce ",
@@ -54,28 +51,16 @@ const Hero = () => {
 
     return (
 
-        <main id="home" className={classes.heroContainer}>
-            <div className={classes.textWrapper}>
-                <h1>Création de site <br />
-                    <CursorBlinker /><motion.span className={classes.accentWord}>{displayText}</motion.span><br />
-                    adapté à vos besoins</h1>
-                <Link href="/book-a-call" className='primary-button'>Réserver un appel</Link>
-            </div>
-            {/* <div className={classes.imgWrapper}>
-                <Image src={meWhileDeveloping} alt="Développeur web freelance" className={classes.heroImg} />
-            </div> */}
-
-            <div className={classes.slider}>
-                <div className={classes.sliderTrack}>
-                    <Image src={meWhileDeveloping} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={office} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={rightArrowImg} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={myCode} alt="Développeur web freelance" className={`${classes.imgCarousel} ${classes.focusLeft}`} />
-                    <Image src={meWhileDeveloping} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={office} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={rightArrowImg} alt="Développeur web freelance" className={classes.imgCarousel} />
-                    <Image src={myCode} alt="Développeur web freelance" className={classes.imgCarousel} />
+        <main className={classes.heroContainer}>
+            <div className={`${classes.content} max-width`}>
+                <div className={classes.textWrapper}>
+                    <h1>Création de site <br />
+                        <CursorBlinker /><motion.span className={classes.accentWord}>{displayText}</motion.span><br />
+                        adapté à vos besoins</h1>
+                    <Link href="/book-a-call" className='primary-button'>Me contacter</Link>
                 </div>
+                {/* <Image src={heroImgMobile} alt='hero image' className={classes.heroImg} /> */}
+                <Image src={isMobileResolution ? heroImgMobile : isTabletResolution ? heroImgMobile : heroImgDesktop} alt='hero image' className={classes.heroImg} />
             </div>
         </main>
     );

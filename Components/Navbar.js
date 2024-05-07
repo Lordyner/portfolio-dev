@@ -4,6 +4,11 @@ import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
+import logo from '@/public/images/logo.png';
+import tiktokLogo from '@/public/images/logo_tiktok.png';
+import instaLogo from '@/public/images/logo_instagram.png';
+import linkedinLogo from '@/public/images/logo_linkedin.png';
+
 const Navbar = () => {
 
     const burger = useRef();
@@ -13,42 +18,66 @@ const Navbar = () => {
     const { toggleMenu } = useContext(GlobalContext);
 
     return (
-        <nav className={classes.navbar}>
-            <div className={classes.navWrapper}>
-                <div className={classes.logo}>
-                    <Link href="/">
-                        {/* <Image src={faceLogo} alt='visage de Thomas André-Lubin en logo' className={classes.logoImg} /> */}
-                    </Link>
-                </div>
-                {/* Classic links */}
-                <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                    <a href="/CV-andrelubin-thomas.pdf" className={classes.link} download="CV-andrelubin-thomas">Curriculum Vitae</a>
-                    <Link href="/#projects-section" className={classes.link}>Projets</Link>
-                </div>
+        <header className={`${classes.header}`}>
+            <nav className={`${classes.navbar} max-width`}>
+                <div className={`${classes.navWrapper} `}>
+                    <div className={classes.logo}>
+                        <Link href="/">
+                            <Image src={logo} alt='logo thomas andré-lubin' className={classes.logoImg} />
+                        </Link>
+                    </div>
+                    {/* Classic links */}
+                    <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
+                        <Link href="/#projects-section" className={classes.link}>Projets</Link>
+                        <Link href="/#projects-section" className={classes.link}>Services</Link>
+                        <Link href="/#projects-section" className={classes.link}>A propos</Link>
+                    </div>
 
-                {/* Burger menu */}
-                <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
-                    onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
+                    {/* Burger menu */}
+                    <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
+                        onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
 
-                    }}>
-                    <div className={classes.bar} />
-                </div>
+                        }}>
+                        <span className={classes.bar} />
+                    </div>
 
-                {/* Mobile menu */}
-                <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
-                    <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Projets</Link>
-                    <a href="/CV-andrelubin-thomas.pdf" className={classes.mobileLink} download="CV-andrelubin-thomas" onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Curriculum Vitae</a>
+                    {/* Mobile menu */}
+                    <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
+                        <div className={classes.mobileLinks}>
+
+                            <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>Accueil</Link>
+                            <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>Services</Link>
+                            <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>Projets</Link>
+                            <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                toggleMenu();
+                                burger.current.classList.toggle(classes.isActive);
+                            }}>A propos</Link>
+                            <div className={classes.buttonWrapper}>
+
+                                <Link href="/book-a-call" className='primary-button'>Me contacter</Link>
+                            </div>
+                        </div>
+                        <div className={classes.socials}>
+                            <Image src={tiktokLogo} alt='logo tiktok' className={classes.socialLogo} />
+                            <Image src={instaLogo} alt='logo instagram' className={classes.socialLogo} />
+                            <Image src={linkedinLogo} alt='logo linkedin' className={classes.socialLogo} />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
+
     );
 };
 

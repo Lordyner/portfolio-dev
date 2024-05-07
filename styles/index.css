@@ -65,12 +65,18 @@
     src: url('../public/fonts/OpenSans/OpenSans-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: OpenSansRegular;
+    src: url('../public/fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
 
 * {
     margin: 0;
     padding: 0;
     /* box-sizing: inherit; */
-    font-family: DMSerifDisplay;
+    font-family: OpenSansRegular;
+
 }
 
 html {
@@ -92,12 +98,33 @@ body {
 /* Title */
 
 h1 {
-    font-family: OpenSansSemiBold;
+    font-family: DMSerifDisplay;
     font-size: var(--heading-900);
+    font-weight: normal;
+    line-height: var(--heading-900);
+}
+
+h2,
+h3,
+h4 {
+    font-family: OpenSansSemiBold;
+    text-transform: uppercase;
 }
 
 h2 {
     font-size: var(--heading-700);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    max-width: 12.5rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-inline: auto;
+
 }
 
 h3 {
@@ -108,6 +135,11 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
+}
+
+.display-none {
+    display: none;
+
 }
 
 /* Button */
@@ -121,9 +153,22 @@ button {
     border-radius: 2px;
 }
 
-.primary-button {}
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: 'DMSerifDisplay';
+    border-radius: 0.625rem;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    text-align: center;
 
+}
 
+.max-width {
+    max-width: 69.375rem;
+    margin-inline: auto;
+}
 
 
 .dark-filter {
@@ -157,6 +202,12 @@ button {
 
 
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 48rem) {
+    h2::after {
+        margin-top: 2rem;
+    }
+}
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 64rem) {}
+
+@media screen and (min-width: 90rem) {}

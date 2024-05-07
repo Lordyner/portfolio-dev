@@ -2,14 +2,20 @@
     display: flex;
     flex-direction: column;
     padding: 0 1.5rem;
-    gap: 2rem;
+    gap: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: flex-start;
+    gap: 1.125rem;
 }
 
 .accentWord {
@@ -17,7 +23,7 @@
     line-height: 2.5rem;
     font-family: DMSerifDisplay;
     font-weight: normal;
-    color: #00619A;
+    color: var(--primary-color);
 }
 
 .focusLeft {
@@ -63,7 +69,9 @@
 
 .heroImg {
     object-fit: cover;
-    border-radius: .5rem;
+    max-width: 20rem;
+    display: flex;
+    align-self: center;
 }
 
 .imgCarousel {
@@ -82,7 +90,74 @@
     transform: rotate(-3deg);
 } */
 
-@media (min-width: 48rem) {}
+@media (min-width: 48rem) {
+
+    .heroContainer {
+        padding: 0 2.5rem;
+    }
+
+    .heroImg {
+        max-width: 30rem;
+    }
+
+    .accentWord {
+        font-size: 3.375rem;
+        line-height: 3.375rem;
+    }
+
+    .content {
+        gap: 2.5rem;
+    }
+
+    .textWrapper {
+        text-align: center;
+        align-items: center;
+        gap: 1.5rem;
+
+    }
 
 
-@media (min-width: 90rem) {}
+}
+
+@media (min-width: 64rem) {
+    .content {
+        flex-direction: row;
+        /* gap: 4rem; */
+    }
+
+    .textWrapper {
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+
+
+    .heroImg {
+        /* max-width: 22rem; */
+    }
+}
+
+@media (min-width: 90rem) {
+
+    .content {
+        flex-direction: row;
+    }
+
+    .textWrapper {
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .heroImg {
+        max-width: none;
+        width: 48rem;
+
+    }
+
+    .accentWord {
+        font-size: 5rem;
+        line-height: 5rem;
+
+    }
+}

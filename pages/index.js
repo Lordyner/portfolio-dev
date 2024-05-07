@@ -10,6 +10,7 @@ import Footer from '@/Components/Footer';
 import Spinner from '@/Components/Spinner';
 import Values from '@/Components/Values';
 import GlobalContext from '@/Store/GlobalContext';
+import Mission from '@/Components/Mission';
 
 export default function Home() {
 
@@ -99,9 +100,9 @@ export default function Home() {
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
       <Navbar />
-      {/* 
-      <Hero /> */}
 
+      <Hero />
+      <Mission />
       {/* <Values />
       <Project />
       <FAQ /> */}

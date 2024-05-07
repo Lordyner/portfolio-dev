@@ -1,11 +1,11 @@
 import React from 'react';
-import newsHomepageImg from '@/public/images/news-homepage-screenshot.png'
-import photoSnapImg from '@/public/images/photosnap-homepage-screenshot.png'
+import newsHomepageImg from '@/public/images/projets/news-homepage-screenshot.png'
+import photoSnapImg from '@/public/images/projets/photosnap-homepage-screenshot.png'
 import Image from 'next/image';
 import classes from './Project.module.css';
-import payAPIHomepage from '../public/images/payAPI_homepage.png';
-import myTeamLandingPage from '@/public/images/myteam_firstPage.png';
-import coffeeRoastersLandingPage from '@/public/images/coffee_roasters_homepage.png';
+import payAPIHomepage from '../public/images/projets/payAPI_homepage.png';
+import myTeamLandingPage from '@/public/images/projets/myteam_firstPage.png';
+import coffeeRoastersLandingPage from '@/public/images/projets/coffee_roasters_homepage.png';
 const Project = () => {
     return (
         <section id='projects-section' className={classes.projectSection}>
