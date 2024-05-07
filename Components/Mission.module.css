@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 1.5rem;
     text-align: center;
-    padding: 5.5rem 1.5rem;
+    padding: 3.5rem 1.5rem;
 }
 
 
@@ -24,7 +24,6 @@
     .missionContainer {
         padding: 5.5rem 2.5rem;
         gap: 2rem;
-
     }
 
 
@@ -41,8 +40,14 @@
         text-align: center;
         gap: 2.5rem;
     }
+
+    .missionContainer {
+        padding: 8.5rem 2.5rem;
+    }
 }
 
 @media (min-width: 90rem) {
-    .content {}
+    .missionContainer {
+        padding: 10.5rem 2.5rem;
+    }
 }
