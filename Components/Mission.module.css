@@ -1,14 +1,14 @@
 .missionContainer {
+    padding: 3.5rem 1.5rem;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
     text-align: center;
-    padding: 3.5rem 1.5rem;
 }
-
-
-
 
 .textWrapper {
     display: flex;
@@ -23,7 +23,11 @@
 @media (min-width: 48rem) {
     .missionContainer {
         padding: 5.5rem 2.5rem;
+    }
+
+    .wrapper {
         gap: 2rem;
+
     }
 
 
@@ -31,7 +35,8 @@
 
 @media (min-width: 64rem) {
     .textWrapper {
-        max-width: 42.5rem;
+        max-width: 80%;
+        margin-inline: auto;
     }
 
     .content {
@@ -42,7 +47,11 @@
     }
 
     .missionContainer {
-        padding: 8.5rem 2.5rem;
+        padding: 8.5rem 3.5rem;
+    }
+
+    .wrapper {
+        gap: 3.5rem;
     }
 }
 

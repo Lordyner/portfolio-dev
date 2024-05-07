@@ -69,7 +69,6 @@
 
 .heroImg {
     object-fit: cover;
-    max-width: 20rem;
     display: flex;
     align-self: center;
 }
@@ -130,6 +129,11 @@
         justify-content: center;
         text-align: left;
     }
+
+    .heroContainer {
+        padding: 0 3.5rem;
+    }
+
 
 
     .heroImg {
