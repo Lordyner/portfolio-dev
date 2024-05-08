@@ -1,13 +1,12 @@
 import React, { useContext, useRef } from 'react';
-import iconMenuClose from '@/public/images/icon_menu_close.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import logo from '@/public/images/logo.png';
-import tiktokLogo from '@/public/images/logo_tiktok.png';
-import instaLogo from '@/public/images/logo_instagram.png';
-import linkedinLogo from '@/public/images/logo_linkedin.png';
+import logo from '@/public/images/global/logo.png';
+import tiktokLogo from '@/public/images/global/logo_tiktok.png';
+import instaLogo from '@/public/images/global/logo_instagram.png';
+import linkedinLogo from '@/public/images/global/logo_linkedin.png';
 
 const Navbar = () => {
 

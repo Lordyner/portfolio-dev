@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import classes from './Mission.module.css';
-import missionImg from '@/public/images/mission_image_cropped.png';
+import missionImg from '@/public/images/global/mission_image_cropped.png';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 

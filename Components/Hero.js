@@ -5,8 +5,8 @@ import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import CursorBlinker from './UI/CursorBlinker';
-import heroImgMobile from '@/public/images/hero_img_mobile.png';
-import heroImgDesktop from '@/public/images/hero_img_desktop.png';
+import heroImgMobile from '@/public/images/mobile/hero_img_mobile.png';
+import heroImgDesktop from '@/public/images/desktop/hero_img_desktop.png';
 const Hero = () => {
 
     const { isMobileResolution, isTabletResolution, isDesktopResolution } = useContext(GlobalContext);

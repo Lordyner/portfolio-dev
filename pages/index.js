@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useEffect, useContext, Suspense } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { getLogger } from '@/logging/log-util';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -105,8 +105,8 @@ export default function Home() {
       <Hero />
       <Mission />
       <Services />
-      {/* <Values />
       <Project />
+      {/* <Values />
       <FAQ /> */}
       {/* <Footer /> */}
     </>
@@ -114,9 +114,17 @@ export default function Home() {
 
 }
 
+async function VideoComponent({ fileName }) {
+  const { blobs } = await list({
+    prefix: fileName,
+    limit: 1,
+  })
+  const { url } = blobs[0]
 
-/************************************************************************************************************* */
-/* There is an issue, I'm requesting a new access token each time, even if the previous one is still valid *****/
-/* Write the access token in a file *****/
-/************************************************************************************************************* */
-
+  return (
+    <video controls preload="none" aria-label="Video player">
+      <source src={url} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  )
+}
