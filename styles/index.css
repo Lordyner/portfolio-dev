@@ -107,6 +107,7 @@ h1 {
 h2,
 h3,
 h4 {
+    font-weight: bold;
     font-family: OpenSansSemiBold;
     text-transform: uppercase;
 }
@@ -129,6 +130,8 @@ h2::after {
 
 h3 {
     font-size: var(--heading-500);
+    color: var(--darker-primary-color);
+    text-transform: uppercase;
 }
 
 img {
@@ -162,12 +165,31 @@ button {
     padding: 0.75rem 1.5rem;
     font-size: 1.125rem;
     text-align: center;
+}
 
+.secondary-button {
+    background-color: transparent;
+    color: var(--darker-primary-color);
+    border: 1px solid var(--darker-primary-color);
+    border-radius: 1.25rem;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    text-align: center;
 }
 
 .max-width {
-    max-width: 69.375rem;
+    max-width: 80rem;
     margin-inline: auto;
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 

@@ -11,6 +11,7 @@ import Spinner from '@/Components/Spinner';
 import Values from '@/Components/Values';
 import GlobalContext from '@/Store/GlobalContext';
 import Mission from '@/Components/Mission';
+import Services from '@/Components/Services';
 
 export default function Home() {
 
@@ -103,6 +104,7 @@ export default function Home() {
 
       <Hero />
       <Mission />
+      <Services />
       {/* <Values />
       <Project />
       <FAQ /> */}
