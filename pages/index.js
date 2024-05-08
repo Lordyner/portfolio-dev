@@ -106,8 +106,9 @@ export default function Home() {
       <Mission />
       <Services />
       <Project />
-      {/* <Values />
-      <FAQ /> */}
+      <Values />
+
+      {/*       <FAQ /> */}
       {/* <Footer /> */}
     </>
   )

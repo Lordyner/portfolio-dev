@@ -5,6 +5,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
+import expertiseTechniqueIcon from '@/public/images/global/expertise_technique_icone.png';
+import communicationIcon from '@/public/images/global/communication_icone.png';
+import engagementIcon from '@/public/images/global/engagement_icone.png';
 
 const Values = () => {
     const { isMobileResolution } = useContext(GlobalContext);
@@ -15,87 +18,33 @@ const Values = () => {
 
     return (
         <section className={classes.valueSection}>
-            <h2>Boostez votre visibilité, convertissez vos visiteurs.</h2>
-            <div className={classes.valueProposition}>
-                <p>Je crée des sites web impactants qui optimisent votre visibilité et vos conversions.</p>
+            <div className={`${classes.content} max-width`}>
+                <h2>Travaillez avec moi</h2>
+                <div className={classes.values}>
+                    <div className={classes.value}>
+                        <Image src={expertiseTechniqueIcon} alt="expertise technique" className={classes.icon} />
+                        <div className={classes.textWrapper}>
+                            <h3>Expertise technique</h3>
+                            <p>+ 5 d'ans d'expériences dans le développent web à travailler sur différents projets</p>
+                        </div>
+                    </div>
+                    <div className={classes.value}>
+                        <Image src={communicationIcon} alt="communication" className={classes.icon} />
+                        <div className={classes.textWrapper}>
+                            <h3>Communication</h3>
+                            <p>Je suis votre unique interlocuteur et vous tient au courant de l'avancé du projet</p>
+                        </div>
+                    </div>
+                    <div className={classes.value}>
+                        <Image src={engagementIcon} alt="engagement" className={classes.icon} />
+                        <div className={classes.textWrapper}>
+                            <h3>Engagement</h3>
+                            <p>Je travaille sur un projet à la fois et j'ai à cœur que le résultat dépasse vos attentes </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            {/* For laptop and desktop, we display values on the same row */}
-            {(isLaptopResolution || isDesktopResolution) && <div className={classes.cardContainer}>
-                <div className={classes.card}>
-                    <div className={classes.imageWrapper}>
-                        <div className={classes.imageBg}></div>
-                        {/* <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" /> */}
-                    </div>
-                    <h3>Expérience utilisateur</h3>
-                    <p className={classes.valueDescription}>Une expérience utilisateur positive favorise la conversion en client.</p>
-                </div>
-                <div className={classes.card}>
-                    <div className={classes.imageWrapper}>
-                        <div className={classes.imageBg}></div>
-                        {/* <Image src={iconSEO} alt="Icône SEO" /> */}
-                    </div>
-                    <h3>Bonnes pratiques SEO</h3>
-                    <p className={classes.valueDescription}>Le respect des bonnes pratiques SEO aide votre site à obtenir plus de trafic.</p>
-                </div>
-                <div className={classes.card}>
-                    <div className={classes.imageWrapper}>
-                        <div className={classes.imageBg}></div>
-                        {/* <Image src={customMade} alt="Icône d'une interface avec des jauges" /> */}
-                    </div>
-                    <h3>Site sur mesure</h3>
-                    <p className={classes.valueDescription}>Chaque site que je réalise est construit sur mesure afin de répondre à vos besoins et coller à votre image.</p>
-                </div>
-            </div>}
-            {/* For mobile, we use a carousel to display values */}
-            {(isMobileResolution || isTabletResolution) &&
-                <Splide
-                    options={{
-                        perPage: 1,
-                        rewind: true,
-                        gap: '1rem',
-                        pagination: true,
-                        arrows: false,
-                    }}
-                >
-
-                    <SplideSlide key="1">
-                        <div className={classes.card}>
-                            <div className={classes.imageWrapper}>
-                                <div className={classes.imageBg}></div>
-                                <Image src={userExperience} alt="Icône d'un téléphone avec des retours d'utilisateurs et trois étoiles" />
-                            </div>
-                            <h3>Expérience utilisateur</h3>
-                            <p className={classes.valueDescription}>Une expérience utilisateur positive favorise la conversion en client.</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide key="2">
-                        <div className={classes.card}>
-                            <div className={classes.imageWrapper}>
-                                <div className={classes.imageBg}></div>
-                                <Image src={iconSEO} alt="Icône SEO" />
-                            </div>
-                            <h3>Bonnes pratiques SEO</h3>
-                            <p className={classes.valueDescription}>Le respect des bonnes pratiques SEO aide votre site à obtenir plus de trafic.</p>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide key="3">
-                        <div className={classes.card}>
-                            <div className={classes.imageWrapper}>
-                                <div className={classes.imageBg}></div>
-                                <Image src={customMade} alt="Icône d'une interface avec des jauges" />
-                            </div>
-                            <h3>Site sur mesure</h3>
-                            <p className={classes.valueDescription}>Chaque site que je réalise est construit sur mesure afin de répondre à vos besoins et coller à votre image.</p>
-                        </div>
-                    </SplideSlide>
-
-                </Splide>
-            }
-
-            <div className={classes.buttonWrapper}>
-                <Link href="/book-a-call" className='primary-button'>Réserver un appel</Link>
-            </div>
         </section >
     );
 };

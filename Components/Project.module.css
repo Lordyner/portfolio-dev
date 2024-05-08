@@ -46,6 +46,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
+
+    .projectSection {
+        padding: 2rem 2.5rem;
+    }
 }
 
 @media screen and (min-width: 64rem) {}
