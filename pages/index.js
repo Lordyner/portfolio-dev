@@ -109,8 +109,7 @@ export default function Home() {
       <Project />
       <Values />
       <Contact />
-      {/*       <FAQ /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 
