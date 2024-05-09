@@ -1,5 +1,5 @@
 .valueSection {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
     background-color: var(--white);
 }
 
@@ -44,7 +44,11 @@
     }
 
     .valueSection {
-        padding: 2rem 2.5rem;
+        padding: 5.5rem 2.5rem;
+    }
+
+    .content {
+        gap: 4rem;
     }
 
 }

@@ -3,7 +3,7 @@ import classes from './Services.module.css';
 import Link from 'next/link';
 const Services = () => {
     return (
-        <div className={`${classes.container}`}>
+        <section className={`${classes.container}`}>
             <div className={`${classes.content} max-width`}>
                 <h2>Services</h2>
                 <p className={classes.description}>Je vous accompagne en tant que développeur web freelance à travers différents services. De l'audit à la conception de maquette et au développement de site, je mets à disposition mon expertise.</p>
@@ -34,7 +34,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

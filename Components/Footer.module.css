@@ -1,5 +1,5 @@
 .footer {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 .content {
@@ -61,8 +61,8 @@
 }
 
 .circle {
-    width: .75rem;
-    height: .75rem;
+    width: .5rem;
+    height: .5rem;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid var(--darker-primary-color);

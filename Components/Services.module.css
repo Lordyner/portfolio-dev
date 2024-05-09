@@ -1,5 +1,4 @@
 .container {
-    background-color: var(--white);
     text-align: center;
     padding: 3rem 1.5rem;
 }
@@ -28,9 +27,9 @@
 .services::after {
     content: '';
     position: absolute;
-    background-color: var(--background-color);
+    background-color: var(--white);
     inset: 0;
-    transform: skewY(-4deg);
+    transform: skewY(-2deg);
     z-index: -1;
 }
 
@@ -95,6 +94,12 @@
 
     .description {
         padding-bottom: 2rem;
+        max-width: 43.75rem;
+        align-self: center;
+    }
+
+    .content {
+        gap: 4rem;
     }
 
 

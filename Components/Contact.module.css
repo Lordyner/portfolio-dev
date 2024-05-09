@@ -1,5 +1,5 @@
 .contactSection {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 .content {
@@ -42,7 +42,7 @@
 
 @media (min-width: 48rem) {
     .contactSection {
-        padding: 2rem 2.5rem;
+        padding: 5.5rem 2.5rem;
     }
 
     .fieldsContainer {
@@ -53,5 +53,15 @@
 
     .contactForm {
         gap: 3rem;
+    }
+
+    .content {
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    .contactForm {
+        width: 70%;
     }
 }
