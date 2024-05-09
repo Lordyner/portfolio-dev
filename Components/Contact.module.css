@@ -1,0 +1,57 @@
+.contactSection {
+    padding: 2rem 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+}
+
+.fieldName {
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.fieldsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 48rem) {
+    .contactSection {
+        padding: 2rem 2.5rem;
+    }
+
+    .fieldsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .contactForm {
+        gap: 3rem;
+    }
+}

@@ -12,6 +12,7 @@ import Values from '@/Components/Values';
 import GlobalContext from '@/Store/GlobalContext';
 import Mission from '@/Components/Mission';
 import Services from '@/Components/Services';
+import Contact from '@/Components/Contact';
 
 export default function Home() {
 
@@ -107,7 +108,7 @@ export default function Home() {
       <Services />
       <Project />
       <Values />
-
+      <Contact />
       {/*       <FAQ /> */}
       {/* <Footer /> */}
     </>

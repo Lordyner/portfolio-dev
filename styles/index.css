@@ -178,6 +178,28 @@ button {
     text-align: center;
 }
 
+input,
+textarea {
+    padding: 0.5rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-family: 'OpenSansRegular';
+    border: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0.25rem var(--primary-color);
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 10rem;
+    resize: vertical;
+}
+
 .max-width {
     max-width: 80rem;
     margin-inline: auto;
@@ -227,6 +249,11 @@ button {
 @media screen and (min-width: 48rem) {
     h2::after {
         margin-top: 2rem;
+    }
+
+    textarea {
+        max-width: 100%;
+        max-height: 10rem;
     }
 }
 
