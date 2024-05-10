@@ -51,11 +51,11 @@
 
 .mobileNav {
     height: 100vh;
-    width: 55%;
+    /* width: 55%; */
     position: fixed;
     z-index: 98;
     top: 0;
-    right: -100%;
+    right: 0;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@
     padding: 6rem 3rem;
     font-size: var(--body-500);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    transition: .5s ease-in-out;
+    /* transition: .5s ease-in-out; */
 }
 
 .mobileNav.active {
