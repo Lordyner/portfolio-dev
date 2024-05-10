@@ -81,11 +81,10 @@ const Navbar = () => {
         <header className={`${classes.header}`}>
             <nav className={`${classes.navbar} max-width`}>
                 <div className={`${classes.navWrapper} `}>
-                    <div className={classes.logo}>
-                        <Link href="/">
-                            <Image src={logo} alt='logo thomas andré-lubin' className={classes.logoImg} />
-                        </Link>
-                    </div>
+                    <Link href="/" className={classes.logo}>
+                        {/* <Image src={logo} alt='logo thomas andré-lubin' className={classes.logoImg} /> */}
+                        &lt;TA&#47;&gt;
+                    </Link>
                     {/* Classic links */}
                     <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
                         <Link href="/#projects-section" className={classes.link}>Projets</Link>

@@ -49,6 +49,7 @@
     padding-top: 2rem;
 }
 
+
 .mobileNav {
     height: 100vh;
     /* width: 55%; */
@@ -83,6 +84,13 @@
     text-decoration: none;
 }
 
+.logo {
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'OpenSansBold';
+    font-weight: bold;
+    font-size: 1rem;
+}
 
 .logo:hover {
     color: var(--primary-color) !important;
@@ -190,5 +198,9 @@
 
     .logoImg {
         width: 8rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
     }
 }

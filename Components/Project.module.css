@@ -15,30 +15,6 @@
     gap: 3.375rem;
 }
 
-.project {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.projectImage {
-    border-top-left-radius: 0.625rem;
-    border-top-right-radius: 0.625rem;
-    width: 100%;
-    /* display: flex;
-    flex-grow: 2;
-    object-fit: cover; */
-}
-
-.textWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem 1.5rem 1.875rem 1.5rem;
-    background-color: var(--white);
-    border-bottom-left-radius: 0.625rem;
-    border-bottom-right-radius: 0.625rem;
-}
 
 @media screen and (min-width: 48rem) {
     .projects {
@@ -61,5 +37,6 @@
 @media screen and (min-width: 90rem) {
     .projects {
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 2.5rem;
     }
 }

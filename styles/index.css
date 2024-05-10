@@ -60,14 +60,15 @@
 }
 
 @font-face {
-    font-family: DMSerifDisplayItalic;
-    src: url('../public/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf');
-}
-
-@font-face {
     font-family: OpenSansSemiBold;
     src: url('../public/fonts/OpenSans/OpenSans-SemiBold.ttf');
 }
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url('../public/fonts/OpenSans/OpenSans-Bold.ttf');
+}
+
 
 @font-face {
     font-family: OpenSansRegular;
@@ -170,6 +171,12 @@ button {
     padding: 0.75rem 1.5rem;
     font-size: 1.125rem;
     text-align: center;
+    transition: all .25s;
+}
+
+.primary-button:hover {
+    transform: scale(1.1);
+    background-color: var(--darker-primary-color);
 }
 
 .secondary-button {
@@ -270,7 +277,6 @@ textarea {
 
 @media screen and (min-width: 90rem) {
     .primary-button {
-
         padding: 1rem 2.5rem;
         font-size: 1.25rem;
     }

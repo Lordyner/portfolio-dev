@@ -66,10 +66,7 @@ export default function Home() {
   return (
     <>
       {isLoading && <Spinner />}
-      {showPopupAddMeetingInClientCalendar && <PopupAddAgenda
-        showPopup={showPopupAddMeetingInClientCalendar}
-        setShowPopup={setShowPopupAddMeetingInClientCalendar}
-      />}
+
       <Head>
         <title>Développeur web Freelance</title>
         <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
@@ -113,19 +110,4 @@ export default function Home() {
     </>
   )
 
-}
-
-async function VideoComponent({ fileName }) {
-  const { blobs } = await list({
-    prefix: fileName,
-    limit: 1,
-  })
-  const { url } = blobs[0]
-
-  return (
-    <video controls preload="none" aria-label="Video player">
-      <source src={url} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  )
 }

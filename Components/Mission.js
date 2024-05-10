@@ -8,7 +8,7 @@ const Mission = () => {
 
     const { isLaptopResolution, isDesktopResolution } = useContext(GlobalContext);
     return (
-        <section className={`${classes.missionContainer} max-width`}>
+        <section className={`${classes.missionContainer} `}>
             <div className={`${classes.wrapper} max-width`}>
                 <h2>Ma mission de<br /> développeur web</h2>
                 <div className={classes.content}>
