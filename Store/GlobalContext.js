@@ -17,6 +17,8 @@ import photosnapDesktop from '@/public/images/desktop/photosnap.png';
 import coffeeRoastersMobile from '@/public/images/mobile/coffee_roasters.png';
 import coffeeRoastersTablet from '@/public/images/tablet/coffee_roasters.png';
 import coffeeRoastersDesktop from '@/public/images/desktop/coffee_roasters.png';
+import responsive from '@/public/images/global/responsive.jpg';
+
 const GlobalContext = createContext();
 
 export function GlobalContextProvider(props) {
@@ -74,7 +76,91 @@ export function GlobalContextProvider(props) {
             liveSiteUrl: 'https://lordyner.github.io/news-homepage/'
         },
     ]);
+    const [servicesData, setServicesData] = useState([
+        {
+            id: 1,
+            title: 'Audit de site',
+            description: 'J\'analyse les données Google Analytics de votre site pour déterminer les problème qui nuisent à son taux de conversion et son trafic.',
+            link: 'services/audit',
+            className: 'audit',
+            features: [{
+                name: 'Responsive',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'SEO',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            }, {
+                name: 'UI',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            }
 
+
+            ]
+        },
+        {
+            id: 2,
+            title: 'Création de site internet',
+            description: 'Je vous crée un site internet au design moderne et avec une bonne expérience utilisateur, qui reflète votre marque. Ensemble nous ...',
+            link: 'services/creation-site-internet',
+            className: 'website',
+            features: [{
+                name: 'Responsive',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            }]
+        },
+        {
+            id: 3,
+            title: 'Conception de maquette',
+            description: 'Je conçois les maquettes de votre site internet à partir de vos besoins et l\'image que vous souhaitez renvoyer. Ces maquettes peuvent ...',
+            link: 'services/conception-maquette',
+            className: 'design',
+            features: [{
+                name: 'Responsive',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            }]
+        }
+    ]);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
         handleBodyScroll(!isMenuOpen);
@@ -100,7 +186,7 @@ export function GlobalContextProvider(props) {
             isDesktopResolution, setIsDesktopResolution,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
             mobileResolution, tabletResolution, laptopResolution, desktopResolution,
-            toggleMenu, projectsData
+            toggleMenu, projectsData, servicesData
         }}>
             {props.children}
         </GlobalContext.Provider>

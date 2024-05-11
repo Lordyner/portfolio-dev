@@ -1,0 +1,40 @@
+.features {
+    padding: 2rem 0;
+    position: relative;
+
+}
+
+.content {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: .5rem;
+} */
+
+
+.features:after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    inset: 0;
+    transform: skewY(-2deg);
+    z-index: -1;
+}
+
+.featuresList {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    /* gap: 1rem; */
+}
+
+.featuresList:active {
+    cursor: grabbing;
+}

@@ -108,6 +108,7 @@ h1 {
     font-size: var(--heading-900);
     font-weight: normal;
     line-height: var(--heading-900);
+    color: #000;
 }
 
 h2,
@@ -116,6 +117,7 @@ h4 {
     font-weight: bold;
     font-family: OpenSansSemiBold;
     text-transform: uppercase;
+    color: #000;
 }
 
 h2 {
@@ -188,6 +190,13 @@ button {
     padding: 0.5rem 1.25rem;
     font-size: 0.875rem;
     text-align: center;
+    transition: all .25s;
+}
+
+.secondary-button:hover {
+    background-color: var(--darker-primary-color);
+    color: var(--white);
+    transform: scale(1.1);
 }
 
 input,

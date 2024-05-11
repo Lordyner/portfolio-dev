@@ -1,0 +1,25 @@
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 0.625rem;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.featureCardText {
+    display: flex;
+
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+    gap: 1.125rem;
+    padding: 0.875rem 1.5rem 2rem 1.5rem;
+}
+
+.cardImage {
+    object-fit: cover;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    max-height: 160px;
+}

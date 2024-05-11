@@ -1,5 +1,5 @@
 .footer {
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
 .content {
@@ -107,6 +107,7 @@
 
     .footerLinks {
         flex-direction: row;
+        gap: 2rem;
     }
 
     .contactInfo {
