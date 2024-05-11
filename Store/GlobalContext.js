@@ -1,10 +1,10 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 import audiophileMobile from '../public/images/mobile/audiophile.png';
 import audiophileTablet from '../public/images/tablet/audiophile.png';
 import audiophileDesktop from '../public/images/desktop/audiophile.png';
-import payApiMobile from '@/public/images/mobile/payApi.png';
-import payApiTablet from '@/public/images/tablet/payApi.png';
-import payApiDesktop from '@/public/images/desktop/payApi.png';
+import payApiMobile from '@/public/images/mobile/payAPI.png';
+import payApiTablet from '@/public/images/tablet/payAPI.png';
+import payApiDesktop from '@/public/images/desktop/payAPI.png';
 import myTeamMobile from '@/public/images/mobile/myTeam.png';
 import myTeamTablet from '@/public/images/tablet/myTeam.png';
 import myTeamDesktop from '@/public/images/desktop/myTeam.png';
