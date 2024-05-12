@@ -9,7 +9,7 @@ const Services = () => {
     const { servicesData } = useContext(GlobalContext);
 
     return (
-        <section className={`${classes.container}`}>
+        <section id='services' className={`${classes.container}`}>
             <div className={`${classes.content} max-width`}>
                 <h2>Services</h2>
                 <p className={classes.description}>Je vous accompagne en tant que développeur web freelance à travers différents services. De l'audit à la conception de maquette et au développement de site, je mets à disposition mon expertise.</p>

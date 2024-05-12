@@ -12,7 +12,7 @@ const Project = () => {
     const { projectsData } = useContext(GlobalContext);
 
     return (
-        <section id='projects-section' className={classes.projectSection}>
+        <section id='realisations' className={classes.projectSection}>
             <div className={`${classes.content} max-width`}>
                 <h2>Réalisations</h2>
                 <div className={classes.projects}>

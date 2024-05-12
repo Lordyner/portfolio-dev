@@ -1,16 +1,14 @@
-import CTAReminder from "@/Components/CTAReminder";
+import About from "@/Components/About";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import ProjectDescription from "@/Components/ProjectDescription";
-import ServicePresentation from "@/Components/ServicePresentation";
 import Spinner from "@/Components/Spinner";
-import Stats from "@/Components/Stats";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 
-export default function ServiceName({ serviceUrl }) {
+export default function APropos() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
@@ -22,6 +20,7 @@ export default function ServiceName({ serviceUrl }) {
     const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
     const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
     const { isLoading, setIsLoading } = useContext(GlobalContext);
+    const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
     const { isMenuOpen } = useContext(GlobalContext);
 
     /* Router */
@@ -52,8 +51,6 @@ export default function ServiceName({ serviceUrl }) {
         router.events.on("routeChangeComplete", () => setIsLoading(false));
     }, [screenWidth])
 
-    const { servicesData } = useContext(GlobalContext);
-    const service = servicesData.find(service => service.link === 'services/' + serviceUrl);
 
     return (
         <>
@@ -91,30 +88,10 @@ export default function ServiceName({ serviceUrl }) {
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
-            <ServicePresentation service={service} />
-            <CTAReminder />
-            <Stats />
+            <About />
             <Footer />
         </>
     )
 
 
-}
-
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true
-    };
-}
-export async function getStaticProps(context) {
-
-    // Get product handle from context
-    const { serviceUrl } = context.params;
-    return {
-        props: {
-            serviceUrl: serviceUrl,
-        },
-        revalidate: 60
-    }
 }

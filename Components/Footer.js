@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className={classes.logoAndLinks}>
                     <Image src={logo} alt="Logo" className={classes.logo} />
                     <div className={classes.footerLinks}>
-                        <Link href="#projets" className={classes.link}>Projets</Link>
+                        <Link href="#realisations" className={classes.link}>Projets</Link>
                         <Link href="#services" className={classes.link}>Services</Link>
                         <Link href="#" className={classes.link}>A propos</Link>
                         <Link href="#contact" className={classes.link}>Contact</Link>

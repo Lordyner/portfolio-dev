@@ -1,0 +1,7 @@
+.title {
+    font-family: 'OpenSansSemiBold';
+    font-weight: bold;
+    font-size: var(--heading-700);
+    text-transform: uppercase;
+    text-align: center;
+}

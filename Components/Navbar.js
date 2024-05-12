@@ -87,9 +87,9 @@ const Navbar = () => {
                     </Link>
                     {/* Classic links */}
                     <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                        <Link href="/#projects-section" className={classes.link}>Projets</Link>
-                        <Link href="/#projects-section" className={classes.link}>Services</Link>
-                        <Link href="/#projects-section" className={classes.link}>A propos</Link>
+                        <Link href="/#realisations" className={classes.link}>Projets</Link>
+                        <Link href="/#services" className={classes.link}>Services</Link>
+                        <Link href="/a-propos" className={classes.link}>A propos</Link>
                     </div>
 
                     {/* Burger menu */}
@@ -111,31 +111,30 @@ const Navbar = () => {
                             animate={isMenuOpen ? "open" : "closed"}
                             variants={sideVariants}>
                             <motion.div variants={variantsItem}>
-                                <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                <Link href="/" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Accueil</Link>
                             </motion.div>
                             <motion.div variants={variantsItem}>
-                                <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                <Link href="/#services" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Services</Link>
                             </motion.div>
                             <motion.div variants={variantsItem}>
-                                <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                <Link href="/#realisations" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Projets</Link>
                             </motion.div>
                             <motion.div variants={variantsItem}>
-                                <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
+                                <Link href="/a-propos" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>A propos</Link>
                             </motion.div>
                             <motion.div className={classes.buttonWrapper} variants={variantsItem}>
-
                                 <Link href="/book-a-call" className='primary-button'>Me contacter</Link>
                             </motion.div>
                         </motion.div>

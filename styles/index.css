@@ -86,7 +86,7 @@
 
 html {
     /* Bug : rentre en conflit avec le form validation (le message d'erreur ne s'affiche pas)  */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -174,6 +174,12 @@ button {
     font-size: 1.125rem;
     text-align: center;
     transition: all .25s;
+}
+
+.primary-button.light {
+    background-color: var(--white);
+    color: var(--black);
+
 }
 
 .primary-button:hover {
