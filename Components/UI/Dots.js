@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classes from './Dots.module.css';
-const Dots = ({ featureIndex, setFeatureIndex, features }) => {
+import GlobalContext from '@/Store/GlobalContext';
+
+const Dots = ({ featureIndex, setFeatureIndex, dots }) => {
+
     return (
         <div className={classes.dots}>
-            {features.map((feature, index) => {
+            {dots.map((dot, index) => {
                 return (
                     // <div key={index} className={`${classes.dot} ${featureIndex === index ? classes.active : ''}`} onClick={() => setFeatureIndex(index)}></div>
                     <button key={index}

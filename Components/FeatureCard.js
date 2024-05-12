@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classes from './FeatureCard.module.css';
 import Image from 'next/image';
 import { motion, useMotionValue } from "framer-motion";
+import GlobalContext from '@/Store/GlobalContext';
 
 
 const FeatureCard = ({ title, description, image, alt, featureIndex, index }) => {
+
+    const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
+    const scaleAnimation = () => {
+        if (isMobileResolution) {
+            return featureIndex === index ? 0.95 : 0.85;
+        } else if (isTabletResolution || isLaptopResolution) {
+            return 0.95;
+        } else {
+            return 1;
+
+        }
+    }
     return (
         <motion.div className={classes.featureCard}
             animate={{
-                scale: featureIndex === index ? 0.95 : 0.85
+                scale: scaleAnimation()
             }}
             transition={{
                 type: "spring",
