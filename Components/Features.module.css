@@ -10,17 +10,6 @@
     text-align: center;
 }
 
-
-
-.features:after {
-    content: '';
-    position: absolute;
-    background-color: var(--white);
-    inset: 0;
-    transform: skewY(-2deg);
-    z-index: -1;
-}
-
 .featuresList {
     display: flex;
     align-items: center;
@@ -31,6 +20,17 @@
 .featuresList:active {
     cursor: grabbing;
 }
+
+.features:after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    inset: 0;
+    transform: skewY(-2deg);
+    z-index: -1;
+}
+
+
 
 .featuresGrid {
     display: grid;

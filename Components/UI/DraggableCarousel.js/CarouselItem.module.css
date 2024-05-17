@@ -1,0 +1,20 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--darker-primary-color);
+    color: #fff;
+    border-radius: 0.625rem;
+    min-height: 10rem;
+
+}
+
+.title {
+    color: var(--white);
+}
+
+.textWrapper {
+    padding: 1.5rem 1rem;
+}

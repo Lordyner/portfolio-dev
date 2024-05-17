@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react';
 import classes from './Features.module.css';
 import FeatureCard from './FeatureCard';
 import { motion, useMotionValue } from "framer-motion";
-import Dots from './UI/Dots';
+import Dots from './UI/DraggableCarousel.js/Dots';
 import GlobalContext from '@/Store/GlobalContext';
+import DotsFeature from './UI/DraggableCarousel.js/DotsFeature';
 
 const DRAG_BUFFER = 30;
+
+
 const Features = ({ features }) => {
     const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
     const INDEX_BUFFER = isMobileResolution ? 1 : 2;
@@ -64,7 +67,7 @@ const Features = ({ features }) => {
                             <FeatureCard key={index} title={feature.name} description={feature.description} image={feature.image} alt={feature.alt} featureIndex={featureIndex} index={index} />
                         ))}
                     </motion.div>
-                    <Dots featureIndex={featureIndex} setFeatureIndex={setFeatureIndex} dots={dots} />
+                    <DotsFeature featureIndex={featureIndex} setFeatureIndex={setFeatureIndex} dots={dots} />
                 </div>
             }
             {!(isMobileResolution || isTabletResolution || isLaptopResolution) &&

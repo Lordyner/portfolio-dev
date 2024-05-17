@@ -1,25 +1,24 @@
 import React, { useContext } from 'react';
-import classes from './FeatureCard.module.css';
-import Image from 'next/image';
-import { motion, useMotionValue } from "framer-motion";
+import classes from './CarouselItem.module.css';
+import { motion } from 'framer-motion';
 import GlobalContext from '@/Store/GlobalContext';
 
-
-const FeatureCard = ({ title, description, image, alt, featureIndex, index }) => {
+const CarouselItem = ({ title, description, itemIndex, index }) => {
 
     const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
     const scaleAnimation = () => {
         if (isMobileResolution) {
-            return featureIndex === index ? 0.95 : 0.85;
+            return itemIndex === index ? 0.95 : 0.85;
         } else if (isTabletResolution || isLaptopResolution) {
             return 0.95;
         } else {
             return 1;
+
         }
     }
 
     return (
-        <motion.div className={classes.featureCard}
+        <motion.div
             animate={{
                 scale: scaleAnimation()
             }}
@@ -29,14 +28,13 @@ const FeatureCard = ({ title, description, image, alt, featureIndex, index }) =>
                 stiffness: 400,
                 damping: 40
             }}
-        >
-            <Image src={image} alt={alt} className={classes.cardImage} />
-            <div className={classes.featureCardText}>
-                <h3>{title}</h3>
-                <p>{description}</p>
+            className={classes.card}>
+            <div className={classes.textWrapper}>
+                <h3 className={classes.title}>{title}</h3>
+                <p className={classes.description}>{description}</p>
             </div>
-        </motion.div >
+        </motion.div>
     );
 };
 
-export default FeatureCard;
+export default CarouselItem;
