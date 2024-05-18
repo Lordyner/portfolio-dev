@@ -14,6 +14,7 @@ import Mission from '@/Components/Mission';
 import Services from '@/Components/Services';
 import Contact from '@/Components/Contact';
 import Stats from '@/Components/Stats';
+import classes from '@/Components/MainPage.module.css';
 
 export default function Home() {
 
@@ -99,9 +100,12 @@ export default function Home() {
 
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
-      <Navbar />
+      <div className={classes.mainPage}>
 
-      <Hero />
+        <Navbar />
+
+        <Hero />
+      </div>
       <Mission />
       <Services />
       <Project />
