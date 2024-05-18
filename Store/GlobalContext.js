@@ -137,7 +137,7 @@ export function GlobalContextProvider(props) {
         {
             id: 2,
             title: 'Création de site internet',
-            description: 'Je vous crée un site internet au design moderne et avec une bonne expérience utilisateur, qui reflète votre marque. Ensemble nous ...',
+            description: 'Un site internet est aujourd\'hui un outil indispensable pour toute entreprise. Il est gage de crédibilité et de visibilité. Imaginez un magasin ou un bureau ouvert 24h/24 et 7j/7, avec des charges de fonctionnement minimes et qui est accessible immédiatement par des millions de personnes. C\'est ce que vous offre un site internet. ',
             link: 'services/creation-site-internet',
             className: 'website',
             features: [{

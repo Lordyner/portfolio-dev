@@ -9,8 +9,13 @@ import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
+import classes from '@/Components/ServicePresentation.module.css'
+import Features from "@/Components/Features";
+import responsive from '@/public/images/global/responsive.jpg';
+import Link from "next/link";
 
-export default function ServiceName({ serviceUrl }) {
+
+export default function ServiceName() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
@@ -52,9 +57,29 @@ export default function ServiceName({ serviceUrl }) {
         router.events.on("routeChangeComplete", () => setIsLoading(false));
     }, [screenWidth])
 
-    const { servicesData } = useContext(GlobalContext);
-    const service = servicesData.find(service => service.link === 'services/' + serviceUrl);
+    const [features, setFeatures] = useState(
+        [
+            {
+                name: 'Responsive',
+                description: 'Chacun de mes maquettes est pensée pour s\'adapter à tous les écrans. Vous recevrez donc vos maquettes pour mobile, tablette et ordinateur.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Expérience utilisateur',
+                description: 'L\'expérience utilisateur est primordiale pour la réussite de votre site internet. C\'est pourquoi je m\'assure que chaque élément de la maquette est pensé pour offrir la meilleure expérience possible à vos utilisateurs.',
+                image: responsive,
+                alt: 'Responsive'
+            },
 
+            {
+                name: 'Retouches',
+                description: 'J\'offre plusieurs retouches afin que vous soyez pleinement satisfait du design de votre site internet.',
+                image: responsive,
+                alt: 'Responsive'
+            }
+        ]
+    )
     return (
         <>
             {isLoading && <Spinner />}
@@ -91,10 +116,17 @@ export default function ServiceName({ serviceUrl }) {
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
-            <h1>Old page</h1>
-            {/* <ServicePresentation service={service} />
+            <main className={classes.serviceContainer}>
+                <div className={classes.content}>
+                    <h1 className={classes.serviceTitle}>Conception de maquette</h1>
+                    <p className={classes.description}>Je conçois les maquettes de votre site internet à partir de vos besoins et l'image que vous souhaitez renvoyer. </p>
+                    <div className={classes.buttonWrapper}>
+                        <Link href="/contact" className='primary-button'>Discutons de votre projet</Link>
+                    </div>
+                </div>
+            </main>
+            <Features features={features} />
             <CTAReminder />
-            <Stats /> */}
             <Footer />
         </>
     )
@@ -102,19 +134,11 @@ export default function ServiceName({ serviceUrl }) {
 
 }
 
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true
-    };
-}
 export async function getStaticProps(context) {
 
-    // Get product handle from context
-    const { serviceUrl } = context.params;
     return {
         props: {
-            serviceUrl: serviceUrl,
+
         },
         revalidate: 60
     }

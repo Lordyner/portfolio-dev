@@ -9,8 +9,13 @@ import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
+import classes from '@/Components/ServicePresentation.module.css'
+import Features from "@/Components/Features";
+import responsive from '@/public/images/global/responsive.jpg';
+import Link from "next/link";
 
-export default function ServiceName({ serviceUrl }) {
+
+export default function ServiceName() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
@@ -52,9 +57,46 @@ export default function ServiceName({ serviceUrl }) {
         router.events.on("routeChangeComplete", () => setIsLoading(false));
     }, [screenWidth])
 
-    const { servicesData } = useContext(GlobalContext);
-    const service = servicesData.find(service => service.link === 'services/' + serviceUrl);
-
+    const [features, setFeatures] = useState(
+        [
+            {
+                name: 'Taux de conversion',
+                description: 'Que ce soit de la prise de rendez-vous, demande de devis, l\'achat d\'un produit, il est primordial de connaitre le taux de conversion de votre site.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Performance',
+                description: 'Un site lent à charger sera pénalisé par Google et apparaîtra plus bas dans les résultats de recherche.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Taux de rebond',
+                description: 'C\'est le pourcentage de visiteurs qui quittent votre site après avoir vu une seule page. Cela peut cacher un problème de contenu, de design ou de performance de votre site internet.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Taux de conversion par support',
+                description: 'Si votre taux de conversion est bon sur ordinateur mais mauvais sur mobile, cela peut cacher un problème de responsive design.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Evolution du nombre de visiteurs',
+                description: 'Une chute du nombre de visiteurs peut être dû à un problème de référencement, de contenu ou de performance de votre site internet. Dans tout les cas, il est important de comprendre pourquoi et résoudre le problème.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Référencement technique',
+                description: 'Un audit de site internet permet de vérifier que votre site respecte les bonnes pratiques de référencement technique. Cela permettra à Google de mieux comprendre votre site et de le référencer plus facilement.',
+                image: responsive,
+                alt: 'Responsive'
+            }
+        ]
+    )
     return (
         <>
             {isLoading && <Spinner />}
@@ -91,10 +133,21 @@ export default function ServiceName({ serviceUrl }) {
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
-            <h1>Old page</h1>
-            {/* <ServicePresentation service={service} />
+            <main className={classes.serviceContainer}>
+                <div className={classes.content}>
+                    <h1 className={classes.serviceTitle}>Audit de site internet</h1>
+                    <p className={classes.description}
+                    >Un site internet est un investissement pour votre entreprise. Il doit vous aider à gagner en visibilité, obtenir plus de clients, vendre vos produits etc.<br />
+                        Mais bien trop souvent ces objectifs là ne sont pas suivi et ce qui avait le pouvoir d'être une force pour votre entreprise se transforme en charge.<br /><br />
+                        Un audit de site internet permet de faire un état des lieux de votre site internet et de déterminer les points qui nuisent à son bon fonctionnement.<br />
+                    </p>
+                    <div className={classes.buttonWrapper}>
+                        <Link href="/contact" className='primary-button'>Discutons de votre projet</Link>
+                    </div>
+                </div>
+            </main>
+            <Features features={features} />
             <CTAReminder />
-            <Stats /> */}
             <Footer />
         </>
     )
@@ -102,19 +155,11 @@ export default function ServiceName({ serviceUrl }) {
 
 }
 
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true
-    };
-}
 export async function getStaticProps(context) {
 
-    // Get product handle from context
-    const { serviceUrl } = context.params;
     return {
         props: {
-            serviceUrl: serviceUrl,
+
         },
         revalidate: 60
     }

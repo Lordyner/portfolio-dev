@@ -9,8 +9,13 @@ import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
+import classes from '@/Components/ServicePresentation.module.css'
+import Features from "@/Components/Features";
+import responsive from '@/public/images/global/responsive.jpg';
+import Link from "next/link";
 
-export default function ServiceName({ serviceUrl }) {
+
+export default function ServiceName() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
@@ -52,9 +57,35 @@ export default function ServiceName({ serviceUrl }) {
         router.events.on("routeChangeComplete", () => setIsLoading(false));
     }, [screenWidth])
 
-    const { servicesData } = useContext(GlobalContext);
-    const service = servicesData.find(service => service.link === 'services/' + serviceUrl);
+    const [features, setFeatures] = useState(
+        [
+            {
+                name: 'Responsive',
+                description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Référencement technique',
+                description: 'Un mauvais référencement technique est pénaliser lourdement par Google. Chacun de mes sites respecte les bonnes pratiques (vitesses des pages, sémantique, sitesmaps, robots.txt etc) en matière de référencement technique.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Performance',
+                description: 'Mes réalisations sont optimisé, que ce soit au niveau du code, des images ou de l\'hébergement pour garantir une vitesse de chargement optimale.',
+                image: responsive,
+                alt: 'Responsive'
+            },
+            {
+                name: 'Expérience utilisateur',
+                description: 'Mes sites sont accessible et facile d\'utilisation pour offrir à vos clients une agréable expérience.',
+                image: responsive,
+                alt: 'Responsive'
+            }
 
+        ]
+    )
     return (
         <>
             {isLoading && <Spinner />}
@@ -91,10 +122,20 @@ export default function ServiceName({ serviceUrl }) {
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
-            <h1>Old page</h1>
-            {/* <ServicePresentation service={service} />
+            <main className={classes.serviceContainer}>
+                <div className={classes.content}>
+                    <h1 className={classes.serviceTitle}>Création de site internet</h1>
+                    <p className={classes.description}>
+                        Un site internet est aujourd'hui un outil indispensable pour toute entreprise. Il est gage de crédibilité et de visibilité.<br /><br />
+                        Imaginez un magasin ou un bureau ouvert 24h/24 et 7j/7, avec des charges de fonctionnement minimes et qui est accessible immédiatement par des millions de personnes. C'est ce que vous offre un site internet.
+                    </p>
+                    <div className={classes.buttonWrapper}>
+                        <Link href="/contact" className='primary-button'>Discutons de votre projet</Link>
+                    </div>
+                </div>
+            </main>
+            <Features features={features} />
             <CTAReminder />
-            <Stats /> */}
             <Footer />
         </>
     )
@@ -102,19 +143,11 @@ export default function ServiceName({ serviceUrl }) {
 
 }
 
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true
-    };
-}
 export async function getStaticProps(context) {
 
-    // Get product handle from context
-    const { serviceUrl } = context.params;
     return {
         props: {
-            serviceUrl: serviceUrl,
+
         },
         revalidate: 60
     }

@@ -14,7 +14,7 @@ const ServicePresentation = ({ service }) => {
                             <h1 className={classes.serviceTitle}>{service?.title}</h1>
                             <p className={classes.description}>{service?.description}</p>
                             <div className={classes.buttonWrapper}>
-                                <Link href="#" className='primary-button'>Discutons de votre projet</Link>
+                                <Link href="/contact" className='primary-button'>Discutons de votre projet</Link>
                             </div>
                         </div>
                     </main>
