@@ -8,16 +8,16 @@ const Stats = () => {
     const { isMobileResolution } = useContext(GlobalContext);
     const stats = [
         {
-            title: "Attention là où ça compte",
-            description: "Les sites internet sont la première source d'information pour 97% des consommateurs."
+            title: "Crédibilité de l'entreprise",
+            description: "75% des consommateurs admettent juger la crédibilité d'une entreprise en fonction du design de leur site internet."
         },
         {
-            title: "Attention là où ça compte 2",
-            description: "Les sites internet sont la première source d'information pour 97% des consommateurs."
+            title: "Recommendations",
+            description: "57% des internautes disent ne pas recommander une entreprise avec un site internet mal conçue pour mobile."
         },
         {
-            title: "Attention là où ça compte 3",
-            description: "Les sites internet sont la première source d'information pour 97% des consommateurs."
+            title: "Engagement des utilisateurs",
+            description: "38% des utilisateurs quittent un site internet si le contenu ou le design n'est pas attrayant."
         }
     ]
 
