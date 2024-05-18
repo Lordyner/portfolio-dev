@@ -105,7 +105,6 @@ export default function Home() {
       <Services />
       <Project />
       <Values />
-      <Contact />
       <Footer />
     </>
   )

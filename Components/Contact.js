@@ -1,14 +1,18 @@
 import React from 'react';
 import classes from './Contact.module.css';
+import Link from 'next/link';
 const Contact = () => {
 
     return (
         <section className={classes.contactSection}>
             <div className={`${classes.content} max-width`}>
                 <h2>Discutons de votre projet</h2>
-                <p className={classes.description}>Vous avez un projet ? Discutons-en via visioconférence ou par mon formulaire de contact.<br />
+                <h3>Contacter moi via le formulaire de contact</h3>
+                <p className={classes.description}>Vous avez un projet ? Discutons-en via le formulaire de contact ou bien <Link href="#calendly">réserver un échange téléphonique</Link>.
+                    <br />
+                    <br />
                     Je m'engage à revenir vers vous dans les 24h.<br /><br />
-                    Vous pouvez me joindre au 06 37 51 43 79 ou par mail à l'adresse suivante :  dev@thomasandrelubin.fr</p>
+                    Vous pouvez me joindre par mail à l'adresse suivante :  dev@thomasandrelubin.fr</p>
 
                 <form className={classes.contactForm}>
                     <div className={classes.fieldsContainer}>

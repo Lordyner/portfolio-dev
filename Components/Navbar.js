@@ -135,7 +135,7 @@ const Navbar = () => {
                                 }}>A propos</Link>
                             </motion.div>
                             <motion.div className={classes.buttonWrapper} variants={variantsItem}>
-                                <Link href="/book-a-call" className='primary-button'>Me contacter</Link>
+                                <Link href="/contact" className='primary-button'>Me contacter</Link>
                             </motion.div>
                         </motion.div>
                         <motion.div className={classes.socials} variants={sideVariantsSocials}>

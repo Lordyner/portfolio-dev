@@ -57,7 +57,7 @@ const Hero = () => {
                     <h1>Création de site <br />
                         <CursorBlinker /><motion.span className={classes.accentWord}>{displayText}</motion.span><br />
                         adapté à vos besoins</h1>
-                    <Link href="/book-a-call" className='primary-button'>Me contacter</Link>
+                    <Link href="/contact" className='primary-button'>Me contacter</Link>
                 </div>
                 {/* <Image src={heroImgMobile} alt='hero image' className={classes.heroImg} /> */}
                 <Image src={isMobileResolution ? heroImgMobile : isTabletResolution ? heroImgMobile : heroImgDesktop} alt='hero image' className={classes.heroImg} />

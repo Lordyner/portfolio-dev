@@ -26,7 +26,6 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={classes.contactInfo}>
-                    <p>06 37 51 43 79</p>
                     <p>dev@thomasandrelubin.fr</p>
                 </div>
                 <div className={classes.socialLinksAndCopy}>
