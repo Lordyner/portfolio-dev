@@ -15,6 +15,9 @@ import Services from '@/Components/Services';
 import Contact from '@/Components/Contact';
 import Stats from '@/Components/Stats';
 import classes from '@/Components/MainPage.module.css';
+import Problem from '@/Components/Problem';
+import Agitation from '@/Components/Agitation';
+import Solution from '@/Components/Solution';
 
 export default function Home() {
 
@@ -28,9 +31,8 @@ export default function Home() {
   /* Context */
   const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
   const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
-  const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
-  const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+  const { tabletResolution, desktopResolution } = useContext(GlobalContext);
   const { isLoading, setIsLoading } = useContext(GlobalContext);
   const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
   const { isMenuOpen } = useContext(GlobalContext);
@@ -43,13 +45,11 @@ export default function Home() {
     setScreenWidth(window.screen.width);
 
     const isMobile = screenWidth < tabletResolution;
-    const isTablet = screenWidth >= tabletResolution && screenWidth < laptopResolution;
-    const isLaptop = screenWidth >= laptopResolution && screenWidth < desktopResolution;
+    const isTablet = screenWidth >= tabletResolution && screenWidth < desktopResolution;
     const isDesktop = screenWidth >= desktopResolution;
 
     setIsMobileResolution(isMobile);
     setIsTabletResolution(isTablet);
-    setIsLaptopResolution(isLaptop);
     setIsDesktopResolution(isDesktop);
   }
 
@@ -106,12 +106,15 @@ export default function Home() {
 
         <Hero />
       </div>
-      <Mission />
+      <Problem />
+      <Agitation />
+      <Solution />
+      {/* <Mission />
       <Services />
       <Project />
       <Values />
       <Stats />
-      <Footer />
+      <Footer /> */}
     </>
   )
 

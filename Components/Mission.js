@@ -1,18 +1,16 @@
 import React, { useContext } from 'react';
 import classes from './Mission.module.css';
-import missionImg from '@/public/images/global/mission_image_cropped.png';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 
 const Mission = () => {
 
-    const { isLaptopResolution, isDesktopResolution } = useContext(GlobalContext);
+    const { isDesktopResolution } = useContext(GlobalContext);
     return (
         <section className={`${classes.missionContainer} `}>
             <div className={`${classes.wrapper} max-width`}>
                 <h2>Ma mission de<br /> développeur web</h2>
                 <div className={classes.content}>
-                    {(isLaptopResolution || isDesktopResolution) && <Image src={missionImg} alt="Mission image" />}
                     <div className={classes.textWrapper}>
                         <p>
                             J'accompagne les entreprises dans la création de leur site internet, de la conception de la maquette en passant par le développement, jusqu'à la livraison.<br /><br />

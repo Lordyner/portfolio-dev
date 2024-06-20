@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import classes from './CarouselItem.module.css';
 import { motion } from 'framer-motion';
 import GlobalContext from '@/Store/GlobalContext';
+import Image from 'next/image';
 
-const CarouselItem = ({ title, description, itemIndex, index }) => {
+const CarouselItem = ({ title, description, image, itemIndex, index }) => {
 
-    const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
+    const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);
     const scaleAnimation = () => {
         if (isMobileResolution) {
             return itemIndex === index ? 0.95 : 0.85;
-        } else if (isTabletResolution || isLaptopResolution) {
+        } else if (isTabletResolution) {
             return 0.95;
         } else {
             return 1;
@@ -29,11 +30,12 @@ const CarouselItem = ({ title, description, itemIndex, index }) => {
                 damping: 40
             }}
             className={classes.card}>
+            {image && <Image src={image} alt={title} className={classes.carouselImg} />}
             <div className={classes.textWrapper}>
                 <h3 className={classes.title}>{title}</h3>
-                <p className={classes.description}>{description}</p>
+                <p className={classes.description} dangerouslySetInnerHTML={{ __html: description }}></p>
             </div>
-        </motion.div>
+        </motion.div >
     );
 };
 

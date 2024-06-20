@@ -23,9 +23,8 @@ export default function ServiceName() {
     /* Context */
     const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
     const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
-    const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
     const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
-    const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+    const { tabletResolution, desktopResolution } = useContext(GlobalContext);
     const { isLoading, setIsLoading } = useContext(GlobalContext);
     const { isMenuOpen } = useContext(GlobalContext);
 
@@ -37,13 +36,11 @@ export default function ServiceName() {
         setScreenWidth(window.screen.width);
 
         const isMobile = screenWidth < tabletResolution;
-        const isTablet = screenWidth >= tabletResolution && screenWidth < laptopResolution;
-        const isLaptop = screenWidth >= laptopResolution && screenWidth < desktopResolution;
+        const isTablet = screenWidth >= tabletResolution && screenWidth < desktopResolution;
         const isDesktop = screenWidth >= desktopResolution;
 
         setIsMobileResolution(isMobile);
         setIsTabletResolution(isTablet);
-        setIsLaptopResolution(isLaptop);
         setIsDesktopResolution(isDesktop);
     }
 

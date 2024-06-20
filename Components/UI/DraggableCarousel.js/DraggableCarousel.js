@@ -9,12 +9,12 @@ const DRAG_BUFFER = 30;
 
 const DraggableCarousel = ({ items }) => {
 
-    const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
+    const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);
     const INDEX_BUFFER = isMobileResolution ? 1 : 2;
     const [itemIndex, setItemIndex] = useState(0);
     const [dragging, setDragging] = useState(false);
 
-    const dots = isMobileResolution ? items : items.slice(0, (items.length) / 2);
+    const dots = isMobileResolution ? items : items.length % 2 === 0 ? items.slice(0, (items.length) / 2) : items.slice(0, (items.length + 1) / 2);
 
     const dragX = useMotionValue(0);
 

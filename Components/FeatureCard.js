@@ -7,11 +7,11 @@ import GlobalContext from '@/Store/GlobalContext';
 
 const FeatureCard = ({ title, description, image, alt, featureIndex, index }) => {
 
-    const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
+    const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);
     const scaleAnimation = () => {
         if (isMobileResolution) {
             return featureIndex === index ? 0.95 : 0.85;
-        } else if (isTabletResolution || isLaptopResolution) {
+        } else if (isTabletResolution) {
             return 0.95;
         } else {
             return 1;

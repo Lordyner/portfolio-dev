@@ -1,8 +1,5 @@
 import React from 'react';
 import classes from './About.module.css';
-import crazyGuyMeme from '@/public/images/global/crazy_guy_meme.PNG';
-import meOutddor from '@/public/images/global/me_outdoor.jpg';
-import montpellierFeatBxl from '@/public/images/global/mtp_bx.png';
 import Image from 'next/image';
 
 const About = () => {
@@ -16,10 +13,8 @@ const About = () => {
                         <p>J'ai commencé à m'intéresser à l'informatique à 11 ans lorsque je suis tombé sur un cours du langage de programmation C.</p>
                         <p>Les murs de ma chambre étaient remplis des notes que j'avais prisent. Autant vous dire que ma famille était pas rassuré..</p>
                     </div>
-                    <Image src={crazyGuyMeme} alt="Crazy guy meme" className={classes.aboutImg} />
                 </div>
                 <div className={`${classes.lifePart} ${classes.reversed}`}>
-                    <Image src={montpellierFeatBxl} alt="Montpellier et Bruxelles" className={classes.aboutImg} />
 
                     <div className={classes.textWrapper}>
                         <h3>Avance rapide</h3>
@@ -36,7 +31,6 @@ const About = () => {
                         <p>Si je suis devenu développeur c'est pour pouvoir résoudre des problèmes et aider les gens avec mes compétences.</p>
                         <p>Loin de la rigidité des grandes entreprises, au plus proche de mes clients, l'aventure freelance apparait comme le choix idéal. </p>
                     </div>
-                    <Image src={meOutddor} alt="Me outdoor" className={`${classes.aboutImg} ${classes.photoOfMe}`} />
                 </div>
             </div>
         </main>

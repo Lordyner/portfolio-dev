@@ -3,10 +3,7 @@ import classes from './Footer.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import logo from '@/public/images/global/logo.png';
-import instagramIcon from '@/public/images/global/logo_instagram.png';
-import linkedinIcon from '@/public/images/global/logo_linkedin.png';
-import tiktokIcon from '@/public/images/global/logo_tiktok.png';
+import logo from '@/public/images/mobile/global/logo_thomas_andre-lubin.svg';
 const Footer = () => {
 
     const { isMobileResolution } = useContext(GlobalContext)
@@ -31,9 +28,9 @@ const Footer = () => {
                 <div className={classes.socialLinksAndCopy}>
 
                     <div className={classes.socials}>
-                        <Image src={instagramIcon} alt="Instagram" className={classes.socialIcon} />
+                        {/* <Image src={instagramIcon} alt="Instagram" className={classes.socialIcon} />
                         <Image src={linkedinIcon} alt="Linkedin" className={classes.socialIcon} />
-                        <Image src={tiktokIcon} alt="Tiktok" className={classes.socialIcon} />
+                        <Image src={tiktokIcon} alt="Tiktok" className={classes.socialIcon} /> */}
                     </div>
 
                     <div className={classes.copy}>

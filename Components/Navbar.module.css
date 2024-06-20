@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 1.5rem 3.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .navWrapper {
@@ -12,32 +12,26 @@
     align-items: center;
 }
 
-.link {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 0.9375rem;
-}
-
-.navLink {
+.navLinks {
     display: flex;
-    gap: 2rem;
+    gap: 2.375rem;
 }
 
 .link {
-    color: var(--black);
-    position: relative;
+    font-family: 'PoppinsRegular';
+    color: var(--neutral-color-2);
     text-decoration: none;
+    position: relative;
 }
 
 .link::before {
     content: '';
     position: absolute;
     width: 100%;
-
-    height: 3px;
+    height: 4px;
     border-radius: 4px;
-    background-color: var(--darker-primary-color);
-    bottom: -2px;
+    background-color: var(--accent-color);
+    bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
@@ -47,13 +41,12 @@
 .link:hover::before {
     transform-origin: left;
     transform: scaleX(1);
-
 }
 
 
 .buttonWrapper {
     display: flex;
-    padding-top: 2rem;
+    padding-top: .5rem;
 }
 
 
@@ -69,7 +62,7 @@
     flex-direction: column;
     gap: 4rem;
 
-    padding: 6rem 3rem;
+    padding: 6rem 1.5rem;
     font-size: var(--body-500);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     /* transition: .5s ease-in-out; */
@@ -82,31 +75,18 @@
 .mobileLinks {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.75rem;
 }
 
 .mobileLink {
-    color: var(--black);
+    color: var(--neutral-color-2);
+    font-family: PoppinsRegular;
     font-size: 1.125rem;
     text-decoration: none;
 }
 
 .logo {
     text-decoration: none;
-    color: var(--black);
-    font-family: 'OpenSansBold';
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.logo:hover {
-    color: var(--primary-color) !important;
-
-}
-
-.logo:hover img {
-    transform: scale(1.1);
-    transition: 0.1s ease-in-out;
 }
 
 .socials {
@@ -122,7 +102,7 @@
 }
 
 .logoImg {
-    width: 5rem;
+    width: 3.5rem;
 }
 
 .navbar li {
@@ -150,14 +130,14 @@
     width: 100%;
     height: 3px;
     border-radius: 10rem;
-    background-color: var(--black);
+    background-color: var(--neutral-color-2);
     margin: 5px 0;
     transition: .4s;
 }
 
 .hamburger.isActive:before {
     transform: rotate(-45deg) translate(-5px, 4px);
-    background-color: var(--black);
+    background-color: var(--neutral-color-2);
 }
 
 .hamburger.isActive .bar {
@@ -166,48 +146,38 @@
 
 .hamburger.isActive:after {
     transform: rotate(45deg) translate(-7px, -7px);
-    background-color: var(--black);
+    background-color: var(--neutral-color-2);
 }
 
-
-
 @media (min-width: 48rem) {
-    .logoImg {
-        width: 6rem;
-    }
 
     .hamburger {
         display: none;
     }
 
     .navbar {
-        padding: 2.5rem;
+        padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+
+    .logoImg {
+        width: 3.75rem;
     }
 
 }
 
-@media (min-width: 1024px) {
 
+@media (min-width: 1440px) {
+    .navLinks {
+        gap: 5rem;
+        font-size: 1rem;
+    }
 
-    .navLink {
-        gap: 4rem;
+    .logoImg {
+        width: 4.25rem;
     }
 
     .navbar {
-        padding: 3.5rem;
+        padding: 3.5rem 3.5rem 0 3.5rem;
     }
 
-
-
-}
-
-@media (min-width: 1440px) {
-
-    .logoImg {
-        width: 8rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
 }

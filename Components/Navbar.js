@@ -3,10 +3,8 @@ import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import logo from '@/public/images/global/logo.png';
-import tiktokLogo from '@/public/images/global/logo_tiktok.png';
-import instaLogo from '@/public/images/global/logo_instagram.png';
-import linkedinLogo from '@/public/images/global/logo_linkedin.png';
+import logo from '@/public/images/mobile/global/logo_thomas_andre-lubin.svg';
+
 import { animations, delay, motion, spring } from "framer-motion";
 const Navbar = () => {
 
@@ -25,8 +23,8 @@ const Navbar = () => {
             },
         },
         open: {
-            width: "55%",
-            padding: "6rem 3rem",
+            width: "65%",
+            padding: "6rem 1.5rem",
             transition: {
                 // delay: 0.25,
                 duration: 0.55,
@@ -82,14 +80,12 @@ const Navbar = () => {
             <nav className={`${classes.navbar} max-width`}>
                 <div className={`${classes.navWrapper} `}>
                     <Link href="/" className={classes.logo}>
-                        {/* <Image src={logo} alt='logo thomas andré-lubin' className={classes.logoImg} /> */}
-                        &lt;TA&#47;&gt;
+                        <Image src={logo} alt="logo de l'entrepreneur Thomas André-Lubin" className={classes.logoImg} />
                     </Link>
                     {/* Classic links */}
-                    <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                        <Link href="/#realisations" className={classes.link}>Projets</Link>
-                        <Link href="/#services" className={classes.link}>Services</Link>
-                        <Link href="/a-propos" className={classes.link}>A propos</Link>
+                    <div className={`${isMobileResolution ? "display-none" : classes.navLinks}`}>
+                        <Link href="/a-propos" className={classes.link}>À Propos</Link>
+                        <Link href="/#realisations" className={classes.link}>Réalisations</Link>
                     </div>
 
                     {/* Burger menu */}
@@ -117,16 +113,10 @@ const Navbar = () => {
                                 }}>Accueil</Link>
                             </motion.div>
                             <motion.div variants={variantsItem}>
-                                <Link href="/#services" className={classes.mobileLink} onClick={() => {
-                                    toggleMenu();
-                                    burger.current.classList.toggle(classes.isActive);
-                                }}>Services</Link>
-                            </motion.div>
-                            <motion.div variants={variantsItem}>
                                 <Link href="/#realisations" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
-                                }}>Projets</Link>
+                                }}>Réalisations</Link>
                             </motion.div>
                             <motion.div variants={variantsItem}>
                                 <Link href="/a-propos" className={classes.mobileLink} onClick={() => {
@@ -140,14 +130,14 @@ const Navbar = () => {
                         </motion.div>
                         <motion.div className={classes.socials} variants={sideVariantsSocials}>
                             <motion.div variants={variantsItem}>
-                                <Image src={tiktokLogo} alt='logo tiktok' className={classes.socialLogo} />
+                                {/* <Image src={tiktokLogo} alt='logo tiktok' className={classes.socialLogo} /> */}
                             </motion.div>
                             <motion.div variants={variantsItem}>
 
-                                <Image src={instaLogo} alt='logo instagram' className={classes.socialLogo} />
+                                {/* <Image src={instaLogo} alt='logo instagram' className={classes.socialLogo} /> */}
                             </motion.div>
                             <motion.div variants={variantsItem}>
-                                <Image src={linkedinLogo} alt='logo linkedin' className={classes.socialLogo} />
+                                {/* <Image src={linkedinLogo} alt='logo linkedin' className={classes.socialLogo} /> */}
                             </motion.div>
                         </motion.div>
                     </motion.div>

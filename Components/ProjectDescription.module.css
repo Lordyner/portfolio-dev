@@ -42,18 +42,77 @@
     border-radius: 0.625rem;
 }
 
+.requirements {
+    text-align: left;
+}
+
+.requirement {
+    margin-left: 1.5rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
 @media (min-width: 48rem) {
+
+
     .projectContainer {
         gap: 3rem;
+        padding: 0 3.5rem;
     }
+
+    .description {
+        align-items: start;
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 64rem) {
 
     .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'quickDescription projectImage'
+            'description description';
         text-align: center;
+        row-gap: 6rem;
     }
 
+    .projectImage {
+        grid-area: projectImage;
+    }
+
+
     .textWrapper {
-        align-items: center;
+        grid-area: quickDescription;
+        align-items: start;
+        text-align: left;
+    }
+
+    .description {
+        grid-area: description;
+        gap: 2rem;
+        align-items: start;
+
+    }
+}
+
+@media (min-width: 90rem) {
+
+
+    .projectContainer {
+        gap: 6rem;
+    }
+
+    /* .textWrapper {
+        align-items: flex-start;
+    } */
+
+    .projectImage {
+        align-self: baseline;
     }
 }

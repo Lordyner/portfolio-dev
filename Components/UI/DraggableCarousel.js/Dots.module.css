@@ -1,7 +1,7 @@
 .dots {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: .65rem;
     margin: 1rem 0;
 }
 
@@ -9,14 +9,13 @@
     width: .75rem;
     height: .75rem;
     border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--darker-primary-color);
+    background-color: #D9D9D9;
     cursor: pointer;
     transition: color 0.3s;
     padding: 0;
 }
 
 .dot.active {
-    background-color: var(--darker-primary-color);
+    background-color: var(--accent-color);
     transform: scale(1.1);
 }

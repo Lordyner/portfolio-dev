@@ -10,7 +10,7 @@ const DRAG_BUFFER = 30;
 
 
 const Features = ({ features }) => {
-    const { isMobileResolution, isTabletResolution, isLaptopResolution } = useContext(GlobalContext);
+    const { isMobileResolution, isTabletResolution } = useContext(GlobalContext);
     const INDEX_BUFFER = isMobileResolution ? 1 : 2;
     const [featureIndex, setFeatureIndex] = useState(0);
     const [dragging, setDragging] = useState(false);
@@ -37,7 +37,7 @@ const Features = ({ features }) => {
 
     return (
         <section className={classes.features}>
-            {(isMobileResolution || isTabletResolution || isLaptopResolution) &&
+            {(isMobileResolution || isTabletResolution) &&
                 <div className={`${classes.content} max-width`}>
                     <h2>Features</h2>
 
@@ -70,7 +70,7 @@ const Features = ({ features }) => {
                     <DotsFeature featureIndex={featureIndex} setFeatureIndex={setFeatureIndex} dots={dots} />
                 </div>
             }
-            {!(isMobileResolution || isTabletResolution || isLaptopResolution) &&
+            {!(isMobileResolution || isTabletResolution) &&
                 <div className={`${classes.content} max-width`}>
                     <h2>Features</h2>
                     <div className={classes.featuresGrid}>

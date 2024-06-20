@@ -64,7 +64,7 @@
     width: .5rem;
     height: .5rem;
     background-color: transparent;
-    border-radius: 50%;
+    border-radius: 40%;
     border: 1px solid var(--darker-primary-color);
     position: absolute;
     top: 50%;

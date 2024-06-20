@@ -104,3 +104,9 @@
 .title {
     color: var(--white);
 }
+
+@media (min-width: 48rem) {
+    .stats {
+        padding: 5.5rem 2.5rem;
+    }
+}

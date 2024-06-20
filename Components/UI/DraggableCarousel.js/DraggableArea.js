@@ -30,7 +30,7 @@ const DraggableArea = ({ items, itemIndex, onDragEnd, onDragStart, dragX }) => {
             className={classes.draggableArea}
         >
             {items.map((item, index) => (
-                <CarouselItem key={index} title={item.title} description={item.description} itemIndex={itemIndex} index={index} />
+                <CarouselItem key={index} title={item.title} description={item.description} image={item.image} itemIndex={itemIndex} index={index} />
             ))}
         </motion.div>
 

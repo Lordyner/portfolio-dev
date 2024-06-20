@@ -3,36 +3,35 @@
     flex-direction: column;
     gap: 1.5rem;
     flex-grow: 2;
-    justify-content: center;
-
-    padding: 0 1.5rem 2rem 1.5rem;
-
-
+    padding: 4.5rem 1.5rem var(--topAndBotPadding) 1.5rem;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 1.875rem;
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.125rem;
+    align-items: center;
+    gap: 1.375rem;
 }
 
-.accentWord {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    font-family: DMSerifDisplay;
-    font-weight: normal;
-    color: var(--primary-color);
+
+.titleAndDescriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5625rem;
 }
 
-.focusLeft {
-    object-position: left;
+.description {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    font-family: "PoppinsRegular";
 }
 
 .imgWrapper {
@@ -40,74 +39,26 @@
     justify-content: center;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-13.5rem * 4))
-    }
-}
-
-.slider {
-    width: 100vw;
-    position: relative;
-    height: auto;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    /* margin: auto; */
-    overflow-x: hidden;
-    position: relative;
-}
-
-
-
-.sliderTrack {
-    display: flex;
-    gap: 1.5rem;
-    animation: scroll 10s linear infinite;
-    width: calc(13.5rem * 4);
-}
-
 .heroImg {
     object-fit: cover;
     display: flex;
     align-self: center;
+    max-width: 320px;
+    width: 100%;
 }
 
-.imgCarousel {
-    border-radius: 0.5rem;
-    width: 12rem;
-    object-fit: cover;
-
-
+.lineBreak {
+    display: block;
+    /* Ensure the line break behaves as expected */
+    content: "";
+    /* Optionally ensure space is preserved */
 }
 
-.imgCarousel:nth-child(even) {
-    /* transform: translateY(1rem); */
-}
-
-/* .imgCarousel:nth-child(odd):hover {
-    transform: rotate(-3deg);
-} */
 
 @media (min-width: 48rem) {
 
     .heroContainer {
-        padding: 0 2.5rem 2rem 2.5rem;
-
-    }
-
-    .heroImg {
-        max-width: 30rem;
-    }
-
-    .accentWord {
-        font-size: 3.375rem;
-        line-height: 3.375rem;
+        padding: 5.3125rem 2.5rem var(--topAndBotPadding) 2.5rem;
     }
 
     .content {
@@ -117,59 +68,65 @@
     .textWrapper {
         text-align: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.9375rem;
 
     }
-
-
-}
-
-@media (min-width: 64rem) {
-    .content {
-        flex-direction: row;
-        /* gap: 4rem; */
-    }
-
-    .textWrapper {
-        align-items: flex-start;
-        justify-content: center;
-        text-align: left;
-    }
-
-    .heroContainer {
-        padding: 0 3.5rem 2rem 3.5rem;
-
-    }
-
-
 
     .heroImg {
-        /* max-width: 22rem; */
+        max-width: 21.625rem;
     }
+
+    .description {
+        font-size: 1.375rem;
+    }
+
+    .titleAndDescriptionWrapper {
+        gap: 0.8125rem;
+    }
+
+
 }
+
 
 @media (min-width: 90rem) {
 
+
+    .heroContainer {
+        padding-top: 2rem;
+        justify-content: center;
+    }
+
     .content {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+
+    .titleAndDescriptionWrapper {
+        text-align: left;
+        align-items: flex-start;
+        gap: 1.375rem;
     }
 
     .textWrapper {
         align-items: flex-start;
         justify-content: center;
         text-align: left;
-        gap: 2.5rem;
+        gap: 2.375rem;
     }
 
     .heroImg {
-        max-width: none;
-        width: 48rem;
-
+        max-width: 29rem;
+        justify-self: end;
     }
 
-    .accentWord {
-        font-size: 5rem;
-        line-height: 5rem;
-
+    .title {
+        min-width: max-content;
     }
+
 }

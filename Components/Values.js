@@ -5,14 +5,11 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import expertiseTechniqueIcon from '@/public/images/global/expertise_technique_icone.png';
-import communicationIcon from '@/public/images/global/communication_icone.png';
-import engagementIcon from '@/public/images/global/engagement_icone.png';
+
 
 const Values = () => {
     const { isMobileResolution } = useContext(GlobalContext);
     const { isTabletResolution } = useContext(GlobalContext);
-    const { isLaptopResolution } = useContext(GlobalContext);
     const { isDesktopResolution } = useContext(GlobalContext);
 
 
@@ -20,7 +17,7 @@ const Values = () => {
         <section className={classes.valueSection}>
             <div className={`${classes.content} max-width`}>
                 <h2>Travaillez avec moi</h2>
-                <div className={classes.values}>
+                {/* <div className={classes.values}>
                     <div className={classes.value}>
                         <Image src={expertiseTechniqueIcon} alt="expertise technique" className={classes.icon} />
                         <div className={classes.textWrapper}>
@@ -42,7 +39,7 @@ const Values = () => {
                             <p>Je travaille sur un projet à la fois et j'ai à cœur que le résultat dépasse vos attentes </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </section >

@@ -1,23 +1,5 @@
 import { createContext, useState } from 'react';
-import audiophileMobile from '../public/images/mobile/audiophile.png';
-import audiophileTablet from '../public/images/tablet/audiophile.png';
-import audiophileDesktop from '../public/images/desktop/audiophile.png';
-import payApiMobile from '@/public/images/mobile/payApi.png';
-import payApiTablet from '@/public/images/tablet/payApi.png';
-import payApiDesktop from '@/public/images/desktop/payApi.png';
-import myTeamMobile from '@/public/images/mobile/myTeam.png';
-import myTeamTablet from '@/public/images/tablet/myTeam.png';
-import myTeamDesktop from '@/public/images/desktop/myTeam.png';
-import newsHomepageMobile from '@/public/images/mobile/news_homepage.png';
-import newsHomepageTablet from '@/public/images/tablet/news_homepage.png';
-import newsHomepageDesktop from '@/public/images/desktop/news_homepage.png';
-import photosnapMobile from '@/public/images/mobile/photosnap.png';
-import photosnapTablet from '@/public/images/tablet/photosnap.png';
-import photosnapDesktop from '@/public/images/desktop/photosnap.png';
-import coffeeRoastersMobile from '@/public/images/mobile/coffee_roasters.png';
-import coffeeRoastersTablet from '@/public/images/tablet/coffee_roasters.png';
-import coffeeRoastersDesktop from '@/public/images/desktop/coffee_roasters.png';
-import responsive from '@/public/images/global/responsive.jpg';
+
 
 const GlobalContext = createContext();
 
@@ -30,52 +12,50 @@ export function GlobalContextProvider(props) {
     const [isMenuOpen, setIsMenuOpen] = useState();
     const [isMobileResolution, setIsMobileResolution] = useState();
     const [isTabletResolution, setIsTabletResolution] = useState();
-    const [isLaptopResolution, setIsLaptopResolution] = useState();
     const [isDesktopResolution, setIsDesktopResolution] = useState();
     const [mobileResolution] = useState(320);
     const [tabletResolution] = useState(768);
-    const [laptopResolution] = useState(1024);
     const [desktopResolution] = useState(1440);
 
-    const [projectsData, setProjectsData] = useState([
-        {
-            name: "audiophile",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? audiophileMobile : isTabletResolution ? audiophileTablet : audiophileDesktop, alt: 'Audiophile',
-            liveSiteUrl: 'https://audiophile-indol-nu.vercel.app/'
-        },
-        {
-            name: "photosnap",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? photosnapMobile : isTabletResolution ? photosnapTablet : photosnapDesktop, alt: 'Photosnap',
-            liveSiteUrl: 'https://photosnap-sigma.vercel.app/'
-        },
-        {
-            name: "coffee roasters",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? coffeeRoastersMobile : isTabletResolution ? coffeeRoastersTablet : coffeeRoastersDesktop, alt: 'Coffee Roasters',
-            liveSiteUrl: 'https://coffee-roasters-gamma.vercel.app/'
-        },
-        {
-            name: "myTeam",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? myTeamMobile : isTabletResolution ? myTeamTablet : myTeamDesktop, alt: 'MyTeam',
-            liveSiteUrl: 'https://my-team-eosin.vercel.app/'
+    // const [projectsData, setProjectsData] = useState([
+    //     {
+    //         name: "audiophile2",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? audiophileMobile : isTabletResolution ? audiophileTablet : audiophileDesktop, alt: 'Audiophile',
+    //         liveSiteUrl: 'https://audiophile-indol-nu.vercel.app/'
+    //     },
+    //     {
+    //         name: "photosnap",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? photosnapMobile : isTabletResolution ? photosnapTablet : photosnapDesktop, alt: 'Photosnap',
+    //         liveSiteUrl: 'https://photosnap-sigma.vercel.app/'
+    //     },
+    //     {
+    //         name: "coffee roasters",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? coffeeRoastersMobile : isTabletResolution ? coffeeRoastersTablet : coffeeRoastersDesktop, alt: 'Coffee Roasters',
+    //         liveSiteUrl: 'https://coffee-roasters-gamma.vercel.app/'
+    //     },
+    //     {
+    //         name: "myTeam",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? myTeamMobile : isTabletResolution ? myTeamTablet : myTeamDesktop, alt: 'MyTeam',
+    //         liveSiteUrl: 'https://my-team-eosin.vercel.app/'
 
-        },
-        {
-            name: "payAPI",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? payApiMobile : isTabletResolution ? payApiTablet : payApiDesktop, alt: 'PayAPI',
-            liveSiteUrl: 'https://pay-api-seven.vercel.app/'
-        },
-        {
-            name: "news homepage",
-            description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
-            image: isMobileResolution ? newsHomepageMobile : isTabletResolution ? newsHomepageTablet : newsHomepageDesktop, alt: 'News homepage',
-            liveSiteUrl: 'https://lordyner.github.io/news-homepage/'
-        },
-    ]);
+    //     },
+    //     {
+    //         name: "payAPI",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? payApiMobile : isTabletResolution ? payApiTablet : payApiDesktop, alt: 'PayAPI',
+    //         liveSiteUrl: 'https://pay-api-seven.vercel.app/'
+    //     },
+    //     {
+    //         name: "news homepage",
+    //         description: "Site e-commerce pour des appareils de musique. Connecté à une boutique Shopify, le propriétaire peut tout gérer...",
+    //         image: isMobileResolution ? newsHomepageMobile : isTabletResolution ? newsHomepageTablet : newsHomepageDesktop, alt: 'News homepage',
+    //         liveSiteUrl: 'https://lordyner.github.io/news-homepage/'
+    //     },
+    // ]);
     const [servicesData, setServicesData] = useState([
         {
             id: 1,
@@ -86,48 +66,40 @@ export function GlobalContextProvider(props) {
             features: [{
                 name: 'Responsive',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'SEO',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             },
             {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             }, {
                 name: 'UI',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             }
 
@@ -143,7 +115,6 @@ export function GlobalContextProvider(props) {
             features: [{
                 name: 'Responsive',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             }]
         },
@@ -156,7 +127,6 @@ export function GlobalContextProvider(props) {
             features: [{
                 name: 'Responsive',
                 description: 'Chacune de mes réalisations s\'adaptent parfaitement à chaque taille d\'écran (mobile, tablette, ordinateur) pour offrir à l\'utilisateur la meilleur expérience possible.',
-                image: responsive,
                 alt: 'Responsive'
             }]
         }
@@ -182,11 +152,10 @@ export function GlobalContextProvider(props) {
             isMenuOpen, setIsMenuOpen,
             isMobileResolution, setIsMobileResolution,
             isTabletResolution, setIsTabletResolution,
-            isLaptopResolution, setIsLaptopResolution,
             isDesktopResolution, setIsDesktopResolution,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
-            mobileResolution, tabletResolution, laptopResolution, desktopResolution,
-            toggleMenu, projectsData, servicesData
+            mobileResolution, tabletResolution, desktopResolution,
+            toggleMenu, servicesData
         }}>
             {props.children}
         </GlobalContext.Provider>
