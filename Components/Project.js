@@ -6,8 +6,13 @@ import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 import ProjectCard from './ProjectCard';
+import audiophileImg from '@/public/images/mobile/accueil/projets/audiophile.png';
+import photosnapImg from '@/public/images/mobile/accueil/projets/photosnap.png';
+import coffeeRoastersImg from '@/public/images/mobile/accueil/projets/coffee_roasters.png';
+import payApiImg from '@/public/images/mobile/accueil/projets/payApi.png';
+import myTeamImg from '@/public/images/mobile/accueil/projets/myTeam.png';
+import newsImg from '@/public/images/mobile/accueil/projets/news_homepage.png';
 
-// 
 
 const Project = () => {
 
@@ -16,71 +21,71 @@ const Project = () => {
     return (
         <section id='realisations' className={classes.projectSection}>
             <div className={`${classes.content} max-width`}>
-                <h2>Réalisations</h2>
+                <h2>Mes <span className='accentuedWord'>réalisations</span></h2>
+                <p>Découvrez mes projets</p>
                 <div className={classes.projects}>
-
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/audiophile`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? audiophileMobile : isTabletResolution ? audiophileTablet : audiophileDesktop} alt="audiophile" className={classes.projectImage} /> */}
+                            <Image src={audiophileImg} alt="Page d'accueil du site audiophile" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>Audiophile</h3>
+                                <h3 className={classes.projectTitle}>Audiophile</h3>
                                 <p className={classes.description}>Site e-commerce pour des appareils de musique (casques, enceintes etc).</p>
                             </div>
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/photosnap`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? photosnapMobile : isTabletResolution ? photosnapTablet : photosnapDesktop} alt="photosnap" className={classes.projectImage} /> */}
+                            <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>Photosnap</h3>
+                                <h3 className={classes.projectTitle}>Photosnap</h3>
                                 <p className={classes.description}>Plateforme pour photographe afin de partager des photos, des histoires et se connecter avec les autres.</p>
                             </div>
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/coffeeRoasters`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? coffeeRoastersMobile : isTabletResolution ? coffeeRoastersTablet : coffeeRoastersDesktop} alt="coffeeRoasters" className={classes.projectImage} /> */}
+                            <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffeeRoasters" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>Coffee roasters</h3>
+                                <h3 className={classes.projectTitle}>Coffee roasters</h3>
                                 <p className={classes.description}>Site de commande de café avec différents abonnements et la meilleur qualité de café.</p>
                             </div>
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/payApi`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? payApiMobile : isTabletResolution ? payApiTablet : payApiDesktop} alt="payAPI" className={classes.projectImage} /> */}
+                            <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>payAPI</h3>
-                                <p className={classes.description}>Landing page pour une API Bancaire</p>
+                                <h3 className={classes.projectTitle}>payAPI</h3>
+                                <p className={classes.description}>Site pour une API ("Application Programming Interface") Bancaire.</p>
                             </div>
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/myTeam`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? myTeamMobile : isTabletResolution ? myTeamTablet : myTeamDesktop} alt="myTeam" className={classes.projectImage} /> */}
+                            <Image src={myTeamImg} alt="Page d'accueil du site MyTeam" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>myTeam</h3>
+                                <h3 className={classes.projectTitle}>myTeam</h3>
                                 <p className={classes.description}>Site pour un cabinet de recrutement spécialisé dans la construction d'équipe talentueuse</p>
                             </div>
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.1, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/news`} className={classes.cardLink}>
-                            {/* <Image src={isMobileResolution ? newsHomepageMobile : isTabletResolution ? newsHomepageTablet : newsHomepageDesktop} alt="news" className={classes.projectImage} /> */}
+                            <Image src={newsImg} alt="news" className={classes.projectImage} />
                             <div className={classes.textWrapper}>
-                                <h3>News</h3>
+                                <h3 className={classes.projectTitle}>News</h3>
                                 <p className={classes.description}>Page d'accueil d'un blog gaming/nouvelles technologies</p>
                             </div>
                         </Link>

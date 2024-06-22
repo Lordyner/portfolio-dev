@@ -1,0 +1,27 @@
+.container {
+    padding: var(--topAndBotPadding) var(--sidePadding);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    text-align: center;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+@media (min-width: 48rem) {
+    .content {
+        gap: 2.5rem;
+
+    }
+
+    .textWrapper {
+        gap: 1.75rem;
+    }
+}

@@ -1,5 +1,7 @@
 .footer {
-    padding: 1rem 1.5rem;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+    background-color: var(--background-color-2);
+
 }
 
 .content {
@@ -11,14 +13,15 @@
 }
 
 .logo {
-    width: 5rem;
+    width: 3.5rem;
+    max-height: 2.1875rem;
 }
 
 .footerLinks {
     display: flex;
     flex-direction: column;
+    gap: .75rem;
     text-align: center;
-    gap: .5rem;
 }
 
 .socials {
@@ -34,47 +37,24 @@
     text-align: center;
 }
 
+.info,
+.copyright {
+    font-family: 'PoppinsRegular';
+    font-size: 0.875rem;
+    color: var(--neutral-color-2);
+}
+
 .separator {
     width: 100%;
     position: relative;
     margin-bottom: 1.5rem;
 }
 
-
-.separator::before {
-    content: '';
-    width: calc(50% - .65rem);
-    height: 1px;
-    background-color: var(--darker-primary-color);
-    position: absolute;
-    top: 50%;
-}
-
-.separator::after {
-    content: '';
-    width: calc(50% - .65rem);
-    height: 1px;
-    right: 0;
-    background-color: var(--darker-primary-color);
-    position: absolute;
-    top: 50%;
-}
-
-.circle {
-    width: .5rem;
-    height: .5rem;
-    background-color: transparent;
-    border-radius: 40%;
-    border: 1px solid var(--darker-primary-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .link {
     text-decoration: none;
-    color: var(--black);
+    font-family: 'PoppinsRegular';
+    font-size: 0.875rem;
+    color: var(--neutral-color-2);
 }
 
 .socialIcon {
@@ -97,29 +77,52 @@
 
 @media screen and (min-width: 48rem) {
     .content {
-        align-items: unset;
+        display: grid;
+        grid-template-areas: 'logo .'
+            'navLinks contactInfo'
+            'socials copyright';
+
+        row-gap: 3.5rem;
     }
 
-    .logoAndLinks {
-        flex-direction: row;
-        justify-content: space-between;
+    .logo {
+        grid-area: logo;
     }
+
+    .footerLinks {
+        grid-area: navLinks;
+    }
+
+    .contactInfo {
+        grid-area: contactInfo;
+        text-align: right;
+    }
+
+    .socials {
+        grid-area: socials;
+    }
+
+    .copy {
+        grid-area: copyright;
+        text-align: right;
+    }
+
 
     .footerLinks {
         flex-direction: row;
         gap: 2rem;
     }
-
-    .contactInfo {
-        justify-items: flex-start;
-        text-align: left;
-
-    }
-
-    .socialLinksAndCopy {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 }
 
-@media screen and (min-width: 90rem) {}
+@media screen and (min-width: 90rem) {
+
+    .info,
+    .copyright {
+        font-size: 1rem;
+
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+}

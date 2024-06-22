@@ -103,6 +103,7 @@
 
 .logoImg {
     width: 3.5rem;
+    max-height: 2.1875rem;
 }
 
 .navbar li {

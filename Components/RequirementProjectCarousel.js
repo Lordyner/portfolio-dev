@@ -1,27 +1,23 @@
-import React from 'react'
+import React from 'react';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import classes from './EmblaCarousel.module.css'
-import Image from 'next/image'
+import classes from './CarouselFeedback.module.css'
 import useEmblaCarousel from 'embla-carousel-react'
-const EmblaCarousel = ({ slides, options }) => {
 
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
-    const { selectedIndex, scrollSnaps, onDotButtonClick } =
-        useDotButton(emblaApi)
+const RequirementProjectCarousel = ({ requirements }) => {
+
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
+    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
 
     return (
         <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    {slides.map((slide, index) => (
-                        <div className="embla__slide" key={index}>
-                            <Image src={slide.image} alt={slide.title} className={classes.carouselImg} />
-                            <div className={classes.textWrapper}>
-                                <h3 className={classes.title}>{slide.title}</h3>
-                                <p className={classes.description} dangerouslySetInnerHTML={{ __html: slide.description }}></p>
-                            </div>
+                    {requirements.map((requirement, index) => (
+                        <div className="embla__slide requirement">
+                            {requirement.description}
                         </div>
+
                     ))}
                 </div>
             </div>
@@ -40,7 +36,7 @@ const EmblaCarousel = ({ slides, options }) => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default EmblaCarousel
+export default RequirementProjectCarousel;

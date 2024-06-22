@@ -16,7 +16,7 @@ const Problem = () => {
                     placeholder="blur"
                 />
                 <div className={classes.content}>
-                    <h2 className={classes.title}>Ne laissez plus vos <span className='accentuedWord'>clients filer</span></h2>
+                    <h2 className={classes.title}><span className='accentuedWord'>Ne laissez plus</span> vos clients filer</h2>
                     <div className={classes.description}>
                         <p>
                             <b>Fatigué de votre site internet</b> au design dépassé, aux temps de chargement trop longs et qui ne reflète pas la qualité de votre entreprise ?<br /><br />

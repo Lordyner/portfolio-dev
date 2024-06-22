@@ -1,19 +1,4 @@
 /* Embla Carousel */
-.embla {
-    overflow: hidden;
-}
-
-.embla__container {
-    display: flex;
-}
-
-.embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-    background-color: var(--background-color-2);
-    color: var(--neutral-color-2);
-    text-align: left;
-}
 
 .carouselImg {
     max-height: 150px;
@@ -34,8 +19,14 @@
     flex-direction: column;
     gap: 0.875rem;
     text-align: left;
-    height: 19rem;
+    height: 22rem;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     background-color: var(--background-color-2);
+}
+
+@media (min-width: 64rem) {
+    .textWrapper {
+        height: 15rem;
+    }
 }

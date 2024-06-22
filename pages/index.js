@@ -18,6 +18,11 @@ import classes from '@/Components/MainPage.module.css';
 import Problem from '@/Components/Problem';
 import Agitation from '@/Components/Agitation';
 import Solution from '@/Components/Solution';
+import WhyMyServices from '@/Components/WhyMyServices';
+import CTAReminder from '@/Components/CTAReminder';
+import Process from '@/Components/Process';
+import Feedback from '@/Components/Feedback';
+import FAQ from '@/Components/FAQ';
 
 export default function Home() {
 
@@ -109,12 +114,18 @@ export default function Home() {
       <Problem />
       <Agitation />
       <Solution />
+      <WhyMyServices />
+      <CTAReminder />
+      <Process />
+      <Feedback />
+      <Project />
+      <FAQ />
+      <Footer />
       {/* <Mission />
       <Services />
-      <Project />
       <Values />
       <Stats />
-      <Footer /> */}
+       */}
     </>
   )
 

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import classes from './Solution.module.css';
 import CardList from './CardList';
-import DraggableCarousel from './UI/DraggableCarousel.js/DraggableCarousel';
 
 import responsiveImg from '@/public/images/mobile/accueil/solutions/responsive.jpg';
 import modernDesignImg from '@/public/images/mobile/accueil/solutions/design_moderne.jpg';
@@ -11,9 +10,9 @@ import userExperienceImg from '@/public/images/mobile/accueil/solutions/experien
 import seoImg from '@/public/images/mobile/accueil/solutions/referencement_naturel.jpg';
 import performanceImg from '@/public/images/mobile/accueil/solutions/performance.jpg';
 import GlobalContext from '@/Store/GlobalContext';
-import EmblaCarousel from './EmblaCarousel';
+import CarouselSolution from './CarouselSolution';
 
-const OPTIONS = { loop: true }
+const OPTIONS = { loop: true, align: 'start' }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 const Solution = () => {
@@ -68,7 +67,7 @@ const Solution = () => {
                         Chaque site que je crée se concentre sur les <b>points suivants</b> :</p>
                 </div>
                 {/* {(isMobileResolution || isTabletResolution) && <DraggableCarousel items={focusPoints} />} */}
-                {(isMobileResolution || isTabletResolution) && <EmblaCarousel slides={focusPoints} options={OPTIONS} />}
+                {(isMobileResolution || isTabletResolution) && <CarouselSolution slides={focusPoints} options={OPTIONS} />}
                 {isDesktopResolution && <CardList items={focusPoints} />}
             </div>
 

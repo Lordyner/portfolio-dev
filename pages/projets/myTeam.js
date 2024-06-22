@@ -7,9 +7,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
-import myTeamMobile from '@/public/images/mobile/myTeam.png';
-import myTeamTablet from '@/public/images/tablet/myTeam.png';
-import myTeamDesktop from '@/public/images/desktop/myTeam.png';
+import myTeamImg from '@/public/images/mobile/accueil/projets/myTeam.png';
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -92,14 +91,14 @@ export default function myTeam() {
             <Navbar />
             <main className={classes.projectContainer}>
 
-                <h1 className={classes.projectTitle}>myTeam</h1>
+                <h1>myTeam</h1>
                 <div className={`${classes.wrapper} max-width`}>
                     <div className={classes.textWrapper}>
                         <h3>Présentation</h3>
                         <p>Site pour un cabinet de recrutement spécialisé dans la création d'équipe talentueuse.</p>
                         {!(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
                     </div>
-                    <Image src={isMobileResolution ? myTeamMobile : isTabletResolution ? myTeamTablet : myTeamDesktop} alt="audiophile" className={classes.projectImage} />
+                    <Image src={myTeamImg} alt="audiophile" className={classes.projectImage} />
                     {(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
                     <div className={classes.description}>
                         <h3>Contexte</h3>

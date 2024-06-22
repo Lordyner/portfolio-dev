@@ -8,9 +8,8 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import coffeeRoastersMobile from '@/public/images/mobile/coffee_roasters.png';
-import coffeeRoastersTablet from '@/public/images/tablet/coffee_roasters.png';
-import coffeeRoastersDesktop from '@/public/images/desktop/coffee_roasters.png';
+import coffeeRoastersImg from '@/public/images/mobile/accueil/projets/coffee_roasters.png';
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -100,7 +99,7 @@ export default function coffeeRoasters() {
                         <p>Coffee roasters est un site pour les consommateurs de café. Il permet de créer un plan personnalisé avec le type de café que l'on voudrait recevoir, la quantité ainsi que la périodicité.</p>
                         {!(isMobileResolution || isTabletResolution) && <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
                     </div>
-                    <Image src={isMobileResolution ? coffeeRoastersMobile : isTabletResolution ? coffeeRoastersTablet : coffeeRoastersDesktop} alt="coffeeRoasters" className={classes.projectImage} />
+                    <Image src={coffeeRoasters} alt="Page d'accueil du site coffee roasters" className={classes.projectImage} />
                     {(isMobileResolution || isTabletResolution) && <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
                     <div className={classes.description}>
                         <h3>Contexte</h3>

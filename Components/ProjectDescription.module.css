@@ -1,8 +1,6 @@
 .projectContainer {
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    padding: 4.5rem var(--sidePadding) var(--topAndBotPadding) var(--sidePadding);
+    text-align: center;
 }
 
 .wrapper {

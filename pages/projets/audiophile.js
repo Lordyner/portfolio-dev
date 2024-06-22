@@ -8,11 +8,10 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import audiophileMobile from '@/public/images/mobile/audiophile.png';
-import audiophileTablet from '@/public/images/tablet/audiophile.png';
-import audiophileDesktop from '@/public/images/desktop/audiophile.png';
+import audiophile from '@/public/images/mobile/accueil/projets/audiophile.png';
 import Link from "next/link";
 import Image from "next/image";
+import RequirementProjectCarousel from "@/Components/RequirementProjectCarousel";
 
 export default function Audiophile() {
 
@@ -43,6 +42,18 @@ export default function Audiophile() {
         setIsTabletResolution(isTablet);
         setIsDesktopResolution(isDesktop);
     }
+
+    const requirements = [
+        { description: "Ajouter/Retirer des produits depuis son panier" },
+        { description: "Modifier la quantité de produit dans son panier" },
+        { description: "Remplir tous les champs sur la page de paiement" },
+        { description: "Recevoir une validation du formulaire si des champs étaient pas remplis ou incorrecte" },
+        { description: "Voir le prix total de sa commande" },
+        { description: "Voir une confirmation de sa commande après avoir commandé." },
+        { description: "Voir l'affichage idéale du site en fonction de la taille de son appareil." },
+        { description: "Garder son panier même s'il raffraichis la page" }
+
+    ]
 
     useEffect(() => {
         // Handle menu display
@@ -93,19 +104,17 @@ export default function Audiophile() {
             <Navbar />
             <main className={classes.projectContainer}>
 
-                <h1 className={classes.projectTitle}>Audiophile</h1>
+                <h1>Projet <span className="accentuedWord">Audiophile</span></h1>
                 <div className={`${classes.wrapper} max-width`}>
 
                     <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Audiophile est un site e-commerce pour des appareils de musique (casques, enceintes etc). <br /></p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-
+                        <h2>Contexte</h2>
+                        <p>Audiophile est un projet défi du site frontendmentor.io. Le but était de construire ce site e-commerce multi-page à l'identique de la maquette. L'utilisateur devait être capable de :</p>
                     </div>
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-
-                    <Image src={isMobileResolution ? audiophileMobile : isTabletResolution ? audiophileTablet : audiophileDesktop} alt="audiophile" className={classes.projectImage} />
-                    <div className={classes.description}>
+                    <RequirementProjectCarousel requirements={requirements} />
+                    {/* <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link> */}
+                    {/* <Image src={audiophile} alt="audiophile" className={classes.projectImage} /> */}
+                    {/* <div className={classes.description}>
                         <h3>Contexte</h3>
                         <p>C'est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site e-commerce multi-page à l'identique de la maquette.</p>
                         <p>L'utilisateur devait être capable de :</p>
@@ -124,7 +133,7 @@ export default function Audiophile() {
                         <p>J'ai choisi d'utiliser Shopify pour gérer mes différents produits afin de me rapprocher le plus possible d'un cas réel.</p>
                         <p>J'ai créé une boutique shopify dans laquelle j'ai créé tous mes produits avec leur prix, description, images, etc.</p>
                         <p>J'ai ensuite créer le site à l'identique de la maquette et apeller l'API Shopify pour récupérer mes différents produits et les afficher.</p>
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer />
