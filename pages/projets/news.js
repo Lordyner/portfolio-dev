@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -8,9 +7,8 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import newsHomepageMobile from '@/public/images/mobile/news_homepage.png';
-import newsHomepageTablet from '@/public/images/tablet/news_homepage.png';
-import newsHomepageDesktop from '@/public/images/desktop/news_homepage.png';
+import newsImg from '@/public/images/mobile/accueil/projets/news_homepage.png';
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -92,24 +90,25 @@ export default function news() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>
-
-                <h1 className={classes.projectTitle}>News</h1>
-                <div className={`${classes.wrapper} max-width`}>
-                    <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Page d'accueil d'un blog gaming/nouvelles technologies</p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://lordyner.github.io/news-homepage/" className="primary-button" target="_blank">Voir le site</Link>}
+                <h1>Projet <span className="accentuedWord">News</span></h1>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>News est un projet défi du site frontendmentor.io. <br />Le but était de construire cette page internet à l'identique de la maquette, afin de présenter différents articles sur les nouvelles technologies.</p>
+                        </div>
+                        <Link href="https://lordyner.github.io/news-homepage/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={newsImg} alt="Page d'accueil du site news" className={classes.projectImage} />
                     </div>
-                    <Image src={isMobileResolution ? newsHomepageMobile : isTabletResolution ? newsHomepageTablet : newsHomepageDesktop} alt="news" className={classes.projectImage} />
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://lordyner.github.io/news-homepage/" className="primary-button" target="_blank">Voir le site</Link>}
-                    <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>C'est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire cette page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                            <li className={classes.requirement}>Voir différents états lors du survol des éléments.</li>
-                        </ul>
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Voir différents états lors du survol des éléments</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

@@ -171,6 +171,11 @@ h2 .accentuedWord {
     font-family: 'PoppinsBold';
 }
 
+h2.accentuedWord {
+    color: var(--accent-color);
+    font-family: 'PoppinsBold';
+}
+
 /* Button */
 button {
     padding: 1rem;
@@ -209,10 +214,11 @@ button {
     color: var(--neutral-color-2);
     padding: 0.5rem 1.25rem;
     text-align: center;
+    position: relative;
 }
 
 .secondary-button::after {
-    content: '';
+    content: " ";
     background: url('../public/images/mobile/global/right-arrow.png') no-repeat;
     display: inline-block;
     width: 2.625rem;
@@ -220,14 +226,18 @@ button {
     margin-left: 1rem;
 }
 
+p a {
+    font-family: 'PoppinsRegular';
+    color: var(--primary-color-2);
+}
 
 input,
 textarea {
-    padding: 0.5rem;
-    background-color: var(--white);
-    border-radius: 0.5rem;
+    padding: 0.65rem;
+    background-color: #fff;
+    border-radius: 0.375rem;
     font-size: 0.875rem;
-    font-family: 'OpenSansRegular';
+    font-family: 'PoppinsRegular';
     border: none;
 }
 

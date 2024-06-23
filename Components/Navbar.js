@@ -76,7 +76,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className={`${classes.header}`}>
+        <header>
             <nav className={`${classes.navbar} max-width`}>
                 <div className={`${classes.navWrapper} `}>
                     <Link href="/" className={classes.logo}>

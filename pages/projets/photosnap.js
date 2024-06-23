@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -8,9 +7,8 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import photosnapMobile from '@/public/images/mobile/photosnap.png';
-import photosnapTablet from '@/public/images/tablet/photosnap.png';
-import photosnapDesktop from '@/public/images/desktop/photosnap.png';
+import photosnapImg from '@/public/images/mobile/accueil/projets/photosnap.png';
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -92,25 +90,25 @@ export default function Photosnap() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>
-
-                <h1 className={classes.projectTitle}>Photosnap</h1>
-                <div className={`${classes.wrapper} max-width`}>
-                    <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Plateforme à destination des photographes afin de partager des photos, des histoires et se connecter avec les autres.</p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://photosnap-sigma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
+                <h1>Projet <span className="accentuedWord">Photosnap</span></h1>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>Photosnap est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site vitrine multi-page pour photographes à l'identique de la maquette.</p>
+                        </div>
+                        <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} />
                     </div>
-                    <Image src={isMobileResolution ? photosnapMobile : isTabletResolution ? photosnapTablet : photosnapDesktop} alt="audiophile" className={classes.projectImage} />
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://photosnap-sigma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-                    <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>Photosnap est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site multi-page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                            <li className={classes.requirement}>Voir différents états lors du survol des éléments.</li>
-                        </ul>
-                        <p>Une de mes réalisations favorites. Le design est moderne, épuré et il y a beaucoup de photos.</p>
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Voir différents états lors du survol des éléments</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

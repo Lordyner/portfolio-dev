@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -24,7 +23,6 @@ export default function coffeeRoasters() {
     const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
     const { tabletResolution, desktopResolution } = useContext(GlobalContext);
     const { isLoading, setIsLoading } = useContext(GlobalContext);
-    const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
     const { isMenuOpen } = useContext(GlobalContext);
 
     /* Router */
@@ -91,28 +89,26 @@ export default function coffeeRoasters() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>
-
-                <h1 className={classes.projectTitle}>Coffee roasters</h1>
-                <div className={`${classes.wrapper} max-width`}>
-                    <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Coffee roasters est un site pour les consommateurs de café. Il permet de créer un plan personnalisé avec le type de café que l'on voudrait recevoir, la quantité ainsi que la périodicité.</p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
+                <h1>Projet <span className="accentuedWord">Coffee Roasters</span></h1>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>Photosnap est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page pour commander du café, à l'identique de la maquette.</p>
+                        </div>
+                        <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffee roasters" className={classes.projectImage} />
                     </div>
-                    <Image src={coffeeRoasters} alt="Page d'accueil du site coffee roasters" className={classes.projectImage} />
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-                    <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>C'est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site multi-page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Faire une sélection pour créer un abonnement de café et voir une modal résumant leur choix</li>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                            <li className={classes.requirement}>Voir différents états lors du survol des éléments.</li>
-                        </ul>
-                        <p>En plus de créer un site à l'identique de la maquette, j'ai décider d'ajouter quelques petites animation.</p>
-                        <p>Le contenu des pages s'affiche au fur et à mesure que l'on scroll. Cela permet d'attirer un peu plus l'attention du visiteur et de créer une expérience plus dynamique qu'un simple site où tout s'affiche d'un bloc.</p>
-                        <p>J'ai également ajouter une petite animation sur les éléments de la création d'abonnement. Toujours dans la volonté de créer une expérience plus interactive pour l'utilisateur.</p>
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Faire une sélection pour créer un abonnement de café et voir une modal résumant leur choix</li>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Voir différents états lors du survol des éléments</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

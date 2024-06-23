@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -8,9 +7,8 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import payApiMobile from '@/public/images/mobile/payApi.png';
-import payApiTablet from '@/public/images/tablet/payApi.png';
-import payApiDesktop from '@/public/images/desktop/payApi.png';
+import payApiImg from '@/public/images/mobile/accueil/projets/payApi.png';
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -92,25 +90,26 @@ export default function payApi() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>
-
-                <h1 className={classes.projectTitle}>payAPI</h1>
-                <div className={`${classes.wrapper} max-width`}>
-                    <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Landing page pour une API (Application Programming Interface) Bancaire à destination des développeurs.</p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://pay-api-seven.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
+                <h1>Projet <span className="accentuedWord">Pay API</span></h1>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>PayAPI est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page à l'identique de la maquette, afin de présenter une API Bancaire.</p>
+                        </div>
+                        <Link href="https://pay-api-seven.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} />
                     </div>
-                    <Image src={isMobileResolution ? payApiMobile : isTabletResolution ? payApiTablet : payApiDesktop} alt="audiophile" className={classes.projectImage} />
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://pay-api-seven.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-                    <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>C'est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site multi-page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                            <li className={classes.requirement}>Voir différents états lors du survol des éléments.</li>
-                            <li className={classes.requirement}>Recevoir un message d'erreur si un des champs du formulaire de contact est invalide</li>
-                        </ul>
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Voir différents états lors du survol des éléments</li>
+                                <li>Recevoir un message d'erreur si un des champs du formulaire de contact est invalide</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

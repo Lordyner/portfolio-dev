@@ -13,8 +13,13 @@
     flex-direction: column;
     gap: 1.125rem;
     text-align: center;
-
 }
+
+.buttonWrapper {
+    display: flex;
+    align-self: center;
+}
+
 
 @media (min-width: 48rem) {
 

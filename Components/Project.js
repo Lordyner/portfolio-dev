@@ -5,7 +5,6 @@ import { motion, } from "framer-motion";
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import ProjectCard from './ProjectCard';
 import audiophileImg from '@/public/images/mobile/accueil/projets/audiophile.png';
 import photosnapImg from '@/public/images/mobile/accueil/projets/photosnap.png';
 import coffeeRoastersImg from '@/public/images/mobile/accueil/projets/coffee_roasters.png';

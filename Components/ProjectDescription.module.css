@@ -1,47 +1,35 @@
 .projectContainer {
-    padding: 4.5rem var(--sidePadding) var(--topAndBotPadding) var(--sidePadding);
+    padding: var(--topAndBotPadding) var(--sidePadding);
     text-align: center;
 }
 
-.wrapper {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 5rem;
+    padding-top: 2.25rem;
+}
+
+.context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-}
-
-.projectTitle {
-    font-family: 'OpenSansRegular';
-    font-size: var(--heading-700);
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.projectTitle::after {
-
-    content: '';
-    display: block;
-    width: 50%;
-    max-width: 12.5rem;
-    height: 0.25rem;
-    background-color: var(--primary-color);
-    margin-top: 1.5rem;
-    margin-inline: auto;
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.125rem;
 }
 
 .projectImage {
-    border-radius: 0.625rem;
-}
+    border-radius: 0.375rem;
+    max-width: 21.875rem;
+    width: 100%;
 
-.requirements {
-    text-align: left;
 }
 
 .requirement {
@@ -55,62 +43,55 @@
     gap: 1rem;
 }
 
-@media (min-width: 48rem) {
+.requirementList {
+    list-style-position: inside;
+}
 
+@media (min-width: 48rem) {
 
     .projectContainer {
         gap: 3rem;
-        padding: 0 3.5rem;
     }
 
-    .description {
-        align-items: start;
-        text-align: left;
+    .content {
+        gap: 7rem;
+        padding-top: 5rem;
     }
 
-}
-
-@media (min-width: 64rem) {
-
-    .wrapper {
-        display: grid;
-        grid-template-areas: 'quickDescription projectImage'
-            'description description';
-        text-align: center;
-        row-gap: 6rem;
+    .context {
+        gap: 2.5rem;
     }
 
     .projectImage {
-        grid-area: projectImage;
+        max-width: 31.25rem;
     }
-
 
     .textWrapper {
-        grid-area: quickDescription;
-        align-items: start;
-        text-align: left;
+        gap: 1.75rem;
     }
 
-    .description {
-        grid-area: description;
-        gap: 2rem;
-        align-items: start;
-
-    }
 }
 
 @media (min-width: 90rem) {
 
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: baseline;
+        text-align: left;
+        padding-top: 6.25rem;
+    }
+
+    .context {
+        align-items: flex-start;
+    }
+
+    .textWrapper {
+        gap: 2.375rem;
+    }
 
     .projectContainer {
         gap: 6rem;
     }
 
-    /* .textWrapper {
-        align-items: flex-start;
-    } */
-
-    .projectImage {
-        align-self: baseline;
-    }
 }

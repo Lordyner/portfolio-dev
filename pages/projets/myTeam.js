@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -90,27 +89,27 @@ export default function myTeam() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>
-
-                <h1>myTeam</h1>
-                <div className={`${classes.wrapper} max-width`}>
-                    <div className={classes.textWrapper}>
-                        <h3>Présentation</h3>
-                        <p>Site pour un cabinet de recrutement spécialisé dans la création d'équipe talentueuse.</p>
-                        {!(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
+                <h1>Projet <span className="accentuedWord">myTeam</span></h1>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>myTeam est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page à l'identique de la maquette, afin de présenter un cabinet de recrutement.</p>
+                        </div>
+                        <Link href="https://my-team-eosin.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={myTeamImg} alt="Page d'accueil du site myTeam" className={classes.projectImage} />
                     </div>
-                    <Image src={myTeamImg} alt="audiophile" className={classes.projectImage} />
-                    {(isMobileResolution || isTabletResolution) && <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>}
-                    <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>myTeam est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site multi-page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Voir le bon contenu pour chaque membre de l'équipe sur la page "A propos" quand il clique sur l'icône +.</li>
-                            <li className={classes.requirement}>Recevoir un message d'erreur si le formulaire de contact est mal renseigné.</li>
-                            <li className={classes.requirement}>Voir différents états lors du survol des éléments.</li>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                        </ul>
-                        <p>Une de mes réalisations favorites dans un tout autre style que <Link href="/projets/photosnap">photosnap</Link> mais tout aussi plaisant à réaliser. </p>
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Voir le bon contenu pour chaque membre de l'équipe sur la page "A propos" quand il clique sur l'icône +.</li>
+                                <li>Recevoir un message d'erreur si le formulaire de contact est mal renseigné.</li>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Voir différents états lors du survol des éléments</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

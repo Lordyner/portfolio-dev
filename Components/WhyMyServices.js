@@ -13,7 +13,10 @@ const WhyMyServices = () => {
                         Chaque projet est unique, et je m'engage à vous offrir une solution sur mesure, adaptée à vos besoins spécifiques.
                     </p>
                 </div>
-                <Link href="/a-propos" className="secondary-button">En savoirs plus</Link>
+                <div className={classes.buttonWrapper}>
+
+                    <Link href="/a-propos" className="secondary-button">En savoirs plus</Link>
+                </div>
             </div>
         </section>
     );

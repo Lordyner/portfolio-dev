@@ -1,6 +1,5 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -8,7 +7,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import audiophile from '@/public/images/mobile/accueil/projets/audiophile.png';
+import audiophileImg from '@/public/images/mobile/accueil/projets/audiophile.png';
 import Link from "next/link";
 import Image from "next/image";
 import RequirementProjectCarousel from "@/Components/RequirementProjectCarousel";
@@ -42,18 +41,6 @@ export default function Audiophile() {
         setIsTabletResolution(isTablet);
         setIsDesktopResolution(isDesktop);
     }
-
-    const requirements = [
-        { description: "Ajouter/Retirer des produits depuis son panier" },
-        { description: "Modifier la quantité de produit dans son panier" },
-        { description: "Remplir tous les champs sur la page de paiement" },
-        { description: "Recevoir une validation du formulaire si des champs étaient pas remplis ou incorrecte" },
-        { description: "Voir le prix total de sa commande" },
-        { description: "Voir une confirmation de sa commande après avoir commandé." },
-        { description: "Voir l'affichage idéale du site en fonction de la taille de son appareil." },
-        { description: "Garder son panier même s'il raffraichis la page" }
-
-    ]
 
     useEffect(() => {
         // Handle menu display
@@ -105,35 +92,32 @@ export default function Audiophile() {
             <main className={classes.projectContainer}>
 
                 <h1>Projet <span className="accentuedWord">Audiophile</span></h1>
-                <div className={`${classes.wrapper} max-width`}>
-
-                    <div className={classes.textWrapper}>
-                        <h2>Contexte</h2>
-                        <p>Audiophile est un projet défi du site frontendmentor.io. Le but était de construire ce site e-commerce multi-page à l'identique de la maquette. L'utilisateur devait être capable de :</p>
+                <div className={`${classes.content} max-width`}>
+                    <div className={classes.context}>
+                        <div className={classes.textWrapper}>
+                            <h2>Contexte</h2>
+                            <p>Audiophile est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site e-commerce multi-page à l'identique de la maquette.</p>
+                        </div>
+                        <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Image src={audiophileImg} alt="Page d'accueil du site audiophile" className={classes.projectImage} />
                     </div>
-                    <RequirementProjectCarousel requirements={requirements} />
-                    {/* <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link> */}
-                    {/* <Image src={audiophile} alt="audiophile" className={classes.projectImage} /> */}
-                    {/* <div className={classes.description}>
-                        <h3>Contexte</h3>
-                        <p>C'est un défi du site <Link href='https://www.frontendmentor.io/profile/Lordyner' target="_blank">frontendmentor</Link>, le but était de construire ce site e-commerce multi-page à l'identique de la maquette.</p>
-                        <p>L'utilisateur devait être capable de :</p>
-                        <ul className={classes.requirements}>
-                            <li className={classes.requirement}>Ajouter/Retirer des produits depuis son panier</li>
-                            <li className={classes.requirement}>Modifier la quantité de produit dans son panier</li>
-                            <li className={classes.requirement}>Remplir tous les champs sur la page de paiment</li>
-                            <li className={classes.requirement}>Recevoir une validation du formulaire si des champs étaient pas remplis ou incorrecte</li>
-                            <li className={classes.requirement}>Voir le prix total de sa commande</li>
-                            <li className={classes.requirement}>La livraison ajoute toujours 50$ à la commande</li>
-                            <li className={classes.requirement}>La TVA vaut 20% du total de la commande, sans compter les frais de livraisons.</li>
-                            <li className={classes.requirement}>Voir une confirmation de sa commande après avoir commandé.</li>
-                            <li className={classes.requirement}>Voir l'affichage idéale du site en fonction de la taille de son appareil.</li>
-                            <li className={classes.requirement}>Garder son panier même s'il raffraichis la page</li>
-                        </ul>
-                        <p>J'ai choisi d'utiliser Shopify pour gérer mes différents produits afin de me rapprocher le plus possible d'un cas réel.</p>
-                        <p>J'ai créé une boutique shopify dans laquelle j'ai créé tous mes produits avec leur prix, description, images, etc.</p>
-                        <p>J'ai ensuite créer le site à l'identique de la maquette et apeller l'API Shopify pour récupérer mes différents produits et les afficher.</p>
-                    </div> */}
+                    <div className={classes.requirements}>
+                        <div className={classes.textWrapper}>
+
+                            <h2>Fonctionnalités </h2>
+                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
+                            <ul className={classes.requirementList}>
+                                <li>Ajouter/Retirer des produits depuis son panier</li>
+                                <li>Modifier la quantité de produit dans son panier</li>
+                                <li>Remplir tous les champs sur la page de paiement</li>
+                                <li>Recevoir une validation du formulaire si des champs n'étaient pas remplis ou incorrecte</li>
+                                <li>Voir le prix total de sa commande</li>
+                                <li>Voir une confirmation de sa commande après avoir commandé</li>
+                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
+                                <li>Garder son panier même s'il rafraichis la page</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </main>
             <Footer />

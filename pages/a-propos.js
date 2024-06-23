@@ -1,8 +1,9 @@
 import About from "@/Components/About";
+import CTAReminder from "@/Components/CTAReminder";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
+import Values from "@/Components/Values";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -30,7 +31,7 @@ export default function APropos() {
         setScreenWidth(window.screen.width);
 
         const isMobile = screenWidth < tabletResolution;
-        const isTablet = screenWidth >= tabletResolution && screenWidth < isDesktop;
+        const isTablet = screenWidth >= tabletResolution && screenWidth < desktopResolution;
         const isDesktop = screenWidth >= desktopResolution;
 
         setIsMobileResolution(isMobile);
@@ -86,6 +87,8 @@ export default function APropos() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <About />
+            <CTAReminder />
+            <Values />
             <Footer />
         </>
     )

@@ -10,7 +10,7 @@ const CTAReminder = () => {
                     <h2 className={classes.title}>Un besoin? Un projet ?</h2>
                     <p>Que vous ayez besoin de <b>créer</b> un premier site internet ou bien de <b>refaire</b> un existant, je vous accompagne à chaque étape.</p>
                 </div>
-                <Link href="#" className='primary-button'>Discutons de votre besoin</Link>
+                <Link href="/contact" className='primary-button'>Discutons de votre besoin</Link>
             </div>
         </section>
     );

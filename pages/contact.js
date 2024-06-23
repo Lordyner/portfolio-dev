@@ -1,9 +1,6 @@
-import About from "@/Components/About";
-import CalendlyEmbedded from "@/Components/CalendlyEmbedded";
 import Contact from "@/Components/Contact";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import ProjectDescription from "@/Components/ProjectDescription";
 import Spinner from "@/Components/Spinner";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
@@ -88,7 +85,7 @@ export default function ContactPage() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <Contact />
-            <CalendlyEmbedded />
+
             <Footer />
         </>
     )
