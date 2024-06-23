@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import audiophileImg from '@/public/images/mobile/accueil/projets/audiophile.png';
+import audiophileImg from '@/public/images/accueil/projets/audiophile.png';
 import Link from "next/link";
 import Image from "next/image";
 import RequirementProjectCarousel from "@/Components/RequirementProjectCarousel";
@@ -58,35 +58,39 @@ export default function Audiophile() {
             {isLoading && <Spinner />}
 
             <Head>
-                <title>Audiophile</title>
-                <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
+                {/* Google */}
+                <title>Projet Audiophile - Thomas André-Lubin</title>
+                <meta name="description" content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="robots" content="all" />
 
-                <meta property='og:title' content='Développeur web Freelance' />
-                <meta property='og:description' content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta property='og:image' content='/images/profil_pic_looking_laptop_zoomed.jpg' />
-                <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
+                {/* Favicons */}
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/site.webmanifest" />
+                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+                <meta name="msapplication-TileColor" content="#da532c" />
+                <meta name="theme-color" content="#ffffff" />
+
+                {/* Socials */}
+                <meta property='og:title' content='Projet Audiophile - Thomas André-Lubin' />
+                <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
+                <meta property='og:image' content='/images/about/consultant_pic.png' />
+                <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/audiophile' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content='Développeur web Freelance' />
-                <link rel="icon" href="/favicon.ico" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://www.thomasandrelubin.fr/" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Développeur web Freelance" />
-                <meta property="og:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta property="og:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+                <meta property='og:site_name' content='Projet Audiophile - Thomas André-Lubin' />
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
-                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
-                <meta name="twitter:title" content="Développeur web Freelance" />
-                <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
-
+                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/audiophile" />
+                <meta name="twitter:title" content="Projet Audiophile - Thomas André-Lubin" />
+                <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/about/consultant_pic.png" />
             </Head>
+
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <main className={classes.projectContainer}>

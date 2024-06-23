@@ -3,8 +3,8 @@ import classes from './Footer.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import logo from '@/public/images/mobile/global/logo_thomas_andre-lubin.svg';
-import logoLinkedin from '@/public/images/mobile/global/logo_linkedin.png';
+import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
+import logoLinkedin from '@/public/images/global/logo_linkedin.png';
 
 const Footer = () => {
 
@@ -12,12 +12,14 @@ const Footer = () => {
     return (
         <footer className={classes.footer}>
             <div className={`${classes.content} max-width`}>
-                <Image src={logo} alt="Logo" className={classes.logo} />
+                <Link href="/" className={classes.logoLink}>
+                    <Image src={logo} alt="Logo" className={classes.logo} />
+                </Link>
                 <div className={classes.footerLinks}>
                     <Link href="#realisations" className={classes.link}>Réalisations</Link>
-                    <Link href="#" className={classes.link}>A propos</Link>
-                    <Link href="#contact" className={classes.link}>Contact</Link>
-                    <Link href="#" className={classes.link}>Mentions Légales</Link>
+                    <Link href="/a-propos" className={classes.link}>A propos</Link>
+                    <Link href="/contact" className={classes.link}>Contact</Link>
+                    <Link href="/mentions-legales" className={classes.link}>Mentions Légales</Link>
                 </div>
 
                 <div className={classes.contactInfo}>
@@ -26,7 +28,9 @@ const Footer = () => {
                 </div>
 
                 <div className={classes.socials}>
-                    <Image src={logoLinkedin} alt="Linkedin" className={classes.socialIcon} />
+                    <Link href="https://www.linkedin.com/in/thomas-andre-lubin-988760111/" rel='nofollow' target='_blank' className={classes.socialLink}>
+                        <Image src={logoLinkedin} alt="Linkedin" className={classes.socialIcon} />
+                    </Link>
                 </div>
 
                 <div className={classes.copy}>

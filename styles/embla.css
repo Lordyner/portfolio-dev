@@ -5,7 +5,7 @@
     --slide-height: 19rem;
     --slide-spacing: 1rem;
     --slide-spacing-lg: 1rem;
-    --slide-size: 100%;
+    --slide-size: 95%;
     --slide-size-lg: calc(95% / 2);
 
 }
@@ -47,6 +47,14 @@
     .embla__slide {
         flex: 0 0 var(--slide-size-lg);
         padding-left: var(--slide-spacing-lg);
+    }
+
+    .embla__slide.solution {
+        cursor: grab;
+    }
+
+    .embla__slide.solution:active {
+        cursor: grabbing;
     }
 }
 

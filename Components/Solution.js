@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import classes from './Solution.module.css';
 import CardList from './CardList';
 
-import responsiveImg from '@/public/images/mobile/accueil/solutions/responsive.jpg';
-import modernDesignImg from '@/public/images/mobile/accueil/solutions/design_moderne.jpg';
-import googleAnalyticsImg from '@/public/images/mobile/accueil/solutions/google_analytics.png';
-import callToActionImg from '@/public/images/mobile/accueil/solutions/appel_a_laction.jpg';
-import userExperienceImg from '@/public/images/mobile/accueil/solutions/experience_utilisateur.jpg';
-import seoImg from '@/public/images/mobile/accueil/solutions/referencement_naturel.jpg';
-import performanceImg from '@/public/images/mobile/accueil/solutions/performance.jpg';
+import responsiveImg from '@/public/images/accueil/solutions/responsive.jpg';
+import modernDesignImg from '@/public/images/accueil/solutions/design_moderne.jpg';
+import googleAnalyticsImg from '@/public/images/accueil/solutions/google_analytics.png';
+import callToActionImg from '@/public/images/accueil/solutions/appel_a_laction.jpg';
+import userExperienceImg from '@/public/images/accueil/solutions/experience_utilisateur.jpg';
+import seoImg from '@/public/images/accueil/solutions/referencement_naturel.jpg';
+import performanceImg from '@/public/images/accueil/solutions/performance.jpg';
 import GlobalContext from '@/Store/GlobalContext';
 import CarouselSolution from './CarouselSolution';
 
@@ -63,7 +63,7 @@ const Solution = () => {
                 <div className={classes.textWrapper}>
 
                     <h2>Faites appels à mon service de {isDesktopResolution && <br />}<span className="accentuedWord">création de site internet</span> en freelance</h2>
-                    <p className={classes.description}>Fort de mes 6 années d'expériences dans le développement web, je vous accompagne dans la <b>création d'un site internet</b> moderne et performant qui saura attirer plus de visiteurs et les convertir en clients. <br /> <br />
+                    <p className={classes.description}>Fort de mes 6 années d'expériences dans le <b>développement web</b>, je vous accompagne dans la <b>création d'un site internet</b> moderne et performant qui saura attirer plus de visiteurs et les convertir en clients. <br /> <br />
                         Chaque site que je crée se concentre sur les <b>points suivants</b> :</p>
                 </div>
                 {/* {(isMobileResolution || isTabletResolution) && <DraggableCarousel items={focusPoints} />} */}

@@ -14,7 +14,7 @@ const CarouselSolution = ({ slides, options }) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((slide, index) => (
-                        <div className="embla__slide" key={index}>
+                        <div className="embla__slide solution" key={index}>
                             <Image src={slide.image} alt={slide.title} className={classes.carouselImg} />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.title}>{slide.title}</h3>

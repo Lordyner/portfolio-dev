@@ -55,33 +55,28 @@ export default function APropos() {
             {isLoading && <Spinner />}
 
             <Head>
-                <title>Développeur web Freelance</title>
-                <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
+                {/* Google */}
+                <title>A propos - Thomas André-Lubin</title>
+                <meta name="description" content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-                <meta property='og:title' content='Développeur web Freelance' />
-                <meta property='og:description' content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta property='og:image' content='/images/profil_pic_looking_laptop_zoomed.jpg' />
+                <meta name="robots" content="all" />
+                <link rel="icon" href="/favicon.ico" />
+                {/* Socials */}
+                <meta property='og:title' content='A propos - Thomas André-Lubin' />
+                <meta property='og:description' content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
+                <meta property='og:image' content='/images/about/consultant_pic.png' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content='Développeur web Freelance' />
-                <link rel="icon" href="/favicon.ico" />
-
-                {/* Facebook Meta Tags */}
-                <meta property="og:url" content="https://www.thomasandrelubin.fr/" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Développeur web Freelance" />
-                <meta property="og:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta property="og:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+                <meta property='og:site_name' content='A propos - Thomas André-Lubin' />
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
-                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
-                <meta name="twitter:title" content="Développeur web Freelance" />
-                <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/a-propos" />
+                <meta name="twitter:title" content="A propos - Thomas André-Lubin" />
+                <meta name="twitter:description" content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/about/consultant_pic.png" />
 
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}

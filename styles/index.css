@@ -218,8 +218,8 @@ button {
 }
 
 .secondary-button::after {
-    content: " ";
-    background: url('../public/images/mobile/global/right-arrow.png') no-repeat;
+    content: '';
+    background: url('../public/images/global/right-arrow.png') no-repeat;
     display: inline-block;
     width: 2.625rem;
     height: .75rem;

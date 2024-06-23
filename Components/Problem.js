@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Problem.module.css';
 import Image from 'next/image';
-import clientRunning from '@/public/images/mobile/accueil/ne_laisser_plus_vos_clients_filer.png';
+import clientRunning from '@/public/images/accueil/ne_laisser_plus_vos_clients_filer.png';
 
 const Problem = () => {
     return (
@@ -21,7 +21,7 @@ const Problem = () => {
                         <p>
                             <b>Fatigué de votre site internet</b> au design dépassé, aux temps de chargement trop longs et qui ne reflète pas la qualité de votre entreprise ?<br /><br />
                             Ou bien vous n'avez pas encore de site web et <b>vous voudriez en créer un </b> pour ne plus laisser filer vos prospects chez vos concurrents ?<br /><br />
-                            Aujourd'hui, un site internet est <b>incontournable</b> pour une entreprise. Malheureusement, trop de sites sont mal conçus : <br /><br />
+                            Aujourd'hui, <b>un site internet est incontournable</b> pour une entreprise. Malheureusement, trop de sites sont mal conçus : <br /><br />
                         </p>
                         <ul className={classes.badFeatures}>
                             <li>design viellot</li>

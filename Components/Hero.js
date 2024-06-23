@@ -3,13 +3,14 @@ import classes from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
-import heroImg from '@/public/images/mobile/accueil/hero_img.png';
+import heroImg from '@/public/images/accueil/hero_img.png';
 
 const Hero = () => {
 
     const { isMobileResolution, isTabletResolution, isDesktopResolution } = useContext(GlobalContext);
 
     return (
+
 
         <main className={classes.heroContainer}>
             <div className={`${classes.content} max-width`}>

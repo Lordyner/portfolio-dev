@@ -34,7 +34,7 @@
     position: absolute;
     width: 2rem;
     height: 8rem;
-    background-image: url('/images/mobile/accueil/golden_half_circle.png');
+    background-image: url('/images/accueil/golden_half_circle.png');
     background-repeat: no-repeat;
     left: -.5rem;
     top: 0;
@@ -47,7 +47,7 @@
     position: absolute;
     width: 2rem;
     height: 2rem;
-    background-image: url('/images/mobile/accueil/golden_line.png');
+    background-image: url('/images/accueil/golden_line.png');
     background-repeat: no-repeat;
     right: 0;
     top: 6rem;

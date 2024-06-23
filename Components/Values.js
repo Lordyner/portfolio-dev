@@ -3,9 +3,9 @@ import classes from './Values.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import professionnalismeGif from '@/public/images/mobile/about/professionnalisme.gif';
-import communicationGif from '@/public/images/mobile/about/communication.gif';
-import satisfactionClientGif from '@/public/images/mobile/about/satisfaction_client.gif';
+import professionnalismeGif from '@/public/images/about/professionnalisme.gif';
+import communicationGif from '@/public/images/about/communication.gif';
+import satisfactionClientGif from '@/public/images/about/satisfaction_client.gif';
 
 const Values = () => {
     const { isMobileResolution } = useContext(GlobalContext);

@@ -22,6 +22,11 @@
     list-style-position: inside;
 }
 
+.link {
+    color: var(--neutral-color-2);
+
+
+}
 
 .gamblingCredibilityImg {
     object-fit: cover;

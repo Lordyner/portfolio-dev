@@ -69,33 +69,39 @@ export default function Home() {
       {isLoading && <Spinner />}
 
       <Head>
-        <title>Développeur web Freelance</title>
-        <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property='og:title' content='Développeur web Freelance' />
-        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta property='og:image' content='/images/profil_pic_looking_laptop_zoomed.jpg' />
+        {/* Google */}
+        <title>Création de site web en freelance - Thomas André-Lubin</title>
+        <meta name="description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="all" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Favicons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Socials */}
+        <meta property='og:title' content='Création de site web en freelance - Thomas André-Lubin' />
+        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta property='og:image' content='/images/accueil/hero_img.png' />
         <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='fr_FR' />
-        <meta property='og:site_name' content='Développeur web Freelance' />
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* Facebook Meta Tags */}
-        <meta property="og:url" content="https://www.thomasandrelubin.fr/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Développeur web Freelance" />
-        <meta property="og:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta property="og:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+        <meta property='og:site_name' content='Création de site web en freelance - Thomas André-Lubin' />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="thomasandrelubin.fr" />
         <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
-        <meta name="twitter:title" content="Développeur web Freelance" />
-        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+        <meta name="twitter:title" content="Création de site web en freelance - Thomas André-Lubin" />
+        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
 
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}

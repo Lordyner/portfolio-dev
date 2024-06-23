@@ -31,13 +31,13 @@ const SteppedProgress = () => {
                     className={classes.prevButton}
                     onClick={() => handleSetStep(-1)}
                 >
-                    Prev
+                    Précédent
                 </button>
                 <button
                     className={classes.nextButton}
                     onClick={() => handleSetStep(1)}
                 >
-                    Next
+                    Suivant
                 </button>
             </div>
         </div>

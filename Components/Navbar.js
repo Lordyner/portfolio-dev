@@ -3,7 +3,7 @@ import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import logo from '@/public/images/mobile/global/logo_thomas_andre-lubin.svg';
+import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
 
 import { animations, delay, motion, spring } from "framer-motion";
 const Navbar = () => {

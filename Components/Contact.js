@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import classes from './Contact.module.css';
 import Link from 'next/link';
-import appelGif from '@/public/images/mobile/contact/appel.gif';
-import emailGif from '@/public/images/mobile/contact/email.gif';
+import appelGif from '@/public/images/contact/appel.gif';
+import emailGif from '@/public/images/contact/email.gif';
 import Image from 'next/image';
 import CalendlyEmbedded from './CalendlyEmbedded';
 import GlobalContext from '@/Store/GlobalContext';
