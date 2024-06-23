@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--background-color-2);
+    color: var(--neutral-color-2);
+    border-radius: 0.625rem;
+    min-height: 10rem;
+
+}
+
+.title {
+    font-size: 1.125rem;
+    font-family: 'PoppinsSemiBold';
+    text-transform: uppercase;
+}
+
+.textWrapper {
+    padding: 1.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.carouselImg {
+    max-height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+@media (min-width: 48rem) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media (min-width: 90rem) {
+    .card {
+        width: 100%;
+    }
+}

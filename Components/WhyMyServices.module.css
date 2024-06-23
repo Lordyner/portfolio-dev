@@ -1,0 +1,40 @@
+.container {
+    padding: var(--topAndBotPadding) var(--sidePadding);
+}
+
+.whyMyServices {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    text-align: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-self: center;
+}
+
+
+@media (min-width: 48rem) {
+
+    .whyMyServices {
+        gap: 3.125rem;
+    }
+
+    .textWrapper {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 48rem) {
+
+    .textWrapper {
+        gap: 3.125rem;
+    }
+}

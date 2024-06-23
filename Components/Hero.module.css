@@ -1,150 +1,132 @@
 .heroContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 4;
-    background-color: var(--black);
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
+    gap: 1.5rem;
+    flex-grow: 2;
+    padding: 4.5rem 1.5rem var(--topAndBotPadding) 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
 }
 
 .textWrapper {
-    padding-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
-}
-
-.valueProposition {
-    font-size: var(--body-500);
-    max-width: 21rem;
-    padding-bottom: 1em;
-    /* color: var(--grey); */
-    opacity: .8;
+    gap: 1.375rem;
 }
 
 
-
-.heroContainer img {
-    max-width: 90%;
-    object-fit: contain;
-    max-height: 340px;
+.titleAndDescriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5625rem;
 }
 
-.heroContainer .handdrawn {
-    width: 2.5rem;
-    min-height: unset;
-    height: 2.5rem;
-    position: absolute;
+.description {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    font-family: "PoppinsRegular";
 }
 
-/* Media for tablet */
-@media screen and (min-width: 768px) {
+.imgWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.heroImg {
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+    max-width: 320px;
+    width: 100%;
+}
+
+.lineBreak {
+    display: block;
+    /* Ensure the line break behaves as expected */
+    content: "";
+    /* Optionally ensure space is preserved */
+}
+
+
+@media (min-width: 48rem) {
+
     .heroContainer {
-        padding: 1rem 2.5rem;
-        background-color: unset;
-        /* text-align: left; */
-        position: relative;
+        padding: 5.3125rem 2.5rem var(--topAndBotPadding) 2.5rem;
+    }
+
+    .content {
+        gap: 2.5rem;
+    }
+
+    .textWrapper {
+        text-align: center;
+        align-items: center;
+        gap: 1.9375rem;
 
     }
 
-    .heroContainer .handdrawn {
-        width: 2.5rem;
-        min-height: unset;
-        height: 2.5rem;
-        position: absolute;
+    .heroImg {
+        max-width: 21.625rem;
     }
 
-    #github {
-        right: 18rem;
-        bottom: 17rem;
-        transform: rotate(-20deg);
-
+    .description {
+        font-size: 1.375rem;
     }
 
-    #laptop {
-        left: 25rem;
-        bottom: 5rem;
-        transform: rotate(10deg);
+    .titleAndDescriptionWrapper {
+        gap: 0.8125rem;
     }
 
-    #rocket {
-        right: 10rem;
-        top: 6rem;
-        transform: rotate(40deg);
-    }
 
-    .valueProposition {
-        max-width: 70%;
-
-    }
 }
 
-/* Media for laptop */
-@media screen and (min-width: 1024px) {
-    .valueProposition {
-        max-width: 80%;
+
+@media (min-width: 90rem) {
+
+
+    .heroContainer {
+        padding-top: 2rem;
+        justify-content: center;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+
+    .titleAndDescriptionWrapper {
         text-align: left;
+        align-items: flex-start;
+        gap: 1.375rem;
     }
 
     .textWrapper {
         align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        gap: 2.375rem;
     }
 
-    .heroContainer .handdrawn {
-        width: 3rem;
-        height: 3rem;
-        opacity: .9;
-        color: red;
+    .heroImg {
+        max-width: 29rem;
+        justify-self: end;
     }
 
-    #github {
-        right: 8rem;
-        bottom: 12rem;
-        transform: rotate(-15deg);
-
+    .title {
+        min-width: max-content;
     }
 
-    #laptop {
-        left: 23rem;
-        bottom: 4rem;
-        transform: rotate(5deg);
-    }
-
-    #rocket {
-        right: 6rem;
-        top: 6rem;
-        transform: rotate(40deg);
-    }
-}
-
-/* Media for desktop */
-@media screen and (min-width: 1440px) {
-    .valueProposition {
-        max-width: 80%;
-    }
-
-    .heroContainer .handdrawn {
-        width: 5rem;
-        height: 5rem;
-    }
-
-    #github {
-        right: 18rem;
-        bottom: 17rem;
-
-    }
-
-    #laptop {
-        left: 25rem;
-        bottom: 5rem;
-    }
-
-    #rocket {
-        right: 10rem;
-        top: 6rem;
-    }
 }

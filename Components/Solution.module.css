@@ -1,0 +1,38 @@
+.container {
+    /* display: flex; */
+    flex-direction: column;
+    text-align: center;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+    position: relative;
+}
+
+.solution {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+@media (min-width: 48rem) {
+    .solution {
+        gap: 2.5rem;
+    }
+
+    .textWrapper {
+        gap: 1.75rem;
+    }
+
+}
+
+@media (min-width: 90rem) {
+    .solution {
+        gap: 5.25rem;
+    }
+
+
+}

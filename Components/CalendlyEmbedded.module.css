@@ -1,0 +1,33 @@
+.calendlyContainer {
+    padding: 0 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.calendly {
+    min-width: calc(320px - 3rem) !important;
+    height: 62.5rem !important;
+    overflow-y: hidden !important;
+}
+
+
+@media (min-width: 48rem) {
+    /* .calendly {
+        height: 31.25rem !important;
+    } */
+}
+
+@media (min-width: 90rem) {
+    .calendly {
+        height: 700px !important;
+    }
+
+    .calendlyContainer {
+
+        gap: .5rem;
+
+    }
+}

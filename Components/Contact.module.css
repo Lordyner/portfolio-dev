@@ -1,0 +1,101 @@
+.contactSection {
+    padding: var(--topAndBotPadding) var(--sidePadding);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.description {
+    padding-top: 1.125rem;
+}
+
+.contactInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    padding-top: 3.4375rem;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.icon {
+    width: 3.625rem;
+    border-radius: 50%;
+}
+
+.formPart {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+}
+
+.fieldName {
+    font-size: 0.875rem;
+    text-align: left;
+    font-family: 'PoppinsRegular';
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.fieldsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contactMeans {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding-top: 4.125rem;
+    width: 100%;
+
+}
+
+@media (min-width: 48rem) {
+
+    .contactMeans {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        padding-top: 4.4375rem;
+        gap: 1rem;
+    }
+
+    .contactInfos {
+        flex-direction: row;
+        padding-top: 3.875rem;
+    }
+
+    .description {
+        padding-top: 4.125rem;
+    }
+}
+
+@media (min-width: 90rem) {}

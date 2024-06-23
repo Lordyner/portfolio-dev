@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+    position: relative;
+}
+
+.agitation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.stats {
+    list-style-position: inside;
+}
+
+.link {
+    color: var(--neutral-color-2);
+
+
+}
+
+.gamblingCredibilityImg {
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+    max-width: 320px;
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .gamblingCredibilityImg {
+        max-width: 25rem;
+    }
+
+    .content {
+        gap: 2rem;
+    }
+
+    .description {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 90rem) {
+
+    .content {
+        align-self: center;
+        text-align: left;
+    }
+
+    .agitation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gamblingCredibilityImg {
+        max-width: 30.5rem;
+        justify-self: right;
+    }
+
+    .description {
+        max-width: none;
+    }
+}

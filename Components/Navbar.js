@@ -1,10 +1,11 @@
 import React, { useContext, useRef } from 'react';
-import avatarOfMe from '@/public/images/avatarOfMe.png';
-import iconMenuClose from '@/public/images/icon_menu_close.svg';
 import Image from 'next/image';
 import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
+import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
+
+import { animations, delay, motion, spring } from "framer-motion";
 const Navbar = () => {
 
     const burger = useRef();
@@ -12,44 +13,138 @@ const Navbar = () => {
     const { isMobileResolution } = useContext(GlobalContext);
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
+    const sideBar = {
+        closed: {
+            width: 0,
+            padding: 0,
+            transition: {
+                // delay: 0.25,
+                duration: 0.55,
+            },
+        },
+        open: {
+            width: "65%",
+            padding: "6rem 1.5rem",
+            transition: {
+                // delay: 0.25,
+                duration: 0.55,
+
+            },
+        },
+    }
+
+    const sideVariants = {
+        closed: {
+            transition: {
+                // staggerChildren: 0.2,
+                // staggerDirection: 1,
+            },
+        },
+        open: {
+            transition: {
+                staggerChildren: 0.2,
+                staggerDirection: 1,
+            },
+        },
+    };
+    const sideVariantsSocials = {
+        closed: {
+            transition: {
+                // staggerChildren: 0.2,
+                // staggerDirection: 1,
+            },
+        },
+        open: {
+            transition: {
+                delayChildren: 0.25,
+                staggerChildren: 0.2,
+                staggerDirection: 1,
+            },
+        },
+    };
+
+    const variantsItem = {
+
+        open: {
+            y: 50,
+            opacity: 1,
+
+        },
+        closed: {
+            opacity: 0,
+        }
+    };
 
     return (
-        <nav className={classes.navbar}>
-            <div className={classes.navWrapper}>
-                <div className={classes.logo}>
-                    <Link href="/">
-                        <Image src={avatarOfMe} alt='avatar du développeur web freelance Thomas André-Lubin' className={classes.logoImg} width={50} height={50} />
+        <header>
+            <nav className={`${classes.navbar} max-width`}>
+                <div className={`${classes.navWrapper} `}>
+                    <Link href="/" className={classes.logo}>
+                        <Image src={logo} alt="logo de l'entrepreneur Thomas André-Lubin" className={classes.logoImg} />
                     </Link>
-                </div>
-                {/* Classic links */}
-                <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
-                    <a href="/CV-andrelubin-thomas.pdf" className={classes.link} download="CV-andrelubin-thomas">Curriculum Vitae</a>
-                    <Link href="/#projects-section" className={classes.link}>Projets</Link>
-                </div>
+                    {/* Classic links */}
+                    <div className={`${isMobileResolution ? "display-none" : classes.navLinks}`}>
+                        <Link href="/a-propos" className={classes.link}>À Propos</Link>
+                        <Link href="/#realisations" className={classes.link}>Réalisations</Link>
+                    </div>
 
-                {/* Burger menu */}
-                <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
-                    onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
+                    {/* Burger menu */}
+                    <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
+                        onClick={() => {
+                            toggleMenu();
+                            burger.current.classList.toggle(classes.isActive);
 
-                    }}>
-                    <div className={classes.bar} />
-                </div>
+                        }}>
+                        <span className={classes.bar} />
+                    </div>
 
-                {/* Mobile menu */}
-                <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
-                    <Link href="/#projects-section" className={classes.mobileLink} onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Projets</Link>
-                    <a href="/CV-andrelubin-thomas.pdf" className={classes.mobileLink} download="CV-andrelubin-thomas" onClick={() => {
-                        toggleMenu();
-                        burger.current.classList.toggle(classes.isActive);
-                    }}>Curriculum Vitae</a>
+                    {/* Mobile menu */}
+                    <motion.div className={`${classes.mobileNav} `}
+                        initial="closed" animate={isMenuOpen ? "open" : "closed"} variants={sideBar} >
+                        {/* ${isMenuOpen ? classes.active : ""} */}
+                        <motion.div className={classes.mobileLinks}
+                            initial="closed"
+                            animate={isMenuOpen ? "open" : "closed"}
+                            variants={sideVariants}>
+                            <motion.div variants={variantsItem}>
+                                <Link href="/" className={classes.mobileLink} onClick={() => {
+                                    toggleMenu();
+                                    burger.current.classList.toggle(classes.isActive);
+                                }}>Accueil</Link>
+                            </motion.div>
+                            <motion.div variants={variantsItem}>
+                                <Link href="/#realisations" className={classes.mobileLink} onClick={() => {
+                                    toggleMenu();
+                                    burger.current.classList.toggle(classes.isActive);
+                                }}>Réalisations</Link>
+                            </motion.div>
+                            <motion.div variants={variantsItem}>
+                                <Link href="/a-propos" className={classes.mobileLink} onClick={() => {
+                                    toggleMenu();
+                                    burger.current.classList.toggle(classes.isActive);
+                                }}>A propos</Link>
+                            </motion.div>
+                            <motion.div className={classes.buttonWrapper} variants={variantsItem}>
+                                <Link href="/contact" className='primary-button'>Me contacter</Link>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div className={classes.socials} variants={sideVariantsSocials}>
+                            <motion.div variants={variantsItem}>
+                                {/* <Image src={tiktokLogo} alt='logo tiktok' className={classes.socialLogo} /> */}
+                            </motion.div>
+                            <motion.div variants={variantsItem}>
+
+                                {/* <Image src={instaLogo} alt='logo instagram' className={classes.socialLogo} /> */}
+                            </motion.div>
+                            <motion.div variants={variantsItem}>
+                                {/* <Image src={linkedinLogo} alt='logo linkedin' className={classes.socialLogo} /> */}
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
+
     );
 };
 

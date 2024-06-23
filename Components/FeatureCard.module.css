@@ -1,0 +1,44 @@
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.featureCardText {
+    display: flex;
+
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+    gap: 1.125rem;
+    padding: 0.875rem 1.5rem 2rem 1.5rem;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+
+}
+
+.cardImage {
+    object-fit: cover;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    max-height: 160px;
+}
+
+@media (min-width: 48rem) {
+    .featureCard {
+        width: 50%;
+    }
+}
+
+@media (min-width: 90rem) {
+    .featureCard {
+        display: flex;
+        flex-direction: column;
+        width: unset;
+    }
+}

@@ -1,0 +1,10 @@
+.draggableArea {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    margin-top: 1.5rem;
+}
+
+.draggableArea:active {
+    cursor: grabbing;
+}

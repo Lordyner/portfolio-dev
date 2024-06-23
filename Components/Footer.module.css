@@ -1,131 +1,150 @@
 .footer {
-    background-color: var(--black);
-    color: #fff;
-    padding: 2rem;
-    font-size: var(--body-400);
+    padding: var(--topAndBotPadding) var(--sidePadding);
+    background-color: var(--background-color-2);
 }
 
-.footer h2 {
-    color: #fff;
-    font-size: var(--heading-500);
-    font-family: Lato;
-
-}
-
-.valueProposition {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    gap: .75rem;
-
-}
-
-.footer button {
-    font-size: var(--body-400);
-}
-
-.footer a {
-
-    color: #fff;
-}
-
-.container {
+.content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-.profilImg {
-    border-radius: 90px;
-    width: 50px;
-    height: 50px;
-    transition: 0.1s ease-in-out;
-}
-
-
-.classicLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.linkContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    align-items: flex-end;
-}
-
-
-.topLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.separator {
-    width: 100%;
-    border-bottom: 2px solid var(--lightGrey);
-}
-
-.icon svg {
-    font-size: 1.5rem;
-}
-
-.socialLinks {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 2rem;
+    margin-top: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-    .container {
+.logo {
+    width: 3.25rem;
+    max-height: 2.1875rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logoLink {
+    width: max-content;
+}
+
+.logoLink:hover {
+    transform: scale(1.1);
+    transition: transform .1s ease-in-out;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.info,
+.copyright {
+    font-family: 'PoppinsRegular';
+    font-size: 0.875rem;
+    color: var(--neutral-color-2);
+}
+
+
+.link {
+    text-decoration: none;
+    font-family: 'PoppinsRegular';
+    font-size: 0.875rem;
+    color: var(--neutral-color-2);
+    position: relative;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.socialIcon {
+    width: 1.75rem;
+}
+
+.socialLink {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(11%) saturate(891%) hue-rotate(176deg) brightness(96%) contrast(79%);
+}
+
+.socialLink:hover {
+    transition: filter .1s ease-in-out;
+    filter: unset;
+}
+
+@media screen and (min-width: 48rem) {
+    .content {
         display: grid;
-        grid-template-columns: 30% 70%;
-        column-gap: 1rem;
+        grid-template-areas: 'logo .'
+            'navLinks contactInfo'
+            'socials copyright';
+
+        row-gap: 3.5rem;
     }
 
-    .valueProposition {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: .75rem;
-
+    .logo {
+        grid-area: logo;
     }
 
-    .linkContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+    .footerLinks {
+        grid-area: navLinks;
     }
 
-    .topLinks {
-        display: flex;
-        border-bottom: 2px solid var(--lightGrey);
-        padding-bottom: 1rem;
+    .contactInfo {
+        grid-area: contactInfo;
+        text-align: right;
     }
 
-    .classicLinks {
-        display: flex;
+    .socials {
+        grid-area: socials;
+    }
+
+    .copy {
+        grid-area: copyright;
+        text-align: right;
+    }
+
+
+    .footerLinks {
         flex-direction: row;
-        gap: 2.5rem;
-
-    }
-
-    .socialLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
         gap: 2rem;
     }
+}
 
-    .icon svg {
-        font-size: 2rem;
+@media screen and (min-width: 90rem) {
+
+    .info,
+    .copyright {
+        font-size: 1rem;
+
     }
 
-    .imageAndNameContainer {
-        display: flex;
-        align-items: center;
-        gap: .75rem;
+    .link {
+        font-size: 1rem;
     }
 }

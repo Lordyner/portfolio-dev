@@ -1,0 +1,48 @@
+.name {
+    font-family: 'PoppinsMedium';
+    line-height: 1.875rem;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    position: relative;
+}
+
+.textWrapper::after {
+    content: '';
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    background: url('/images/global/quote.png') no-repeat;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 3rem;
+
+}
+
+.carouselImg {
+    width: 3.5rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1.5rem 1rem;
+
+}

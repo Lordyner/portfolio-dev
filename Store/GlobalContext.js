@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
+
 
 const GlobalContext = createContext();
 
@@ -11,11 +12,9 @@ export function GlobalContextProvider(props) {
     const [isMenuOpen, setIsMenuOpen] = useState();
     const [isMobileResolution, setIsMobileResolution] = useState();
     const [isTabletResolution, setIsTabletResolution] = useState();
-    const [isLaptopResolution, setIsLaptopResolution] = useState();
     const [isDesktopResolution, setIsDesktopResolution] = useState();
     const [mobileResolution] = useState(320);
     const [tabletResolution] = useState(768);
-    const [laptopResolution] = useState(1024);
     const [desktopResolution] = useState(1440);
 
     const toggleMenu = () => {
@@ -39,11 +38,10 @@ export function GlobalContextProvider(props) {
             isMenuOpen, setIsMenuOpen,
             isMobileResolution, setIsMobileResolution,
             isTabletResolution, setIsTabletResolution,
-            isLaptopResolution, setIsLaptopResolution,
             isDesktopResolution, setIsDesktopResolution,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
-            mobileResolution, tabletResolution, laptopResolution, desktopResolution,
-            toggleMenu
+            mobileResolution, tabletResolution, desktopResolution,
+            toggleMenu,
         }}>
             {props.children}
         </GlobalContext.Provider>

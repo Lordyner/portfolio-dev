@@ -1,0 +1,32 @@
+/* Embla Carousel */
+
+.carouselImg {
+    max-height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-family: 'PoppinsSemiBold';
+    text-transform: uppercase;
+}
+
+.textWrapper {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    text-align: left;
+    height: 22rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: var(--background-color-2);
+}
+
+@media (min-width: 64rem) {
+    .textWrapper {
+        height: 15rem;
+    }
+}

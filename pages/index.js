@@ -1,18 +1,22 @@
 import Head from 'next/head';
-import { useState, useEffect, useContext, Suspense } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { getLogger } from '@/logging/log-util';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import Navbar from '@/Components/Navbar';
 import Hero from '@/Components/Hero';
 import Project from '@/Components/Project';
 import Footer from '@/Components/Footer';
 import Spinner from '@/Components/Spinner';
-import Values from '@/Components/Values';
-import PopupAddAgenda from '@/Components/PopupAddAgenda';
-import FAQ from '@/Components/FAQ';
 import GlobalContext from '@/Store/GlobalContext';
-import portfolioBg from '../public/images/portfolio_bg.jpeg';
+import classes from '@/Components/MainPage.module.css';
+import Problem from '@/Components/Problem';
+import Agitation from '@/Components/Agitation';
+import Solution from '@/Components/Solution';
+import WhyMyServices from '@/Components/WhyMyServices';
+import CTAReminder from '@/Components/CTAReminder';
+import Process from '@/Components/Process';
+import Feedback from '@/Components/Feedback';
+import FAQ from '@/Components/FAQ';
 
 export default function Home() {
 
@@ -26,9 +30,8 @@ export default function Home() {
   /* Context */
   const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
   const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
-  const { isLaptopResolution, setIsLaptopResolution } = useContext(GlobalContext);
   const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
-  const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+  const { tabletResolution, desktopResolution } = useContext(GlobalContext);
   const { isLoading, setIsLoading } = useContext(GlobalContext);
   const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
   const { isMenuOpen } = useContext(GlobalContext);
@@ -41,13 +44,11 @@ export default function Home() {
     setScreenWidth(window.screen.width);
 
     const isMobile = screenWidth < tabletResolution;
-    const isTablet = screenWidth >= tabletResolution && screenWidth < laptopResolution;
-    const isLaptop = screenWidth >= laptopResolution && screenWidth < desktopResolution;
+    const isTablet = screenWidth >= tabletResolution && screenWidth < desktopResolution;
     const isDesktop = screenWidth >= desktopResolution;
 
     setIsMobileResolution(isMobile);
     setIsTabletResolution(isTablet);
-    setIsLaptopResolution(isLaptop);
     setIsDesktopResolution(isDesktop);
   }
 
@@ -66,75 +67,66 @@ export default function Home() {
   return (
     <>
       {isLoading && <Spinner />}
-      {showPopupAddMeetingInClientCalendar && <PopupAddAgenda
-        showPopup={showPopupAddMeetingInClientCalendar}
-        setShowPopup={setShowPopupAddMeetingInClientCalendar}
-      />}
-      <Head>
-        <title>Développeur web Freelance</title>
-        <meta name="description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception des maquettes jusqu'au code en passant par le référencement." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property='og:title' content='Développeur web Freelance' />
-        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta property='og:image' content='/images/profil_pic_looking_laptop_zoomed.jpg' />
+      <Head>
+
+        {/* Google */}
+        <title>Création de site web en freelance - Thomas André-Lubin</title>
+        <meta name="description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="all" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Favicons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Socials */}
+        <meta property='og:title' content='Création de site web en freelance - Thomas André-Lubin' />
+        <meta property='og:description' content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta property='og:image' content='/images/accueil/hero_img.png' />
         <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='fr_FR' />
-        <meta property='og:site_name' content='Développeur web Freelance' />
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* Facebook Meta Tags */}
-        <meta property="og:url" content="https://www.thomasandrelubin.fr/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Développeur web Freelance" />
-        <meta property="og:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta property="og:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+        <meta property='og:site_name' content='Création de site web en freelance - Thomas André-Lubin' />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="thomasandrelubin.fr" />
         <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
-        <meta name="twitter:title" content="Développeur web Freelance" />
-        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création de votre site web de la conception de la maquette jusqu'au code en passant par le référencement." />
-        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/profil_pic_looking_laptop_zoomed.jpg" />
+        <meta name="twitter:title" content="Création de site web en freelance - Thomas André-Lubin" />
+        <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
 
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
+      <div className={classes.mainPage}>
 
-      <main className="main-container">
-        {(isMobileResolution || isTabletResolution) &&
-          <>
-            <Navbar />
-            <Hero />
-          </>
-        }
-        {(isLaptopResolution || isDesktopResolution) &&
-          <>
-            <div className='wrapperLeftAndRight'>
-              <div className='leftSide'>
-                <Navbar />
-                <Hero />
-              </div>
-              <div className="rightSide">
-                <Image src={portfolioBg} alt='Développeur web freelance en train de développer sur son ordinateur' />
-              </div>
-            </div>
-          </>
-        }
-      </main >
-      <Values />
+        <Navbar />
+
+        <Hero />
+      </div>
+      <Problem />
+      <Agitation />
+      <Solution />
+      <WhyMyServices />
+      <CTAReminder />
+      <Process />
+      <Feedback />
       <Project />
       <FAQ />
       <Footer />
+      {/* <Mission />
+      <Services />
+      <Values />
+      <Stats />
+       */}
     </>
   )
 
 }
-
-
-/************************************************************************************************************* */
-/* There is an issue, I'm requesting a new access token each time, even if the previous one is still valid *****/
-/* Write the access token in a file *****/
-/************************************************************************************************************* */
-

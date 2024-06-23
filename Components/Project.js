@@ -1,113 +1,101 @@
-import React from 'react';
-import newsHomepageImg from '@/public/images/news-homepage-screenshot.png'
-import passwordGeneratorImg from '@/public/images/password-generator-screenshot.png'
-import puissance4Img from '@/public/images/puissance4-screenshot.png'
-import photoSnapImg from '@/public/images/photosnap-homepage-screenshot.png'
-import Image from 'next/image';
+import React, { useContext } from 'react';
 import classes from './Project.module.css';
-import frontendmentorLogo from '../public/images/frontend_mentor_logo.png';
-import payAPIHomepage from '../public/images/payAPI_homepage.png';
-import myTeamLandingPage from '@/public/images/myteam_firstPage.png';
-import coffeeRoastersLandingPage from '@/public/images/coffee_roasters_homepage.png';
-import audiophileScreenshot from '@/public/images/audiophile-screenshot.png';
+import { motion, } from "framer-motion";
+
+import Image from 'next/image';
+import GlobalContext from '@/Store/GlobalContext';
+import Link from 'next/link';
+import audiophileImg from '@/public/images/accueil/projets/audiophile.png';
+import photosnapImg from '@/public/images/accueil/projets/photosnap.png';
+import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.png';
+import payApiImg from '@/public/images/accueil/projets/payApi.png';
+import myTeamImg from '@/public/images/accueil/projets/myTeam.png';
+import newsImg from '@/public/images/accueil/projets/news_homepage.png';
+
+
 const Project = () => {
+
+    const { isMobileResolution, isTabletResolution, isDesktopResolution } = useContext(GlobalContext);
+
     return (
-        <section id='projects-section' className={classes.projectSection}>
-            <h2>Derniers projets</h2>
-            <div className={classes.container}>
-                <div className={classes.card}>
-                    <Image src={audiophileScreenshot} alt="page d'accueil d'audiophile" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Audiophile e-commerce</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://audiophile-indol-nu.vercel.app/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
-                </div>
-                <div className={classes.card}>
-                    <Image src={coffeeRoastersLandingPage} alt="page d'accueil de coffee roasters" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Coffee roasters</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://coffee-roasters-gamma.vercel.app/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
-                </div>
-                <div className={classes.card}>
-                    <Image src={photoSnapImg} alt="page d'accueil de photosnap" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Photosnap</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://photosnap-sigma.vercel.app/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
-                </div>
-                <div className={classes.card}>
-                    <Image src={myTeamLandingPage} alt="page d'accueil de myTeam" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Landing page myTeam</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://my-team-eosin.vercel.app/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
-                </div>
-                <div className={classes.card}>
-                    <Image src={payAPIHomepage} alt="page d'accueil de payAPI" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Landing page PayAPI</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://pay-api-seven.vercel.app/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
-                </div>
-                <div className={classes.card}>
-                    <Image src={newsHomepageImg} alt="page d'accueil du site d'information" className={classes.mainImg} />
-                    <div className='d-flex gap-05 align-items-center flex-grow-2'>
-                        <Image src={frontendmentorLogo} className={classes.logo} alt="logo de l'entreprise frontendmentor.io" />
-                        <div className={classes.text}>
-                            <p className={classes.title}>Page d'accueil d'informations</p>
-                            <p className={classes.description}>Frontend mentor</p>
-                        </div>
-                    </div>
-                    <div className='d-flex w-100'>
-                        <a className={classes.button} href="https://lordyner.github.io/news-homepage/" target="blank">
-                            Visitez le site
-                        </a>
-                    </div>
+        <section id='realisations' className={classes.projectSection}>
+            <div className={`${classes.content} max-width`}>
+                <h2>Mes <span className='accentuedWord'>réalisations</span></h2>
+                <p>Découvrez mes projets</p>
+                <div className={classes.projects}>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/audiophile`} className={classes.cardLink}>
+                            <Image src={audiophileImg} alt="Page d'accueil du site audiophile" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>Audiophile</h3>
+                                <p className={classes.description}>Site e-commerce pour des appareils de musique (casques, enceintes etc).</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/photosnap`} className={classes.cardLink}>
+                            <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>Photosnap</h3>
+                                <p className={classes.description}>Plateforme pour photographe afin de partager des photos, des histoires et se connecter avec les autres.</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/coffeeRoasters`} className={classes.cardLink}>
+                            <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffeeRoasters" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>Coffee roasters</h3>
+                                <p className={classes.description}>Site de commande de café avec différents abonnements et la meilleur qualité de café.</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/payApi`} className={classes.cardLink}>
+                            <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>payAPI</h3>
+                                <p className={classes.description}>Site pour une API ("Application Programming Interface") Bancaire.</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/myTeam`} className={classes.cardLink}>
+                            <Image src={myTeamImg} alt="Page d'accueil du site MyTeam" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>myTeam</h3>
+                                <p className={classes.description}>Site pour un cabinet de recrutement spécialisé dans la construction d'équipe talentueuse</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+                    <motion.div className={classes.project}
+                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileTap={{ scale: 0.9 }}>
+                        <Link href={`projets/news`} className={classes.cardLink}>
+                            <Image src={newsImg} alt="news" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <div className={classes.textWrapper}>
+                                <h3 className={classes.projectTitle}>News</h3>
+                                <p className={classes.description}>Page d'accueil d'un blog gaming/nouvelles technologies</p>
+                            </div>
+                        </Link>
+                    </motion.div>
+
                 </div>
             </div>
         </section >
     );
 };
+
+
 
 export default Project;
