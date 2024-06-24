@@ -56,25 +56,25 @@ export default function APropos() {
 
             <Head>
                 {/* Google */}
-                <title>A propos - Thomas André-Lubin</title>
+                <title>A propos de Thomas André-Lubin | Mes valeurs et ce que je fais</title>
                 <meta name="description" content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
                 {/* Socials */}
-                <meta property='og:title' content='A propos - Thomas André-Lubin' />
+                <meta property='og:title' content='A propos de Thomas André-Lubin | Mes valeurs et ce que je fais' />
                 <meta property='og:description' content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
                 <meta property='og:image' content='/images/about/consultant_pic.png' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content='A propos - Thomas André-Lubin' />
+                <meta property='og:site_name' content='A propos de Thomas André-Lubin | Mes valeurs et ce que je fais' />
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/a-propos" />
-                <meta name="twitter:title" content="A propos - Thomas André-Lubin" />
+                <meta name="twitter:title" content="A propos de Thomas André-Lubin | Mes valeurs et ce que je fais" />
                 <meta name="twitter:description" content="Développeur web depuis plus de 6 ans, j'ai travaillé pour de nombreux projets en entreprise : Crédit Agricole, Orange, Rostchild Martin Maurel, etc." />
                 <meta name="twitter:image" content="https://thomasandrelubin.fr/images/about/consultant_pic.png" />
 
