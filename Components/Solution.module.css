@@ -34,5 +34,8 @@
         gap: 5.25rem;
     }
 
+    .textWrapper {
+        gap: 3.125rem;
+    }
 
 }

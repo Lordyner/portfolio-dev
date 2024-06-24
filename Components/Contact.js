@@ -1,15 +1,48 @@
-import React, { useContext } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import classes from './Contact.module.css';
 import Link from 'next/link';
 import appelGif from '@/public/images/contact/appel.gif';
 import emailGif from '@/public/images/contact/email.gif';
 import Image from 'next/image';
 import CalendlyEmbedded from './CalendlyEmbedded';
+import emailjs from '@emailjs/browser';
+import SpringModal from './UI/SpringModal';
 import GlobalContext from '@/Store/GlobalContext';
 
 const Contact = () => {
 
-    const { isMobileResolution } = useContext(GlobalContext);
+    const form = useRef();
+    const [isOpen, setIsOpen] = useState(false);
+    const { isLoading, setIsLoading } = useContext(GlobalContext);
+    const [title, setTitle] = useState();
+    const [message, setMessage] = useState();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        emailjs
+            .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+                publicKey: process.env.NEXT_PUBLIC_KEY_MAIL,
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setIsLoading(false);
+                    setTitle('Message <span class="accentuedWord">envoyé</span> !');
+                    setMessage('Votre message a bien été envoyé, je vous recontacterai dans les 24h.');
+                    setIsOpen(true);
+                    form.current.reset();
+
+                },
+                (error) => {
+                    console.log('ERROR');
+                    setIsLoading(false);
+                    setTitle("<span class=\"accentuedWord\">Une erreur</span> s'est produite !");
+                    setMessage('Vous pouvez me contacter directement par téléphone ou par mail ou prendre rendez-vous directement dans mon agenda');
+                    setIsOpen(true);
+                },
+            );
+    }
 
     return (
         <section className={classes.contactSection}>
@@ -32,19 +65,19 @@ const Contact = () => {
                 <div className={classes.contactMeans}>
                     <div id='contactForm' className={classes.formPart}>
                         <h2>Parlez moi de votre <span className="accentuedWord">projet</span></h2>
-                        <form className={classes.contactForm}>
+                        <form ref={form} className={classes.contactForm} onSubmit={sendEmail}>
                             <div className={classes.fieldsContainer}>
                                 <div className={classes.formGroup}>
-                                    <label htmlFor="name" className={classes.fieldName}>Nom</label>
-                                    <input type="text" id="name" name="name" required />
+                                    <label htmlFor="from_name" className={classes.fieldName}>Nom</label>
+                                    <input type="text" id="from_name" name="from_name" required />
                                 </div>
                                 <div className={classes.formGroup}>
                                     <label htmlFor="phone" className={classes.fieldName}>Téléphone</label>
-                                    <input type="text" id="phone" name="phone" required />
+                                    <input type="tel" id="phone" pattern="[0-9]+" title="Veuillez saisir un numéro de téléphone valide" name="phone" required />
                                 </div>
                                 <div className={classes.formGroup}>
-                                    <label htmlFor="mail" className={classes.fieldName}>Adresse mail</label>
-                                    <input type="mail" id="mail" name="mail" required />
+                                    <label htmlFor="reply_to" className={classes.fieldName}>Adresse mail</label>
+                                    <input type="mail" id="mail" pattern='[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$' title='Veuillez saisir une adresse mail valide' name="reply_to" required />
                                 </div>
                                 <div className={classes.formGroup}>
                                     <label htmlFor="message" className={classes.fieldName}>Message</label>
@@ -58,6 +91,7 @@ const Contact = () => {
                     </div>
                     <h2 className='accentuedWord'>OU</h2>
                     <CalendlyEmbedded />
+                    <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} title={title} message={message} />
                 </div>
             </div>
         </section>

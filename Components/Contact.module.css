@@ -28,6 +28,11 @@
     gap: 0.875rem;
 }
 
+.contactInfo p {
+    font-family: 'PoppinsRegular';
+
+}
+
 .icon {
     width: 3.625rem;
     border-radius: 50%;

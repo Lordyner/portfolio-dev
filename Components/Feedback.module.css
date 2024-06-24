@@ -25,3 +25,14 @@
         gap: 1.75rem;
     }
 }
+
+@media (min-width: 48rem) {
+    .content {
+        gap: 3.5rem;
+
+    }
+
+    .textWrapper {
+        gap: 3.125rem;
+    }
+}
