@@ -5,7 +5,6 @@ import appelGif from '@/public/images/contact/appel.gif';
 import emailGif from '@/public/images/contact/email.gif';
 import Image from 'next/image';
 import CalendlyEmbedded from './CalendlyEmbedded';
-import emailjs from '@emailjs/browser';
 import SpringModal from './UI/SpringModal';
 import GlobalContext from '@/Store/GlobalContext';
 
@@ -20,28 +19,32 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        emailjs
-            .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-                publicKey: process.env.NEXT_PUBLIC_KEY_MAIL,
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    setIsLoading(false);
-                    setTitle('Message <span class="accentuedWord">envoyé</span> !');
-                    setMessage('Votre message a bien été envoyé, je vous recontacterai dans les 24h.');
-                    setIsOpen(true);
-                    form.current.reset();
+        const mailContent = `Message envoyé par ${form.current.from_name.value}. \n Téléphone : ${form.current.phone.value} \n Mail : ${form.current.mail.value} \n Message : ${form.current.message.value}`;
+        fetch('/api/mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: mailContent,
+            }),
+        }).then((res) => {
 
-                },
-                (error) => {
-                    console.log('ERROR');
-                    setIsLoading(false);
-                    setTitle("<span class=\"accentuedWord\">Une erreur</span> s'est produite !");
-                    setMessage('Vous pouvez me contacter directement par téléphone ou par mail ou prendre rendez-vous directement dans mon agenda');
-                    setIsOpen(true);
-                },
-            );
+            if (res.status === 200) {
+                console.log('SUCCESS!');
+                setIsLoading(false);
+                setTitle('Message <span class="accentuedWord">envoyé</span> !');
+                setMessage('Votre message a bien été envoyé, je vous recontacterai dans les 24h.');
+                setIsOpen(true);
+                form.current.reset();
+            } else {
+                console.log('ERROR');
+                setIsLoading(false);
+                setTitle("<span class=\"accentuedWord\">Une erreur</span> s'est produite !");
+                setMessage('Vous pouvez me contacter directement par téléphone ou par mail ou prendre rendez-vous directement dans mon agenda');
+                setIsOpen(true);
+            }
+        });
     }
 
     return (
@@ -73,11 +76,11 @@ const Contact = () => {
                                 </div>
                                 <div className={classes.formGroup}>
                                     <label htmlFor="phone" className={classes.fieldName}>Téléphone</label>
-                                    <input type="tel" id="phone" pattern="[0-9]+" title="Veuillez saisir un numéro de téléphone valide" name="phone" required />
+                                    <input type="tel" id="phone" pattern="[0-9 ]+" title="Veuillez saisir un numéro de téléphone valide" name="phone" required />
                                 </div>
                                 <div className={classes.formGroup}>
-                                    <label htmlFor="reply_to" className={classes.fieldName}>Adresse mail</label>
-                                    <input type="mail" id="mail" pattern='[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$' title='Veuillez saisir une adresse mail valide' name="reply_to" required />
+                                    <label htmlFor="fromEmail" className={classes.fieldName}>Adresse mail</label>
+                                    <input type="mail" id="mail" pattern='[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$' title='Veuillez saisir une adresse mail valide' name="fromEmail" required />
                                 </div>
                                 <div className={classes.formGroup}>
                                     <label htmlFor="message" className={classes.fieldName}>Message</label>
