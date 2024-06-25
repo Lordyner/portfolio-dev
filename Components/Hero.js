@@ -30,8 +30,6 @@ const Hero = () => {
                     src={heroImg}
                     alt='Image du développeur web Thomas André-Lubin'
                     priority={true}
-                    width={450}
-                    height={600}
                     placeholder='blur'
                     blurDataURL='/images/accueil/hero_img_low_quality.webp'
                     className={classes.heroImg}
