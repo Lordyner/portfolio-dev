@@ -67,7 +67,7 @@ export default function Photosnap() {
                 {/* Socials */}
                 <meta property='og:title' content='Projet Photosnap - Thomas André-Lubin' />
                 <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour que les photographes puissent partager des histoires et photos." />
-                <meta property='og:image' content='/images/accueil/hero_img.png' />
+                <meta property='og:image' content='/images/accueil/hero_img.webp' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/photosnap' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -79,7 +79,7 @@ export default function Photosnap() {
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/photosnap" />
                 <meta name="twitter:title" content="Projet Photosnap - Thomas André-Lubin" />
                 <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour que les photographes puissent partager des histoires et photos." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />

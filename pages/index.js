@@ -70,6 +70,8 @@ export default function Home() {
 
       <Head>
 
+        <link rel='preload' href='/images/accueil/hero_img.webp' as='image' />
+
         {/* Google */}
         <title>Création de site web en freelance - Thomas André-Lubin</title>
         <meta name="description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
@@ -82,7 +84,7 @@ export default function Home() {
         {/* Socials */}
         <meta property='og:title' content='Création de site web en freelance - Thomas André-Lubin' />
         <meta property='og:description' content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
-        <meta property='og:image' content='/images/accueil/hero_img.png' />
+        <meta property='og:image' content='/images/accueil/hero_img.webp' />
         <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='fr_FR' />
@@ -94,7 +96,7 @@ export default function Home() {
         <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
         <meta name="twitter:title" content="Création de site web en freelance - Thomas André-Lubin" />
         <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
-        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+        <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
 
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}

@@ -67,7 +67,7 @@ export default function news() {
                 {/* Socials */}
                 <meta property='og:title' content='Projet news - Thomas André-Lubin' />
                 <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer une page web pour présenter différents articles sur les nouvelles technologies." />
-                <meta property='og:image' content='/images/accueil/hero_img.png' />
+                <meta property='og:image' content='/images/accueil/hero_img.webp' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/news' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -79,7 +79,7 @@ export default function news() {
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/news" />
                 <meta name="twitter:title" content="Projet news - Thomas André-Lubin" />
                 <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer une page web pour présenter différents articles sur les nouvelles technologies." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />

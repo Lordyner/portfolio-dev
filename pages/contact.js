@@ -63,7 +63,7 @@ export default function ContactPage() {
                 {/* Socials */}
                 <meta property='og:title' content='Contactez moi - Thomas André-Lubin' />
                 <meta property='og:description' content="Besoin de créer un site internet pour votre entreprise ? Vous pouvez me joindre facilement via le formulaire de contact ou en prenant un rendez-vous directement sur mon calendrier." />
-                <meta property='og:image' content='/images/accueil/hero_img.png' />
+                <meta property='og:image' content='/images/accueil/hero_img.webp' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/contact" />
                 <meta name="twitter:title" content="Contactez moi - Thomas André-Lubin" />
                 <meta name="twitter:description" content="Besoin de créer un site internet pour votre entreprise ? Vous pouvez me joindre facilement via le formulaire de contact ou en prenant un rendez-vous directement sur mon calendrier." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
 
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}

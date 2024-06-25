@@ -67,7 +67,7 @@ export default function payApi() {
                 {/* Socials */}
                 <meta property='og:title' content='Projet payAPI - Thomas André-Lubin' />
                 <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter une API Bancaire." />
-                <meta property='og:image' content='/images/accueil/hero_img.png' />
+                <meta property='og:image' content='/images/accueil/hero_img.webp' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/payApi' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -79,7 +79,7 @@ export default function payApi() {
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/payApi" />
                 <meta name="twitter:title" content="Projet payAPI - Thomas André-Lubin" />
                 <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter une API Bancaire." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />

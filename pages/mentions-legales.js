@@ -59,7 +59,7 @@ export default function MentionsLegales() {
 
                 <meta property='og:title' content='Mentions Légales - Thomas André-Lubin' />
                 <meta property='og:description' content="Mentions Légales pour le site du développeur web freelance Thomas André-Lubin" />
-                <meta property='og:image' content='/images/accueil/hero_img.png' />
+                <meta property='og:image' content='/images/accueil/hero_img.webp' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/mentions-legales' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -70,7 +70,7 @@ export default function MentionsLegales() {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Mentions Légales - Thomas André-Lubin" />
                 <meta property="og:description" content="Mentions Légales pour le site du développeur web freelance Thomas André-Lubin" />
-                <meta property="og:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
+                <meta property="og:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
