@@ -61,8 +61,8 @@ const Solution = () => {
                 <div className={classes.textWrapper}>
 
                     <h2>Faites appels à mon service de {isDesktopResolution && <br />}<span className="accentuedWord">création de site internet</span> en freelance</h2>
-                    <p className={classes.description}>Fort de mes 6 années d'expériences dans le <b>développement web</b>, je vous accompagne dans la <b>création d'un site internet</b> moderne et performant qui saura attirer plus de visiteurs et les convertir en clients. <br /> <br />
-                        Chaque site que je crée se concentre sur les <b>points suivants</b> :</p>
+                    <p className={classes.description}>Fort de mes 6 années d'expériences dans le <b className='boldWord'>développement web</b>, je vous accompagne dans la <b className='boldWord'>création d'un site internet</b> moderne et performant qui saura attirer plus de visiteurs et les convertir en clients. <br /> <br />
+                        Chaque site que je crée se concentre sur les <b className='boldWord'>points suivants</b> :</p>
                 </div>
                 {/* {(isMobileResolution || isTabletResolution) && <DraggableCarousel items={focusPoints} />} */}
                 {(isMobileResolution || isTabletResolution) && <CarouselSolution slides={focusPoints} options={OPTIONS} />}

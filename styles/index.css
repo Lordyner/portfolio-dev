@@ -66,44 +66,13 @@
 
 }
 
-@font-face {
-    font-family: PoppinsLight;
-    src: url('../public/fonts/Poppins/Poppins-Light.ttf');
-}
-
-@font-face {
-    font-family: PoppinsRegular;
-    src: url('../public/fonts/Poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: PoppinsMedium;
-    src: url('../public/fonts/Poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: PoppinsSemiBold;
-    src: url('../public/fonts/Poppins/Poppins-SemiBold.ttf');
-}
-
-@font-face {
-    font-family: PoppinsBold;
-    src: url('../public/fonts/Poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-    font-family: PoppinsExtraBold;
-    src: url('../public/fonts/Poppins/Poppins-ExtraBold.ttf');
-}
-
-
-
 
 * {
     margin: 0;
     padding: 0;
     /* box-sizing: inherit; */
-    font-family: PoppinsLight;
+    font-family: 'Poppins';
+    font-weight: 300;
 
 }
 
@@ -127,19 +96,24 @@ body {
 /* Title */
 
 h1 {
-    font-family: PoppinsExtraBold;
+    /* font-family: PoppinsExtraBold; */
     font-size: var(--heading-900);
     line-height: var(--line-height-900);
+
+    font-family: 'Poppins';
+    font-weight: 800;
 }
 
 h2 {
-    font-family: PoppinsBold;
+    font-family: 'Poppins';
+    font-weight: 700;
     font-size: var(--heading-800);
     text-transform: capitalize;
 }
 
 h3 {
-    font-family: PoppinsSemiBold;
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: var(--heading-700);
 }
 
@@ -156,17 +130,24 @@ img {
 
 h1 .accentuedWord {
     color: var(--accent-color);
-    font-family: 'PoppinsExtraBold';
+    font-family: 'Poppins';
+    font-weight: 800;
 }
 
 h2 .accentuedWord {
     color: var(--accent-color);
-    font-family: 'PoppinsBold';
+    font-family: 'Poppins';
+    font-weight: 700;
 }
 
 h2.accentuedWord {
     color: var(--accent-color);
-    font-family: 'PoppinsBold';
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+.boldWord {
+    font-weight: 500;
 }
 
 /* Button */
@@ -191,7 +172,8 @@ button {
     text-decoration: none;
     border: none;
     text-transform: uppercase;
-    font-family: 'PoppinsMedium';
+    font-family: 'Poppins';
+    font-weight: 500;
     transition: all .25s;
 }
 
@@ -203,7 +185,8 @@ button {
 
 .secondary-button {
     text-decoration: none;
-    font-family: 'PoppinsBold';
+    font-family: 'Poppins';
+    font-weight: 700;
     color: var(--neutral-color-2);
     padding: 0.5rem 1.25rem;
     text-align: center;
@@ -220,7 +203,8 @@ button {
 }
 
 p a {
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     color: var(--primary-color-2);
 }
 
@@ -230,7 +214,8 @@ textarea {
     background-color: #fff;
     border-radius: 0.375rem;
     font-size: 0.875rem;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     border: none;
 }
 
@@ -343,7 +328,8 @@ body {
 }
 
 .card-title {
-    font-family: 'PoppinsBold';
+    font-family: 'Poppins';
+    font-weight: 700;
     color: #fff;
     margin: 6px 0 12px;
 }

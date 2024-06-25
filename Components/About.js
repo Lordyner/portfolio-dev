@@ -15,7 +15,7 @@ const About = () => {
                             <span className='accentuedWord'>Expertise</span> dans le développement web
                         </h2>
                         <p>
-                            <b>Développeur web</b> depuis 6 ans, j'ai été amené à travailler sur de nombreux projets pour des entreprises comme le Crédit Agricole, Orange ou bien Rothschild Martin Maurel.<br /><br />
+                            <b className='boldWord'>Développeur web</b> depuis 6 ans, j'ai été amené à travailler sur de nombreux projets pour des entreprises comme le Crédit Agricole, Orange ou bien Rothschild Martin Maurel.<br /><br />
                             Vous pouvez télécharger mon curriculum vitae <a href="/CV-andrelubin-thomas.pdf" className={classes.link} download="CV-andrelubin-thomas">ici</a>.<br /><br />
                             Ces expériences m'ont fait gagner en compétences techniques mais également en analyse du besoin client et en communication avec le client.
                         </p>

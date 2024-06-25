@@ -51,7 +51,8 @@
 
 .info,
 .copyright {
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 0.875rem;
     color: var(--neutral-color-2);
 }
@@ -59,7 +60,8 @@
 
 .link {
     text-decoration: none;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 0.875rem;
     color: var(--neutral-color-2);
     position: relative;

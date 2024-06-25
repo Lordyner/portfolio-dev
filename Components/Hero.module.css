@@ -31,7 +31,8 @@
 .description {
     font-size: 1.125rem;
     line-height: 1.875rem;
-    font-family: "PoppinsRegular";
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 .imgWrapper {

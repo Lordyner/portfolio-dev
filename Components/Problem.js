@@ -16,9 +16,9 @@ const Problem = () => {
                     <h2 className={classes.title}><span className='accentuedWord'>Ne laissez plus</span> vos clients filer</h2>
                     <div className={classes.description}>
                         <p>
-                            <b>Fatigué de votre site internet</b> au design dépassé, aux temps de chargement trop longs et qui ne reflète pas la qualité de votre entreprise ?<br /><br />
-                            Ou bien vous n'avez pas encore de site web et <b>vous voudriez en créer un </b> pour ne plus laisser filer vos prospects chez vos concurrents ?<br /><br />
-                            Aujourd'hui, <b>un site internet est incontournable</b> pour une entreprise. Malheureusement, trop de sites sont mal conçus : <br /><br />
+                            <b className='boldWord'>Fatigué de votre site internet</b> au design dépassé, aux temps de chargement trop longs et qui ne reflète pas la qualité de votre entreprise ?<br /><br />
+                            Ou bien vous n'avez pas encore de site web et <b className='boldWord'>vous voudriez en créer un </b> pour ne plus laisser filer vos prospects chez vos concurrents ?<br /><br />
+                            Aujourd'hui, <b className='boldWord'>un site internet est incontournable</b> pour une entreprise. Malheureusement, trop de sites sont mal conçus : <br /><br />
                         </p>
                         <ul className={classes.badFeatures}>
                             <li>design viellot</li>

@@ -29,7 +29,8 @@
 }
 
 .contactInfo p {
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
 
 }
 
@@ -54,7 +55,8 @@
 .fieldName {
     font-size: 0.875rem;
     text-align: left;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 .contactForm {

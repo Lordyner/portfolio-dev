@@ -18,7 +18,8 @@
 }
 
 .link {
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     color: var(--neutral-color-2);
     text-decoration: none;
     position: relative;
@@ -80,7 +81,8 @@
 
 .mobileLink {
     color: var(--neutral-color-2);
-    font-family: PoppinsRegular;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1.125rem;
     text-decoration: none;
 }

@@ -8,7 +8,7 @@ const CTAReminder = () => {
             <div className={classes.content}>
                 <div className={classes.textWrapper}>
                     <h2 className={classes.title}>Un besoin? Un projet ?</h2>
-                    <p>Que vous ayez besoin de <b>créer votre premier site internet</b> ou bien de <b>refaire</b> un existant, je vous accompagne à chaque étape.</p>
+                    <p>Que vous ayez besoin de <b className='boldWord'>créer votre premier site internet</b> ou bien de <b className='boldWord'>refaire</b> un existant, je vous accompagne à chaque étape.</p>
                 </div>
                 <Link href="/contact" className='primary-button'>Discutons de votre besoin</Link>
             </div>
