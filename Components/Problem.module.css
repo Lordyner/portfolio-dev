@@ -24,34 +24,12 @@
 }
 
 
-.badFeature:last-of-type {
-    position: relative;
-}
-
-.badFeature:last-of-type::before {
-
-    content: "";
-    position: absolute;
-    width: 2rem;
-    height: 8rem;
-    background-image: url('/images/accueil/golden_half_circle.png');
-    background-repeat: no-repeat;
-    left: -.5rem;
-    top: 0;
-
-}
 
 
-.container::before {
-    content: "";
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    background-image: url('/images/accueil/golden_line.png');
-    background-repeat: no-repeat;
-    right: 0;
-    top: 6rem;
-}
+
+
+
+
 
 .problemImg {
     object-fit: cover;
