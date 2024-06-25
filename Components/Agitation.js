@@ -26,9 +26,6 @@ const Agitation = () => {
                     src={credibilityGambled}
                     alt="Image d'un homme jouant au poker avec son téléphone dans les mains"
                     className={classes.gamblingCredibilityImg}
-                    quality={100}
-                    priority={true}
-                    placeholder="blur"
                 />
             </div>
         </section>

@@ -24,7 +24,6 @@ const About = () => {
                         src={aboutImage}
                         alt="Image de Thomas André-Lubin en chemise, souriant et regardant l'objectif, bras croisé"
                         className={classes.consultantImg}
-                        quality={100}
                         priority={true} />
                 </div>
                 <div className={classes.passion}>
@@ -32,7 +31,6 @@ const About = () => {
                         src={meInFrontOfComputer}
                         alt="Image de Thomas André-Lubin en train de travailler sur son ordinateur"
                         className={classes.workingImg}
-                        quality={90}
                     />
                     <div className={classes.textWrapper}>
 

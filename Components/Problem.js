@@ -11,9 +11,6 @@ const Problem = () => {
                     src={clientRunning}
                     alt="Image d'un client s'en allant à cause d'un site internet mal conçu"
                     className={classes.problemImg}
-                    quality={100}
-                    priority={true}
-                    placeholder="blur"
                 />
                 <div className={classes.content}>
                     <h2 className={classes.title}><span className='accentuedWord'>Ne laissez plus</span> vos clients filer</h2>
