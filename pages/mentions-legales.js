@@ -55,6 +55,7 @@ export default function MentionsLegales() {
                 <title>Mentions Légales - Thomas André-Lubin</title>
                 <meta name="description" content="Mentions Légales pour le site du développeur web freelance Thomas André-Lubin." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
 
                 <meta property='og:title' content='Mentions Légales - Thomas André-Lubin' />
                 <meta property='og:description' content="Mentions Légales pour le site du développeur web freelance Thomas André-Lubin" />
@@ -63,7 +64,6 @@ export default function MentionsLegales() {
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
                 <meta property='og:site_name' content='Mentions Légales - Thomas André-Lubin' />
-                <link rel="icon" href="/favicon.ico" />
 
                 {/* Facebook Meta Tags */}
                 <meta property="og:url" content="https://www.thomasandrelubin.fr/mentions-legales" />
