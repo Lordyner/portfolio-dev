@@ -33,6 +33,8 @@ const Hero = () => {
                     placeholder='blur'
                     blurDataURL='/images/accueil/hero_img_low_quality.webp'
                     className={classes.heroImg}
+                    width={400}
+                    height={540}
                 />
             </div>
         </main>
