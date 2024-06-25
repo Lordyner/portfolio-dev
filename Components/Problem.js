@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Problem.module.css';
 import Image from 'next/image';
-import clientRunning from '@/public/images/accueil/ne_laisser_plus_vos_clients_filer.png';
+import clientRunning from '@/public/images/accueil/ne_laisser_plus_vos_clients_filer.webp';
 
 const Problem = () => {
     return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import classes from './CarouselFeedback.module.css'
 import useEmblaCarousel from 'embla-carousel-react'
 
 

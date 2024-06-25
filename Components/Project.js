@@ -5,12 +5,12 @@ import { motion, } from "framer-motion";
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import audiophileImg from '@/public/images/accueil/projets/audiophile.png';
-import photosnapImg from '@/public/images/accueil/projets/photosnap.png';
-import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.png';
-import payApiImg from '@/public/images/accueil/projets/payApi.png';
-import myTeamImg from '@/public/images/accueil/projets/myTeam.png';
-import newsImg from '@/public/images/accueil/projets/news_homepage.png';
+import audiophileImg from '@/public/images/accueil/projets/audiophile.webp';
+import photosnapImg from '@/public/images/accueil/projets/photosnap.webp';
+import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.webp';
+import payApiImg from '@/public/images/accueil/projets/payApi.webp';
+import myTeamImg from '@/public/images/accueil/projets/myTeam.webp';
+import newsImg from '@/public/images/accueil/projets/news_homepage.webp';
 
 
 const Project = () => {

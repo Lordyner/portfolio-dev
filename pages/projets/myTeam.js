@@ -6,7 +6,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
-import myTeamImg from '@/public/images/accueil/projets/myTeam.png';
+import myTeamImg from '@/public/images/accueil/projets/myTeam.webp';
 
 import Link from "next/link";
 import Image from "next/image";

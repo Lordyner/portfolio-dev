@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.png';
+import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.webp';
 
 import Link from "next/link";
 import Image from "next/image";

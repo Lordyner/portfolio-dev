@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import photosnapImg from '@/public/images/accueil/projets/photosnap.png';
+import photosnapImg from '@/public/images/accueil/projets/photosnap.webp';
 
 import Link from "next/link";
 import Image from "next/image";

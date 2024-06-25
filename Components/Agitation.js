@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Agitation.module.css';
-import credibilityGambled from '@/public/images/accueil/credibilite_entreprise_en_jeu.png';
+import credibilityGambled from '@/public/images/accueil/credibilite_entreprise_en_jeu.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 

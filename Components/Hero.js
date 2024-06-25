@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import classes from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';

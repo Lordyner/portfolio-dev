@@ -13,8 +13,6 @@ import GlobalContext from '@/Store/GlobalContext';
 import CarouselSolution from './CarouselSolution';
 
 const OPTIONS = { loop: true, align: 'start' }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 const Solution = () => {
 
     const focusPoints = [

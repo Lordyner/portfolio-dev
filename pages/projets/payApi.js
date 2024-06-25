@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import payApiImg from '@/public/images/accueil/projets/payApi.png';
+import payApiImg from '@/public/images/accueil/projets/payApi.webp';
 
 import Link from "next/link";
 import Image from "next/image";
