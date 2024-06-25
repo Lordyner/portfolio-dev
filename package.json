@@ -9,23 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.4",
     "@vercel/analytics": "^1.1.1",
-    "@vercel/blob": "^0.23.2",
     "@vercel/speed-insights": "^1.0.1",
     "embla-carousel-react": "^8.1.5",
     "framer-motion": "^11.2.11",
-    "jose": "^5.2.0",
     "next": "^13.0.7",
-    "next-auth": "^4.24.5",
-    "next-video": "^1.0.6",
-    "node-jose": "^2.2.0",
     "nodemailer": "^6.9.14",
     "pino": "^8.16.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-loader-spinner": "^6.1.0",
-    "react-lorem-ipsum": "^1.4.10",
     "react-use-measure": "^2.1.1",
     "sharp": "^0.33.0"
   }
