@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import classes from './Solution.module.css';
 import CardList from './CardList';
 
-import responsiveImg from '@/public/images/accueil/solutions/responsive.jpg';
-import modernDesignImg from '@/public/images/accueil/solutions/design_moderne.jpg';
-import googleAnalyticsImg from '@/public/images/accueil/solutions/google_analytics.png';
-import callToActionImg from '@/public/images/accueil/solutions/appel_a_laction.jpg';
-import userExperienceImg from '@/public/images/accueil/solutions/experience_utilisateur.jpg';
-import seoImg from '@/public/images/accueil/solutions/referencement_naturel.jpg';
-import performanceImg from '@/public/images/accueil/solutions/performance.jpg';
+import responsiveImg from '@/public/images/accueil/solutions/responsive.webp';
+import modernDesignImg from '@/public/images/accueil/solutions/design_moderne.webp';
+import googleAnalyticsImg from '@/public/images/accueil/solutions/google_analytics.webp';
+import callToActionImg from '@/public/images/accueil/solutions/appel_a_laction.webp';
+import userExperienceImg from '@/public/images/accueil/solutions/experience_utilisateur.webp';
+import seoImg from '@/public/images/accueil/solutions/referencement_naturel.webp';
+import performanceImg from '@/public/images/accueil/solutions/performance.webp';
 import GlobalContext from '@/Store/GlobalContext';
 import CarouselSolution from './CarouselSolution';
 
