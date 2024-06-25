@@ -55,25 +55,25 @@ export default function ContactPage() {
             <Head>
 
                 {/* Google */}
-                <title>Discutons de votre projet - Thomas André-Lubin</title>
+                <title>Contactez moi - Thomas André-Lubin</title>
                 <meta name="description" content="Besoin de créer un site internet pour votre entreprise ? Vous pouvez me joindre facilement via le formulaire de contact ou en prenant un rendez-vous directement sur mon calendrier." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
                 {/* Socials */}
-                <meta property='og:title' content='Discutons de votre projet - Thomas André-Lubin' />
+                <meta property='og:title' content='Contactez moi - Thomas André-Lubin' />
                 <meta property='og:description' content="Besoin de créer un site internet pour votre entreprise ? Vous pouvez me joindre facilement via le formulaire de contact ou en prenant un rendez-vous directement sur mon calendrier." />
                 <meta property='og:image' content='/images/accueil/hero_img.png' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content='Discutons de votre projet - Thomas André-Lubin' />
+                <meta property='og:site_name' content='Contactez moi - Thomas André-Lubin' />
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/contact" />
-                <meta name="twitter:title" content="Discutons de votre projet - Thomas André-Lubin" />
+                <meta name="twitter:title" content="Contactez moi - Thomas André-Lubin" />
                 <meta name="twitter:description" content="Besoin de créer un site internet pour votre entreprise ? Vous pouvez me joindre facilement via le formulaire de contact ou en prenant un rendez-vous directement sur mon calendrier." />
                 <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.png" />
 
