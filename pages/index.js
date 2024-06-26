@@ -62,39 +62,6 @@ export default function Home() {
     router.events.on("routeChangeComplete", () => setIsLoading(false));
   }, [screenWidth])
 
-
-  const DynamicProblem = dynamic(() => import('../Components/Problem'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicAgitation = dynamic(() => import('../Components/Agitation'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicSolution = dynamic(() => import('../Components/Solution'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicWhyMyServices = dynamic(() => import('../Components/WhyMyServices'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicReminder = dynamic(() => import('../Components/CTAReminder'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicProcess = dynamic(() => import('../Components/Process'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicFeedback = dynamic(() => import('../Components/Feedback'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicProject = dynamic(() => import('../Components/Project'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicFAQ = dynamic(() => import('../Components/FAQ'), {
-    loading: () => <p>Chargement...</p>,
-  })
-  const DynamicFooter = dynamic(() => import('../Components/Footer'), {
-    loading: () => <p>Chargement...</p>,
-  })
-
-
   return (
     <>
       {isLoading && <Spinner />}
@@ -131,16 +98,17 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      <DynamicProblem />
-      <DynamicAgitation />
-      <DynamicSolution />
-      <DynamicWhyMyServices />
-      <DynamicReminder />
-      <DynamicProcess />
-      <DynamicFeedback />
-      <DynamicProject />
-      <DynamicFAQ />
-      <DynamicFooter />
+
+      <Problem />
+      <Agitation />
+      <Solution />
+      <WhyMyServices />
+      <CTAReminder />
+      <Process />
+      <Feedback />
+      <Project />
+      <FAQ />
+      <Footer />
     </>
   )
 
