@@ -15,7 +15,7 @@ const CarouselSolution = ({ slides, options }) => {
                 <div className="embla__container">
                     {slides.map((slide, index) => (
                         <div className="embla__slide solution" key={index}>
-                            <Image src={slide.image} alt={slide.title} className={classes.carouselImg} />
+                            <Image src={slide.image} alt={slide.title} className={classes.carouselImg} width={720} height={300} />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.title}>{slide.title}</h3>
                                 <p className={classes.description} dangerouslySetInnerHTML={{ __html: slide.description }}></p>
