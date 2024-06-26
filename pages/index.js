@@ -70,8 +70,6 @@ export default function Home() {
 
       <Head>
 
-        <link rel='preload' href='/images/accueil/hero_img.webp' as='image' />
-
         {/* Google */}
         <title>Création de site web en freelance - Thomas André-Lubin</title>
         <meta name="description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
