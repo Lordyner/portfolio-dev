@@ -81,7 +81,18 @@ export default function Home() {
   const DynamicProcess = dynamic(() => import('../Components/Process'), {
     loading: () => <p>Chargement...</p>,
   })
-
+  const DynamicFeedback = dynamic(() => import('../Components/Feedback'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicProject = dynamic(() => import('../Components/Project'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicFAQ = dynamic(() => import('../Components/FAQ'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicFooter = dynamic(() => import('../Components/Footer'), {
+    loading: () => <p>Chargement...</p>,
+  })
 
 
   return (
@@ -120,21 +131,16 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      {/* <Problem /> */}
       <DynamicProblem />
-      {/* <Agitation />
-      <Solution /> */}
       <DynamicAgitation />
       <DynamicSolution />
-      {/* <WhyMyServices />
-      <CTAReminder /> */}
       <DynamicWhyMyServices />
       <DynamicReminder />
       <DynamicProcess />
-      <Feedback />
-      <Project />
-      <FAQ />
-      <Footer />
+      <DynamicFeedback />
+      <DynamicProject />
+      <DynamicFAQ />
+      <DynamicFooter />
     </>
   )
 
