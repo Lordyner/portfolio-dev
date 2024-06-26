@@ -5,12 +5,11 @@ import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
 
-import { animations, delay, motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 const Navbar = () => {
 
     const burger = useRef();
 
-    const { isMobileResolution } = useContext(GlobalContext);
     const { isMenuOpen, setIsMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
     const sideBar = {
@@ -83,13 +82,13 @@ const Navbar = () => {
                         <Image src={logo} alt="logo de l'entrepreneur Thomas André-Lubin" className={classes.logoImg} />
                     </Link>
                     {/* Classic links */}
-                    <div className={`${isMobileResolution ? "display-none" : classes.navLinks}`}>
+                    <div className={classes.navLinks}>
                         <Link href="/a-propos" className={classes.link}>À Propos</Link>
                         <Link href="/#realisations" className={classes.link}>Réalisations</Link>
                     </div>
 
                     {/* Burger menu */}
-                    <div ref={burger} className={`${isMobileResolution ? classes.hamburger : classes.hamburger + " display-none"}`}
+                    <div ref={burger} className={classes.hamburger}
                         onClick={() => {
                             toggleMenu();
                             burger.current.classList.toggle(classes.isActive);
@@ -101,7 +100,6 @@ const Navbar = () => {
                     {/* Mobile menu */}
                     <motion.div className={`${classes.mobileNav} `}
                         initial="closed" animate={isMenuOpen ? "open" : "closed"} variants={sideBar} >
-                        {/* ${isMenuOpen ? classes.active : ""} */}
                         <motion.div className={classes.mobileLinks}
                             initial="closed"
                             animate={isMenuOpen ? "open" : "closed"}
