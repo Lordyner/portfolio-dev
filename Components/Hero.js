@@ -3,7 +3,7 @@ import classes from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
-import heroImg from '@/public/images/accueil/hero_img.avif';
+import heroImg from '@/public/images/accueil/hero_img.webp';
 
 const Hero = () => {
 
