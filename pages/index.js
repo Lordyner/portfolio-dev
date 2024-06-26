@@ -17,6 +17,7 @@ import CTAReminder from '@/Components/CTAReminder';
 import Process from '@/Components/Process';
 import Feedback from '@/Components/Feedback';
 import FAQ from '@/Components/FAQ';
+import dynamic from 'next/dynamic'
 
 export default function Home() {
 
@@ -62,6 +63,26 @@ export default function Home() {
   }, [screenWidth])
 
 
+  const DynamicProblem = dynamic(() => import('../Components/Problem'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicAgitation = dynamic(() => import('../Components/Agitation'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicSolution = dynamic(() => import('../Components/Solution'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicWhyMyServices = dynamic(() => import('../Components/WhyMyServices'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicReminder = dynamic(() => import('../Components/CTAReminder'), {
+    loading: () => <p>Chargement...</p>,
+  })
+  const DynamicProcess = dynamic(() => import('../Components/Process'), {
+    loading: () => <p>Chargement...</p>,
+  })
+
+
 
   return (
     <>
@@ -99,12 +120,17 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      <Problem />
-      <Agitation />
-      <Solution />
-      <WhyMyServices />
-      <CTAReminder />
-      <Process />
+      {/* <Problem /> */}
+      <DynamicProblem />
+      {/* <Agitation />
+      <Solution /> */}
+      <DynamicAgitation />
+      <DynamicSolution />
+      {/* <WhyMyServices />
+      <CTAReminder /> */}
+      <DynamicWhyMyServices />
+      <DynamicReminder />
+      <DynamicProcess />
       <Feedback />
       <Project />
       <FAQ />
