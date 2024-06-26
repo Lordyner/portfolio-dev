@@ -17,12 +17,11 @@ const Hero = () => {
                 <div className={classes.textWrapper}>
                     <div className={classes.titleAndDescriptionWrapper}>
                         <h1 className={classes.title}>
-                            Création de <span className="accentuedWord"> site {isDesktopResolution && <br className={classes.lineBreak} />} web </span>
-                            {(isMobileResolution || isTabletResolution) && <br />}
+                            Création de <span className="accentuedWord"> site <br className={classes.lineBreak} /> web </span>
                             en freelance
                         </h1>
 
-                        <p className={classes.description}>Un site web qui attire {isMobileResolution && <br />} et convertit ses {isDesktopResolution && <br />} visiteurs</p>
+                        <p className={classes.description}>Un site web qui attire et convertit ses visiteurs</p>
                     </div>
                     <Link href="/contact" className='primary-button'>Discutons de votre besoin</Link>
                 </div>
