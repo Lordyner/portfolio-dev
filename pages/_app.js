@@ -21,7 +21,18 @@ export default function App({ Component, pageProps }) {
     </div>
     <SpeedInsights />
     <Analytics />
-
+    <Script
+      src='https://www.googletagmanager.com/gtag/js?id=G-S70VDK1DHC'
+      strategy='lazyOnLoad'
+    />
+    <Script id="google-analytics" strategy='lazyOnLoad'>
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S70VDK1DHC');
+      `}
+    </Script>
 
   </GlobalContextProvider>
 }
