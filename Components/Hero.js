@@ -18,11 +18,13 @@ const Hero = () => {
                     <div className={classes.titleAndDescriptionWrapper}>
                         <h1 className={classes.title}>
                             Création de <span className="accentuedWord"> site <br className={classes.lineBreak} /> web </span>
+
                             en freelance
                         </h1>
 
                         <p className={classes.description}>Un site web qui attire et convertit ses visiteurs</p>
                     </div>
+
                     <Link href="/contact" className='primary-button'>Discutons de votre besoin</Link>
                 </div>
                 <Image
@@ -34,6 +36,7 @@ const Hero = () => {
                     className={classes.heroImg}
                     width={400}
                     height={540}
+                    sizes='(max-width: 768px) 100vw, 50vw'
                 />
             </div>
         </main>
