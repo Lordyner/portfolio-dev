@@ -36,7 +36,6 @@ const Hero = () => {
                     className={classes.heroImg}
                     width={400}
                     height={540}
-                    sizes='(max-width: 768px) 100vw, 50vw'
                 />
             </div>
         </main>
