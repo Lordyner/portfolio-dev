@@ -13,8 +13,8 @@
 }
 
 .navLinks {
-    display: flex;
-    gap: 2.375rem;
+    display: none;
+
 }
 
 .link {
@@ -164,6 +164,11 @@
 
     .logoImg {
         width: 3.75rem;
+    }
+
+    .navLinks {
+        display: flex;
+        gap: 2.375rem;
     }
 
 }
