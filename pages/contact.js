@@ -13,12 +13,11 @@ export default function ContactPage() {
     const [screenWidth, setScreenWidth] = useState();
 
     /* Context */
-    const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
-    const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
-    const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
+    const { setIsMobileResolution } = useContext(GlobalContext);
+    const { setIsTabletResolution } = useContext(GlobalContext);
+    const { setIsDesktopResolution } = useContext(GlobalContext);
     const { tabletResolution, desktopResolution } = useContext(GlobalContext);
     const { isLoading, setIsLoading } = useContext(GlobalContext);
-    const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
     const { isMenuOpen } = useContext(GlobalContext);
 
     /* Router */
@@ -81,7 +80,6 @@ export default function ContactPage() {
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
             <Contact />
-
             <Footer />
         </>
     )

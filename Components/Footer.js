@@ -4,7 +4,7 @@ import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
-import logoLinkedin from '@/public/images/global/logo_linkedin.png';
+import logoLinkedin from '@/public/images/global/logo_linkedin.webp';
 
 const Footer = () => {
 

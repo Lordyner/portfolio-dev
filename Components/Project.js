@@ -27,7 +27,11 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/audiophile`} className={classes.cardLink}>
-                            <Image src={audiophileImg} alt="Page d'accueil du site audiophile" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={audiophileImg} alt="Page d'accueil du site audiophile"
+                                className={classes.projectImage}
+                                width={720} height={300} quality={50}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px"
+                            />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>Audiophile</h3>
                                 <p className={classes.description}>Site e-commerce pour des appareils de musique (casques, enceintes etc).</p>
@@ -38,7 +42,7 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/photosnap`} className={classes.cardLink}>
-                            <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>Photosnap</h3>
                                 <p className={classes.description}>Plateforme pour photographe afin de partager des photos, des histoires et se connecter avec les autres.</p>
@@ -49,7 +53,7 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/coffeeRoasters`} className={classes.cardLink}>
-                            <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffeeRoasters" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffeeRoasters" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>Coffee roasters</h3>
                                 <p className={classes.description}>Site de commande de café avec différents abonnements et la meilleur qualité de café.</p>
@@ -60,7 +64,7 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/payApi`} className={classes.cardLink}>
-                            <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>payAPI</h3>
                                 <p className={classes.description}>Site pour une API ("Application Programming Interface") Bancaire.</p>
@@ -71,7 +75,7 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/myTeam`} className={classes.cardLink}>
-                            <Image src={myTeamImg} alt="Page d'accueil du site MyTeam" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={myTeamImg} alt="Page d'accueil du site MyTeam" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>myTeam</h3>
                                 <p className={classes.description}>Site pour un cabinet de recrutement spécialisé dans la construction d'équipe talentueuse</p>
@@ -82,7 +86,7 @@ const Project = () => {
                         whileHover={{ scale: 1.08, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/news`} className={classes.cardLink}>
-                            <Image src={newsImg} alt="news" className={classes.projectImage} width={720} height={300} quality={50} />
+                            <Image src={newsImg} alt="news" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>News</h3>
                                 <p className={classes.description}>Page d'accueil d'un blog gaming/nouvelles technologies</p>

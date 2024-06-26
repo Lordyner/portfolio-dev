@@ -3,7 +3,7 @@ import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import classes from './CarouselFeedback.module.css'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import avatar from '@/public/images/global/avatar.png';
+import avatar from '@/public/images/global/avatar.webp';
 
 const CarouselFeedback = () => {
 

@@ -28,12 +28,11 @@ export default function Home() {
   const [screenWidth, setScreenWidth] = useState();
 
   /* Context */
-  const { isMobileResolution, setIsMobileResolution } = useContext(GlobalContext);
-  const { isTabletResolution, setIsTabletResolution } = useContext(GlobalContext);
-  const { isDesktopResolution, setIsDesktopResolution } = useContext(GlobalContext);
+  const { setIsMobileResolution } = useContext(GlobalContext);
+  const { setIsTabletResolution } = useContext(GlobalContext);
+  const { setIsDesktopResolution } = useContext(GlobalContext);
   const { tabletResolution, desktopResolution } = useContext(GlobalContext);
   const { isLoading, setIsLoading } = useContext(GlobalContext);
-  const { showPopupAddMeetingInClientCalendar, setShowPopupAddMeetingInClientCalendar } = useContext(GlobalContext);
   const { isMenuOpen } = useContext(GlobalContext);
 
   /* Router */
@@ -77,8 +76,6 @@ export default function Home() {
         <meta name="robots" content="all" />
         <link rel="icon" href="/favicon.ico" />
 
-
-
         {/* Socials */}
         <meta property='og:title' content='Création de site web en freelance - Thomas André-Lubin' />
         <meta property='og:description' content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
@@ -99,9 +96,7 @@ export default function Home() {
       </Head>
       {isMenuOpen && <div className='overlay-burger-menu'></div>}
       <div className={classes.mainPage}>
-
         <Navbar />
-
         <Hero />
       </div>
       <Problem />
@@ -114,11 +109,6 @@ export default function Home() {
       <Project />
       <FAQ />
       <Footer />
-      {/* <Mission />
-      <Services />
-      <Values />
-      <Stats />
-       */}
     </>
   )
 
