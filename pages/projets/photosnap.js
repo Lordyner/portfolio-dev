@@ -90,7 +90,7 @@ export default function Photosnap() {
                             <h2>Contexte</h2>
                             <p>Photosnap est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site vitrine multi-page pour photographes à l'identique de la maquette.</p>
                         </div>
-                        <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
+                        <Link href="https://photosnap-sigma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
                         <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} />
                     </div>
                     <div className={classes.requirements}>
