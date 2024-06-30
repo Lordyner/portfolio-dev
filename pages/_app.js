@@ -7,7 +7,7 @@ import Script from 'next/script';
 import { Poppins } from 'next/font/google'
 
 
-const roboto = Poppins({
+const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
   style: ['normal'],
   subsets: ['latin']
@@ -16,16 +16,16 @@ const roboto = Poppins({
 export default function App({ Component, pageProps }) {
 
   return <GlobalContextProvider>
-    <div className={roboto.className}>
+    <div className={poppins.className}>
       <Component {...pageProps} />
     </div>
     <SpeedInsights />
     <Analytics />
     <Script
       src='https://www.googletagmanager.com/gtag/js?id=G-S70VDK1DHC'
-      strategy='lazyOnLoad'
+      strategy='afterInteractive'
     />
-    <Script id="google-analytics" strategy='lazyOnLoad'>
+    <Script id="google-analytics" strategy='afterInteractive'>
       {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
