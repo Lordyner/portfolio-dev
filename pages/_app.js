@@ -21,11 +21,9 @@ export default function App({ Component, pageProps }) {
     </div>
     <SpeedInsights />
     <Analytics />
-    <Script
-      src='https://www.googletagmanager.com/gtag/js?id=G-S70VDK1DHC'
-      strategy='afterInteractive'
-    />
+    <GoogleTagManager gtmId="GTM-MGPLHD9R" />
 
+    {/* <Script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/950fd7c3a8f4e1aa26f0b63459f875b6.js"></Script> */}
 
   </GlobalContextProvider>
 }
