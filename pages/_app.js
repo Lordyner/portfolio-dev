@@ -5,6 +5,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { GlobalContextProvider } from '@/Store/GlobalContext';
 import Script from 'next/script';
 import { Poppins } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
+
 
 
 const poppins = Poppins({
