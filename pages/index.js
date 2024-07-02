@@ -105,8 +105,8 @@ export default function Home() {
       <WhyMyServices />
       <CTAReminder />
       <Process />
-      <Feedback />
       <Project />
+      <Feedback />
       <FAQ />
       <Footer />
     </>

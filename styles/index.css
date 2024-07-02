@@ -53,10 +53,7 @@
         --topAndBotPadding: 6.25rem;
 
         --line-height-900: 94px;
-
-
     }
-
 }
 
 
@@ -173,8 +170,8 @@ button {
 
 .primary-button:hover {
     background-color: var(--primary-color-2);
-    transform: scale(1.1);
-    box-shadow: -4px 8px 8px 6px rgb(0, 0, 0, 0.25);
+    transform: scale(1.03);
+    box-shadow: -4px 4px 4px 3px rgb(0, 0, 0, 0.25);
 }
 
 .secondary-button {
@@ -182,18 +179,26 @@ button {
     font-family: 'Poppins';
     font-weight: 700;
     color: var(--neutral-color-2);
-    padding: 0.5rem 1.25rem;
+    padding: 0.25rem 1.25rem;
     text-align: center;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondary-button::after {
     content: '';
-    background: url('../public/images/global/right-arrow.png') no-repeat;
+    background: url('../public/images/global/right_arrow.avif') no-repeat;
     display: inline-block;
     width: 2.625rem;
     height: .75rem;
     margin-left: 1rem;
+}
+
+.secondary-button:hover {
+    color: var(--accent-color);
 }
 
 p a {
@@ -261,7 +266,7 @@ textarea {
 @media screen and (min-width: 48rem) {
     .primary-button {
         padding: 1.25rem 2rem;
-        box-shadow: -4px 8px 8px 0px rgb(0, 0, 0, 0.25);
+        box-shadow: -4px 4px 8px 0px rgb(0, 0, 0, 0.25);
 
     }
 }

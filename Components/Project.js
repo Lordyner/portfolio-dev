@@ -24,7 +24,7 @@ const Project = () => {
                 <p>Découvrez mes projets</p>
                 <div className={classes.projects}>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/audiophile`} className={classes.cardLink}>
                             <Image src={audiophileImg} alt="Page d'accueil du site audiophile"
@@ -39,7 +39,7 @@ const Project = () => {
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/photosnap`} className={classes.cardLink}>
                             <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
@@ -50,7 +50,7 @@ const Project = () => {
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/coffeeRoasters`} className={classes.cardLink}>
                             <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffeeRoasters" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
@@ -61,7 +61,7 @@ const Project = () => {
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/payApi`} className={classes.cardLink}>
                             <Image src={payApiImg} alt="Page d'accueil du site payAPI" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
@@ -72,7 +72,7 @@ const Project = () => {
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/myTeam`} className={classes.cardLink}>
                             <Image src={myTeamImg} alt="Page d'accueil du site MyTeam" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
@@ -83,7 +83,7 @@ const Project = () => {
                         </Link>
                     </motion.div>
                     <motion.div className={classes.project}
-                        whileHover={{ scale: 1.08, cursor: 'pointer' }}
+                        whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/news`} className={classes.cardLink}>
                             <Image src={newsImg} alt="news" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />

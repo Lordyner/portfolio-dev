@@ -14,7 +14,7 @@ const WhyMyServices = () => {
                     </p>
                 </div>
                 <div className={classes.buttonWrapper}>
-                    <Link href="/a-propos" className="secondary-button">En savoirs plus</Link>
+                    <Link href="/a-propos" className="secondary-button">En savoirs plus </Link>
                 </div>
             </div>
         </section>
