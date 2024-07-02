@@ -1,0 +1,49 @@
+.container {
+    padding: var(--topAndBotPadding) var(--sidePadding);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+}
+
+.content ul {
+    list-style-position: inside;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+@media (min-width: 48rem) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        gap: 3rem;
+    }
+
+    .article {
+        gap: .75rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        gap: 4rem;
+    }
+
+    .article {
+        gap: 1rem;
+    }
+}

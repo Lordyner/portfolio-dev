@@ -20,6 +20,8 @@ const Footer = () => {
                     <Link href="/a-propos" className={classes.link}>A propos</Link>
                     <Link href="/contact" className={classes.link}>Contact</Link>
                     <Link href="/mentions-legales" className={classes.link}>Mentions Légales</Link>
+                    <Link href="/conditions-generales-utilisation" className={classes.link}>CGU</Link>
+                    <Link href="/politique-de-confidentialite" className={classes.link}>Politiques de confidentialité</Link>
                 </div>
 
                 <div className={classes.contactInfo}>

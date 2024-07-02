@@ -77,7 +77,7 @@ export default function MentionsLegales() {
             <div className={classes.container}>
 
                 <div className={`${classes.mentionsLegales} max-width`}>
-                    <h1>Mentions <span className="accentuedWord">Légales</span></h1>
+                    <h1 className={classes.title}>Mentions Légales</h1>
                     <h2>Mes informations</h2>
                     <p>Entrepreneur Individuel André-Lubin Thomas</p>
                     <p>223 Boulevard du Massacre 44100 Nantes</p>

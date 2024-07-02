@@ -24,8 +24,5 @@ export default function App({ Component, pageProps }) {
     <SpeedInsights />
     <Analytics />
     <GoogleTagManager gtmId="GTM-MGPLHD9R" />
-
-    {/* <Script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/950fd7c3a8f4e1aa26f0b63459f875b6.js"></Script> */}
-
   </GlobalContextProvider>
 }

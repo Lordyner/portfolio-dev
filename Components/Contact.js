@@ -90,6 +90,7 @@ const Contact = () => {
                             <div className={classes.buttonWrapper}>
                                 <button className='primary-button' type="submit">Envoyer</button>
                             </div>
+                            <p className={classes.privacyPolicy}>En cliquant sur envoyer vous acceptez notre <Link href="/politique-de-confidentialite">politique de confidentialité</Link></p>
                         </form>
                     </div>
                     <h2 className='accentuedWord'>OU</h2>
