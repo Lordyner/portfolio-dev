@@ -29,9 +29,7 @@
 }
 
 .contactInfo p {
-    font-family: 'Poppins';
     font-weight: 400;
-
 }
 
 .icon {
@@ -55,7 +53,6 @@
 .fieldName {
     font-size: 0.875rem;
     text-align: left;
-    font-family: 'Poppins';
     font-weight: 400;
 }
 
