@@ -25,7 +25,17 @@ const SteppedProgress = () => {
     return (
         <div className={classes.content}>
             <Steps numSteps={numSteps} stepsComplete={stepsComplete} />
-            <div className={classes.textContainer} dangerouslySetInnerHTML={{ __html: stepContent[stepsComplete] }}></div>
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={stepsComplete}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className={classes.textContainer}
+                    dangerouslySetInnerHTML={{ __html: stepContent[stepsComplete] }}
+                />
+            </AnimatePresence>
             <div className={classes.buttonWrapper}>
                 <button
                     className={classes.prevButton}
