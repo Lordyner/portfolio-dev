@@ -161,7 +161,7 @@ button {
 
 .primary-button:hover {
     background-color: var(--primary-color-2);
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: -4px 4px 4px 3px rgb(0, 0, 0, 0.25);
 }
 
@@ -176,6 +176,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .25s;
 }
 
 .secondary-button::after {
