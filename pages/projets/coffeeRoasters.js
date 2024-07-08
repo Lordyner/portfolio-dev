@@ -88,7 +88,7 @@ export default function coffeeRoasters() {
                     <div className={classes.context}>
                         <div className={classes.textWrapper}>
                             <h2>Contexte</h2>
-                            <p>Photosnap est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page pour commander du café, à l'identique de la maquette.</p>
+                            <p>CoffeeRoasters est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page pour commander du café, à l'identique de la maquette.</p>
                         </div>
                         <Link href="https://coffee-roasters-gamma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
                         <Image src={coffeeRoastersImg} alt="Page d'accueil du site coffee roasters" className={classes.projectImage} />
