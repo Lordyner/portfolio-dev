@@ -5,7 +5,7 @@ import { motion, } from "framer-motion";
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import audiophileImg from '@/public/images/accueil/projets/audiophile.webp';
+import audiophileResponsiveMockup from '@/public/images/projets/audiophile/audiophile_responsive_mockup.avif';
 import photosnapImg from '@/public/images/accueil/projets/photosnap.webp';
 import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.webp';
 import payApiImg from '@/public/images/accueil/projets/payApi.webp';
@@ -15,7 +15,6 @@ import newsImg from '@/public/images/accueil/projets/news_homepage.webp';
 
 const Project = () => {
 
-    const { isMobileResolution, isTabletResolution, isDesktopResolution } = useContext(GlobalContext);
 
     return (
         <section id='realisations' className={classes.projectSection}>
@@ -27,7 +26,7 @@ const Project = () => {
                         whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/audiophile`} className={classes.cardLink}>
-                            <Image src={audiophileImg} alt="Page d'accueil du site audiophile"
+                            <Image src={audiophileResponsiveMockup} alt="Page d'accueil du site audiophile"
                                 className={classes.projectImage}
                                 width={720} height={300} quality={50}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px"

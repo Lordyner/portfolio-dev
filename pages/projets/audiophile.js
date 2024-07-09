@@ -7,14 +7,27 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import audiophileImg from '@/public/images/accueil/projets/audiophile.webp';
+import audiophileResponsiveMockupFullPage from '@/public/images/projets/audiophile/audiophile_mockup_fullPage.avif';
+import audiophileResponsiveProductPage from '@/public/images/projets/audiophile/audiophile_responsive_mockup_product.avif';
 import Link from "next/link";
 import Image from "next/image";
+import SteppedProgress from "@/Components/UI/SteppedProgress";
+import HoverImage from "@/Components/UI/HoverImage";
+
 
 export default function Audiophile() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
+    const [isDesignImgHovered, setIsDesignImgHovered] = useState(false);
+    const [isMockupImgHovered, setIsMockupImgHovered] = useState(false);
+    const numSteps = 3;
+    const stepContent = [
+        "<b className='fw-500'>Analyse et estimation</b> :<br/><br/> J'ai commencé par bien analysé le besoin, comprendre les différentes fonctionnalités qui étaient attendus, d'où elles devaient être accessible sur le site et comment j'allais pouvoir y répondre. Ensuite j'ai regardé les différentes maquettes, du mobile à l'ordinateur et réfléchis à comment je pouvais les reproduire. Une fois les différentes fonctionnalités bien comprise et ma solution techniques choisi, j'ai pu estimer le temps de développement.",
+        "<b className='fw-500'>Développement</b> :<br/><br/>Ce fut le moment d'attaquer le développement, j'ai créé le projet Next.js, importé les différentes ressources statiques (font, images, logo), créé les différentes variables de style que j'allais ré-utiliser sur le site (couleurs, taille de police, marges, etc). Ensuite je me suis occupé des éléments que l'on retrouve à plusieurs endroits comme les boutons, les champs textes, etc. Une fois la base du site prête, j'ai créé une boutique Shopify pour y ajouter les différents produits, puis j'ai réalisées les différentes pages du site, de haut en bas, de mobile à ordinateur en passant par tablette.",
+        "<b className='fw-500'>Tests</b> :<br/><br/> Une fois le site fini, je suis repassé sur chacune des pages en format mobile, tablette puis ordinateur pour vérifier que tout fonctionnait comme voulu. J'ai ensuite relu les spécifications pour vérifier que tout avait bien été implémenté.",
+        "<b className='fw-500'>Livraison</b>:<br/><br/>La phase de test validé, j'ai livré le site en production et testé une dernière fois pour m'assurer que tout fonctionne correctement.",
+    ]
 
     /* Context */
     const { setIsMobileResolution } = useContext(GlobalContext);
@@ -90,26 +103,29 @@ export default function Audiophile() {
                     <div className={classes.context}>
                         <div className={classes.textWrapper}>
                             <h2>Contexte</h2>
-                            <p>Audiophile est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site e-commerce multi-page à l'identique de la maquette.</p>
+                            <p>
+                                Audiophile est un projet défi du site <Link href="https://www.frontendmentor.io/profile/Lordyner" target="_blank"> frontendmentor.io</Link>. <br />
+                                Le but était de <b className="fw-500">construire un site e-commerce</b> permettant aux visiteurs de consulter des produits son (casques, écouteurs, enceintes), et de les ajouter à son panier afin de les acheter. <br /><br />
+                                Une maquette était fourni pour le design du site, le but était de créer le site et de reproduire le design le plus fidèlement possible. <br /><br />
+                                J'ai utilisé Shopify pour gérer le contenu de mon site (produits et informations liés aux produits) et j'ai utilisé Next.js pour créer mon site.
+                            </p>
                         </div>
-                        <Link href="https://audiophile-indol-nu.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
-                        <Image src={audiophileImg} alt="Page d'accueil du site audiophile" className={classes.projectImage} />
-                    </div>
-                    <div className={classes.requirements}>
-                        <div className={classes.textWrapper}>
+                        <HoverImage image={audiophileResponsiveMockupFullPage}
+                            alt="Page d'accueil du site audiophile" isHovered={isDesignImgHovered}
+                            setIsHovered={setIsDesignImgHovered}
+                            link="https://audiophile-indol-nu.vercel.app/"
+                        />
 
-                            <h2>Fonctionnalités </h2>
-                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
-                            <ul className={classes.requirementList}>
-                                <li>Ajouter/Retirer des produits depuis son panier</li>
-                                <li>Modifier la quantité de produit dans son panier</li>
-                                <li>Remplir tous les champs sur la page de paiement</li>
-                                <li>Recevoir une validation du formulaire si des champs n'étaient pas remplis ou incorrecte</li>
-                                <li>Voir le prix total de sa commande</li>
-                                <li>Voir une confirmation de sa commande après avoir commandé</li>
-                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
-                                <li>Garder son panier même s'il rafraichis la page</li>
-                            </ul>
+                    </div>
+                    <div className={classes.process}>
+                        <HoverImage image={audiophileResponsiveProductPage}
+                            alt="Mockup responsive de la page produit d'Audiophile" isHovered={isMockupImgHovered}
+                            setIsHovered={setIsMockupImgHovered}
+                            link="https://audiophile-indol-nu.vercel.app/product/xx99-mark-ii"
+                        />
+                        <div className={`${classes.textWrapper} ${classes.processusTextWrapper}`}>
+                            <h2>Processus</h2>
+                            <SteppedProgress stepContent={stepContent} numSteps={numSteps} />
                         </div>
                     </div>
                 </div>

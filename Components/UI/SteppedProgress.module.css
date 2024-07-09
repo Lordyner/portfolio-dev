@@ -147,6 +147,15 @@
     }
 }
 
+
+
+@media (min-width: 64rem) {
+    .textContainer {
+        min-height: unset;
+        height: 24rem;
+    }
+}
+
 @media (min-width: 90rem) {
     .textContainer {
         min-height: unset;

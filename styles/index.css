@@ -72,7 +72,10 @@ html {
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    /* background: linear-gradient(to right, #f0f4f7, #e8f0f5); */
+    background: rgb(240, 244, 247);
+    background: radial-gradient(circle, rgba(240, 244, 247, 1) 0%, rgba(232, 240, 245, 1) 100%);
     color: var(--neutral-color-2);
     font-size: var(--body-500);
     overflow-y: scroll;
@@ -195,6 +198,10 @@ button {
 p a {
     font-weight: 400;
     color: var(--primary-color-2);
+}
+
+.fw-500 {
+    font-weight: 500;
 }
 
 input,
