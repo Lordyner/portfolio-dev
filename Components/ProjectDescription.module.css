@@ -28,7 +28,7 @@
 
 .imageWrapper:hover .projectImage,
 .imageWrapper:focus-within .projectImage {
-    filter: grayscale(100%) brightness(0.3) blur(2px);
+    filter: grayscale(100%) brightness(0.3);
 }
 
 

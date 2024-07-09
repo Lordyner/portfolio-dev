@@ -6,7 +6,7 @@ import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 import audiophileResponsiveMockup from '@/public/images/projets/audiophile/audiophile_responsive_mockup.avif';
-import photosnapImg from '@/public/images/accueil/projets/photosnap.webp';
+import photosnapResponsiveMockup from '@/public/images/projets/photosnap/photosnap_mockup_responsive_homepage.avif';
 import coffeeRoastersImg from '@/public/images/accueil/projets/coffee_roasters.webp';
 import payApiImg from '@/public/images/accueil/projets/payApi.webp';
 import myTeamImg from '@/public/images/accueil/projets/myTeam.webp';
@@ -26,7 +26,7 @@ const Project = () => {
                         whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/audiophile`} className={classes.cardLink}>
-                            <Image src={audiophileResponsiveMockup} alt="Page d'accueil du site audiophile"
+                            <Image src={audiophileResponsiveMockup} alt="Mockup responsive de la page d'accueil du site Audiophile"
                                 className={classes.projectImage}
                                 width={720} height={300} quality={50}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px"
@@ -41,7 +41,7 @@ const Project = () => {
                         whileHover={{ scale: 1.02, cursor: 'pointer' }}
                         whileTap={{ scale: 0.9 }}>
                         <Link href={`projets/photosnap`} className={classes.cardLink}>
-                            <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
+                            <Image src={photosnapResponsiveMockup} alt="Mockup responsive de la page d'accueil du site Photosnap" className={classes.projectImage} width={720} height={300} quality={50} sizes="(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px" />
                             <div className={classes.textWrapper}>
                                 <h3 className={classes.projectTitle}>Photosnap</h3>
                                 <p className={classes.description}>Plateforme pour photographe afin de partager des photos, des histoires et se connecter avec les autres.</p>

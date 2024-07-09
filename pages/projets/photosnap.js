@@ -7,15 +7,27 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
 
-import photosnapImg from '@/public/images/accueil/projets/photosnap.webp';
-
+import photosnapResponsiveMockupFullPage from '@/public/images/projets/photosnap/photosnap_mockup_fullPage.avif';
+import photosnapResponsivePricingPage from '@/public/images/projets/photosnap/photosnap_mockup_responsive_pricing.avif';
 import Link from "next/link";
+import HoverImage from "@/Components/UI/HoverImage";
+import SteppedProgress from "@/Components/UI/SteppedProgress";
+
 import Image from "next/image";
 
 export default function Photosnap() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
+    const [isDesignImgHovered, setIsDesignImgHovered] = useState(false);
+    const [isMockupImgHovered, setIsMockupImgHovered] = useState(false);
+    const numSteps = 3;
+    const stepContent = [
+        "<b className='fw-500'>Analyse et estimation</b> :<br/><br/> J'ai commencé par analyser les maquettes du mobile au format ordinateur afin d'avoir une vue d'ensemble sur les différentes et comprendre comment les différentes sections évoluait en fonction de la taille de l'écran. Une fois que le besoin était clair, j'ai estimer le temps de développement.",
+        "<b className='fw-500'>Développement</b> :<br/><br/>Ensuite j'ai commencé le développement, créé le projet Next.js, importé les différentes ressources statiques (font, images, logo), créé les différentes variables de style que j'allais ré-utiliser sur le site (couleurs, taille de police, marges, etc). Puis je me suis occupé des éléments que l'on retrouve à plusieurs endroits comme les boutons. La base du site faites, j'ai réalisées les différentes pages du site, de haut en bas, de mobile à ordinateur en passant par tablette.",
+        "<b className='fw-500'>Tests</b> :<br/><br/> Une fois le site fini, je suis repassé sur chacune des pages en format mobile, tablette puis ordinateur pour vérifier que tout fonctionnait comme voulu. J'ai ensuite relu les spécifications pour vérifier que tout avait bien été implémenté.",
+        "<b className='fw-500'>Livraison</b>:<br/><br/>La phase de test validé, j'ai livré le site en production et testé une dernière fois pour m'assurer que tout fonctionne correctement.",
+    ]
 
     /* Context */
     const { setIsMobileResolution } = useContext(GlobalContext);
@@ -88,19 +100,28 @@ export default function Photosnap() {
                     <div className={classes.context}>
                         <div className={classes.textWrapper}>
                             <h2>Contexte</h2>
-                            <p>Photosnap est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site vitrine multi-page pour photographes à l'identique de la maquette.</p>
+                            <p>
+                                Photosnap est un projet proposé par <Link href="https://www.frontendmentor.io/profile/Lordyner" target="_blank"> frontendmentor.io</Link>. <br /><br />
+                                L'objectif était de <b className="fw-500">créer ce site vitrine</b> présentant Photosnap, une plateforme pour photographe et "visual storytellers".<br /><br />
+                                Le site est <b className="fw-500">responsive</b> et comporte une page d'accueil qui présente les histoires phares, une page qui regroupe toutes les histoires, une page de caractéristiques qui met en avant les avantages de Photosnap et enfin une page de tarifs.
+                            </p>
                         </div>
-                        <Link href="https://photosnap-sigma.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
-                        <Image src={photosnapImg} alt="Page d'accueil du site photosnap" className={classes.projectImage} />
+                        <HoverImage image={photosnapResponsiveMockupFullPage}
+                            alt="Page d'accueil du site Photosnap" isHovered={isDesignImgHovered}
+                            setIsHovered={setIsDesignImgHovered}
+                            link="https://photosnap-sigma.vercel.app/"
+                        />
+
                     </div>
-                    <div className={classes.requirements}>
-                        <div className={classes.textWrapper}>
-                            <h2>Fonctionnalités </h2>
-                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
-                            <ul className={classes.requirementList}>
-                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
-                                <li>Voir différents états lors du survol des éléments</li>
-                            </ul>
+                    <div className={classes.process}>
+                        <HoverImage image={photosnapResponsivePricingPage}
+                            alt="Mockup responsive de la page de prix de Photosnap" isHovered={isMockupImgHovered}
+                            setIsHovered={setIsMockupImgHovered}
+                            link="https://photosnap-sigma.vercel.app/pricing"
+                        />
+                        <div className={`${classes.textWrapper} ${classes.processusTextWrapper}`}>
+                            <h2>Processus</h2>
+                            <SteppedProgress stepContent={stepContent} numSteps={numSteps} />
                         </div>
                     </div>
                 </div>
