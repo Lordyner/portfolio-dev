@@ -23,10 +23,10 @@ export default function Photosnap() {
     const [isMockupImgHovered, setIsMockupImgHovered] = useState(false);
     const numSteps = 3;
     const stepContent = [
-        "<b className='fw-500'>Analyse et estimation</b> :<br/><br/> J'ai commencé par analyser les maquettes du mobile au format ordinateur afin d'avoir une vue d'ensemble sur les différentes et comprendre comment les différentes sections évoluait en fonction de la taille de l'écran. Une fois que le besoin était clair, j'ai estimer le temps de développement.",
-        "<b className='fw-500'>Développement</b> :<br/><br/>Ensuite j'ai commencé le développement, créé le projet Next.js, importé les différentes ressources statiques (font, images, logo), créé les différentes variables de style que j'allais ré-utiliser sur le site (couleurs, taille de police, marges, etc). Puis je me suis occupé des éléments que l'on retrouve à plusieurs endroits comme les boutons. La base du site faites, j'ai réalisées les différentes pages du site, de haut en bas, de mobile à ordinateur en passant par tablette.",
+        "<b className='fw-500'>Analyse et estimation</b> :<br/><br/> J'ai commencé par analyser les maquettes du mobile au format ordinateur afin d'avoir une vue d'ensemble et comprendre comment les différentes sections évoluaient en fonction de la taille de l'écran. Une fois que le besoin était clair, j'ai estimé le temps de développement.",
+        "<b className='fw-500'>Développement</b> :<br/><br/>Ensuite, j'ai commencé le développement, créé le projet Next.js, importé les différentes ressources statiques (font, images, logo), créé les différentes variables de style que j'allais réutiliser sur le site (couleurs, taille de police, marges, etc). Puis je me suis occupé des éléments que l'on retrouve à plusieurs endroits comme les boutons. La base du site faite, j'ai réalisé les différentes pages du site, de haut en bas, de mobile à ordinateur en passant par tablette.",
         "<b className='fw-500'>Tests</b> :<br/><br/> Une fois le site fini, je suis repassé sur chacune des pages en format mobile, tablette puis ordinateur pour vérifier que tout fonctionnait comme voulu. J'ai ensuite relu les spécifications pour vérifier que tout avait bien été implémenté.",
-        "<b className='fw-500'>Livraison</b>:<br/><br/>La phase de test validé, j'ai livré le site en production et testé une dernière fois pour m'assurer que tout fonctionne correctement.",
+        "<b className='fw-500'>Livraison</b> :<br/><br/>La phase de test validé, j'ai livré le site en production et testé une dernière fois pour m'assurer que tout fonctionne correctement.",
     ]
 
     /* Context */
@@ -115,7 +115,7 @@ export default function Photosnap() {
                     </div>
                     <div className={classes.process}>
                         <HoverImage image={photosnapResponsivePricingPage}
-                            alt="Mockup responsive de la page de prix de Photosnap" isHovered={isMockupImgHovered}
+                            alt="Mockup responsive de la page de tarif de Photosnap" isHovered={isMockupImgHovered}
                             setIsHovered={setIsMockupImgHovered}
                             link="https://photosnap-sigma.vercel.app/pricing"
                         />

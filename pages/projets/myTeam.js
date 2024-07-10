@@ -6,7 +6,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import classes from '@/Components/ProjectDescription.module.css';
-import myTeamImg from '@/public/images/accueil/projets/myTeam.webp';
+import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTeam_mockup_fullPage.avif';
+import myTeamResponsiveAboutPage from '@/public/images/projets/myTeam/myTeam_mockup_responsive_about.avif';
+import HoverImage from "@/Components/UI/HoverImage";
+import SteppedProgress from "@/Components/UI/SteppedProgress";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -15,6 +18,15 @@ export default function myTeam() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
+    const [isDesignImgHovered, setIsDesignImgHovered] = useState(false);
+    const [isMockupImgHovered, setIsMockupImgHovered] = useState(false);
+    const numSteps = 3;
+    const stepContent = [
+        "<b className='fw-500'>Analyse et estimation</b> :<br/><br/> J'ai commencé par analyser les maquettes du mobile au format ordinateur et ce qui était attendu au niveau de la fonctionnalité de sélection d'un abonnement café. Une fois que le besoin était clair, j'ai estimé le temps de développement.",
+        "<b className='fw-500'>Développement</b> :<br/><br/>Ensuite, j'ai commencé le développement, créé le projet Next.js, importé les différentes ressources statiques (font, images, logo), créé les différentes variables de style que j'allais réutiliser sur le site (couleurs, taille de police, marges, etc). Puis je me suis occupé des éléments que l'on retrouve à plusieurs endroits comme les boutons. La base du site créé, j'ai réalisé les différentes pages du site, de haut en bas, de mobile à ordinateur en passant par tablette.",
+        "<b className='fw-500'>Tests</b> :<br/><br/> Une fois le site fini, je suis repassé sur chacune des pages en format mobile, tablette puis ordinateur pour vérifier que tout fonctionnait comme voulu. J'ai ensuite relu les spécifications pour vérifier que tout avait bien été implémenté.",
+        "<b className='fw-500'>Livraison</b> :<br/><br/>La phase de test validé, j'ai livré le site en production et testé une dernière fois pour m'assurer que tout fonctionne correctement.",
+    ]
 
     /* Context */
     const { setIsMobileResolution } = useContext(GlobalContext);
@@ -87,21 +99,28 @@ export default function myTeam() {
                     <div className={classes.context}>
                         <div className={classes.textWrapper}>
                             <h2>Contexte</h2>
-                            <p>myTeam est un projet défi du site frontendmentor.io. <br />Le but était de construire ce site internet multi-page à l'identique de la maquette, afin de présenter un cabinet de recrutement.</p>
+                            <p>
+                                myTeam est un défi de réalisation d'un site responsive, comportant plusieurs pages, proposé par <Link href="https://www.frontendmentor.io/profile/Lordyner" target="_blank"> frontendmentor.io</Link>. <br /><br />
+                                L'objectif était de <b className="fw-500">créer ce site internet</b> présentant un cabinet de recrutement spécialisé dans la création d'équipe dynamique et talentueuse, en étant fidèle à la maquette<br /><br />
+                                Le site comporte 3 pages <b className="fw-500">s'adaptant parfaitement à chaque taille écran</b>. La page d'accueil présente une proposition de valeur ainsi que des avis clients. Sur la page à propos, nous avons une présentation des membres de l'équipe et une liste des plus gros clients de myTeam. Enfin la page de contact contient un formulaire de contact.
+                            </p>
                         </div>
-                        <Link href="https://my-team-eosin.vercel.app/" className="primary-button" target="_blank">Voir le site</Link>
-                        <Image src={myTeamImg} alt="Page d'accueil du site myTeam" className={classes.projectImage} />
+                        <HoverImage image={myTeamResponsiveMockupFullPage}
+                            alt="Page d'accueil du site myTeam" isHovered={isDesignImgHovered}
+                            setIsHovered={setIsDesignImgHovered}
+                            link="https://my-team-eosin.vercel.app/"
+                        />
+
                     </div>
-                    <div className={classes.requirements}>
-                        <div className={classes.textWrapper}>
-                            <h2>Fonctionnalités </h2>
-                            <p className={classes.description}>L'utilisateur devait être capable de :</p>
-                            <ul className={classes.requirementList}>
-                                <li>Voir le bon contenu pour chaque membre de l'équipe sur la page "A propos" quand il clique sur l'icône +.</li>
-                                <li>Recevoir un message d'erreur si le formulaire de contact est mal renseigné.</li>
-                                <li>Voir l'affichage idéale du site en fonction de la taille de son appareil</li>
-                                <li>Voir différents états lors du survol des éléments</li>
-                            </ul>
+                    <div className={classes.process}>
+                        <HoverImage image={myTeamResponsiveAboutPage}
+                            alt="Mockup responsive de la page à propos de myTeam" isHovered={isMockupImgHovered}
+                            setIsHovered={setIsMockupImgHovered}
+                            link="https://my-team-eosin.vercel.app/about"
+                        />
+                        <div className={`${classes.textWrapper} ${classes.processusTextWrapper}`}>
+                            <h2>Processus</h2>
+                            <SteppedProgress stepContent={stepContent} numSteps={numSteps} />
                         </div>
                     </div>
                 </div>

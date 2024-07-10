@@ -50,11 +50,6 @@
     flex-direction: column;
     gap: .5rem;
     padding: 1.5rem 1.5rem 1.875rem 1.5rem;
-    border-bottom-left-radius: 0.625rem;
-    border-bottom-right-radius: 0.625rem;
-    border: 1px solid #d9d9d9;
-    border-top: none;
-
 }
 
 
