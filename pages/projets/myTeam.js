@@ -70,14 +70,14 @@ export default function myTeam() {
             <Head>
                 {/* Google */}
                 <title>Projet myTeam - Thomas André-Lubin</title>
-                <meta name="description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter un cabinet de recrutement." />
+                <meta name="description" content="MyTeam est un cabinet de recrutement spécialisé dans la construction d'équipes dynamique et talentueuse, capable de relever tout les défis." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
                 {/* Socials */}
                 <meta property='og:title' content='Projet myTeam - Thomas André-Lubin' />
-                <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter un cabinet de recrutement." />
-                <meta property='og:image' content='/images/accueil/hero_img.webp' />
+                <meta property='og:description' content="MyTeam est un cabinet de recrutement spécialisé dans la construction d'équipes dynamique et talentueuse, capable de relever tout les défis." />
+                <meta property='og:image' content='/images/projets/myTeam/myTeam_mockup_fullPage.avif' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/myTeam' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -88,8 +88,8 @@ export default function myTeam() {
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/myTeam" />
                 <meta name="twitter:title" content="Projet myTeam - Thomas André-Lubin" />
-                <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter un cabinet de recrutement." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
+                <meta name="twitter:description" content="MyTeam est un cabinet de recrutement spécialisé dans la construction d'équipes dynamique et talentueuse, capable de relever tout les défis." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/projets/myTeam/myTeam_mockup_fullPage.avif" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />

@@ -71,14 +71,14 @@ export default function coffeeRoasters() {
             <Head>
                 {/* Google */}
                 <title>Projet Coffee Roasters - Thomas André-Lubin</title>
-                <meta name="description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour permettre la prise d'un abonnement pour du café." />
+                <meta name="description" content="Coffee Roasters est une entreprise spécialisé dans le café qui offre des abonnements de livraison de café à ses clients." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
                 {/* Socials */}
                 <meta property='og:title' content='Projet Coffee Roasters - Thomas André-Lubin' />
-                <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour permettre la prise d'un abonnement pour du café." />
-                <meta property='og:image' content='/images/accueil/hero_img.webp' />
+                <meta property='og:description' content="Coffee Roasters est une entreprise spécialisé dans le café qui offre des abonnements de livraison de café à ses clients." />
+                <meta property='og:image' content='/images/projets/coffeeRoasters/coffeeRoasters_mockup_fullPage.avif' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/coffeeRoasters' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -89,8 +89,8 @@ export default function coffeeRoasters() {
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/coffeeRoasters" />
                 <meta name="twitter:title" content="Projet Coffee Roasters - Thomas André-Lubin" />
-                <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour permettre la prise d'un abonnement pour du café." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
+                <meta name="twitter:description" content="Coffee Roasters est une entreprise spécialisé dans le café qui offre des abonnements de livraison de café à ses clients." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/projets/coffeeRoasters/coffeeRoasters_mockup_fullPage.avif" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />

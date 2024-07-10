@@ -71,15 +71,15 @@ export default function Audiophile() {
             <Head>
                 {/* Google */}
                 <title>Projet Audiophile - Thomas André-Lubin</title>
-                <meta name="description" content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
+                <meta name="description" content="Audiophile est un site e-commerce permettant d'acheter différents appareils son comme des casques, enceintes ou écouteurs." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
 
                 {/* Socials */}
                 <meta property='og:title' content='Projet Audiophile - Thomas André-Lubin' />
-                <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
-                <meta property='og:image' content='/images/about/consultant_pic.png' />
+                <meta property='og:description' content="Audiophile est un site e-commerce permettant d'acheter différents appareils son comme des casques, enceintes ou écouteurs." />
+                <meta property='og:image' content='/images/projets/audiophile/audiophile_mockup_fullPage.avif' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/audiophile' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -90,8 +90,8 @@ export default function Audiophile() {
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/audiophile" />
                 <meta name="twitter:title" content="Projet Audiophile - Thomas André-Lubin" />
-                <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site e-commerce pour vendre du matériel audio (casques, enceintes, écouteurs)." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/about/consultant_pic.png" />
+                <meta name="twitter:description" content="Audiophile est un site e-commerce permettant d'acheter différents appareils son comme des casques, enceintes ou écouteurs." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/projets/audiophile/audiophile_mockup_fullPage.avif" />
             </Head>
 
             {isMenuOpen && <div className='overlay-burger-menu'></div>}

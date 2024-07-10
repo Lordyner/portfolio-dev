@@ -71,14 +71,14 @@ export default function payApi() {
             <Head>
                 {/* Google */}
                 <title>Projet payAPI - Thomas André-Lubin</title>
-                <meta name="description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter une API Bancaire." />
+                <meta name="description" content="myAPI propose une API bancaire à ses clients, simple à intégrer, afin de gérer les finances personnelles, les paiements et bien d'autres." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
                 {/* Socials */}
                 <meta property='og:title' content='Projet payAPI - Thomas André-Lubin' />
-                <meta property='og:description' content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter une API Bancaire." />
-                <meta property='og:image' content='/images/accueil/hero_img.webp' />
+                <meta property='og:description' content="myAPI propose une API bancaire à ses clients, simple à intégrer, afin de gérer les finances personnelles, les paiements et bien d'autres." />
+                <meta property='og:image' content='/images/projets/payAPI/payAPI_mockup_fullPage.avif' />
                 <meta property='og:url' content='https://www.thomasandrelubin.fr/projets/payApi' />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
@@ -89,8 +89,8 @@ export default function payApi() {
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
                 <meta property="twitter:url" content="https://www.thomasandrelubin.fr/projets/payApi" />
                 <meta name="twitter:title" content="Projet payAPI - Thomas André-Lubin" />
-                <meta name="twitter:description" content="Projet défi de frontendmentor, le but était de créer un site multi-pages pour présenter une API Bancaire." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
+                <meta name="twitter:description" content="myAPI propose une API bancaire à ses clients, simple à intégrer, afin de gérer les finances personnelles, les paiements et bien d'autres." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/projets/payAPI/payAPI_mockup_fullPage.avif" />
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
             <Navbar />
