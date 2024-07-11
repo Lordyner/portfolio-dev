@@ -89,11 +89,11 @@ export default function Home() {
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
 
-            <Navbar />
+            <Navbar theme="white" />
             <div className={classes.container}>
                 <div className={`${classes.content} max-width`}>
                     <div className={classes.header}>
-                        <h1>Retrouvez mes articles</h1>
+                        <h1>Retrouvez mes <span className="accentuedWord">articles</span></h1>
                         <p>Retrouvez ici mes articles sur le développement web, le SEO, le marketing digital et bien d'autres sujets.</p>
                     </div>
 

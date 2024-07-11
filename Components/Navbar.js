@@ -88,6 +88,7 @@ const Navbar = ({ theme, maxWidth }) => {
                         <Link href="/a-propos" className={classes.link}>À Propos</Link>
                         <Link href="/blog" className={classes.link}>Blog</Link>
                         <Link href="/#realisations" className={classes.link}>Réalisations</Link>
+                        <Link href="/contact" className={classes.link}>Contact</Link>
                     </div>
 
                     {/* Burger menu */}

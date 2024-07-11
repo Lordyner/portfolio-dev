@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 1440px) {
     :root {
-        --heading-900: 4.875rem;
+        --heading-900: 3.5rem;
         --heading-800: 2rem;
         --heading-700: 1.25rem;
         --body-500: 1.125rem;

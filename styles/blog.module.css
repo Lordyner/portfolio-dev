@@ -1,5 +1,6 @@
 .container {
     padding: var(--topAndBotPadding) var(--sidePadding);
+    background-color: white;
 }
 
 
@@ -50,6 +51,8 @@
     display: flex;
     flex-direction: column;
     gap: .25rem;
+
+    color: #000;
 }
 
 .textWrapper h2 {
@@ -62,7 +65,7 @@
 .linkArticle {
     text-decoration: none;
     color: var(--black);
-    max-width: 31.25rem;
+    max-width: 28rem;
 }
 
 @media (min-width: 48rem) {
@@ -79,6 +82,7 @@
     .header {
         align-items: center;
         text-align: center;
+        gap: 1rem;
     }
 
     .header p {
@@ -104,10 +108,12 @@
         max-width: none;
         max-height: 12.5rem;
     }
+
 }
 
 
 @media (min-width: 90rem) {
+
 
     .content {
         text-align: center;
@@ -121,12 +127,12 @@
     }
 
     .articles {
-        flex-direction: row;
-        gap: 5rem;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 
+
     .textWrapper h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }

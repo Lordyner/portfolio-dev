@@ -56,6 +56,10 @@
 }
 
 
+.title {
+    font-size: 2.125rem;
+}
+
 @media (min-width: 48rem) {
 
     .heroContainer {
@@ -85,6 +89,9 @@
         gap: 0.8125rem;
     }
 
+    .title {
+        font-size: 3.5rem;
+    }
 
 }
 
@@ -128,6 +135,7 @@
 
     .title {
         min-width: max-content;
+        font-size: 4.875rem;
     }
 
 }
