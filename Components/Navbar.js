@@ -6,7 +6,7 @@ import Link from 'next/link';
 import logo from '@/public/images/global/logo_thomas_andre-lubin.svg';
 
 import { motion } from "framer-motion";
-const Navbar = () => {
+const Navbar = ({ theme, maxWidth }) => {
 
     const burger = useRef();
 
@@ -74,9 +74,11 @@ const Navbar = () => {
         }
     };
 
+    const themeColor = theme === 'white' ? classes.white : '';
+
     return (
-        <header>
-            <nav className={`${classes.navbar} max-width`}>
+        <header className={`${classes.header} ${themeColor}`}>
+            <nav className={`${classes.navbar} max-width`} style={{ maxWidth: maxWidth }}>
                 <div className={`${classes.navWrapper} `}>
                     <Link href="/" className={classes.logo}>
                         <Image src={logo} alt="logo de l'entrepreneur Thomas André-Lubin" className={classes.logoImg} />
@@ -84,6 +86,7 @@ const Navbar = () => {
                     {/* Classic links */}
                     <div className={classes.navLinks}>
                         <Link href="/a-propos" className={classes.link}>À Propos</Link>
+                        <Link href="/blog" className={classes.link}>Blog</Link>
                         <Link href="/#realisations" className={classes.link}>Réalisations</Link>
                     </div>
 
@@ -121,6 +124,12 @@ const Navbar = () => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>A propos</Link>
+                            </motion.div>
+                            <motion.div variants={variantsItem}>
+                                <Link href="/blog" className={classes.mobileLink} onClick={() => {
+                                    toggleMenu();
+                                    burger.current.classList.toggle(classes.isActive);
+                                }}>Blog</Link>
                             </motion.div>
                             <motion.div className={classes.buttonWrapper} variants={variantsItem}>
                                 <Link href="/contact" className='primary-button'>Me contacter</Link>

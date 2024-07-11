@@ -273,9 +273,3 @@ textarea {
         padding: 1.5rem 2.25rem;
     }
 }
-
-
-header {
-    border-bottom: 1px solid var(--divider);
-    position: relative;
-}

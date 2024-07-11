@@ -97,7 +97,7 @@
     filter: unset;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 53.875rem) {
     .content {
         display: grid;
         grid-template-areas: 'logo .'
