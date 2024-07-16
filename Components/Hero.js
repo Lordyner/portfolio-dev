@@ -21,10 +21,10 @@ const Hero = () => {
                             en freelance
                         </h1>
 
-                        <p className={classes.description}>Un site web qui attire et convertit ses visiteurs</p>
+                        <h2 className={classes.description}>Création de site web sur mesure qui génère du <span className={classes.underlinedWord}>trafic</span> et des <span className={classes.underlinedWord}>prospects</span> pour votre activité</h2>
                     </div>
 
-                    <Link href="/contact" className='primary-button'>Discutons de votre besoin</Link>
+                    <Link href="/contact" className='primary-button'>Prendre rendez-vous</Link>
                 </div>
                 <Image
                     src={heroImg}

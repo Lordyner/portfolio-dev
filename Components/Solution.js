@@ -60,15 +60,18 @@ const Solution = () => {
             <div className={`${classes.solution} max-width`}>
                 <div className={classes.textWrapper}>
 
-                    <h2>Faites appels à mon service de {isDesktopResolution && <br />}<span className="accentuedWord">création de site internet</span> en freelance</h2>
-                    <p className={classes.description}>Fort de mes 6 années d'expériences dans le <b className='boldWord'>développement web</b>, je vous accompagne dans la <b className='boldWord'>création d'un site internet</b> moderne et performant qui saura attirer plus de visiteurs et les convertir en clients. <br /> <br />
-                        Chaque site que je crée se concentre sur les <b className='boldWord'>points suivants</b> :</p>
+                    <h2>Pourquoi choisir mon service de {isDesktopResolution && <br />} création de site internet<span className="accentuedWord"> sur mesure</span></h2>
+                    <p className={classes.description}>
+                        Développeur web depuis plus de 6 ans, je me suis spécialisé dans la <b className="fw-500">création de site internet sur mesure</b> qui ont pour but d'améliorer la visibilité de votre entreprise et générer des prospects pour votre activité.<br /><br />
+                        Si vous cherchez à <b className="fw-500">créer un site web sur mesure</b> pour présenter votre activité, vos services, mettre en valeur votre savoir faire et expérience tout en attirant un maximum de visiteurs : vous êtes au bon endroit.<br /><br />
+                        Du design, au développement en passant par le référencement naturel, <b className="fw-500">je m'occupe de tout</b> pour que votre site internet soit vu par les visiteurs qui compte pour votre activité, et que le plus grand nombre soit converti en prospects.
+                    </p>
                 </div>
                 {(isMobileResolution || isTabletResolution) && <CarouselSolution slides={focusPoints} options={OPTIONS} />}
                 {isDesktopResolution && <CardList items={focusPoints} />}
             </div>
 
-        </section>
+        </section >
     );
 };
 
