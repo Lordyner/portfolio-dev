@@ -98,11 +98,11 @@ export default function Home() {
                     </div>
 
                     <div className={classes.articles}>
-                        <Link href="/blog/avantage-site-internet" className={classes.linkArticle}>
+                        <Link href="/blog/objectif-d'un-site-internet" className={classes.linkArticle}>
                             <div className={classes.article}>
                                 <Image src={imgArticle} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
                                 <div className={classes.textWrapper}>
-                                    <h2>Les avantages incontournables d'un site internet pour votre entreprise</h2>
+                                    <h2>Quel est l'objectif d'un site internet d'entreprise</h2>
                                     <p className={classes.date}>15 Janvier, 2024</p>
                                 </div>
                             </div>
