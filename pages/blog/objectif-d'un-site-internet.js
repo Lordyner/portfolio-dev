@@ -112,14 +112,14 @@ export default function Home() {
                         <div className={classes.infos}>
                             <p className={classes.authorName}>Thomas André-Lubin</p>
                             <div className={classes.articleInfos}>
-                                <p className={classes.dateArticle}>15 Juin, 2022</p>
+                                <p className={classes.dateArticle}>20 Juillet, 2024</p>
                                 <p className={classes.readingTime}>Temps de lecture : 5mn</p>
                             </div>
                         </div>
                     </div>
                     <p>
                         L'objectif d'un site internet est un <b className="fw-500">élément crucial</b>, qu'il faut déterminer correctement et pouvoir suivre si vous souhaitez créer un site internet pour votre entreprise, afin que celui-ci soit un atout plutôt qu'un gouffre financier sans retour visible.<br /><br />
-                        Dans cet article, je vais décrire comment décrire <b className="fw-500">différents types d'objectifs</b> pour votre site web, <b className="fw-500">comment les définir</b> pour être sûr qu'ils soient atteint et <b className="fw-500">comment les suivre</b> par la suite.
+                        Dans cet article, je vais vous expliquer comment décrire <b className="fw-500">différents types d'objectifs</b> pour votre site web, <b className="fw-500">comment les définir</b> pour être sûr qu'ils soient atteints et <b className="fw-500">comment les suivre</b> par la suite.
                     </p>
                     <div className={classes.articleSection}>
 
@@ -134,11 +134,11 @@ export default function Home() {
                         <p>
                             Si votre entreprise vend des produits physiques, un site internet dit site e-commerce ou boutique en ligne, vous permettra de toucher une bien plus vaste clientèle.<br /><br />
 
-                            Un site e-commerce présente bien des avantages. Il vous permet de toucher <b className="fw-500">une plus grande clientèle</b>, les charges sont bien moins importantes qu'avec un magasin physique et vous n'êtes pas soumis au fermeture forcé (covid, manifestations, JO, etc).<br /><br />
+                            Un site e-commerce présente bien des avantages. Il vous permet de toucher <b className="fw-500">une plus grande clientèle</b>, les charges sont bien moins importantes qu'avec un magasin physique et vous n'êtes pas soumis aux fermetures forcées (covid, manifestations, JO, etc).<br /><br />
                         </p>
                         <h3 className={classes.title}>Vendre des services numériques</h3>
                         <p>
-                            Similaire à la vente de produits physiques, la vente de produit numérique (formations, coaching) bénéficiera grandement d'un site e-commerce afin de permettre à ses visiteurs d'acheter directement les produits en ligne.<br /><br />
+                            Similaire à la vente de produits physiques, la vente de produits numériques (formations, coaching) bénéficiera grandement d'un site e-commerce afin de permettre à ses visiteurs d'acheter directement les produits en ligne.<br /><br />
 
                             La vente de services numériques via sa boutique en ligne a les mêmes avantages que la vente de produits physiques, mais en plus, il n'y a <b className="fw-500">aucune livraison à gérer</b>.<br /><br />
                         </p>
@@ -176,7 +176,7 @@ export default function Home() {
 
                     <div className={classes.articleSection}>
                         <h2 className={classes.title}>Définir l'objectif d'un site internet</h2>
-                        <p>Afin que de mettre toutes les chances de notre côté d'atteindre nos objectifs, il y a quelques critères à respecter lorsqu'on défini l'objectif d'un site internet.</p>
+                        <p>Afin que de mettre toutes les chances de notre côté, il y a quelques critères à respecter lorsqu'on défini l'objectif d'un site internet.</p>
                         <Image src={imageDefineWebsiteGoals} alt="Photo d'une loupe, d'un cahier et d'une cible avec une fléchette en plein centre" className={classes.imageArticle} /><br />
                         <h3 className={classes.title}>Un objectif spécifique</h3>
 
@@ -185,11 +185,11 @@ export default function Home() {
 
                             De quelle façon veut-on aider l'entreprise ? On peut très bien aider une entreprise en créant un site de type "application web" qui servira aux employés à remplir leur frais de société. Le résultat, le prix et les efforts attendus seront complètement différents d'un site vitrine présentant les services de l'entreprise.<br /><br />
 
-                            C'est pourquoi il est important de définir <b className='fw-500'>des objectifs de site web</b> spécifique afin de mettre toutes les chances de notre côté.<br /><br />
+                            C'est pourquoi il est important de définir <b className='fw-500'>des objectifs de sites web</b> spécifiques afin de mettre toutes les chances de notre côté.<br /><br />
 
                             On pourrait imaginer un objectif spécifique comme : "je veux vendre mes compléments alimentaires sur mon site internet". Ici l'objectif est concret et la liberté d'interprétation est réduite au maximum.<br /><br />
 
-                            Très bien, il est concret, mais il ne lui manquerais pas un petit truc ?<br /><br />
+                            Très bien, il est concret, mais il ne lui manquerait pas un petit truc ?<br /><br />
                         </p>
 
                         <h3 className={classes.title}>Un objectif mesurable</h3>
@@ -211,9 +211,9 @@ export default function Home() {
 
                             En fonction de votre produit, du marché, de votre réputation et visibilité actuelle, ce 1 000 000 de compléments par mois sera ou non atteignable.<br /><br />
 
-                            Imaginons que nous soyons une nouvelle marque de complément alimentaire pour sportif et que nous ayons décroché un partenariat un gros youtubeur sport français qui a plus d'1 million d'abonnés.<br /><br />
+                            Imaginons que nous soyons une nouvelle marque de complément alimentaire pour sportif et que nous ayons décroché un partenariat avec un gros youtubeur sport français qui a plus d'1 million d'abonnés.<br /><br />
 
-                            Nous allons également créer une campagne de publicité youtube pour nos produits et réalisé différents autre partenariat.<br /><br />
+                            Nous allons également créer une campagne de publicité youtube pour nos produits et réalisé différents autre partenariats.<br /><br />
 
                             <b className='fw-500'>Un objectif atteignable</b> ressemblerait plus à ça : "je veux vendre 10 000 compléments alimentaires par mois sur mon site internet".<br /><br />
 
@@ -262,7 +262,7 @@ export default function Home() {
                     <div className={classes.articleSection}>
                         <h2 className={classes.title}>Comment suivre l'objectif de notre site internet</h2>
                         <p>
-                            L'une des meilleures façons de suivre les objectifs de son site web est de configurer <b className='fw-500'>un outil de collecte des données utilisateur</b> sur son site (pensez à <Link href="">demander le consentement du visiteur</Link> avant de récupérer ces données).<br /><br />
+                            L'une des meilleures façons de suivre les objectifs de son site web est de configurer <b className='fw-500'>un outil de collecte des données utilisateur</b> sur son site (pensez à <Link href="">demander le consentement du visiteur</Link> avant de récupérer ses données).<br /><br />
 
                             Le meilleur étant Google Analytics, c'est celui que je configure sur tous les sites de mes clients. Il permet de suivre un ensemble de données vitales au suivi de nos objectifs.<br /><br />
 
@@ -287,15 +287,15 @@ export default function Home() {
                         <p>
                             Une conversion est un événement important sur votre site que vous voulez suivre. Pour un site e-commerce cela peut être <b className='fw-500'>l'achat d'un produit</b>, pour un site vitrine <b className='fw-500'>l'envoie d'un message</b> via le formulaire de contact.<br /><br />
 
-                            Le taux de conversion lui ce calcul de la façon suivante : (Nombre de conversions / Nombre de visiteurs) x 100.<br /><br />
+                            Le taux de conversion lui se calcul de la façon suivante : (Nombre de conversions / Nombre de visiteurs) x 100.<br /><br />
 
-                            Un nombre de visiteurs important et un taux de conversion trop faible peut indiquer que <b className='fw-500'>ces visiteurs ne sont pas assez bien qualifié</b>.<br /><br />
+                            Un nombre de visiteurs important et un taux de conversion trop faible peut indiquer que <b className='fw-500'>ces visiteurs ne sont pas assez bien qualifiés</b>.<br /><br />
                         </p>
 
                         <h3 className={classes.title}>Le taux de rebond</h3>
 
                         <p>
-                            C'est le <b className='fw-500'>pourcentage de personne qui quitte votre site après avoir accédé à seulement une page</b> et n'avoir cliqué nulle part.<br /><br />
+                            C'est le <b className='fw-500'>pourcentage de personnes qui quitte votre site après avoir accédé à seulement une page</b> et n'avoir cliqué nulle part.<br /><br />
 
                             Le taux de rebond est à prendre avec des pincettes en fonction de la page. Un taux de rebond élevé ne signifie pas forcément un problème.<br /><br />
 
@@ -317,7 +317,7 @@ export default function Home() {
                         <h3 className={classes.title}>Et bien d'autres</h3>
 
                         <p>
-                            Il existe bien d'autres indicateurs clé à suivre pour votre site internet. Je vous ai présenté les basiques mais en fonction des objectifs de votre site, il pourra être intéressant d'en suivre d'autres comme : les pages les plus visités, l'âge de vos visiteurs, les zones géographiques de vos visiteurs, etc.<br /><br />
+                            Il existe bien d'autres indicateurs clé à suivre pour votre site internet. Je vous ai présenté les basiques mais en fonction des objectifs de votre site, il pourra être intéressant d'en suivre d'autres comme : les pages les plus visitées, l'âge de vos visiteurs, les zones géographiques de vos visiteurs, etc.<br /><br />
                         </p>
 
                     </div>

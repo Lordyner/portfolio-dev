@@ -8,7 +8,8 @@ import Spinner from '@/Components/Spinner';
 import GlobalContext from '@/Store/GlobalContext';
 import classes from '@/styles/blog.module.css';
 import Image from 'next/image';
-import imgArticle from '@/public/images/blog/avantageSiteInternet/avantage_site_internet.jpg';
+import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp";
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -99,40 +100,16 @@ export default function Home() {
 
                     <div className={classes.articles}>
                         <Link href="/blog/objectif-d'un-site-internet" className={classes.linkArticle}>
-                            <div className={classes.article}>
-                                <Image src={imgArticle} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
+                            <motion.div
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.9 }}
+                                className={classes.article}>
+                                <Image src={imageWebsiteGoal} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
                                 <div className={classes.textWrapper}>
                                     <h2>Quel est l'objectif d'un site internet d'entreprise</h2>
-                                    <p className={classes.date}>15 Janvier, 2024</p>
+                                    <p className={classes.date}>20 Juillet, 2024</p>
                                 </div>
-                            </div>
-                        </Link>
-                        <Link href="/blog/avantage-site-internet" className={classes.linkArticle}>
-                            <div className={classes.article}>
-                                <Image src={imgArticle} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
-                                <div className={classes.textWrapper}>
-                                    <h2>Les avantages incontournables d'un site internet pour votre entreprise</h2>
-                                    <p className={classes.date}>15 Janvier, 2024</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link href="/blog/avantage-site-internet" className={classes.linkArticle}>
-                            <div className={classes.article}>
-                                <Image src={imgArticle} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
-                                <div className={classes.textWrapper}>
-                                    <h2>Les avantages incontournables d'un site internet pour votre entreprise</h2>
-                                    <p className={classes.date}>15 Janvier, 2024</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link href="/blog/avantage-site-internet" className={classes.linkArticle}>
-                            <div className={classes.article}>
-                                <Image src={imgArticle} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
-                                <div className={classes.textWrapper}>
-                                    <h2>Les avantages incontournables d'un site internet pour votre entreprise</h2>
-                                    <p className={classes.date}>15 Janvier, 2024</p>
-                                </div>
-                            </div>
+                            </motion.div>
                         </Link>
                     </div>
                 </div>
