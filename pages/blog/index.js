@@ -99,7 +99,7 @@ export default function Home() {
                     </div>
 
                     <div className={classes.articles}>
-                        <Link href="/blog/objectif-d'un-site-internet" className={classes.linkArticle}>
+                        <Link href="/blog/objectif-site-internet" className={classes.linkArticle}>
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.9 }}
