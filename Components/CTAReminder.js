@@ -2,9 +2,11 @@ import React from 'react';
 import classes from './CTAReminder.module.css';
 import Link from 'next/link';
 
-const CTAReminder = () => {
+const CTAReminder = ({ backgroundColor }) => {
+
+
     return (
-        <section className={classes.ctaReminder}>
+        <section className={classes.ctaReminder} style={{ backgroundColor: backgroundColor }}>
             <div className={classes.content}>
                 <div className={classes.textWrapper}>
                     <h2 className={classes.title}>Un besoin? Un projet ?</h2>

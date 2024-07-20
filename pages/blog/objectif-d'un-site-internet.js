@@ -11,12 +11,14 @@ import Image from 'next/image';
 import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp";
 import imageAuthorThomas from '@/public/images/blog/auteur-thomas-andrelubin.png'
 import imageGoogleAnalytics from '@/public/images/blog/objectif-site-internet/suivre_objectif_site_internet.webp'
+import imageAchievableGoal from '@/public/images/blog/objectif-site-internet/objectif_site_internet_atteignable.webp'
 import { motion, useScroll } from "framer-motion";
 import imageGenerateMoney from "@/public/images/blog/objectif-site-internet/generer-argent-site-internet.webp"
 import Link from 'next/link';
 import CTAReminder from '@/Components/CTAReminder';
 import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTeam_mockup_fullPage.avif';
 import imageDefineWebsiteGoals from '@/public/images/blog/objectif-site-internet/definir_objectif_site_internet.webp'
+import heroImg from '@/public/images/accueil/hero_img.webp';
 
 
 export default function Home() {
@@ -218,6 +220,8 @@ export default function Home() {
                             <b className='fw-500'>Un objectif atteignable</b> ressemblerait plus à ça : "je veux vendre 10 000 compléments alimentaires par mois sur mon site internet".<br /><br />
 
                             Cela parait déjà plus atteignable, ça rend bien à l'écrit, mais dans le monde réel, il ne manquerait pas un petit truc ?<br /><br />
+
+                            <Image src={imageAchievableGoal} alt='Homme sautant entre deux falaises' className={classes.imageArticle} /><br />
                         </p>
 
                         <h3 className={classes.title}>Un objectif limité dans le temps</h3>
@@ -337,6 +341,8 @@ export default function Home() {
 
                 </div>
             </div >
+            <CTAReminder backgroundColor="#F0F4F7" />
+
             <Footer />
         </>
     )
