@@ -121,7 +121,7 @@ export default function Home() {
                     </div>
                     <p>
                         L'objectif d'un site internet est un <b className="fw-500">élément crucial</b>, qu'il faut déterminer correctement et pouvoir suivre si vous souhaitez créer un site internet pour votre entreprise, afin que celui-ci soit un atout plutôt qu'un gouffre financier sans retour visible.<br /><br />
-                        Dans cet article, je vais vous expliquer comment décrire <b className="fw-500">différents types d'objectifs</b> pour votre site web, <b className="fw-500">comment les définir</b> pour être sûr qu'ils soient atteints et <b className="fw-500">comment les suivre</b> par la suite.
+                        Dans cet article, je vais vous décrire <b className="fw-500">différents types d'objectifs</b> pour votre site web, <b className="fw-500">comment les définir</b> pour être sûr qu'ils soient atteints et <b className="fw-500">comment les suivre</b> par la suite.
                     </p>
                     <div className={classes.articleSection}>
 
