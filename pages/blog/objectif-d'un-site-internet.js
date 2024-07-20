@@ -76,28 +76,28 @@ export default function Home() {
             <Head>
 
                 {/* Google */}
-                <title>Les avantages incontournables d'un site internet pour votre entreprise - Thomas André-Lubin</title>
-                <meta name="description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
+                <title>Définir l'objectif d'un site internet d'entreprise</title>
+                <meta name="description" content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
 
                 {/* Socials */}
-                <meta property='og:title' content="Les avantages incontournables d' un site internet pour votre entreprise - Thomas André-Lubin" />
-                <meta property='og:description' content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
-                <meta property='og:image' content='/images/accueil/hero_img.webp' />
-                <meta property='og:url' content='https://www.thomasandrelubin.fr/' />
+                <meta property='og:title' content="Définir l'objectif d'un site internet d'entreprise" />
+                <meta property='og:description' content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
+                <meta property='og:image' content="/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
+                <meta property='og:url' content="https://www.thomasandrelubin.fr/blog/objectif-d'un-site-internet" />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content="Les avantages incontournables d' un site internet pour votre entreprise - Thomas André-Lubin" />
+                <meta property='og:site_name' content="Définir l'objectif d'un site internet d'entreprise" />
 
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
-                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/" />
-                <meta name="twitter:title" content="Les avantages incontournables d'un site internet pour votre entreprise - Thomas André-Lubin" />
-                <meta name="twitter:description" content="Développeur web freelance vous accompagne dans la création d'un site internet moderne, optimisé pour le référencement et avec une excellente expérience utilisateur." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/accueil/hero_img.webp" />
+                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/blog/objectif-d'un-site-internet" />
+                <meta name="twitter:title" content="Définir l'objectif d'un site internet d'entreprise" />
+                <meta name="twitter:description" content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
+                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
 
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
@@ -266,7 +266,7 @@ export default function Home() {
                     <div className={classes.articleSection}>
                         <h2 className={classes.title}>Comment suivre l'objectif de notre site internet</h2>
                         <p>
-                            L'une des meilleures façons de suivre les objectifs de son site web est de configurer <b className='fw-500'>un outil de collecte des données utilisateur</b> sur son site (pensez à <Link href="">demander le consentement du visiteur</Link> avant de récupérer ses données).<br /><br />
+                            L'une des meilleures façons de suivre les objectifs de son site web est de configurer <b className='fw-500'>un outil de collecte des données utilisateur</b> sur son site.<br /><br />
 
                             Le meilleur étant Google Analytics, c'est celui que je configure sur tous les sites de mes clients. Il permet de suivre un ensemble de données vitales au suivi de nos objectifs.<br /><br />
 
