@@ -86,7 +86,7 @@ export default function Home() {
                 <meta property='og:title' content="Définir l'objectif d'un site internet d'entreprise" />
                 <meta property='og:description' content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
                 <meta property='og:image' content="/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
-                <meta property='og:url' content="https://www.thomasandrelubin.fr/blog/objectif-d'un-site-internet" />
+                <meta property='og:url' content="https://www.thomasandrelubin.fr/blog/objectif-site-internet" />
                 <meta property='og:type' content='website' />
                 <meta property='og:locale' content='fr_FR' />
                 <meta property='og:site_name' content="Définir l'objectif d'un site internet d'entreprise" />
@@ -94,7 +94,7 @@ export default function Home() {
                 {/* Twitter Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="thomasandrelubin.fr" />
-                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/blog/objectif-d'un-site-internet" />
+                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/blog/objectif-site-internet" />
                 <meta name="twitter:title" content="Définir l'objectif d'un site internet d'entreprise" />
                 <meta name="twitter:description" content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
                 <meta name="twitter:image" content="https://thomasandrelubin.fr/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
