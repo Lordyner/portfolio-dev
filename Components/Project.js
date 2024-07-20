@@ -18,8 +18,8 @@ const Project = () => {
     return (
         <section id='realisations' className={classes.projectSection}>
             <div className={`${classes.content} max-width`}>
-                <h2>Mes <span className='accentuedWord'>réalisations</span></h2>
-                <p>Découvrez mes projets</p>
+                <h2>Mes créations de site <span className='accentuedWord'>internet sur mesure</span></h2>
+                <p>Découvrez mes projets de site web sur mesure pour mes différents clients.</p>
                 <div className={classes.projects}>
                     <motion.div className={classes.project}
                         whileHover={{ scale: 1.02, cursor: 'pointer' }}

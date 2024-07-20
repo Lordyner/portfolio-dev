@@ -29,14 +29,32 @@
 }
 
 .description {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+    font-size: 1rem;
+    line-height: normal;
     font-weight: 400;
+    text-transform: none;
 }
 
-.imgWrapper {
-    display: flex;
-    justify-content: center;
+.underlinedWord {
+    position: relative;
+    z-index: 2;
+    padding: 0.0625rem;
+    display: inline-block;
+    font-weight: 400;
+    color: #FFFDFB;
+
+}
+
+.underlinedWord::before {
+    content: '';
+    /* background-color: #FFFDFB; */
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 0rem;
+    bottom: 5px;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
 }
 
 .heroImg {
