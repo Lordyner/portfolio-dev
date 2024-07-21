@@ -19,14 +19,15 @@ import CTAReminder from '@/Components/CTAReminder';
 import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTeam_mockup_fullPage.avif';
 import imageDefineWebsiteGoals from '@/public/images/blog/objectif-site-internet/definir_objectif_site_internet.webp'
 import heroImg from '@/public/images/accueil/hero_img.webp';
+import { getAllPostsForHome } from '@/lib/api';
 
 
-export default function Home() {
+export default function Home({ allPosts, preview }) {
 
     /* Logger */
     const logger = getLogger('Avantage Site Internet');
     logger.debug('Page rendered');
-
+    console.log("allPosts : " + JSON.stringify(allPosts))
     /* State */
     const [screenWidth, setScreenWidth] = useState();
 
@@ -239,19 +240,19 @@ export default function Home() {
 
                         <p>
                             Faisons un rapide récapitulatif de notre objectif :<br />
-                            <label class="form-control-checkbox">
+                            <label className="form-control-checkbox">
                                 <input type="checkbox" name="specific" checked disabled />
                                 Spécifique : vente de compléments alimentaires sur mon site internet
                             </label>
-                            <label class="form-control-checkbox">
+                            <label className="form-control-checkbox">
                                 <input type="checkbox" name="measurable" checked disabled />
                                 Mesurable : 10 000 par mois
                             </label>
-                            <label class="form-control-checkbox">
+                            <label className="form-control-checkbox">
                                 <input type="checkbox" name="achievable" checked disabled />
                                 Atteignable
                             </label>
-                            <label class="form-control-checkbox">
+                            <label className="form-control-checkbox">
                                 <input type="checkbox" name="timely" checked disabled />
                                 Date limite : d'ici janvier 2027
                             </label><br />
@@ -347,4 +348,13 @@ export default function Home() {
         </>
     )
 
+}
+
+export async function getStaticProps({ preview = false }) {
+    const allPosts = await getAllPostsForHome(preview)
+
+    return {
+        props: { allPosts, preview },
+        revalidate: 10,
+    }
 }

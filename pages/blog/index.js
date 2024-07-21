@@ -12,9 +12,9 @@ import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/object
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { getAllPostsForHome } from '@/lib/api';
 
-export default function Home() {
-
+export default function Home({ allPosts, preview }) {
     /* Logger */
     const logger = getLogger('Articles');
     logger.debug('Page rendered');
@@ -111,11 +111,38 @@ export default function Home() {
                                 </div>
                             </motion.div>
                         </Link>
+
+                        {allPosts && allPosts?.edges?.length > 0 && allPosts?.edges.map((post) => {
+                            return (
+
+                                <Link href={`/blog/${post.node.slug}`} className={classes.linkArticle} key={post.node.title}>
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        className={classes.article}>
+                                        <Image src={post.node.featuredImage.node.sourceUrl} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
+                                        <div className={classes.textWrapper}>
+                                            <h2>{post.node.title}</h2>
+                                            <p className={classes.date}>{post.node.date}</p>
+                                        </div>
+                                    </motion.div>
+                                </Link>
+
+
+                            )
+                        })}
                     </div>
                 </div>
             </div>
             <Footer />
         </>
     )
+}
 
+export async function getStaticProps({ preview = false }) {
+    const allPosts = await getAllPostsForHome(preview);
+    return {
+        props: { allPosts, preview },
+        revalidate: 10,
+    }
 }
