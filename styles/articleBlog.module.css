@@ -4,6 +4,21 @@
     color: #000;
 }
 
+.container li {
+    list-style: inside;
+}
+
+.customBox {
+    color: white;
+}
+
+.customBox .tip {
+    background-color: green;
+}
+
+.customBox .error {
+    background-color: red;
+}
 
 .content {
     display: flex;
@@ -88,6 +103,14 @@
     gap: 2px;
 }
 
+.blogContent {
+    max-width: 100%;
+}
+
+.blogContent p {
+    padding: 1rem 0;
+}
+
 
 @media (min-width: 48rem) {
     .content {
@@ -112,5 +135,6 @@
 
     .headerImageArticle {
         object-position: bottom;
+        max-height: none;
     }
 }
