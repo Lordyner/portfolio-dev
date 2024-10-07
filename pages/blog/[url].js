@@ -106,7 +106,7 @@ export default function ArticleWordpress({ article }) {
                             </div>
                         </div>
                         <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: article.content }}></div>
-                        {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
+                        {/* {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />} */}
                     </div>
                 }
             </div >
