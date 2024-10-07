@@ -8,19 +8,9 @@ import Spinner from '@/Components/Spinner';
 import GlobalContext from '@/Store/GlobalContext';
 import classes from '@/styles/articleBlog.module.css';
 import Image from 'next/image';
-import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp";
-import imageAuthorThomas from '@/public/images/blog/auteur-thomas-andrelubin.png'
-import imageGoogleAnalytics from '@/public/images/blog/objectif-site-internet/suivre_objectif_site_internet.webp'
-import imageAchievableGoal from '@/public/images/blog/objectif-site-internet/objectif_site_internet_atteignable.webp'
 import { motion, useScroll } from "framer-motion";
-import imageGenerateMoney from "@/public/images/blog/objectif-site-internet/generer-argent-site-internet.webp"
 import Link from 'next/link';
-import CTAReminder from '@/Components/CTAReminder';
-import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTeam_mockup_fullPage.avif';
-import imageDefineWebsiteGoals from '@/public/images/blog/objectif-site-internet/definir_objectif_site_internet.webp'
-import heroImg from '@/public/images/accueil/hero_img.webp';
 import { getAllPostsForHome, getSinglePostBySlug } from '@/lib/api';
-import { format } from 'date-fns';
 import FAQArticle from '@/Components/FAQArticle';
 
 export default function ArticleWordpress({ article }) {
