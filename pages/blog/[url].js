@@ -20,16 +20,16 @@ import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTea
 import imageDefineWebsiteGoals from '@/public/images/blog/objectif-site-internet/definir_objectif_site_internet.webp'
 import heroImg from '@/public/images/accueil/hero_img.webp';
 import { getAllPostsForHome, getSinglePostBySlug } from '@/lib/api';
-
+import { format } from 'date-fns';
+import FAQArticle from '@/Components/FAQArticle';
 
 export default function ArticleWordpress({ article }) {
 
     /* Logger */
-    const logger = getLogger('Avantage Site Internet');
+    const logger = getLogger('Article page');
     logger.debug('Page rendered');
     /* State */
     const [screenWidth, setScreenWidth] = useState();
-
     /* Context */
     const { setIsMobileResolution } = useContext(GlobalContext);
     const { setIsTabletResolution } = useContext(GlobalContext);
