@@ -76,28 +76,11 @@ export default function ArticleWordpress({ article }) {
             <Head>
 
                 {/* Google */}
-                <title>Définir l'objectif d'un site internet d'entreprise</title>
-                <meta name="description" content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
+                <title>{article?.title}</title>
+                <meta name="description" content={article?.excerpt} />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
-
-                {/* Socials */}
-                <meta property='og:title' content="Définir l'objectif d'un site internet d'entreprise" />
-                <meta property='og:description' content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
-                <meta property='og:image' content="/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
-                <meta property='og:url' content="https://www.thomasandrelubin.fr/blog/objectif-site-internet" />
-                <meta property='og:type' content='website' />
-                <meta property='og:locale' content='fr_FR' />
-                <meta property='og:site_name' content="Définir l'objectif d'un site internet d'entreprise" />
-
-                {/* Twitter Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:domain" content="thomasandrelubin.fr" />
-                <meta property="twitter:url" content="https://www.thomasandrelubin.fr/blog/objectif-site-internet" />
-                <meta name="twitter:title" content="Définir l'objectif d'un site internet d'entreprise" />
-                <meta name="twitter:description" content="Il est crucial de définir l'objectif principal d'un site internet d'entreprise si vous voulez qu'il soit un atout pour votre entreprise." />
-                <meta name="twitter:image" content="https://thomasandrelubin.fr/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp" />
 
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
@@ -109,23 +92,24 @@ export default function ArticleWordpress({ article }) {
                         <h1 className={`${classes.title} ${classes.mainTitle}`}>{article.title}</h1>
                         <Image src={article.featuredImage.node.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
                         <div className={classes.secondaryInfos}>
-
-                            <Image src={article.author.node.avatar.url} alt='Thomas André-Lubin' className={classes.authorImg} width={48} height={48} />
+                            <Link href="/a-propos" target='_blank'>
+                                <Image src={article.author.node.avatar.url} alt='Thomas André-Lubin' className={classes.authorImg} width={48} height={48} />
+                            </Link>
                             <div className={classes.infos}>
-                                <p className={classes.authorName}>{article.author.node.name}</p>
-                                <div className={classes.articleInfos}>
-                                    <p className={classes.dateArticle}>{article.date}</p>
+                                <Link href="/a-propos" target='_blank'>
+                                    <p className={classes.authorName}>{article.author.node.name}</p>
+                                </Link>
+                                {/* <div className={classes.articleInfos}>
+                                    <p className={classes.dateArticle}>Date de création : {formattedDate}</p>
                                     <p className={classes.readingTime}>Temps de lecture : 5mn</p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
-                        <div dangerouslySetInnerHTML={{ __html: article.content }}></div>
+                        <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: article.content }}></div>
+                        {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
                     </div>
                 }
-
-
             </div >
-
             <Footer />
         </>
     )
