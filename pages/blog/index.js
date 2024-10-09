@@ -9,11 +9,12 @@ import GlobalContext from '@/Store/GlobalContext';
 import classes from '@/styles/blog.module.css';
 import Image from 'next/image';
 import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp";
+import { format } from "date-fns";
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/api';
-
+import { fr } from "date-fns/locale";
 export default function Home({ posts, preview }) {
     /* Logger */
     const logger = getLogger('Articles');
@@ -121,7 +122,8 @@ export default function Home({ posts, preview }) {
                                         <Image src={post.node.featuredImage.node.sourceUrl} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
                                         <div className={classes.textWrapper}>
                                             <h2>{post.node.title}</h2>
-                                            <p className={classes.date}>{post.node.date}</p>
+                                            {/* <p className={classes.date}>{post.node.date}</p> */}
+                                            <p className={classes.date}>{format(post.node.date, "dd MMMM yyyy", { locale: fr })}</p>
                                         </div>
                                     </motion.div>
                                 </Link>
@@ -138,7 +140,7 @@ export default function Home({ posts, preview }) {
 export async function getStaticProps({ preview = true }) {
 
     const posts = await getAllPosts(preview);
-
+    console.log(JSON.stringify(posts));
     return {
         props: { posts, preview },
         revalidate: 10,
