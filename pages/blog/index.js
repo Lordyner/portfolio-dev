@@ -12,9 +12,9 @@ import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/object
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { getAllPostsForHome } from '@/lib/api';
+import { getAllPosts, getAllPostsForHome, getAllPrivatePost } from '@/lib/api';
 
-export default function Home({ allPosts, preview }) {
+export default function Home({ posts, preview }) {
     /* Logger */
     const logger = getLogger('Articles');
     logger.debug('Page rendered');
@@ -55,7 +55,6 @@ export default function Home({ allPosts, preview }) {
         router.events.on("routeChangeStart", () => setIsLoading(true));
         router.events.on("routeChangeComplete", () => setIsLoading(false));
     }, [screenWidth])
-
 
     return (
         <>
@@ -112,9 +111,8 @@ export default function Home({ allPosts, preview }) {
                             </motion.div>
                         </Link>
 
-                        {allPosts && allPosts?.edges?.length > 0 && allPosts?.edges.map((post) => {
+                        {posts && posts.length > 0 && posts.map((post) => {
                             return (
-
                                 <Link href={`/blog/${post.node.slug}`} className={classes.linkArticle} key={post.node.title}>
                                     <motion.div
                                         whileHover={{ scale: 1.02 }}
@@ -127,8 +125,6 @@ export default function Home({ allPosts, preview }) {
                                         </div>
                                     </motion.div>
                                 </Link>
-
-
                             )
                         })}
                     </div>
@@ -139,10 +135,12 @@ export default function Home({ allPosts, preview }) {
     )
 }
 
-export async function getStaticProps({ preview = false }) {
-    const allPosts = await getAllPostsForHome(preview);
+export async function getStaticProps({ preview = true }) {
+
+    const posts = await getAllPosts(preview);
+
     return {
-        props: { allPosts, preview },
+        props: { posts, preview },
         revalidate: 10,
     }
 }
