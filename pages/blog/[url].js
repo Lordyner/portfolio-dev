@@ -10,7 +10,7 @@ import classes from '@/styles/articleBlog.module.css';
 import Image from 'next/image';
 import { motion, useScroll } from "framer-motion";
 import Link from 'next/link';
-import { getAllPostsForHome, getSinglePostBySlug } from '@/lib/api';
+import { getSinglePostBySlug } from '@/lib/api';
 import FAQArticle from '@/Components/FAQArticle';
 
 export default function ArticleWordpress({ article }) {

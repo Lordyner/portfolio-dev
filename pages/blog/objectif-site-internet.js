@@ -19,15 +19,13 @@ import CTAReminder from '@/Components/CTAReminder';
 import myTeamResponsiveMockupFullPage from '@/public/images/projets/myTeam/myTeam_mockup_fullPage.avif';
 import imageDefineWebsiteGoals from '@/public/images/blog/objectif-site-internet/definir_objectif_site_internet.webp'
 import heroImg from '@/public/images/accueil/hero_img.webp';
-import { getAllPostsForHome } from '@/lib/api';
 
 
-export default function Home({ allPosts, preview }) {
+export default function Home() {
 
     /* Logger */
     const logger = getLogger('Avantage Site Internet');
     logger.debug('Page rendered');
-    console.log("allPosts : " + JSON.stringify(allPosts))
     /* State */
     const [screenWidth, setScreenWidth] = useState();
 
@@ -348,13 +346,4 @@ export default function Home({ allPosts, preview }) {
         </>
     )
 
-}
-
-export async function getStaticProps({ preview = false }) {
-    const allPosts = await getAllPostsForHome(preview)
-
-    return {
-        props: { allPosts, preview },
-        revalidate: 10,
-    }
 }
