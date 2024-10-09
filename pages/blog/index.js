@@ -12,7 +12,7 @@ import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/object
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { getAllPosts, getAllPostsForHome, getAllPrivatePost } from '@/lib/api';
+import { getAllPosts } from '@/lib/api';
 
 export default function Home({ posts, preview }) {
     /* Logger */
