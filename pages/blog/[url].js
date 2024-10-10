@@ -13,6 +13,9 @@ import Link from 'next/link';
 import { getSinglePostBySlug } from '@/lib/api';
 import FAQArticle from '@/Components/FAQArticle';
 
+import { fr } from "date-fns/locale";
+import { format } from "date-fns";
+
 export default function ArticleWordpress({ article }) {
 
     /* Logger */
@@ -30,7 +33,6 @@ export default function ArticleWordpress({ article }) {
 
     /* Other hooks */
     const { scrollYProgress } = useScroll();
-
 
     /* Router */
     const router = useRouter();
@@ -80,7 +82,6 @@ export default function ArticleWordpress({ article }) {
                 {article &&
                     <div className={`${classes.content}`}>
                         <h1 className={`${classes.title} ${classes.mainTitle}`}>{article.title}</h1>
-                        <Image src={article.featuredImage.node.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
                         <div className={classes.secondaryInfos}>
                             <Link href="/a-propos" target='_blank'>
                                 <Image src={article.author.node.avatar.url} alt='Thomas André-Lubin' className={classes.authorImg} width={48} height={48} />
@@ -89,12 +90,13 @@ export default function ArticleWordpress({ article }) {
                                 <Link href="/a-propos" target='_blank'>
                                     <p className={classes.authorName}>{article.author.node.name}</p>
                                 </Link>
-                                {/* <div className={classes.articleInfos}>
-                                    <p className={classes.dateArticle}>Date de création : {formattedDate}</p>
-                                    <p className={classes.readingTime}>Temps de lecture : 5mn</p>
-                                </div> */}
+                                <div className={classes.articleInfos}>
+                                    <p className={classes.dateArticle}>Mis à jour le : {format(article.modified, "dd MMMM yyyy", { locale: fr })}</p>
+                                    <p className={classes.readingTime}>Temps de lecture : {article.readingTime} minutes</p>
+                                </div>
                             </div>
                         </div>
+                        <Image src={article.featuredImage.node.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
                         <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: article.content }}></div>
                         {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
                     </div>

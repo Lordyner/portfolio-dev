@@ -15,6 +15,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/api';
 import { fr } from "date-fns/locale";
+
 export default function Home({ posts, preview }) {
     /* Logger */
     const logger = getLogger('Articles');
@@ -107,7 +108,7 @@ export default function Home({ posts, preview }) {
                                 <Image src={imageWebsiteGoal} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
                                 <div className={classes.textWrapper}>
                                     <h2>Quel est l'objectif d'un site internet d'entreprise</h2>
-                                    <p className={classes.date}>20 Juillet, 2024</p>
+                                    <p className={classes.date}>20 Juillet 2024</p>
                                 </div>
                             </motion.div>
                         </Link>
@@ -122,7 +123,6 @@ export default function Home({ posts, preview }) {
                                         <Image src={post.node.featuredImage.node.sourceUrl} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
                                         <div className={classes.textWrapper}>
                                             <h2>{post.node.title}</h2>
-                                            {/* <p className={classes.date}>{post.node.date}</p> */}
                                             <p className={classes.date}>{format(post.node.date, "dd MMMM yyyy", { locale: fr })}</p>
                                         </div>
                                     </motion.div>
@@ -140,7 +140,7 @@ export default function Home({ posts, preview }) {
 export async function getStaticProps({ preview = true }) {
 
     const posts = await getAllPosts(preview);
-    console.log(JSON.stringify(posts));
+
     return {
         props: { posts, preview },
         revalidate: 10,
