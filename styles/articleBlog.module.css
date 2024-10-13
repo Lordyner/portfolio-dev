@@ -69,8 +69,9 @@
 
 .mainTitle {
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 3rem;
+    text-transform: capitalize;
 }
 
 .articleInfos {
@@ -106,8 +107,13 @@
     max-width: 100%;
 }
 
-.blogContent p {
-    padding: 1rem 0;
+.blogContent p,
+.blogContent ul {
+    padding-bottom: 1.5rem;
+}
+
+.blogContent img {
+    margin-bottom: 2rem;
 }
 
 
@@ -118,22 +124,32 @@
     }
 }
 
+@media (min-width: 64rem) {
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+}
+
 @media (min-width: 90rem) {
 
     .content {
         align-items: left;
         text-align: left;
         font-size: 1.125rem;
-
-
     }
 
     .mainTitle {
         font-size: 3rem;
+        line-height: 4rem;
     }
 
     .headerImageArticle {
-        object-position: bottom;
-        max-height: none;
+        object-position: top;
+        max-height: 37.5rem;
+    }
+
+    .articleInfos {
+        gap: 1rem;
+        flex-direction: row;
     }
 }
