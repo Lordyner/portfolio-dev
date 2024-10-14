@@ -74,6 +74,14 @@ export default function ArticleWordpress({ article }) {
                 <meta name="robots" content="all" />
                 <link rel="icon" href="/favicon.ico" />
 
+                <meta property='og:title' content={article?.title} />
+                <meta property='og:description' content={article?.excerpt} />
+                <meta property='og:image' content={article.featuredImage.node.sourceUrl} />
+                <meta property='og:url' content={`https://www.thomasandrelubin.fr/blog/` + article?.uri} />
+                <meta property='og:type' content='website' />
+                <meta property='og:locale' content='fr_FR' />
+                <meta property='og:site_name' content="https://www.thomasandrelubin.fr" />
+
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
 

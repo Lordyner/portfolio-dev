@@ -8,7 +8,6 @@ import Spinner from '@/Components/Spinner';
 import GlobalContext from '@/Store/GlobalContext';
 import classes from '@/styles/blog.module.css';
 import Image from 'next/image';
-import imageWebsiteGoal from "@/public/images/blog/objectif-site-internet/objectif-d'un-site-internet.webp";
 import { format } from "date-fns";
 
 import { motion } from 'framer-motion';
@@ -98,21 +97,7 @@ export default function Home({ posts, preview }) {
                         <h1>Retrouvez mes <span className="accentuedWord">articles</span></h1>
                         <p>Retrouvez ici mes articles sur le développement web, le SEO, le marketing digital et bien d'autres sujets.</p>
                     </div>
-
                     <div className={classes.articles}>
-                        <Link href="/blog/objectif-site-internet" className={classes.linkArticle}>
-                            <motion.div
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.9 }}
-                                className={classes.article}>
-                                <Image src={imageWebsiteGoal} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
-                                <div className={classes.textWrapper}>
-                                    <h2>Quel est l'objectif d'un site internet d'entreprise</h2>
-                                    <p className={classes.date}>20 Juillet 2024</p>
-                                </div>
-                            </motion.div>
-                        </Link>
-
                         {posts && posts.length > 0 && posts.map((post) => {
                             return (
                                 <Link href={`/blog/${post.node.slug}`} className={classes.linkArticle} key={post.node.title}>
