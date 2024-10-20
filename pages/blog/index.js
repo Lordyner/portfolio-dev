@@ -105,7 +105,7 @@ export default function Home({ posts, preview }) {
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.9 }}
                                         className={classes.article}>
-                                        <Image src={post.node.featuredImage.node.sourceUrl} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />
+                                        {post.node.featuredImage && <Image src={post.node.featuredImage.node.sourceUrl} alt="Image d'accueil" width={300} height={200} className={classes.previewImgArticle} />}
                                         <div className={classes.textWrapper}>
                                             <h2>{post.node.title}</h2>
                                             <p className={classes.date}>{format(post.node.date, "dd MMMM yyyy", { locale: fr })}</p>

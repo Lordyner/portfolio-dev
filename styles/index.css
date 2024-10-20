@@ -347,9 +347,60 @@ input[type="checkbox"]:focus {
 
 }
 
+.faqTitle {
+    padding: 0 !important;
+}
+
 .wp-block-image img {
     border-radius: 0.625rem;
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .25));
+}
+
+.wp-block-aioseo-table-of-contents::before {
+    content: 'Sommaire';
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.wp-block-aioseo-table-of-contents {
+
+    background-color: #F0F4F7;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    letter-spacing: 0;
+
+    &>ul {
+        padding-top: 1.25rem;
+
+    }
+
+    ul {
+        padding-bottom: 0 !important;
+    }
+
+    li {
+        padding-bottom: 1rem !important;
+        list-style: none !important;
+    }
+
+
+    li>ul {
+        padding-left: 2rem;
+        /* padding-top: 1rem; */
+    }
+
+    a {
+        text-decoration: none;
+        color: #2E2E2E;
+        transition: all .3s;
+        font-weight: 500;
+    }
+
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 @media screen and (min-width: 48rem) {

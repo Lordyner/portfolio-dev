@@ -113,7 +113,7 @@ export default function ArticleWordpress({ article }) {
                         {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
                         {article.slug === "cout-maintenance-site-internet" &&
                             <>
-                                <h2 className='h2'>FAQ sur le prix de la maintenance d'un site web
+                                <h2 className='h2 faqTitle'>FAQ : coût de la maintenance d'un site web
                                 </h2><FAQArticle2 />
                             </>}
                     </div>
