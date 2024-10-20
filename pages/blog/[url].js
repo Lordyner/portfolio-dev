@@ -15,6 +15,7 @@ import FAQArticle from '@/Components/FAQArticle';
 
 import { fr } from "date-fns/locale";
 import { format } from "date-fns";
+import FAQArticle2 from '@/Components/FAQArticle2';
 
 export default function ArticleWordpress({ article }) {
 
@@ -49,6 +50,8 @@ export default function ArticleWordpress({ article }) {
         setIsTabletResolution(isTablet);
         setIsDesktopResolution(isDesktop);
     }
+
+
 
     useEffect(() => {
         // Handle menu display
@@ -104,9 +107,15 @@ export default function ArticleWordpress({ article }) {
                                 </div>
                             </div>
                         </div>
-                        <Image src={article.featuredImage.node.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
+                        {article.featuredImage && <Image src={article?.featuredImage?.node?.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
+                        }
                         <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: article.content }}></div>
                         {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
+                        {article.slug === "cout-maintenance-site-internet" &&
+                            <>
+                                <h2 className='h2'>FAQ sur le prix de la maintenance d'un site web
+                                </h2><FAQArticle2 />
+                            </>}
                     </div>
                 }
             </div >
@@ -126,7 +135,7 @@ export async function getStaticProps(context) {
 
     const { url } = context.params;
     const fetchedArticle = await getSinglePostBySlug(url);
-
+    console.log(fetchedArticle);
     return {
         props: {
             article: fetchedArticle

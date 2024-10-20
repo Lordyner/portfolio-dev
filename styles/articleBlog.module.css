@@ -1,11 +1,13 @@
 .container {
     padding: var(--topAndBotPadding) var(--sidePadding);
     background-color: #fff;
-    color: #000;
+    color: #2E2E2E;
+    letter-spacing: .3px;
 }
 
 .container li {
     list-style: inside;
+    padding-bottom: .75rem;
 }
 
 .customBox {
@@ -72,6 +74,7 @@
     font-weight: 600;
     line-height: 3rem;
     text-transform: capitalize;
+    color: #2E2E2E;
 }
 
 .articleInfos {
@@ -107,6 +110,10 @@
     max-width: 100%;
 }
 
+.blogContent p {
+    line-height: 2rem;
+}
+
 .blogContent p,
 .blogContent ul {
     padding-bottom: 1.5rem;
@@ -119,7 +126,7 @@
 
 @media (min-width: 48rem) {
     .content {
-        max-width: 56.25rem;
+        max-width: 45rem;
         margin-inline: auto;
     }
 }
