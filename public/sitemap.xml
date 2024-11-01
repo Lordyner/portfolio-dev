@@ -1,62 +1,95 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://www.thomasandrelubin.fr/</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://www.thomasandrelubin.fr/</loc>
+  <lastmod>2024-10-20T17:51:34+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/a-propos</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/a-propos</loc>
+  <lastmod>2024-11-01T14:18:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/contact</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/blog</loc>
+  <lastmod>2024-11-01T14:18:40+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/projets/audiophile</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/contact</loc>
+  <lastmod>2024-11-01T14:18:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/projets/photosnap</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/projets/audiophile</loc>
+  <lastmod>2024-11-01T14:18:37+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/projets/coffeeRoasters</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/projets/photosnap</loc>
+  <lastmod>2024-11-01T14:18:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/projets/payApi</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/projets/coffeeRoasters</loc>
+  <lastmod>2024-11-01T14:18:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/projets/myTeam</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/projets/payApi</loc>
+  <lastmod>2024-10-22T10:20:05+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/mentions-legales</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/projets/myTeam</loc>
+  <lastmod>2024-11-01T14:18:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/conditions-generales-utilisation</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/mentions-legales</loc>
+  <lastmod>2024-11-01T14:18:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/politique-de-confidentialite</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://www.thomasandrelubin.fr/conditions-generales-utilisation</loc>
+  <lastmod>2024-11-01T14:18:38+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://www.thomasandrelubin.fr/CV-andrelubin-thomas.pdf</loc>
-<lastmod>2024-07-10T08:08:22+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://www.thomasandrelubin.fr/politique-de-confidentialite</loc>
+  <lastmod>2024-11-01T14:18:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/CV-andrelubin-thomas.pdf</loc>
+  <lastmod>2024-11-01T14:18:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/blog/cout-maintenance-site-internet</loc>
+  <lastmod>2024-11-01T14:18:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/blog/objectifs-site-internet-entreprise</loc>
+  <lastmod>2024-11-01T14:18:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/blog/avantages-seo-pour-tpe-et-pme</loc>
+  <lastmod>2024-11-01T14:18:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/blog/quel-est-le-prix-dun-site-vitrine-professionnel</loc>
+  <lastmod>2024-11-01T14:18:40+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 </urlset>
