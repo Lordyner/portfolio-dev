@@ -17,7 +17,7 @@ import { fr } from "date-fns/locale";
 import { format } from "date-fns";
 import FAQArticle2 from '@/Components/FAQArticle2';
 
-export default function ArticleWordpress({ article }) {
+export default function ArticleWordpress({ article, indexPage }) {
 
     /* Logger */
     const logger = getLogger('Article page');
@@ -85,10 +85,13 @@ export default function ArticleWordpress({ article }) {
                 <meta property='og:locale' content='fr_FR' />
                 <meta property='og:site_name' content="https://www.thomasandrelubin.fr" />
 
+                {!indexPage && <meta name="robots" content="noindex"></meta>}
+
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
 
             <Navbar theme="white" maxWidth="56.25rem" />
+
             <div className={classes.container}>
                 {article &&
                     <div className={`${classes.content}`}>
@@ -135,10 +138,13 @@ export async function getStaticProps(context) {
 
     const { url } = context.params;
     const fetchedArticle = await getSinglePostBySlug(url);
-    console.log(fetchedArticle);
+
+    const indexPage = process.env.ENV === 'PRD' ? true : false;
+
     return {
         props: {
-            article: fetchedArticle
+            article: fetchedArticle,
+            indexPage: indexPage
         },
         revalidate: 60
     }

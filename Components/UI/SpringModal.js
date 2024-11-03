@@ -20,6 +20,7 @@ const SpringModal = ({ isOpen, setIsOpen, title, message }) => {
                         exit={{ scale: 0, rotate: "0deg" }}
                         onClick={(e) => e.stopPropagation()}
                         className={classes.modal}
+                        id='callbackModalContact'
                     >
 
                         <div className={classes.content}>
