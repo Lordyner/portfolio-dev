@@ -85,8 +85,6 @@ export default function ArticleWordpress({ article, indexPage }) {
                 <meta property='og:locale' content='fr_FR' />
                 <meta property='og:site_name' content="https://www.thomasandrelubin.fr" />
 
-                {!indexPage && <meta name="robots" content="noindex"></meta>}
-
             </Head>
             {isMenuOpen && <div className='overlay-burger-menu'></div>}
 
