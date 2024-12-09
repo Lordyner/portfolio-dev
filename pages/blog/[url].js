@@ -108,7 +108,13 @@ export default function ArticleWordpress({ article, indexPage }) {
                                 </div>
                             </div>
                         </div>
-                        {article.featuredImage && <Image src={article?.featuredImage?.node?.sourceUrl} alt={article.featuredImage.node.altText} className={classes.headerImageArticle} width={900} height={280} />
+                        {article.featuredImage && <Image
+                            src={article?.featuredImage?.node?.sourceUrl}
+                            alt={article.featuredImage.node.altText}
+                            className={classes.headerImageArticle}
+                            width={900} height={280}
+                            priority={true}
+                        />
                         }
                         <div className={classes.blogContent} dangerouslySetInnerHTML={{ __html: article.content }}></div>
                         {article.slug === "avantages-seo-pour-tpe-et-pme" && <FAQArticle />}
