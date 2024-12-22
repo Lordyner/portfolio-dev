@@ -95,14 +95,14 @@ export default function SudOuestHabitat() {
             <Navbar />
             <main className={classes.projectContainer}>
 
-                <h1>Projet <span className="accentuedWord">Waterline</span></h1>
+                <h1>Projet <span className="accentuedWord">Sud Ouest Habitat</span></h1>
                 <div className={`${classes.content} max-width`}>
                     <div className={classes.context}>
                         <div className={classes.textWrapper}>
                             <h2>Contexte</h2>
                             <p>
-                                Waterline est une entreprise situé à Montauban, spécialisé dans la construction de piscine en béton.<br /><br />
-                                L'entreprise possédait déjà un site internet qu'ils souhaitaient remettre au goût du jour en terme de design.<br /><br />
+                                Sud Ouest Habitat est une entreprise construction spécialisée en maçonnerie, terrassement et charpente.<br /><br />
+                                L'entreprise ne possédait pas encore de site internet et souhaitait améliorer sa visibilité.<br /><br />
                             </p>
                         </div>
                         <HoverImage image={sudOuestHabitatMockupFullPage}
