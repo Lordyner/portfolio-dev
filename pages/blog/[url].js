@@ -16,6 +16,7 @@ import FAQArticle from '@/Components/FAQArticle';
 import { fr } from "date-fns/locale";
 import { format } from "date-fns";
 import FAQArticle2 from '@/Components/FAQArticle2';
+import FAQArticle3 from '@/Components/FAQArticle3';
 
 export default function ArticleWordpress({ article, indexPage }) {
 
@@ -122,6 +123,11 @@ export default function ArticleWordpress({ article, indexPage }) {
                             <>
                                 <h2 className='h2 faqTitle'>FAQ : coût de la maintenance d'un site web
                                 </h2><FAQArticle2 />
+                            </>}
+                        {article.slug === "site-vitrine" &&
+                            <>
+                                <h2 className='h2 faqTitle'>FAQ
+                                </h2><FAQArticle3 />
                             </>}
                     </div>
                 }
