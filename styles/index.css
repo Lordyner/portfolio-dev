@@ -147,10 +147,11 @@ button {
 }
 
 
-.primary-button {
+.primary-button,
+.cta {
     padding: 1rem 1.25rem;
     width: fit-content;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: var(--primary-color);
     box-shadow: -1px 1px 1px 0px rgb(0, 0, 0, 0.25);
     border-radius: 0.625rem;
@@ -161,10 +162,27 @@ button {
     transition: all .25s;
 }
 
+.cta {
+    padding: .75rem 1rem !important;
+
+}
+
+.cta a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .primary-button:hover {
     background-color: var(--primary-color-2);
     transform: scale(1.02);
     box-shadow: -2px 2px 2px 1px rgb(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.cta:hover {
+    background-color: var(--primary-color-2);
+
+    cursor: pointer;
 }
 
 .secondary-button {
@@ -347,6 +365,15 @@ input[type="checkbox"]:focus {
 
 }
 
+.note {
+    color: white;
+    border-radius: 4px;
+}
+
+.note+p {
+    padding-top: 1.5rem;
+}
+
 .faqTitle {
     padding: 0 !important;
 }
@@ -404,11 +431,14 @@ input[type="checkbox"]:focus {
 }
 
 @media screen and (min-width: 48rem) {
+
     .primary-button {
         padding: 1.25rem 2rem;
         box-shadow: -4px 4px 8px 0px rgb(0, 0, 0, 0.25);
 
     }
+
+
 
     .h2,
     .h3 {
