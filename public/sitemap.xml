@@ -55,22 +55,22 @@
 <url>
   <loc>https://www.thomasandrelubin.fr/mentions-legales</loc>
   <lastmod>2024-11-01T14:18:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.10</priority>
 </url>
 <url>
   <loc>https://www.thomasandrelubin.fr/conditions-generales-utilisation</loc>
   <lastmod>2024-11-01T14:18:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.10</priority>
 </url>
 <url>
   <loc>https://www.thomasandrelubin.fr/politique-de-confidentialite</loc>
   <lastmod>2024-11-01T14:18:39+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.10</priority>
 </url>
 <url>
   <loc>https://www.thomasandrelubin.fr/CV-andrelubin-thomas.pdf</loc>
   <lastmod>2024-11-01T14:18:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.10</priority>
 </url>
 <url>
   <loc>https://www.thomasandrelubin.fr/blog/cout-maintenance-site-internet</loc>
@@ -145,6 +145,11 @@
 <url>
   <loc>https://www.thomasandrelubin.fr/blog/core-web-vitals-cest-quoi</loc>
   <lastmod>2025-05-05T18:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.thomasandrelubin.fr/blog/checklist-preparation-site-internet</loc>
+  <lastmod>2025-05-19T18:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 </urlset>
